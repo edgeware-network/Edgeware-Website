@@ -1,0 +1,65 @@
+.card {
+  padding: var(--spacing-m) var(--spacing-m) var(--spacing-m) var(--spacing-m);
+  border-radius: var(--br-m);
+  border: solid 1px var(--grey-800);
+  background-color: var(--grey-900);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  right: 0;
+  top: -8px;
+  opacity: 0.25;
+
+  svg {
+    width: 24px;
+  }
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  display: block;
+  border-radius: 48px;
+  float: left;
+  margin: 0 12px 0 0;
+}
+
+.name {
+  font-size: 1.125rem;
+  font-weight: var(--fw-semibold);
+  display: block;
+  line-height: 1.1;
+}
+
+.handle {
+  font-size: 0.875rem;
+  color: var(--grey-500);
+  line-height: 1;
+
+  a:link, a:visited {
+    color: var(--grey-500);
+  }
+}
+
+.body {
+  margin-top: var(--spacing-s);
+  line-height: 1.88;
+  flex: 1;
+}
+
+.footer {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--grey-500);
+  line-height: 2;
+  display: block;
+  margin-top: var(--spacing-s);
+}

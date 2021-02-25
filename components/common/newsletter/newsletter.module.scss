@@ -1,0 +1,39 @@
+@import '../../../styles/custom.scss';
+
+.wrapper {
+  margin: 0;
+  color: var(--grey-900);
+  border-radius: var(--br-m);
+  padding: var(--spacing-xs);
+
+  background: var(--bw-white) url('/images/developer/mailart@2x.jpg') 100% 50% no-repeat;
+  background-size: cover;
+
+  @include media-breakpoint-up(lg) {
+    margin: var(--spacing-xl) auto;
+    max-width: 1120px;
+    padding: 0;
+    background-size: contain;
+    border-radius: var(--br-m);
+    overflow: hidden;
+  }
+}
+
+.content {
+  padding: var(--spacing-s);
+  background: var(--bw-white);
+  border-radius: var(--br-m);
+
+
+  @include media-breakpoint-up(lg) {
+    padding: var(--spacing-xl);
+    max-width: 60%;
+  }
+
+  p {
+    @include media-breakpoint-up(lg) {
+      max-width: 460px;
+    }
+  }
+}
+

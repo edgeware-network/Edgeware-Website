@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="103px" height="160px" viewBox="0 0 103 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>confetti-left</title>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Edgeware-V2---Homepage-(Desktop)" transform="translate(-287.000000, -8269.000000)">
+            <g id="confetti-left" transform="translate(287.000000, 8269.000000)">
+                <polygon id="Triangle" fill="#D42B69" transform="translate(76.683615, 24.500000) rotate(-11.000000) translate(-76.683615, -24.500000) " points="76.6836151 5 99.6836151 44 53.6836151 44"></polygon>
+                <path d="M33,134 L33,143 L42,143 L42,149 L33,149 L33,158 L27,158 L27,148.999 L18,149 L18,143 L27,142.999 L27,134 L33,134 Z" id="Combined-Shape-Copy" fill="#44CD9A" transform="translate(30.000000, 146.000000) rotate(-10.000000) translate(-30.000000, -146.000000) "></path>
+                <circle id="Oval" fill="#F7B500" cx="6" cy="19" r="6"></circle>
+                <polygon id="/-copy" fill="#6236FF" fill-rule="nonzero" points="95.1669542 132.02 101.14 112.02 99.1130458 112.02 93.14 132.02"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

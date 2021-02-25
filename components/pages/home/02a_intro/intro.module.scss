@@ -1,0 +1,95 @@
+@import '../../../../styles/custom.scss';
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  padding: var(--spacing-l) 0;
+  margin: -150px 0 -50px 0;
+
+  @include media-breakpoint-up(lg) {
+    margin: 0;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+
+  em {
+    font-style: normal;
+    font-weight: var(--fw-semibold);
+    color: var(--primary-500);
+  }
+}
+
+
+.bigBubble {
+  position: absolute;
+  z-index: 1;
+
+  right: -300px;
+  top: -100px;
+
+  @include media-breakpoint-up(lg) {
+    right: -200px;
+    top: 0;
+  }
+
+  svg {
+    transform: scale(0.5);
+
+    @include media-breakpoint-up(lg) {
+      transform: scale(0.9);
+    }
+  }
+}
+
+.mediumBubble {
+  position: absolute;
+  z-index: 1;
+
+  right: -200px;
+  bottom: 10px;
+
+  @include media-breakpoint-up(lg) {
+    right: 25%;
+    bottom: auto;
+    top: 250px;
+  }
+}
+
+.smallBubble {
+  position: absolute;
+  z-index: 1;
+
+  top: 0%;
+  left: -100px;
+
+  @include media-breakpoint-up(lg) {
+    top: 0%;
+    left: auto;
+    right: 32%;
+  }
+}
+
+.tinyBubble {
+  position: absolute;
+  z-index: 1;
+
+  bottom: 100px;
+  left: -50px;
+
+  @include media-breakpoint-up(lg) {
+    bottom: 0%;
+    left: auto;
+    right: 40%;
+  }
+
+  svg {
+    transform: scale(0.6);
+
+    @include media-breakpoint-up(lg) {
+      transform: scale(0.75);
+    }
+  }
+}

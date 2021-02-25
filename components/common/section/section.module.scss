@@ -1,0 +1,62 @@
+@import '../../../styles/custom.scss';
+
+.section {
+  display: block;
+}
+
+.sectionGap-none {
+  padding: var(--spacing-xs) 0;
+}
+
+.sectionGap-standard {
+  padding: var(--spacing-m) 0;
+  margin: 0 0 var(--spacing-m) 0;
+
+  @include media-breakpoint-up(md) {
+    padding: var(--spacing-l) 0;
+    margin: 0 0 var(--spacing-l) 0;
+  }
+}
+
+.containerNarrow {
+  margin: 0 var(--spacing-s);
+
+  @include media-breakpoint-up(lg) {
+    margin: var(--spacing-xl) auto;
+    max-width: 1150px;
+  }
+}
+
+
+
+.containerNormal {}
+.containerWide {}
+.containerFluid {
+  width: 100%;
+}
+
+.backgroundWaves {
+  padding: 0 0 100px 0;
+
+  background:
+    url('/images/backgrounds/wave-light.svg') 95% 100% repeat-x,
+    url('/images/backgrounds/wave-dark.svg') 60% 70% repeat-x;
+
+  @include media-breakpoint-up(md) {
+    background:
+      url('/images/backgrounds/wave-light.svg') 0% 100% repeat-x,
+      url('/images/backgrounds/wave-dark.svg') 50% 80% repeat-x;
+  }
+}
+
+.backgroundTop {
+  background:
+    url('/images/backgrounds/wave-light.svg') 45% 10% repeat-x,
+    url('/images/backgrounds/wave-dark.svg') 30% 18% repeat-x;
+}
+
+.backgroundFooter {
+  background:
+    url('/images/backgrounds/wave-light.svg') 85% 30% repeat-x,
+    url('/images/backgrounds/wave-dark.svg') 40% 15% repeat-x;
+}

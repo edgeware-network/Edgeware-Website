@@ -1,0 +1,30 @@
+@import '../../../styles/custom.scss';
+
+
+.header {
+  border-top: 0.5rem solid var(--primary-500);
+  position: relative;
+  z-index: 3;
+
+  padding: 2rem 0;
+  @include media-breakpoint-up(lg) {
+    padding-top: 8rem;
+  }
+}
+
+.logo {
+  z-index: 10;
+
+  svg {
+    height: 30px;
+
+    @include media-breakpoint-up(lg) {
+      height: 32px;
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}

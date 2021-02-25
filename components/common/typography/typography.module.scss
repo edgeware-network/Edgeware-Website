@@ -1,0 +1,64 @@
+@import '../../../styles/custom.scss';
+
+.h1 {
+  font-size: var(--fs-headline-400--sm);
+  letter-spacing: var(--ls-headline--sm);
+  font-weight: var(--fw-semibold);
+  margin: 0 0 var(--spacing-s) 0;
+
+  @include media-breakpoint-up(md) {
+    font-size: var(--fs-headline-400);
+    margin: 0 0 var(--spacing-s) 0;
+    line-height: 1.16;
+    letter-spacing: var(--ls-headline--md);
+  }
+}
+
+.h2 {
+  font-size: var(--fs-headline-300--sm);
+  letter-spacing: var(--ls-headline--sm);
+  font-weight: var(--fw-semibold);
+  margin: 0 0 var(--spacing-s) 0;
+
+  @include media-breakpoint-up(md) {
+    font-size: var(--fs-headline-300);
+    margin: 0 0 var(--spacing-s) 0;
+    line-height: 1.16;
+    letter-spacing: var(--ls-headline--md);
+  }
+}
+
+.h1, .h2, .h3 {
+  & em {
+    font-style: normal;
+    color: var(--primary-500);
+  }
+}
+
+.p {
+  font-size: 1.125rem;
+  letter-spacing: var(--ls-text--md);
+}
+
+.regular {}
+
+.secondary {
+  font-size: 1rem;
+}
+
+.lead {
+  font-size: var(--fs-text-lg);
+}
+
+.large {
+  font-size: 1.5rem;
+}
+
+.small {
+  font-size: 0.875px;
+  color: var(--grey-300);
+}
+
+.inverted {
+  color: var(--grey-900);
+}

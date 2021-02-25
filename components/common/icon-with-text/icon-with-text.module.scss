@@ -1,0 +1,48 @@
+@import '../../../styles/custom.scss';
+
+.wrapper {
+  position: relative;
+
+  @include media-breakpoint-up(lg) {
+    padding: 1rem 0 1rem 5rem;
+    margin: 0 0 2rem 0;
+  }
+}
+
+.icon {
+  display: block;
+  border-radius: 100px;
+  width: 66px;
+  border: 7px solid rgba(255,255,255,0.035);
+  padding: 12px;
+
+  margin: var(--spacing-m) auto;
+  text-align: center;
+
+  svg {
+    width: 24px;
+    fill: var(--primary-500);
+    margin-top: -3px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+  }
+}
+
+.headline {
+  font-weight: var(--fw-semibold);
+  font-size: 1.25rem;
+  letter-spacing: var(--ls-text--md);
+  display: block;
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.content {
+  p {
+    color: var(--grey-300);
+  }
+}
