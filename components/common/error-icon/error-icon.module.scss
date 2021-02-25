@@ -1,0 +1,8 @@
+@import '../../../styles/custom.scss';
+
+.errorIcon {
+  margin: var(--spacing-m) 0;
+  svg {
+    max-width: 360px;
+  }
+}

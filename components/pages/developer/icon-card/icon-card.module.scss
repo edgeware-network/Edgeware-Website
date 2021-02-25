@@ -1,0 +1,86 @@
+@import '../../../../styles/custom.scss';
+
+.card {
+  border-radius: var(--br-l);
+  border: solid 1px var(--grey-800);
+  background-color: var(--grey-900);
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding: var(--spacing-m) var(--spacing-m) var(--spacing-s) var(--spacing-m);
+
+  @include media-breakpoint-up(md) {
+    display: block;
+    position: relative;
+    text-align: left;
+    padding-right: 86px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: var(--spacing-m) var(--spacing-m) var(--spacing-s) var(--spacing-m);
+    padding-right: 124px;
+  }
+}
+
+.headline {
+  font-size: 1.125rem;
+  display: block;
+  font-weight: var(--fw-semibold);
+  margin: var(--spacing-xs) 0;
+
+  @include media-breakpoint-up(lg) {
+    margin: 0 0 var(--spacing-xs) 0;
+  }
+}
+
+.text {
+  font-size: 0.875rem;
+  color: var(--grey-300);
+  margin: 0;
+}
+
+.icon {
+  max-width: 92px;
+  max-height: 92px;
+
+  @include media-breakpoint-up(md) {
+    position: absolute;
+    right: 16px;
+    top: 32px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    top: 50px;
+    right: 16px;
+  }
+}
+
+.list {
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: stretch;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+  }
+}
+
+.item {
+  margin: 0 0 var(--spacing-m) 0;
+
+  @include media-breakpoint-up(lg) {
+    flex: 0 0 calc(33% - var(--spacing-xs));
+  }
+
+  @include media-breakpoint-up(xl) {
+    flex: 0 0 calc(33% - var(--spacing-m));
+  }
+}

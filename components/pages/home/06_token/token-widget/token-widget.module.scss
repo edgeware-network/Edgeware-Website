@@ -1,0 +1,57 @@
+@import '../../../../../styles/custom.scss';
+
+.tokenBox {
+  border-radius: var(--br-m);
+  border: solid 1px var(--grey-700);
+  background-color: rgba(20, 20, 20, 0.7);
+
+  padding: var(--spacing-m);
+  @include media-breakpoint-up(lg) {
+    padding: var(--spacing-l) var(--spacing-m);
+  }
+}
+
+.tokenLogo {
+  text-align: center;
+  margin-bottom: var(--spacing-s);
+}
+
+.marketInfo {
+  text-align: center;
+}
+
+.marketInfoLabel {
+  display: inline-block;
+  font-weight: var(--fw-semibold);
+}
+
+.marketInfoLabelBorder {
+  border-top: solid 1px var(--primary-500);
+  padding: var(--spacing-xs) var(--spacing-l) 0 var(--spacing-l);
+  margin-top: var(--spacing-s);
+}
+
+.marketInfoValue {
+  display: block;
+  font-weight: var(--fw-semibold);
+  font-size: 2rem;
+  line-height: 1.1;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 2.5rem;
+  }
+}
+
+.tokenInfo {
+  color: var(--grey-300);
+  font-size: 0.875rem;
+  text-align: center;
+  padding-top: var(--spacing-m);
+}
+
+.coingeckoLogo {
+  img {
+    width: 24px;
+    margin: 0 8px 0 0;
+  }
+}

@@ -1,0 +1,238 @@
+import * as React from 'react';
+
+import Image from 'next/image';
+
+import IconSlash from 'remixicon/icons/Development/code-s-slash-line.svg';
+import IconPrompt from 'remixicon/icons/Development/terminal-line.svg';
+import IconTerminal from 'remixicon/icons/Development/terminal-window-line.svg';
+import IconServer from 'remixicon/icons/Device/server-line.svg';
+
+import { H1, H2, P } from '../components/common/typography/typography';
+import { IconCard } from '../components/pages/developer/icon-card/icon-card';
+import { IconCardList } from '../components/pages/developer/icon-card/icon-card-list';
+import { Link } from '../components/common/link/link';
+import { HeadlineSection } from '../components/common/headline-section/headline-section';
+import { Newsletter } from '../components/common/newsletter/newsletter';
+import { TechFeatures } from '../components/pages/developer/tech-features/tech-features';
+import { IconBox } from '../components/pages/developer/icon-box/icon-box';
+import { IconBoxList } from '../components/pages/developer/icon-box/icon-box-list';
+import { Button } from '../components/common/button/button';
+import { LinkBox } from '../components/pages/developer/link-box/link-box';
+import { OvalIcon } from '../components/pages/developer/oval-icon/oval-icon';
+import { MainPromo } from '../components/pages/developer/main-promo/main-promo';
+import { Section } from '../components/common/section/section';
+import { EdgewareNode } from '../components/pages/developer/edgeware-node/edgeware-node';
+
+export default function Developer() {
+  return (
+    <>
+      <Section id="main-info" background="waves" width="normal">
+        <MainPromo>
+          <H1 size="1">Build governance focused smart contracts with Edgeware</H1>
+          <br />
+          <P>
+            Edgeware aims to solve the scalability problem by adopting a fundamentally different
+            architecture. Edgeware token holders can vote to upgrade the network using on-chain
+            voting, after which nodes automatically download a new version of the runtime. Critical
+            decisions are made on-chain, creating a system with lower coordination overhead and a
+            transparent process for deciding upon improvements.
+          </P>
+        </MainPromo>
+
+        <IconCardList>
+          <IconCard headline="Gaming" iconSrc="/images/developer/gaming.png">
+            In Edgeware, working groups function as mission-based development orgs that are composed
+            of members who share interests.
+          </IconCard>
+          <IconCard headline="DeFi" iconSrc="/images/developer/defi.png">
+            In Edgeware, working groups function as mission-based development orgs that are composed
+            of members who share interests.
+          </IconCard>
+          <IconCard headline="Social / DAOs" iconSrc="/images/developer/dao.png">
+            In Edgeware, working groups function as mission-based development orgs that are composed
+            of members who share interests.
+          </IconCard>
+        </IconCardList>
+      </Section>
+
+      <Section id="builders-guild" width="narrow">
+        <div className="mb-5">
+          <div className="row">
+            <div className="col-lg">
+              <div className="px-md-5 mx-md-1">
+                <Image
+                  src="/images/developer/code-s-slash-large.png"
+                  layout="responsive"
+                  width="474"
+                  height="472"
+                />
+              </div>
+            </div>
+            <div className="col-lg text-center text-md-start">
+              <div className="mt-md-3 p-md-5">
+                <H2 size="1">Builders Guild</H2>
+                <P secondary>
+                  In Edgeware, working groups function as mission-based development orgs that are
+                  composed of members who share interests, needs, and passions. Where an Ambassador
+                  team is largely formed to promote a network in a variety of ways, Working Groups
+                  are intended to solve issues specific to a community while also growing community.
+                </P>
+                <Link href="https://t.me/edg_developers">Learn more about the builders guild</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section id="tech-features" background="waves" width="narrow">
+        <div className="mb-5">
+          <div className="row">
+            <div className="col-lg d-flex align-items-center">
+              <div className="ps-md-4 ms-md-4 me-md-3">
+                <H2 size="1">Technical features</H2>
+                <P secondary>
+                  Edgeware is a smart contract blockchain that compiles to a client runtime, a blob
+                  of WebAssembly (Wasm) code that may be built and run natively or executed within a
+                  Wasm virtual machine. Either way, when an Edgeware native binary is compiled, it
+                  includes a Wasm virtual machine which can be used to execute later versions of the
+                  client runtime downloaded from the network.
+                </P>
+                <P secondary>
+                  The client runtime interfaces with networking code and other components provided
+                  by Parity Substrate. Substrate includes libp2p networking, PBFT consensus, and
+                  proof-of-stake block validation and finality [substrate]. Ultimately, the client
+                  is only responsible for downloading, executing, and validating blocks from the
+                  network.
+                </P>
+              </div>
+            </div>
+            <div className="col-lg">
+              <div className="pe-md-4 me-md-4">
+                <TechFeatures />
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section id="get-started" width="normal">
+        <div className="mb-5">
+          <HeadlineSection center>
+            <H2 size="1">Get Started on Edgeware</H2>
+            <P>
+              This is your launchpad to find what you need to integrate Edgware.
+              <br />
+              Unsure of where to start?{' '}
+              <Link href="https://t.me/edg_developers">Join the Developer Chat</Link>
+            </P>
+          </HeadlineSection>
+
+          <IconBoxList>
+            <IconBox headline="Run a Node" headlineSeparator iconComponent={IconServer}>
+              In Edgeware, working groups function as mission-based...
+            </IconBox>
+            <IconBox headline="Build Dapp" headlineSeparator iconComponent={IconSlash}>
+              In Edgeware, working groups function as mission-based...
+            </IconBox>
+            <IconBox headline="Build Runtime" headlineSeparator iconComponent={IconPrompt}>
+              In Edgeware, working groups function as mission-based...
+            </IconBox>
+            <IconBox headline="Build a Pallet" headlineSeparator iconComponent={IconTerminal}>
+              In Edgeware, working groups function as mission-based...
+            </IconBox>
+          </IconBoxList>
+        </div>
+      </Section>
+
+      {/* DAPS */}
+      <Section id="edgeware-dapps" width="normal">
+        <HeadlineSection center>
+          <H2 size="1">DAPPs developed on Edgeware</H2>
+          <P>
+            Learn more about the latest launched applications
+            <br />
+            developed on Edgeware ecosystem.
+          </P>
+        </HeadlineSection>
+
+        <IconBoxList>
+          <IconBox
+            headline="MailChain"
+            imageUrl="/images/developer/dapps-mailchain.png"
+            imageWidth="48"
+            imageHeight="48"
+            targetButton="https://mailchain.xyz/"
+          >
+            Send and receive messages between blockchain addresses & accounts through a simple,
+            email-like interface
+          </IconBox>
+          <IconBox
+            headline="Sublime Finance"
+            imageUrl="/images/developer/dapps-sublime.png"
+            imageWidth="128"
+            imageHeight="26"
+            targetButton="https://commonwealth.im/edgeware/proposal/discussion/636-announcing-sublim"
+          >
+            Sublime is a new lending protocol aimed at providing a more diversified and robust
+            lending experience
+          </IconBox>
+          <IconBox
+            headline="Stafi"
+            imageUrl="/images/developer/dapps-stafi.png"
+            imageWidth="111"
+            imageHeight="28"
+            targetButton="https://www.stafi.io/"
+          >
+            The first DeFi protocol unlocking liquidity of #Staking assets, building #Synthetic,
+            Reward-bearing and tradable #rToken
+          </IconBox>
+        </IconBoxList>
+      </Section>
+
+      <Section id="resources" background="waves-middle" width="narrow">
+        <div className="p-md-5">
+          <div className="row">
+            <div className="col-lg">
+              <div className="mt-md-5 pt-md-4">
+                <HeadlineSection center>
+                  <OvalIcon />
+                  <H2 size="1">Resources</H2>
+                  <div className="px-md-5">
+                    <P>
+                      Jump straight into our developer tutorials and easy to follow documentation.
+                    </P>
+                    <br />
+                    <Button style="white" href="https://github.com/hicommonwealth">
+                      Follow us on Github
+                    </Button>
+                  </div>
+                </HeadlineSection>
+              </div>
+            </div>
+            <div className="col-lg">
+              <div className="p-md-5 me-md-5">
+                <LinkBox />
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section id="node" width="narrow">
+        <EdgewareNode />
+      </Section>
+    </>
+  );
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      meta: {
+        title: 'Build governance focused smart contracts',
+        description:
+          'Edgeware gives blockchain developers an easy-to-use framework to build governance focused smart contracts.',
+      },
+    },
+  };
+}

@@ -1,0 +1,145 @@
+@import '../../../../styles/custom.scss';
+
+.wrapper {
+  position: relative;
+  padding: 100px 0 var(--spacing-lg) 0;
+  width: 100vw;
+
+  margin-top: -30px;
+
+  @include media-breakpoint-up(lg) {
+    padding: 100px 0 0;
+    margin: 0 0 -50px 0;
+  }
+}
+
+.treasuryModel {
+  position: relative;
+  z-index: 1;
+  height: 380px;
+  margin-bottom: var(--spacing-l);
+
+  @include media-breakpoint-up(md) {
+    height: 720px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 640px;
+    margin-top: -60px;
+  }
+
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .treasuryModelFull {
+    opacity: 0;
+    transition: 1s ease;
+  }
+
+  &:hover {
+    .treasuryModelFull {
+      opacity: 1;
+    }
+  }
+
+}
+
+.treasuryModelSimple, .treasuryModelFull {
+  position: absolute;
+  padding: var(--spacing-m) 0;
+
+  @include media-breakpoint-up(md) {
+    padding: var(--spacing-l);
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: var(--spacing-l);
+  }
+}
+
+.bubbles {
+  width: 100%;
+}
+
+
+.bigBubble {
+  position: absolute;
+  z-index: 0;
+
+  right: -250px;
+  top: -300px;
+
+  @include media-breakpoint-up(lg) {
+    right: auto;
+    left: -250px;
+    top: -450px;
+  }
+
+  svg {
+    transform: scale(0.7);
+    @include media-breakpoint-up(lg) {
+      transform: scale(0.9);
+    }
+  }
+}
+
+.mediumBubble {
+  position: absolute;
+  z-index: -1;
+
+  right: -200px;
+  bottom: 10px;
+
+  @include media-breakpoint-up(lg) {
+    right: -100px;
+    bottom: auto;
+    top: -350px;
+  }
+}
+
+.smallBubble1 {
+  position: absolute;
+  z-index: 0;
+
+  top: 0%;
+  left: -100px;
+
+  @include media-breakpoint-up(lg) {
+    top: -100px;
+    left: auto;
+    right: 30%;
+    transform: scale(0.6);
+  }
+
+  svg {
+    transform: scale(0.75);
+    @include media-breakpoint-up(lg) {
+      transform: scale(0.6);
+    }
+  }
+
+
+}
+
+.smallBubble2 {
+  position: absolute;
+  z-index: 1;
+
+  top: 0%;
+  left: -100px;
+
+  @include media-breakpoint-up(lg) {
+    top: auto;
+    bottom: 0px;
+    left: auto;
+    right: -75px;
+  }
+
+  svg {
+    @include media-breakpoint-up(lg) {
+      transform: scale(0.6);
+    }
+  }
+}

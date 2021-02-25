@@ -1,0 +1,25 @@
+@import '../../../../styles/custom.scss';
+
+
+.containerBox {
+  border-radius: var(--br-l);
+  background: var(--bw-white) url('/images/developer/node.png') 50% -150px no-repeat;
+  background-size: 100%;
+  padding-top: 200px;
+
+  @include media-breakpoint-up(lg) {
+    background: var(--bw-white) url('/images/developer/node.png') 90% 50% no-repeat;
+    background-size: 33%;
+    padding: var(--spacing-xl);
+    flex-direction: row;
+  }
+}
+
+.inner {
+  max-width: 640px;
+  padding: var(--spacing-m);
+}
+
+.cta {
+  padding: var(--spacing-m) 0 0 0;
+}

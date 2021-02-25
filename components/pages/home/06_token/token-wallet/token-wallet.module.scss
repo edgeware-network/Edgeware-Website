@@ -1,0 +1,70 @@
+@import '../../../../../styles/custom.scss';
+
+.walletBox {
+  border: 1px solid var(--primary-500);
+  border-radius: var(--br-m);
+  text-align: center;
+  padding: var(--spacing-l);
+  background: url('/images/home/token/circle-pattern.svg') repeat;
+  background-color: rgba(21, 21, 21, 0.7);
+
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background: url('/images/home/token/confetti-left.svg') 0 0 no-repeat;
+    background-size: contain;
+
+    width: 80px;
+    height: 160px;
+    left: var(--spacing-m);
+    top: 120px;
+
+    @include media-breakpoint-up(lg) {
+      width: 103px;
+      height: 160px;
+      left: var(--spacing-l);
+      top: var(--spacing-l);
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+
+    background: url('/images/home/token/confetti-right.svg') 0 0 no-repeat;
+    background-size: contain;
+    width: 80px;
+    height: 190px;
+    right: var(--spacing-m);
+    top: 100px;
+
+    @include media-breakpoint-up(lg) {
+      width: 103px;
+      height: 160px;
+      right: var(--spacing-l);
+      top: var(--spacing-l);
+    }
+  }
+}
+
+.walletLinks {
+  display: flex;
+  flex-direction: column;
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.walletLink {
+  flex: 0 1 auto;
+  padding: var(--spacing-m);
+  margin: 0 var(spacing-xl);
+}
+
+.hint {
+  font-size: 1rem;
+  color: var(--grey-500)
+}

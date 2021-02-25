@@ -1,0 +1,34 @@
+@import '../../../../../styles/custom.scss';
+
+.wrapper {
+  text-align: center;
+  margin: var(--spacing-xl) 0 0 0;
+
+  @include media-breakpoint-up(lg) {
+    margin: var(--spacing-xl) 0;
+  }
+}
+
+.tokenDistribution {
+  margin: var(--spacing-s) 0 0 0;
+
+  @include media-breakpoint-up(lg) {
+    margin: var(--spacing-xl) 0;
+  }
+}
+
+.tokenDistributionBig {
+  display: none;
+
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
+}
+
+.tokenDistributionSmall {
+  display: block;
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}

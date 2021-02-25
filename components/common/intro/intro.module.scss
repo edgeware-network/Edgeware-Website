@@ -1,0 +1,25 @@
+@import '../../../styles/custom.scss';
+
+.wrapper {
+  padding: var(--spacing-m) var(--spacing-m) 0 var(--spacing-m);
+  margin: var(--spacing-xl) 0;
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    padding: var(--spacing-xl) 0;
+  }
+}
+
+.wrapperNoGap {
+  margin-bottom: 0;
+  padding-bottom: 0;
+
+  @include media-breakpoint-up(lg) {
+    padding: var(--spacing-xl) 0 0;
+  }
+}
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+}

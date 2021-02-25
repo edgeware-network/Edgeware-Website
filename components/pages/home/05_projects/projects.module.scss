@@ -1,0 +1,7 @@
+@import '../../../../styles/custom.scss';
+
+.wrapper {
+  margin: var(--spacing-l) 0;
+  position: relative;
+  z-index: 3;
+}

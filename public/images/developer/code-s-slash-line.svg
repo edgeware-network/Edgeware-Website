@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="474px" height="472px" viewBox="0 0 474 472" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/code-s-slash-line</title>
+    <defs>
+        <filter x="-8.2%" y="-8.0%" width="116.4%" height="115.9%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="5" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.831372549   0 0 0 0 0.168627451   0 0 0 0 0.411764706  0 0 0 0.104294143 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Edgeware-V2---Developers-(Desktop)" transform="translate(-165.000000, -1219.000000)">
+            <g id="Icon/code-s-slash-line" filter="url(#filter-1)" transform="translate(191.500000, 1244.500000)">
+                <g id="code-s-slash-line" transform="translate(0.500000, 0.500000)">
+                    <polygon id="Path" points="0 0 420 0 420 420 0 420"></polygon>
+                    <path d="M420,210 L321.0025,308.9975 L296.2575,284.2525 L370.51,210 L296.2575,135.7475 L321.0025,111.0025 L420,210 Z M49.49,210 L123.7425,284.2525 L98.9975,308.9975 L0,210 L98.9975,111.0025 L123.725,135.7475 L49.49,210 Z M171.29,367.5 L134.05,367.5 L248.71,52.5 L285.95,52.5 L171.29,367.5 Z" id="Shape" stroke="#D42B69" fill="#151515" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

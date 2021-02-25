@@ -1,0 +1,13 @@
+.button {
+  background: none;
+  border: none;
+  outline: none;
+
+  svg {
+    width: 32px;
+  }
+
+  &:focus, &:active {
+    outline: none;
+  }
+}

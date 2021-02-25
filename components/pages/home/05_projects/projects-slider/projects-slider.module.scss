@@ -1,0 +1,21 @@
+@import '../../../../../styles/custom.scss';
+
+.slider {
+  display: block;
+
+  [class^="swiper-pagination-bullet"] {
+    background: var(--grey-200);
+    width: 12px;
+    height: 12px;
+  }
+
+  [class$="swiper-pagination-bullet-active"] {
+    background: var(--bw-white);
+    width: 12px;
+    height: 12px;
+  }
+
+  [class$="swiper-wrapper"] {
+    padding-bottom: 32px;
+  }
+}
