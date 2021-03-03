@@ -21,7 +21,7 @@ export const Section: React.FC<SectionProps> = ({
     styles.section,
     styles[`sectionGap-${gap}`],
     background === 'waves' && styles.backgroundWaves,
-    background === 'waves-middle' && styles.backgroundFooter,
+    background === 'waves-middle' && styles.backgroundMiddle,
     background === 'waves-top' && styles.backgroundTop
   );
 

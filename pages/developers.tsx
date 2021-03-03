@@ -41,16 +41,13 @@ export default function Developer() {
 
         <IconCardList>
           <IconCard headline="Gaming" iconSrc="/images/developer/gaming.png">
-            In Edgeware, working groups function as mission-based development orgs that are composed
-            of members who share interests.
+            Develop, design, and experiment with games and game theory while working to promote an infrastructure for game designers and users.
           </IconCard>
           <IconCard headline="DeFi" iconSrc="/images/developer/defi.png">
-            In Edgeware, working groups function as mission-based development orgs that are composed
-            of members who share interests.
+            Edgeware aims to connect existing DeFi ecosystems and to facilitate the designing of next-gen cross-chain DeFi protocols through bridges and EVM+WASM compatibility.
           </IconCard>
-          <IconCard headline="Social / DAOs" iconSrc="/images/developer/dao.png">
-            In Edgeware, working groups function as mission-based development orgs that are composed
-            of members who share interests.
+          <IconCard headline="DAOs" iconSrc="/images/developer/dao.png">
+            Edgeware provides foundations for a network of DAOs that help coordinate and scale the contributions of the community.
           </IconCard>
         </IconCardList>
       </Section>
@@ -92,16 +89,16 @@ export default function Developer() {
                 <H2 size="1">Technical features</H2>
                 <P secondary>
                   Edgeware is a smart contract blockchain that compiles to a client runtime, a blob
-                  of WebAssembly (Wasm) code that may be built and run natively or executed within a
+                  of <strong>WebAssembly (Wasm)</strong> code that may be built and run natively or executed within a
                   Wasm virtual machine. Either way, when an Edgeware native binary is compiled, it
                   includes a Wasm virtual machine which can be used to execute later versions of the
                   client runtime downloaded from the network.
                 </P>
                 <P secondary>
                   The client runtime interfaces with networking code and other components provided
-                  by Parity Substrate. Substrate includes libp2p networking, PBFT consensus, and
-                  proof-of-stake block validation and finality [substrate]. Ultimately, the client
-                  is only responsible for downloading, executing, and validating blocks from the
+                  by <strong>Parity Substrate</strong>. Substrate includes <strong>libp2p networking,
+                  PBFT consensus, proof-of-stake block validation and finality [substrate]</strong>.
+                  Ultimately, the client is only responsible for downloading, executing, and validating blocks from the
                   network.
                 </P>
               </div>
@@ -129,16 +126,16 @@ export default function Developer() {
 
           <IconBoxList>
             <IconBox headline="Run a Node" headlineSeparator iconComponent={IconServer}>
-              In Edgeware, working groups function as mission-based...
+              Easily run your own node and start supporting the Edgeware network.
             </IconBox>
             <IconBox headline="Build Dapp" headlineSeparator iconComponent={IconSlash}>
-              In Edgeware, working groups function as mission-based...
+              Write Smart Contracts on Edgeware using Ink!
             </IconBox>
             <IconBox headline="Build Runtime" headlineSeparator iconComponent={IconPrompt}>
-              In Edgeware, working groups function as mission-based...
+              Execute infrastructure through reusable builds and containers.
             </IconBox>
             <IconBox headline="Build a Pallet" headlineSeparator iconComponent={IconTerminal}>
-              In Edgeware, working groups function as mission-based...
+              Bundle core essentials into modules that are easily deployed.
             </IconBox>
           </IconBoxList>
         </div>
@@ -163,8 +160,7 @@ export default function Developer() {
             imageHeight="48"
             targetButton="https://mailchain.xyz/"
           >
-            Send and receive messages between blockchain addresses & accounts through a simple,
-            email-like interface
+            Send and receive messages between blockchain addresses through a simple, email-like interface.
           </IconBox>
           <IconBox
             headline="Sublime Finance"
@@ -174,17 +170,18 @@ export default function Developer() {
             targetButton="https://commonwealth.im/edgeware/proposal/discussion/636-announcing-sublim"
           >
             Sublime is a new lending protocol aimed at providing a more diversified and robust
-            lending experience
+            lending experience.
           </IconBox>
           <IconBox
-            headline="Stafi"
-            imageUrl="/images/developer/dapps-stafi.png"
+            headline="dTrade"
+            imageUrl="/images/developer/dapps-dtrade.svg"
             imageWidth="111"
             imageHeight="28"
-            targetButton="https://www.stafi.io/"
+            targetButton="https://dtrade.org/"
           >
-            The first DeFi protocol unlocking liquidity of #Staking assets, building #Synthetic,
-            Reward-bearing and tradable #rToken
+            Decentralised Synthetic Options &amp; Futures - derivatives trading powered by Substrate.
+            <br />
+            Community run.
           </IconBox>
         </IconBoxList>
       </Section>

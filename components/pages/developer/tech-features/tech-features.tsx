@@ -12,53 +12,47 @@ export const TechFeatures: React.FC = () => {
         NPoS
       </dt>
       <dd className={styles.dd}>
-        In Edgeware, working groups function as mission-based development orgs that are composed of
-        members who share interests.
+        Nominated Proof of Stake consensus is one of the core pillars of true decentralization of Edgeware.
       </dd>
 
       <dt className={styles.dt}>
         <Icon component={IconAsterisk} />
-        Rust/WASM
+        EVM/WASM
       </dt>
       <dd className={styles.dd}>
-        In Edgeware, working groups function as mission-based development orgs that are composed of
-        members who share interests.
+        Edgeware has the best of both worlds; EVM for compatibility and WASM for performance/efficiency.
       </dd>
 
       <dt className={styles.dt}>
         <Icon component={IconAsterisk} />
-        Security
+        Security via Rust
       </dt>
       <dd className={styles.dd}>
-        In Edgeware, working groups function as mission-based development orgs that are composed of
-        members who share interests.
+        Edgeware's core architecture is built on Parity's Substrate and written in Rust proving next-gen security.
       </dd>
 
       <dt className={styles.dt}>
         <Icon component={IconAsterisk} />
-        NPoS
+        Palettes (Treasury, Identity)
       </dt>
       <dd className={styles.dd}>
-        In Edgeware, working groups function as mission-based development orgs that are composed of
-        members who share interests.
+        Edgeware has integrated various modular palettes providing every features one could ask for at every stage.
       </dd>
 
       <dt className={styles.dt}>
         <Icon component={IconAsterisk} />
-        Rust/WASM
+        Block time
       </dt>
       <dd className={styles.dd}>
-        In Edgeware, working groups function as mission-based development orgs that are composed of
-        members who share interests.
+        Scalability is no more a concern with 6 seconds of block generation time and 12-18 seconds of finality in the Edgeware network.
       </dd>
 
       <dt className={styles.dt}>
         <Icon component={IconAsterisk} />
-        Security
+        Weight based transactions
       </dt>
       <dd className={styles.dd}>
-        In Edgeware, working groups function as mission-based development orgs that are composed of
-        members who share interests.
+        For Edgeware's weight-based transaction(s) fees are charged before the execution, indirectly reducing the chances of gas wars and also transaction failures.
       </dd>
     </dl>
   );

@@ -53,23 +53,21 @@
 
 .timelineItemSymbol {
   display: block;
-  width: 64px;
-  height: 64px;
-  background-color: var(--grey-800);
-  border-radius: 100%;
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
 
   position: absolute;
 
-  top: -32px;
-  left: calc(50% - 32px);
+  top: -50px;
+  left: calc(50% - 40px);
 
   @include media-breakpoint-up(lg) {
     left: auto;
-    top: calc(50% - 32px);
-    right: -128px;
+    top: calc(50% - 40px);
+    right: -132px;
   }
 }
 
@@ -83,7 +81,7 @@
   .timelineItemSymbol {
     @include media-breakpoint-up(lg) {
       right: auto;
-      left: -128px;
+      left: -138px;
     }
   }
 }
@@ -116,6 +114,12 @@
     fill: var(--grey-700);
     width: 24px;
   }
+}
+
+.icon {
+  display: inline-block;
+  width: 72px;
+  height: 72px;
 }
 
 
@@ -154,6 +158,10 @@
 .itemContent {
   font-size: var(--fs-text-sm);
   color: var(--grey-400);
+
+  p {
+    margin: 0;
+  }
 }
 
 .timelineSeparator {

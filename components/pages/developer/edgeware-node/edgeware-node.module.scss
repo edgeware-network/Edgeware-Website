@@ -10,7 +10,7 @@
   @include media-breakpoint-up(lg) {
     background: var(--bw-white) url('/images/developer/node.png') 90% 50% no-repeat;
     background-size: 33%;
-    padding: var(--spacing-xl);
+    padding: var(--spacing-xxl) var(--spacing-xl);
     flex-direction: row;
   }
 }

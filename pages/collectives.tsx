@@ -52,7 +52,7 @@ const COLLECTIVES: CollectiveCardProps[] = [
     imageSrc: '/images/collectives/nft-strategy-group.jpg',
     title: 'NFT Strategy Group',
     description:
-      'The EAC works with artists and art industry actors across mediums of visual, music, NFT and more to ensure that Artists and the Arts are a healthy and innovative sector of Edgeware, and seeks to solve problems with the sustainability, production and consumption of art works.',
+      'This working group works with artists and art industry actors across mediums of visual, music, NFT and more to ensure that Artists and the Arts are a healthy and innovative sector of Edgeware, and seeks to solve problems with the sustainability, production and consumption of art works.',
     members: '+40',
     href: 'https://t.me/EdgewareNFTs',
   },
@@ -76,7 +76,7 @@ const COLLECTIVES: CollectiveCardProps[] = [
     imageSrc: '/images/collectives/edg-games.jpg',
     title: 'EDG Games',
     description:
-      'Develops, designs, and experiments with games and game theory while working to promote an infrastructure for game designers and users within Edgeware.',
+      'Dedicated to cutting-edge technology but also having a good time, the Gaming Working Group is for discussing all things cryptographic and how they might be used in building games of the future.',
     members: '+10',
     href: 'https://t.me/edgewaregamesWG',
   },

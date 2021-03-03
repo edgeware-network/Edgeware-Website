@@ -23,7 +23,7 @@ export const FooterForm: React.FC = () => {
             className={styles.input}
             name="EMAIL"
             type="email"
-            placeholder="youremail@domain.com"
+            placeholder="email@domain.com"
             required
           />
           <div className={styles.honeypot} aria-hidden="true">

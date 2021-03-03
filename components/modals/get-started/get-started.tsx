@@ -31,14 +31,14 @@ export const GetStartedModal: React.FC<GetStartedModalProps> = ({ isOpen, onClos
         <div className={styles.container}>
           <div className={styles.content}>
             <AnimatePresence>
-              <AnimatedCardsList />
+              <AnimatedCardsList onButtonClick={onClose} />
             </AnimatePresence>
           </div>
-          <button className={styles.buttonClose} onClick={onClose}>
-            Close
-            <Icon component={IconClose} />
-          </button>
         </div>
+        <button className={styles.buttonClose} onClick={onClose}>
+          Close
+          <Icon component={IconClose} />
+        </button>
       </div>
       <div className={styles.backdrop}></div>
     </>,
@@ -46,7 +46,12 @@ export const GetStartedModal: React.FC<GetStartedModalProps> = ({ isOpen, onClos
   );
 };
 
-export const AnimatedCardsList: React.FC = () => {
+interface AnimatedCardsListProps {
+  onButtonClick: () => void
+}
+
+
+export const AnimatedCardsList: React.FC<AnimatedCardsListProps> = ({onButtonClick}) => {
   const list = {
     hidden: {
       opacity: 1,
@@ -76,15 +81,18 @@ export const AnimatedCardsList: React.FC = () => {
           headline="Join the Conversation"
           text="Start talking to all of the groups and participate in the ecosystem"
           buttonText="Join Discord"
+          buttonHref="https://discord.com/invite/bDktqyj"
           iconComponent={IconDiscord}
         />
       </motion.div>
       <motion.div className={styles.cardItem} variants={item} initial="hidden">
         <ActionCard
-          headline="Browse Collectives  "
+          headline="Browse Collectives"
           text="See all open collectives and join them or start you own"
           buttonText="See Collectives"
+          buttonHref="/collectives"
           iconComponent={IconBubbles}
+          onButtonClick={onButtonClick}
         />
       </motion.div>
       <motion.div className={styles.cardItem} variants={item} initial="hidden">
@@ -92,6 +100,7 @@ export const AnimatedCardsList: React.FC = () => {
           headline="Start Developing"
           text="Access our documentation to start developing on Edgeware"
           buttonText="Read the docs"
+          buttonHref="https://docs.edgewa.re/"
           iconComponent={IconCode}
         />
       </motion.div>

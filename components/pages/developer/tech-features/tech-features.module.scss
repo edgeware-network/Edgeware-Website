@@ -2,7 +2,7 @@
 
 .list {
   margin: 0;
-  border-radius: 0.875rem;
+  border-radius: var(--br-s);
   border: solid 1px var(--grey-800);
   background-color: var(--grey-900);
 
@@ -36,5 +36,7 @@
 
   &:last-child {
     border: none;
+    margin: 0;
+    padding-bottom: 0;
   }
 }
