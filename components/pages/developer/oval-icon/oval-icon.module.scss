@@ -1,14 +1,14 @@
 .oval {
-  width: 96px;
-  height: 96px;
-  border-radius: 96px;
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
   display: inline-block;
   background: #fff;
-  margin: 0 0 1rem 0;
+  margin: 0 0 var(--spacing-m) 0;
 
   svg {
     fill: var(--primary-500);
     position: relative;
-    top: 32px;
+    top: 26px;
   }
 }

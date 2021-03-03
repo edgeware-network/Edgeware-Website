@@ -4,7 +4,8 @@
   border: 1px solid var(--grey-800);
   border-radius: var(--br-l);
   padding: var(--spacing-m);
-  background: var(--grey-900)
+  background: var(--grey-900);
+  height: 100%;
 
   svg {
     width: 24px;
@@ -62,10 +63,10 @@
 
   @include media-breakpoint-up(md) {
     margin: 0 var(--spacing-m);
-    flex: 1 1 auto;
+    flex: 1 1 0;
   }
 
   @include media-breakpoint-up(xl) {
-    flex: 1 1 auto;
+    flex: 1 1 0;
   }
 }

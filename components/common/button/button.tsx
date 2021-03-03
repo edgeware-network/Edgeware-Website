@@ -37,6 +37,7 @@ export const Button: React.FC<ButtonProps> = ({
       } else if (href) {
         event.preventDefault();
         router.push(href);
+        onClick && onClick();
       } else {
         onClick();
       }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>mission-arrow</title>
+    <g id="Site" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Edgeware-V2---Mission-(Desktop)" transform="translate(-681.000000, -2436.000000)">
+            <g id="mission-arrow" transform="translate(681.000000, 2436.000000)">
+                <circle id="Oval-Copy" fill="#1E1E1E" cx="40" cy="40" r="40"></circle>
+                <ellipse id="Oval-Copy-6" stroke="#383838" stroke-width="2" cx="40" cy="40" rx="30" ry="31"></ellipse>
+                <g id="Group-2-Copy-2" transform="translate(24.000000, 24.000000)" fill="#D42B69" stroke="#292929" stroke-width="4">
+                    <circle id="Oval" cx="16" cy="16" r="18"></circle>
+                </g>
+                <g id="arrow-down-s-line" transform="translate(28.000000, 28.333333)">
+                    <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                    <polygon id="Path" fill="#292929" points="12 13.172 16.95 8.222 18.364 9.636 12 16 5.636 9.636 7.05 8.222"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

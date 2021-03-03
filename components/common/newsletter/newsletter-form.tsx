@@ -19,7 +19,7 @@ export const NewsletterForm: React.FC = () => {
               className={styles.input}
               type="email"
               name="EMAIL"
-              placeholder="youremail@domain.com"
+              placeholder="email@domain.com"
               required
             />
           </label>

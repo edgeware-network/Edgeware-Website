@@ -9,11 +9,12 @@ export interface IActionCardProps {
   headline: string;
   text: string;
   buttonText: string;
+  buttonHref: string;
   onButtonClick?: () => void;
 }
 
 export function ActionCard(props: IActionCardProps) {
-  const { iconComponent, headline, text, buttonText, onButtonClick } = props;
+  const { iconComponent, headline, text, buttonText, buttonHref, onButtonClick } = props;
 
   return (
     <div className={styles.card}>
@@ -23,7 +24,7 @@ export function ActionCard(props: IActionCardProps) {
         <p className={styles.text}>{text}</p>
       </div>
       <div className={styles.button}>
-        <Button onClick={onButtonClick} fullWidth>
+        <Button href={buttonHref} fullWidth onClick={onButtonClick}>
           {buttonText}
         </Button>
       </div>

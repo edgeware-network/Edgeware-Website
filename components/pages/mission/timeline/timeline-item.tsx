@@ -3,6 +3,9 @@ import * as React from 'react';
 import IconCheckmark from 'remixicon/icons/System/check-line.svg';
 import IconArrow from 'remixicon/icons/System/arrow-down-s-line.svg';
 
+import IconDone from '../../../../public/images/mission/mission-done.svg';
+import IconTodo from '../../../../public/images/mission/mission-todo.svg';
+
 import { Icon } from '../../../common/icon/icon';
 
 import styles from './timeline.module.scss';
@@ -18,13 +21,13 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({ name, date, children
     <>
       <span className={styles.timelineItemSymbol}>
         {isDone && (
-          <span className={styles.iconCheckmark}>
-            <Icon component={IconCheckmark} />
+          <span className={styles.icon}>
+            <IconDone />
           </span>
         )}
         {!isDone && (
-          <span className={styles.iconTodo}>
-            <Icon component={IconArrow} />
+          <span className={styles.icon}>
+            <IconTodo />
           </span>
         )}
       </span>

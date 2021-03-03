@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { Section } from '../components/common/section/section';
 
 import { SimpleText } from '../components/common/simple-text/simple-text';
 
 export default function Privacy() {
   return (
-    <>
+    <Section id="privacy-policy" width="normal">
       <SimpleText>
         <h1>Privacy Policy</h1>
         <p>Last updated: January 20, 2021</p>
@@ -1342,7 +1343,7 @@ export default function Privacy() {
           </li>
         </ul>
       </SimpleText>
-    </>
+    </Section>
   );
 }
 
