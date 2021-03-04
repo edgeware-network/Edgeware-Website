@@ -22,7 +22,7 @@ export const TweetCard: React.FC<TweetCardProps> = ({ name, handle, text, date, 
   return (
     <div className={styles.card}>
       <div className={styles.header}>
-        <img src={avatar} className={styles.avatar} alt={name} />
+        <img src={avatar} className={styles.avatar} alt={name} loading="lazy" />
         <strong className={styles.name}>{name}</strong>
         <span className={styles.handle}>
           <a href={url} className="link" onClick={onLinkClick}>

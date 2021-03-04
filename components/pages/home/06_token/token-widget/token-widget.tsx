@@ -49,7 +49,7 @@ export const TokenWidget: React.FC = () => {
       </div>
       <div className={styles.tokenInfo}>
         <span className={styles.coingeckoLogo}>
-          <img src="/images/home/token/coingecko-logo.png" alt="CoinGecko" />
+          <img src="/images/home/token/coingecko-logo.png" alt="CoinGecko" loading="lazy"/>
         </span>
         Live prices from CoinGecko
       </div>

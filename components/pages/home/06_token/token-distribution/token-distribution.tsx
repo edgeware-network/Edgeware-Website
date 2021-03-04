@@ -13,20 +13,22 @@ export const TokenDistribution: React.FC = ({ children }) => {
         <div className="col-12 col-md-8">
           <div className={styles.tokenDistribution}>
             <span className={styles.tokenDistributionBig}>
-              <Image
+              <img
                 src="/images/home/token/edg-distribution-chart-desktop.png"
                 width="1492"
                 height=" 614"
-                quality="100"
+                loading="lazy"
+                // quality="100"
               />
             </span>
             <span className={styles.tokenDistributionSmall}>
-              <Image
+              <img
                 src="/images/home/token/edg-distribution-chart-mobile.png"
                 width="320"
                 height="539"
-                quality="100"
-                layout="fixed"
+                loading="lazy"
+                // quality="100"
+                // layout="fixed"
               />
             </span>
           </div>

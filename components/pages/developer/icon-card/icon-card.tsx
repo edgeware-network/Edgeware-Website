@@ -10,7 +10,7 @@ interface IconCardProps {
 export const IconCard: React.FC<IconCardProps> = ({ headline, children, iconSrc }) => {
   return (
     <div className={styles.card}>
-      <img src={iconSrc} alt={headline} className={styles.icon} />
+      <img src={iconSrc} alt={headline} className={styles.icon} loading="lazy" />
       <strong className={styles.headline}>{headline}</strong>
       <p className={styles.text}>{children}</p>
     </div>

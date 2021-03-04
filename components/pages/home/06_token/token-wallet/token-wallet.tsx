@@ -14,21 +14,23 @@ export const TokenWallet: React.FC<TokenWalletProps> = ({ headline }) => {
 
       <div className={styles.walletLinks}>
         <a href="https://polkadot.js.org/apps/" className={styles.walletLink}>
-          <Image
+          <img
             src="/images/home/token/logo-polkadot.png"
-            layout="fixed"
+            // layout="fixed"
             width="40"
             height="55"
             alt="Polkadot{.js}"
+            loading="lazy"
           />
         </a>
         <a href="https://mathwallet.org/en-us/" className={styles.walletLink}>
-          <Image
+          <img
             src="/images/home/token/logo-mathwallet.png"
-            layout="fixed"
+            // layout="fixed"
             width="96"
             height="53"
             alt="Math Wallet"
+            loading="lazy"
           />
         </a>
       </div>
