@@ -79,13 +79,14 @@ const MobileBackground: React.FC<{ section: 'top' | 'bottom' }> = ({ section }) 
   return (
     <div className={bg.className}>
       <div className={styles.backgroundMobileInner} style={{ left: val }}>
-        <Image
+        <img
           src={bg.image.src}
-          alt=""
-          layout="fixed"
+          alt="Edgeware Collectives"
+          loading="lazy"
+          // layout="fixed"
           width={bg.image.width}
           height={bg.image.height}
-          quality={100}
+          // quality={100}
         />
       </div>
     </div>
@@ -104,14 +105,14 @@ const DesktopBackground: React.FC = () => {
   return (
     <div className={styles.background}>
       <div className={styles.backgroundInner} style={{ left: val }}>
-        <Image
+        <img
           src="/images/home/collectives-desktop.png"
-          alt=""
-          layout="fixed"
+          alt="Edgeware Collectives"
+          // layout="fixed"
           width="1732"
           loading="eager"
           height="1479"
-          quality={100}
+          // quality={100}
         />
       </div>
     </div>

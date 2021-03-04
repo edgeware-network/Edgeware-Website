@@ -57,9 +57,10 @@ export default function Developer() {
           <div className="row">
             <div className="col-lg">
               <div className="px-md-5 mx-md-1">
-                <Image
+                <img
                   src="/images/developer/code-s-slash-large.png"
-                  layout="responsive"
+                  // layout="responsive"
+                  loading="lazy"
                   width="474"
                   height="472"
                 />
