@@ -22,7 +22,7 @@ export const BrandAsset: React.FC<BrandAssetProps> = ({ type, name, color }) => 
           styles[`assetImage-${type}`]
         )}
       >
-        <img src={logoPath(type, color, 'svg')} alt={`Logo asset ${name}`} />
+        <img src={logoPath(type, color, 'svg')} alt={`Logo asset ${name}`} loading="lazy" />
       </div>
       <div className={styles.assetMeta}>
         <span className={styles.assetName}>{name}</span>

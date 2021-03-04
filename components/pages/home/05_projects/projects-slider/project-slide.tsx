@@ -30,7 +30,7 @@ export const ProjectSlide: React.FC<ProjectSlideProps> = (props) => {
         <Button>Visit Project</Button>
       </div>
       <div className={styles.slideImage}>
-        <img src={imageUrl} alt={headline} />
+        <img src={imageUrl} alt={headline} loading="lazy" />
       </div>
     </div>
   );

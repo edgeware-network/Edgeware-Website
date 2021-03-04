@@ -15,6 +15,10 @@
   @include media-breakpoint-up(lg) {
     margin: var(--spacing-xl) 0;
   }
+
+  img {
+    width: 100%;
+  }
 }
 
 .tokenDistributionBig {

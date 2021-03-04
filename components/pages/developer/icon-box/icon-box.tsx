@@ -31,10 +31,11 @@ export const IconBox: React.FC<IconBoxProps> = (props) => {
       {iconComponent && <Icon component={iconComponent} />}
       {imageUrl && (
         <span className={styles.image}>
-          <Image
+          <img
             src={imageUrl}
             alt={headline}
-            layout="fixed"
+            loading="lazy"
+            // layout="fixed"
             width={imageWidth}
             height={imageHeight}
           />

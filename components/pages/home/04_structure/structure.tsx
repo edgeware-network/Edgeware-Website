@@ -91,20 +91,22 @@ const StructureChart: React.FC<{ inView: boolean }> = ({ inView }) => {
       className={styles.treasuryModel}
     >
       <div className={styles.treasuryModelSimple}>
-        <Image
+        <img
           src="/images/home/treasury-simple.png"
           width="1134"
           height="1094"
-          quality="100"
+          loading="lazy"
+          // quality="100"
           alt="Edgeware organization simple model"
         />
       </div>
       <div className={styles.treasuryModelFull}>
-        <Image
+        <img
           src="/images/home/treasury-full.png"
           width="1134"
           height="1094"
-          quality="100"
+          loading="lazy"
+          // quality="100"
           alt="Edgeware organization full model"
         />
       </div>
