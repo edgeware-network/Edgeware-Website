@@ -1,7 +1,7 @@
 @import '../../../styles/custom.scss';
 
 .headlineSection {
-  padding: 1rem 0;
+  padding: var(-spacing-s) 0;
   display: flex;
   flex-direction: column;
 
@@ -12,7 +12,6 @@
 
   p {
     max-width: 720px;
-    margin: 1rem;
   }
 }
 
