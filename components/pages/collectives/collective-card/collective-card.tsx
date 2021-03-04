@@ -30,7 +30,7 @@ export const CollectiveCard: React.FC<CollectiveCardProps> = (props) => {
   return (
     <div className={cn(styles.card, { [`${styles.cardPromo}`]: promo })}>
       <div className={styles.image}>
-        {promo ? <PromoImage /> : <img src={imageSrc} alt={title} />}
+        {promo ? <PromoImage /> : <img src={imageSrc} alt={title} loading="lazy" />}
       </div>
       <div className={styles.body}>
         <strong className={styles.title}>{title}</strong>
