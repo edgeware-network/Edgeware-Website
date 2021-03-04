@@ -23,7 +23,7 @@ export const Timeline: React.FC<TimelineProps> = ({ children, upcoming = false }
           </TimelineItem>
         </li>
         <li className={cn(styles.timelineItem, styles.timelineItemLeft)}>
-          <TimelineItem name="Lockdrop" date="June 2020" isDone>
+          <TimelineItem name="Lockdrop" date="June 2019" isDone>
             Commonwealth Labs deploys the master lockdrop contract to the Ethereum network, allowing
             ETH holders to time lock their ETH in instances of locking contracts, serving as their
             ticket to the EDG world. The process scores longer and larger locks as more committed,
