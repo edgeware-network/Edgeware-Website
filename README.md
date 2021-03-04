@@ -1,10 +1,19 @@
-# Edgeware Website
+# Edgeware
 
-Official Edgeware website developed with [Next.js](https://nextjs.org/)
+[Edgeware](https://edgewa.re/) is a smart contract chain with a community managed treasury,
+decentralised proposal system and network of DAOs.
 
+Edgeware is launched by [Commonwealth Labs](https://commonwealth.im/)
+and built on [Parity Substrate](https://www.parity.io/substrate/).
+We're grateful for the support of many friends, advisors, and community
+members.
+
+## Contributing
+
+TBD
 ## Development
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Edgeware website is built with [Next.js](https://nextjs.org/)
 
 ## Local development
 
