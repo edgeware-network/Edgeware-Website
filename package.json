@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "export": "next build && next export",
+    "deploy": "gh-pages -d out",
     "lint": "eslint ./ --ext .ts,.tsx",
     "lint:fix": "npm run lint -- --fix"
   },
@@ -16,6 +17,7 @@
     "bootstrap": "^5.0.0-beta1",
     "classnames": "^2.2.6",
     "framer-motion": "^3.2.2-rc.1",
+    "gh-pages": "^3.1.0",
     "next": "10.0.5",
     "next-svgr": "^0.0.2",
     "particles.js": "^2.0.0",
