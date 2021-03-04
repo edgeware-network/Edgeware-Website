@@ -22,28 +22,26 @@ export default function Press() {
           Want to keep up to date with all our collectives and wonderings. <br />
           Follow us on Twitter and engage with us.
         </P>
+        <CTAButton arrow="none" href="https://twitter.com/HeyEdgeware" style="normal">
+          Follow us on Twitter
+        </CTAButton>
       </Intro>
 
-      <Section id="twitter" width="fluid">
+      {/* <Section id="twitter" width="fluid">
         <Mentions />
-
-        <div className="text-center">
-          <CTAButton arrow="none" href="https://twitter.com/HeyEdgeware" style="normal">
-            Follow us on Twitter
-          </CTAButton>
-        </div>
-      </Section>
+      </Section> */}
 
       <Intro bottomGap={false}>
         <H2>Brand Assets</H2>
         <P>
-          The Edgeware logo displayed in the official colors and usage patterns. Do not place the
-          logo on top of other objects and leave a reasonable amount of margin around the outside so
-          the logo is clearly visible.
+          The Edgeware logo displayed in the official colors and usage patterns.<br/>
+          Do not place the
+          logo on top of other objects and leave a reasonable amount of margin <br/>
+          around the outside so the logo is clearly visible.
         </P>
       </Intro>
 
-      <Section id="brand-assets" width="normal">
+      <Section id="brand-assets" width="narrow">
         <div className="py-4">
           <BrandAssetList>
             <BrandAsset name="Logo White" type="logo" color="white" />
@@ -59,10 +57,10 @@ export default function Press() {
 
           <div className="text-center">
             <CTAButton
-              arrow="down"
+              arrow="none"
               href="/assets/press/edg-brand-assets.zip"
               download
-              style="normal"
+              style="large"
             >
               Download Brand Assets
             </CTAButton>
@@ -70,7 +68,7 @@ export default function Press() {
         </div>
       </Section>
 
-      <Section id="press-enquiries" width="narrow">
+      <Section id="press-enquiries" width="narrow" gap="none">
         <div className="text-center py-5">
           <H2 size="2">Press Enquiries</H2>
           <P>

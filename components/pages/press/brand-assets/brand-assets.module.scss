@@ -1,16 +1,17 @@
 @import '../../../../styles/custom.scss';
 
 .assetList {
-  width: 100%;
+  max-width: 360px;
   display: flex;
-  margin: var(--spacing-m) 0;
+  margin: var(--spacing-m) auto;
   padding: 0;
   list-style: none;
-
   flex-direction: column;
 
   @include media-breakpoint-up(lg) {
-    margin: var(--spacing-m) calc(-1 * var(--spacing-m));
+    max-width: inherit;
+    width: 100%;
+    margin: var(--spacing-m) 0;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -18,9 +19,12 @@
 
 .assetListItem {
   margin: var(--spacing-m) var(--spacing-xs) 0 var(--spacing-xs);
+  min-width: 278px;
+  max-width: 480px;
 
   @include media-breakpoint-up(lg) {
-    flex: 1 1 calc(33% - 2 * var(--spacing-m));
+    flex: 1 1 0;
+    max-width: initial;
   }
 
 }
@@ -33,17 +37,21 @@
   border-radius: var(--br-m);
   border: solid 1px var(--grey-800);
   background-color: var(--grey-900);
-  padding: var(--spacing-l) 0;
+  padding: 0;
   text-align: center;
 
-  @include media-breakpoint-up(lg) {
-    padding: var(--spacing-xl) 0;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
 
+  @include media-breakpoint-up(lg) {
+    padding: var(--spacing-m) 0;
   }
 
   img {
     max-width: 100%;
-    max-height: 150px;
   }
 }
 
@@ -53,7 +61,13 @@
 
 .assetImage-logo {
   img {
-    height: 96px;
+    height: 72px;
+  }
+}
+
+.assetImage-logomark {
+  img {
+    height: 64px;
   }
 }
 

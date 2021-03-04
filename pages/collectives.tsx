@@ -89,12 +89,19 @@ const COLLECTIVES: CollectiveCardProps[] = [
     href: 'https://t.me/EDGuniWG',
   },
   {
-    title: 'Start your own',
-    description:
-      'Contact @thom_ivy on Telegram, and he will work with you to create a discussion forum on Commonwealth.im, open a chat channel on your preferred platform, and help organize and communicate your new community to all of Edgeware.',
-    promo: true,
-    href: 'https://t.me/thom_ivy',
+    imageSrc: '/images/collectives/zk-wg.jpg',
+    title: 'ZK Working Group',
+    description: 'The ZK Working Group is interested in advancing zero-knowledge and privacy primitives for Edgeware and for the Substrate ecosystem for a variety of applications such as bridges, DeFi, identity, and governance. The group\'s core focus is on identifying research that can be used in novel ways in the ecosystem.',
+    members: '+20',
+    href: 'https://t.me/zkedge',
   },
+  // {
+  //   title: 'Start your own',
+  //   description:
+  //     'Contact @thom_ivy on Telegram, and he will work with you to create a discussion forum on Commonwealth.im, open a chat channel on your preferred platform, and help organize and communicate your new community to all of Edgeware.',
+  //   promo: true,
+  //   href: 'https://t.me/thom_ivy',
+  // },
 ];
 
 export default function Collectives() {
