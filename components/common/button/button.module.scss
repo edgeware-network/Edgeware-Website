@@ -49,6 +49,12 @@
   &:active {
     background: var(--grey-400);
   }
+
+  svg {
+    fill: var(--grey-900);
+    margin-left: var(--spacing-xs);
+    margin-top: -5px;
+  }
 }
 
 .buttonBlack {
@@ -88,7 +94,6 @@
   display: block;
   width: 100%;
 }
-
 
 .CTAButton {
   display: inline-block;

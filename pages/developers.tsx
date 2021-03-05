@@ -7,6 +7,8 @@ import IconPrompt from 'remixicon/icons/Development/terminal-line.svg';
 import IconTerminal from 'remixicon/icons/Development/terminal-window-line.svg';
 import IconServer from 'remixicon/icons/Device/server-line.svg';
 
+import IconGithub from 'remixicon/icons/Logos/github-fill.svg'
+
 import { H1, H2, P } from '../components/common/typography/typography';
 import { IconCard } from '../components/pages/developer/icon-card/icon-card';
 import { IconCardList } from '../components/pages/developer/icon-card/icon-card-list';
@@ -23,6 +25,7 @@ import { MainPromo } from '../components/pages/developer/main-promo/main-promo';
 import { Section } from '../components/common/section/section';
 import { EdgewareNode } from '../components/pages/developer/edgeware-node/edgeware-node';
 import { CodeIcon } from '../components/pages/developer/code-icon/code-icon';
+import { Icon } from '../components/common/icon/icon';
 
 export default function Developer() {
   return (
@@ -193,8 +196,9 @@ export default function Developer() {
                       Jump straight into our developer tutorials and easy to follow documentation.
                     </P>
                     <br />
-                    <Button style="white" href="https://github.com/hicommonwealth">
+                    <Button style="white" href="https://github.com/Edgeware-Network">
                       Follow us on Github
+                      <Icon component={IconGithub} />
                     </Button>
                   </div>
                 </HeadlineSection>
