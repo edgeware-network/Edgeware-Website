@@ -1,3 +1,5 @@
 const withSvgr = require("next-svgr");
 
-module.exports = withSvgr({});
+module.exports = withSvgr({
+  generateBuildId: async () => 'current',
+});
