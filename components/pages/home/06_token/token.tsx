@@ -17,7 +17,7 @@ export const Token: React.FC = ({ children }) => {
             <div className="col-lg-6 order-2 order-lg-1">
               <div className={styles.textContent}>{children}</div>
             </div>
-            <div className="col-lg-4 offset-lg-2 order-1 order-lg-2">
+            <div className="col-lg-5 col-xl-4 offset-lg-1 offset-xl-2 order-1 order-lg-2">
               <TokenWidget />
             </div>
           </div>

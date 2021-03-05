@@ -22,6 +22,7 @@ import { OvalIcon } from '../components/pages/developer/oval-icon/oval-icon';
 import { MainPromo } from '../components/pages/developer/main-promo/main-promo';
 import { Section } from '../components/common/section/section';
 import { EdgewareNode } from '../components/pages/developer/edgeware-node/edgeware-node';
+import { CodeIcon } from '../components/pages/developer/code-icon/code-icon';
 
 export default function Developer() {
   return (
@@ -56,15 +57,7 @@ export default function Developer() {
         <div className="mb-5">
           <div className="row">
             <div className="col-lg">
-              <div className="px-md-5 mx-md-1">
-                <img
-                  src="/images/developer/code-s-slash-large.png"
-                  // layout="responsive"
-                  loading="lazy"
-                  width="474"
-                  height="472"
-                />
-              </div>
+              <CodeIcon />
             </div>
             <div className="col-lg text-center text-md-start">
               <div className="mt-md-3 p-md-5">

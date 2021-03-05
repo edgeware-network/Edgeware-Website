@@ -18,6 +18,7 @@
 
   img {
     width: 100%;
+    height: auto;
   }
 }
 
@@ -31,6 +32,11 @@
 
 .tokenDistributionSmall {
   display: block;
+
+  img {
+    width: 320px;
+    height: auto;
+  }
 
   @include media-breakpoint-up(lg) {
     display: none;

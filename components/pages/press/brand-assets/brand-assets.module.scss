@@ -18,7 +18,7 @@
 }
 
 .assetListItem {
-  margin: var(--spacing-m) var(--spacing-xs) 0 var(--spacing-xs);
+  margin: 0 var(--spacing-xs) var(--spacing-m) var(--spacing-xs);
   min-width: 278px;
   max-width: 480px;
 
@@ -52,6 +52,7 @@
 
   img {
     max-width: 100%;
+    height: auto;
   }
 }
 
