@@ -114,7 +114,7 @@ export default function Developer() {
           <HeadlineSection center>
             <H2 size="1">Get Started on Edgeware</H2>
             <P>
-              This is your launchpad to find what you need to integrate Edgware.
+              This is your launchpad to find what you need to integrate Edgeware.
               <br />
               Unsure of where to start?{' '}
               <Link href="https://t.me/edg_developers">Join the Developer Chat</Link>
