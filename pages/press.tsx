@@ -42,34 +42,32 @@ export default function Press() {
       </Intro>
 
       <Section id="brand-assets" width="narrow">
-        <div className="py-4">
-          <BrandAssetList>
-            <BrandAsset name="Logo White" type="logo" color="white" />
-            <BrandAsset name="Logo Dark Grey" type="logo" color="dark" />
-            <BrandAsset name="Logo Magenta" type="logo" color="magenta" />
-          </BrandAssetList>
+        <BrandAssetList>
+          <BrandAsset name="Logo White" type="logo" color="white" />
+          <BrandAsset name="Logo Dark Grey" type="logo" color="dark" />
+          <BrandAsset name="Logo Magenta" type="logo" color="magenta" />
+        </BrandAssetList>
 
-          <BrandAssetList>
-            <BrandAsset name="Logo Mark White" type="logomark" color="white" />
-            <BrandAsset name="Logo Mark Dark Grey" type="logomark" color="dark" />
-            <BrandAsset name="Logo Mark Magenta" type="logomark" color="magenta" />
-          </BrandAssetList>
+        <BrandAssetList>
+          <BrandAsset name="Logo Mark White" type="logomark" color="white" />
+          <BrandAsset name="Logo Mark Dark Grey" type="logomark" color="dark" />
+          <BrandAsset name="Logo Mark Magenta" type="logomark" color="magenta" />
+        </BrandAssetList>
 
-          <div className="text-center">
-            <CTAButton
-              arrow="none"
-              href="/assets/press/edg-brand-assets.zip"
-              download
-              style="large"
-            >
-              Download Brand Assets
-            </CTAButton>
-          </div>
+        <div className="text-center">
+          <CTAButton
+            arrow="none"
+            href="/assets/press/edg-brand-assets.zip"
+            download
+            style="large"
+          >
+            Download Brand Assets
+          </CTAButton>
         </div>
       </Section>
 
       <Section id="press-enquiries" width="narrow" gap="none">
-        <div className="text-center py-5">
+        <div className="text-center py-3 mb-5">
           <H2 size="2">Press Enquiries</H2>
           <P>
             For media inquiries, please contact{' '}

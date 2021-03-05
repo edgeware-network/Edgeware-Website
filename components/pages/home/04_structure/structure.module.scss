@@ -16,11 +16,11 @@
 .treasuryModel {
   position: relative;
   z-index: 1;
-  height: 380px;
+  height: auto;
   margin-bottom: var(--spacing-l);
 
   @include media-breakpoint-up(md) {
-    height: 720px;
+    height: 640px;
   }
 
   @include media-breakpoint-up(lg) {
@@ -69,6 +69,14 @@
 
   @include media-breakpoint-up(lg) {
     padding: var(--spacing-l);
+  }
+}
+
+.treasuryModelFull {
+  position: static;
+
+  @include media-breakpoint-up(md) {
+    position: absolute;
   }
 }
 
