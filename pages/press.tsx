@@ -1,13 +1,18 @@
 import * as React from 'react';
 
+import IconTwitter from 'remixicon/icons/Logos/twitter-fill.svg'
+
 import Image from 'next/image';
 import { H1, H2, P } from '../components/common/typography/typography';
 import { Mentions } from '../components/pages/home/08_mentions/mentions';
 import { Intro } from '../components/common/intro/intro';
 import { BrandAsset, BrandAssetList } from '../components/pages/press/brand-assets/brand-assets';
+import { Button } from '../components/common/button/button';
 import { CTAButton } from '../components/common/button/cta-button';
 import { Section } from '../components/common/section/section';
 import { Newsletter } from '../components/common/newsletter/newsletter';
+import { Icon } from '../components/common/icon/icon';
+
 
 export default function Press() {
   return (
@@ -22,9 +27,10 @@ export default function Press() {
           Want to keep up to date with all our collectives and wonderings. <br />
           Follow us on Twitter and engage with us.
         </P>
-        <CTAButton arrow="none" href="https://twitter.com/HeyEdgeware" style="normal">
+        <Button style="white" href="https://twitter.com/HeyEdgeware">
           Follow us on Twitter
-        </CTAButton>
+          <Icon component={IconTwitter} />
+        </Button>
       </Intro>
 
       {/* <Section id="twitter" width="fluid">
@@ -55,14 +61,13 @@ export default function Press() {
         </BrandAssetList>
 
         <div className="text-center">
-          <CTAButton
-            arrow="none"
+          <Button
             href="/assets/press/edg-brand-assets.zip"
             download
-            style="large"
+            style="white"
           >
             Download Brand Assets
-          </CTAButton>
+          </Button>
         </div>
       </Section>
 
@@ -71,9 +76,11 @@ export default function Press() {
           <H2 size="2">Press Enquiries</H2>
           <P>
             For media inquiries, please contact{' '}
-            <a href="mailto:press@edgewa.re" className="link">
-              press@edgewa.re
+            <a href="https://t.me/EdgewarePress" target="_blank" rel="noopener noreferrer" className="link">
+              @EdgewarePress
             </a>
+            {' '}
+            Telegram group.
           </P>
         </div>
       </Section>

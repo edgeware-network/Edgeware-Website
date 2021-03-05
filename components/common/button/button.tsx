@@ -9,6 +9,7 @@ interface ButtonProps {
   style?: 'primary' | 'secondary' | 'white' | 'black';
   fullWidth?: boolean;
   onClick?: () => void;
+  download?: boolean
   href?: string;
 }
 
