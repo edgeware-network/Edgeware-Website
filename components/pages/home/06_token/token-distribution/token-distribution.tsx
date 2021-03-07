@@ -18,6 +18,7 @@ export const TokenDistribution: React.FC = ({ children }) => {
                 width="1492"
                 height=" 614"
                 loading="lazy"
+                alt="EDG Token Distribution: Public Lockdrop: 90%, Commonwealth Labs: 4.5%, Parity: 3%, Strategic Advisors 2.5%"
                 // quality="100"
               />
             </span>
@@ -27,6 +28,7 @@ export const TokenDistribution: React.FC = ({ children }) => {
                 width="320"
                 height="539"
                 loading="lazy"
+                alt="EDG Token Distribution: Public Lockdrop: 90%, Commonwealth Labs: 4.5%, Parity: 3%, Strategic Advisors 2.5%"
                 // quality="100"
                 // layout="fixed"
               />

@@ -19,14 +19,11 @@ export default function Press() {
     <>
       <Intro>
         <H1 size="2">
-          For the latest news, follow
+          For the latest news follow
           <br />
-          <em>Edgeware</em> on Twitter
+          <em>@HeyEdgeware</em> on Twitter
         </H1>
-        <P>
-          Want to keep up to date with all our collectives and wonderings. <br />
-          Follow us on Twitter and engage with us.
-        </P>
+        <P>Want to keep up to date with all our collectives and wonderings?</P>
         <Button style="white" href="https://twitter.com/HeyEdgeware">
           Follow us on Twitter
           <Icon component={IconTwitter} />

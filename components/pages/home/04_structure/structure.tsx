@@ -24,7 +24,7 @@ export const Structure: React.FC = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-6 order-2 order-lg-1">
-            <H2 size="1">A crypto native organisational structure</H2>
+            <H2 size="1">A crypto-native organisational structure</H2>
             <P>
               Edgeware has one of the widest and fairest distributions in crypto, however the core
               challenge remains how best to connect, coordinate and accelerate the collective

@@ -35,7 +35,8 @@
 
 .headline {
   font-weight: var(--fw-semibold);
-  font-size: 1.25rem;
+  font-size: var(--fs-text-xl);
+  line-height: 1.5;
   letter-spacing: var(--ls-text--md);
   display: block;
   margin: 0 0 var(--spacing-xs) 0;
