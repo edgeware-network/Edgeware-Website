@@ -61,8 +61,8 @@
 
   position: absolute;
 
-  top: -50px;
-  left: calc(50% - 40px);
+  top: -45px;
+  left: calc(50% - 45px);
 
   @include media-breakpoint-up(lg) {
     left: auto;
