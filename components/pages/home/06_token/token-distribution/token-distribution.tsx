@@ -14,7 +14,7 @@ export const TokenDistribution: React.FC = ({ children }) => {
           <div className={styles.tokenDistribution}>
             <span className={styles.tokenDistributionBig}>
               <img
-                src="/images/home/token/edg-distribution-chart-desktop.png"
+                src="/images/home/token/edg-distribution-chart-desktop.png?v=2"
                 width="1492"
                 height=" 614"
                 loading="lazy"
@@ -24,7 +24,7 @@ export const TokenDistribution: React.FC = ({ children }) => {
             </span>
             <span className={styles.tokenDistributionSmall}>
               <img
-                src="/images/home/token/edg-distribution-chart-mobile.png"
+                src="/images/home/token/edg-distribution-chart-mobile.png?v=2"
                 width="320"
                 height="539"
                 loading="lazy"
