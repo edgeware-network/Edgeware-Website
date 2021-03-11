@@ -23,9 +23,9 @@ export const Features: React.FC = ({ children }) => {
             The best place to <em>work</em> in crypto.
           </H2>
           <P>
-            Building new things is hard. Crypto makes it even harder. Edgeware helps people more
-            easily connect, share skills and receive funding for new projects on Edgeware and
-            beyond.
+            Building new things is hard.
+            Edgeware helps people more easily connect,
+            share skills and receive funding for new projects on Edgeware and beyond.
           </P>
         </div>
 
@@ -56,13 +56,13 @@ export const Features: React.FC = ({ children }) => {
             <div className="col-lg-5">
               <div className="ps-lg-5">
                 <IconWithText headline="Build your reputation" iconComponent={IconOrg}>
-                  As you contribute you can develop reputation through a range of achievements that
+                  As you contribute you can develop a reputation through a range of achievements that
                   attribute value to your profile and signal your value to the community.
                 </IconWithText>
 
                 <IconWithText headline="Request funding from the treasury" iconComponent={IconBank}>
                   Utilise Edgeware’s community treasury to receive seed funding for your new Working
-                  Group or request larger amounts for a fully developed Project plan.
+                  Group or request larger amounts for a fully developed project plan.
                 </IconWithText>
 
                 <IconWithText

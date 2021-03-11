@@ -1,6 +1,6 @@
 # Edgeware
 
-[Edgeware](https://edgewa.re/) is a smart contract chain with a community managed treasury,
+[Edgeware](https://edgewa.re/) is a smart contract chain with a community-managed treasury,
 decentralised proposal system and network of DAOs.
 
 Edgeware is launched by [Commonwealth Labs](https://commonwealth.im/)

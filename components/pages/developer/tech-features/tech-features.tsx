@@ -33,10 +33,10 @@ export const TechFeatures: React.FC = () => {
 
       <dt className={styles.dt}>
         <Icon component={IconAsterisk} />
-        Palettes (Treasury, Identity)
+        Pallets (Treasury, Identity)
       </dt>
       <dd className={styles.dd}>
-        Edgeware has integrated various modular palettes providing every features one could ask for at every stage.
+        Edgeware has integrated various modular pallets providing every features one could ask for at every stage.
       </dd>
 
       <dt className={styles.dt}>

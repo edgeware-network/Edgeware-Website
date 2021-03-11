@@ -41,28 +41,28 @@ export default function Home() {
         <Intro>
           <H2 size="1">Your blockchain project starts here.</H2>
           <P>
-            <strong>Edgeware</strong> is a platform for the next generation of decentralized
-            applications, with a rich ecosystem of modules for advanced{' '}
-            <strong>cryptography, social identity, collective organization</strong>, and more.
+            <strong>Edgeware</strong> is a platform for the next generation of decentralised
+            applications with a rich ecosystem of modules for advanced{' '}
+            <strong>cryptography, social identity, collective organisation</strong>, and more.
           </P>
           <P>
-            Using <strong>Edgeware</strong>, developers can build more advanced applications, while
-            retaining the simplicity and flexibility of smart contracts. Ethereum developers can
-            deploy <strong>Solidity/EVM</strong> smart contracts with few or no changes, while new
-            developers can get started with <strong>Rust and WebAssembly</strong>.
+            On <strong>Edgeware</strong> developers can forgo managing their own chain
+            and focus on building more advanced applications using the simplicity and flexibility of smart contracts.
+            Ethereum developers can deploy <strong>Solidity/EVM</strong> smart contracts with few or no changes,
+            while new developers can get started with <strong>Rust and WebAssembly</strong>.
           </P>
           <P>
-            <strong>Builders and organizers</strong> can find a place in one of Edgeware’s many
-            collectives, <strong>funded by the on-chain treasury</strong> to expand the network and
+            <strong>Builders and organisers</strong> can find a place in one of Edgeware’s many
+            collectives <strong>funded by the on-chain treasury</strong> to expand the network and
             explore new ideas.
           </P>
           <P>
             The treasury and chain are governed by a fairly-launched,{' '}
-            <strong>widely-distributed set of stakeholders</strong>, established during the
+            <strong>widely-distributed set of stakeholders</strong> established during the
             lockdrop, one of the largest Ethereum token generation events in 2018.
           </P>
           <P>
-            <em>Governed by thousands. Owned by no-one. Open to all.</em>
+            <em>Governed by thousands, owned by no-one, open to all.</em>
           </P>
         </Intro>
       </Section>
@@ -76,7 +76,7 @@ export default function Home() {
           <P>
             Rather than attempting to coordinate a single community, Edgeware’s evolving
             organisational structure is designed to devolve power to small groups who become masters
-            of their own destiny, whilst still accountable to their peers.
+            of their destiny, whilst still accountable to their peers.
           </P>
           <P>
             Whether you are looking to develop an idea, a team looking to launch a project or an
@@ -92,13 +92,13 @@ export default function Home() {
         <div className="container">
           <HeaderAndTextList>
             <HeaderAndText headline="Chain Workers">
-              Focus on technical strategy, culture and operations and rely on stable funding.
+              Focuses on technical strategy, culture and operations and rely on stable funding.
             </HeaderAndText>
             <HeaderAndText headline="Working Groups">
-              Focus on emerging challenges and opportunities and rely on seed funding.
+            Focuses on emerging challenges, opportunities and and rely on seed funding.
             </HeaderAndText>
             <HeaderAndText headline="Project Teams">
-              Put forward proposals that are funded based on completion of agreed milestones.
+              Put forward proposals that are funded based on the completion of agreed milestones.
             </HeaderAndText>
             <HeaderAndText headline="Ecosystem DAOs">
               More ambitious entities that take larger grants and return value to the treasury.
@@ -114,7 +114,7 @@ export default function Home() {
             Funded Projects
           </H2>
           <P>
-            Edgeware is a community owned and operated platform funding
+            Edgeware is a community-owned and operated platform funding
             <br />
             ambitious project teams and the infrastructure to support them.
           </P>
@@ -134,13 +134,13 @@ export default function Home() {
             usefulness and awareness of the network.
           </P>
           <P>
-            The token has one of the widest distributions in crypto-currency, with over 15m unique
-            addresses receiving the token as part of the 2019 lockdrop.
+            The token has one of the widest distributions in cryptocurrencies.
+            Oer 15 million unique addresses received the token as part of the 2019 lockdrop.
           </P>
           <P>
-            This offers the project a huge advantage over many less well distributed projects, both
-            in terms of the breadth of its ownership, lack of outside influence and the scale of the
-            opportunity to increase its value.
+            This offers the project a huge advantage over many less well-distributed projects
+            in terms of the breadth of its ownership,
+            lack of outside influence and the scale of the opportunity to increase its value.
           </P>
           <P>The primary features of the EDG token and economic system:</P>
         </Token>
@@ -165,9 +165,9 @@ export async function getStaticProps() {
   return {
     props: {
       meta: {
-        title: 'Smart contract blockchain with a community managed treasury',
+        title: 'Smart contract blockchain with a community-managed treasury',
         description:
-          'Edgeware is a smart contract blockchain with a community managed treasury, decentralised proposal system and network of DAOs.',
+          'Edgeware is a smart contract blockchain with a community-managed treasury, decentralised proposal system and network of DAOs.',
       },
     },
   };

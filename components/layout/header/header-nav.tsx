@@ -72,7 +72,7 @@ export const NavItems: React.FC<NavItemsProps> = ({ style, onClick, onToggleModa
           Commonwealth.im
         </NavItem>
         <NavItem href="https://polkadot.js.org/apps/" onClick={onClick}>
-          Polkadot.js.org/app
+          Polkadot Apps
         </NavItem>
       </NavDropdown>
       <NavItem href="/developers" onClick={onClick}>
