@@ -45,12 +45,7 @@ export const Timeline: React.FC<TimelineProps> = () => {
         </li>
         <li className={cn(styles.timelineItem, styles.timelineItemRight)}>
           <TimelineItem name="Emerging Organisational Structures" date="October 2020" isDone>
-            With a healthy treasury supporting continued innovation, the core connection to
-            Commonwealth's evolving community governance interface and multi-signature wallets a
-            number or DAOs are emerging on Edgeware that focus on a range of areas. Funding and
-            responsibility are delegated to groups such as the Edgeware Agency (which delivered this
-            website) and the Builders Guild. A new generation of more ambitious Ecosystem DAOs are
-            also close to launch led by Decent Partners and BuilDAO.
+            With the help of a healthy treasury supporting continued innovation, a connection to Commonwealth's evolving community governance interface, alongside multi-signature wallets, a number of DAOs are emerging that focus on a range of areas. Funding and responsibility are delegated to groups such as the Edgeware Agency (which delivered this website) and the Builders Guild. A new generation of more ambitious Ecosystem DAOs are also close to launch led by Decent Partners and BuilDAO.
           </TimelineItem>
         </li>
 
