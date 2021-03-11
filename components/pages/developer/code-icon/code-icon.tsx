@@ -1,6 +1,6 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import styles from './code-icon.module.scss'
+import styles from './code-icon.module.scss';
 
 export const CodeIcon: React.FC = () => {
   return (
@@ -13,5 +13,5 @@ export const CodeIcon: React.FC = () => {
         height="472"
       />
     </div>
-  )
-}
+  );
+};

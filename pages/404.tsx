@@ -28,7 +28,7 @@ export async function getStaticProps() {
       meta: {
         title: 'Page not found',
         description:
-          'Edgeware is a smart contract blockchain with a community managed treasury, decentralised proposal system and network of DAOs.',
+          'Edgeware is a smart contract blockchain with a community-managed treasury, decentralised proposal system and network of DAOs.',
       },
       layout: {
         particles: true,

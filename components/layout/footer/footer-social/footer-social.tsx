@@ -8,7 +8,6 @@ import IconDiscord from 'remixicon/icons/Logos/discord-fill.svg';
 import IconGithub from 'remixicon/icons/Logos/github-fill.svg';
 
 import { Icon } from '../../../common/icon/icon';
-import { linkSync } from 'fs';
 
 const SOCIAL_LINKS = {
   Twitter: {

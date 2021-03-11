@@ -1,12 +1,7 @@
 import * as React from 'react';
 
-import IconCheckmark from 'remixicon/icons/System/check-line.svg';
-import IconArrow from 'remixicon/icons/System/arrow-down-s-line.svg';
-
 import IconDone from '../../../../public/images/mission/mission-done.svg';
 import IconTodo from '../../../../public/images/mission/mission-todo.svg';
-
-import { Icon } from '../../../common/icon/icon';
 
 import styles from './timeline.module.scss';
 

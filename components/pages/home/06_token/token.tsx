@@ -23,11 +23,11 @@ export const Token: React.FC = ({ children }) => {
           </div>
 
           <HeaderAndTextList>
-            <HeaderAndText headline="No ICO / No premine">
-              The lockdrop gave a wide distribution that makes it truly community owned.
+            <HeaderAndText headline="GAS">
+              EDG is used to pay for transaction fees and contract rental.
             </HeaderAndText>
             <HeaderAndText headline="Voting power">
-              Token holders can use their tokens to vote on decisions in the network
+              Token holders can use their tokens to vote on decisions in the network.
             </HeaderAndText>
             <HeaderAndText headline="Funding development">
               A proportion of EDG tokens are pooled into the projects native treasury.
@@ -40,8 +40,8 @@ export const Token: React.FC = ({ children }) => {
           <TokenDistribution>
             <H2>EDG Token Distribution</H2>
             <P>
-              Edgeware has one of the widest and fairest distributions in all of the crypto-currency
-              market.
+              Edgeware has one of the widest and fairest distributions in all of the
+              cryptocurrencies market.
             </P>
           </TokenDistribution>
         </div>

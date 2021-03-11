@@ -79,7 +79,7 @@ export const Footer: React.FC = () => {
           <p>© {new Date().getFullYear()} Edgeware built by the Commonwealth Community</p>
           <span className={styles.copyrightMinor}>
             Edgeware is a blockchain network focused on funding and promoting open collectives
-            through decentralized governance. This governance process is used to fund, manage, and
+            through decentralised governance. This governance process is used to fund, manage, and
             deploy improvements to the network, creating a self-improving system that coordinates
             and supports its own development.
           </span>
