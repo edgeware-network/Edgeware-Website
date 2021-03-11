@@ -23,8 +23,7 @@ export const Features: React.FC = () => {
             The best place to <em>work</em> in crypto.
           </H2>
           <P>
-            Building new things is hard. Edgeware helps people more easily connect, share skills and
-            receive funding for new projects on Edgeware and beyond.
+            Building new things is hard. Edgeware helps people more easily connect, share skills and receive funding for new projects as part of the existing ecosystem and beyond.
           </P>
         </div>
 
