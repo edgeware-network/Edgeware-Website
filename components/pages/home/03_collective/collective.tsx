@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Image from 'next/image';
 import IconBubbles from 'remixicon/icons/Business/bubble-chart-line.svg';
 
 import styles from './collective.module.scss';
@@ -74,7 +73,7 @@ const MobileBackground: React.FC<{ section: 'top' | 'bottom' }> = ({ section }) 
   React.useEffect(() => {
     const diff = (bg.image.width - width) / 2 + 10;
     setValue(diff > 0 ? -1 * diff : 0);
-  }, [width]);
+  }, [bg.image.width, width]);
 
   return (
     <div className={bg.className}>

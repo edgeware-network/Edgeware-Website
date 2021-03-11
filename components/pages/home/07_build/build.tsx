@@ -9,7 +9,7 @@ import SvgCompas from 'remixicon/icons/Map/compass-discover-line.svg';
 import styles from './build.module.scss';
 import { H2, P } from '../../../common/typography/typography';
 
-export const Build: React.FC = ({ children }) => {
+export const Build: React.FC = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>

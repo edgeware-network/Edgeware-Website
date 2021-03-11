@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Image from 'next/image';
 import { Button } from '../../../common/button/button';
 import { Icon } from '../../../common/icon/icon';
 

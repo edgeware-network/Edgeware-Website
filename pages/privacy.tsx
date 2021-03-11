@@ -394,7 +394,7 @@ export default function Privacy() {
           <li>
             <p>
               <strong>For business transfers:</strong> We may use Your information to evaluate or
-              conduct a merger, divestiture, restructuring, reorganization, dissolution, or other
+              conduct a merger, divestiture, restructuring, reorganisation, dissolution, or other
               sale or transfer of some or all of Our assets, whether as a going concern or as part
               of bankruptcy, liquidation, or similar proceeding, in which Personal Data held by Us
               about our Service users is among the assets transferred.
@@ -474,7 +474,7 @@ export default function Privacy() {
         <p>
           The Company will take all steps reasonably necessary to ensure that Your data is treated
           securely and in accordance with this Privacy Policy and no transfer of Your Personal Data
-          will take place to an organization or a country unless there are adequate controls in
+          will take place to an organisation or a country unless there are adequate controls in
           place including the security of Your data and other personal information.
         </p>
         <h2>Disclosure of Your Personal Data</h2>

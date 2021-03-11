@@ -1,20 +1,17 @@
 import * as React from 'react';
 
-import Image from 'next/image';
-
 import IconSlash from 'remixicon/icons/Development/code-s-slash-line.svg';
 import IconPrompt from 'remixicon/icons/Development/terminal-line.svg';
 import IconTerminal from 'remixicon/icons/Development/terminal-window-line.svg';
 import IconServer from 'remixicon/icons/Device/server-line.svg';
 
-import IconGithub from 'remixicon/icons/Logos/github-fill.svg'
+import IconGithub from 'remixicon/icons/Logos/github-fill.svg';
 
 import { H1, H2, P } from '../components/common/typography/typography';
 import { IconCard } from '../components/pages/developer/icon-card/icon-card';
 import { IconCardList } from '../components/pages/developer/icon-card/icon-card-list';
 import { Link } from '../components/common/link/link';
 import { HeadlineSection } from '../components/common/headline-section/headline-section';
-import { Newsletter } from '../components/common/newsletter/newsletter';
 import { TechFeatures } from '../components/pages/developer/tech-features/tech-features';
 import { IconBox } from '../components/pages/developer/icon-box/icon-box';
 import { IconBoxList } from '../components/pages/developer/icon-box/icon-box-list';
@@ -45,13 +42,16 @@ export default function Developer() {
 
         <IconCardList>
           <IconCard headline="Gaming" iconSrc="/images/developer/gaming.png">
-            Develop, design, and experiment with games and game theory while working to promote an infrastructure for game designers and users.
+            Develop, design, and experiment with games and game theory while working to promote an
+            infrastructure for game designers and users.
           </IconCard>
           <IconCard headline="DeFi" iconSrc="/images/developer/defi.png">
-            Edgeware aims to connect existing DeFi ecosystems and to facilitate the designing of next-gen cross-chain DeFi protocols through bridges and EVM+WASM compatibility.
+            Edgeware aims to connect existing DeFi ecosystems and to facilitate the designing of
+            next-gen cross-chain DeFi protocols through bridges and EVM+WASM compatibility.
           </IconCard>
           <IconCard headline="DAOs" iconSrc="/images/developer/dao.png">
-            Edgeware provides foundations for a network of DAOs that help coordinate and scale the contributions of the community.
+            Edgeware provides foundations for a network of DAOs that help coordinate and scale the
+            contributions of the community.
           </IconCard>
         </IconCardList>
       </Section>
@@ -86,17 +86,20 @@ export default function Developer() {
                 <H2 size="1">Technical features</H2>
                 <P secondary>
                   Edgeware is a smart contract blockchain that compiles to a client runtime, a blob
-                  of <strong>WebAssembly (Wasm)</strong> code that may be built and run natively or executed within a
-                  Wasm virtual machine. Either way, when an Edgeware native binary is compiled, it
-                  includes a Wasm virtual machine which can be used to execute later versions of the
-                  client runtime downloaded from the network.
+                  of <strong>WebAssembly (Wasm)</strong> code that may be built and run natively or
+                  executed within a Wasm virtual machine. Either way, when an Edgeware native binary
+                  is compiled, it includes a Wasm virtual machine which can be used to execute later
+                  versions of the client runtime downloaded from the network.
                 </P>
                 <P secondary>
                   The client runtime interfaces with networking code and other components provided
-                  by <strong>Parity Substrate</strong>. Substrate includes <strong>libp2p networking,
-                  PBFT consensus, proof-of-stake block validation and finality [substrate]</strong>.
-                  Ultimately, the client is only responsible for downloading, executing, and validating blocks from the
-                  network.
+                  by <strong>Parity Substrate</strong>. Substrate includes{' '}
+                  <strong>
+                    libp2p networking, PBFT consensus, proof-of-stake block validation and finality
+                    [substrate]
+                  </strong>
+                  . Ultimately, the client is only responsible for downloading, executing, and
+                  validating blocks from the network.
                 </P>
               </div>
             </div>
@@ -157,7 +160,8 @@ export default function Developer() {
             imageHeight="48"
             targetButton="https://mailchain.xyz/"
           >
-            Send and receive messages between blockchain addresses through a simple, email-like interface.
+            Send and receive messages between blockchain addresses through a simple, email-like
+            interface.
           </IconBox>
           <IconBox
             headline="Sublime Finance"
@@ -176,7 +180,8 @@ export default function Developer() {
             imageHeight="28"
             targetButton="https://dtrade.org/"
           >
-            Decentralised Synthetic Options &amp; Futures - derivatives trading powered by Substrate.
+            Decentralised Synthetic Options &amp; Futures - derivatives trading powered by
+            Substrate.
             <br />
             Community run.
           </IconBox>
