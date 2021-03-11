@@ -40,7 +40,8 @@ export const Token: React.FC = ({ children }) => {
           <TokenDistribution>
             <H2>EDG Token Distribution</H2>
             <P>
-              Edgeware has one of the widest and fairest distributions in all of the cryptocurrencies market.
+              Edgeware has one of the widest and fairest distributions in all of the
+              cryptocurrencies market.
             </P>
           </TokenDistribution>
         </div>

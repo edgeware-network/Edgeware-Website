@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import * as React from 'react';
 import { SvgBubbleBig, SvgBubbleMedium, SvgBubbleSmall } from '../../../common/bubbles/bubbles';
-import { useIntersection } from 'react-use';
 
 import styles from './intro.module.scss';
 

@@ -26,7 +26,7 @@ const PromoImage = () => (
 
 export const CollectiveCard: React.FC<CollectiveCardProps> = (props) => {
   const { imageSrc, title, description, members = '10+', promo = false, href } = props;
-  const hasAction = Boolean(href)
+  const hasAction = Boolean(href);
   return (
     <div className={cn(styles.card, { [`${styles.cardPromo}`]: promo })}>
       <div className={styles.image}>
@@ -43,9 +43,11 @@ export const CollectiveCard: React.FC<CollectiveCardProps> = (props) => {
             {members} Members
           </span>
         )}
-        {hasAction && <a href={href} className={styles.action} target="_blank" rel="noopener noreferrer">
-          {promo ? 'Start your own' : 'Join'}
-        </a>}
+        {hasAction && (
+          <a href={href} className={styles.action} target="_blank" rel="noopener noreferrer">
+            {promo ? 'Start your own' : 'Join'}
+          </a>
+        )}
       </div>
     </div>
   );

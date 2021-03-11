@@ -27,7 +27,8 @@ const COLLECTIVES: CollectiveCardProps[] = [
   {
     imageSrc: '/images/collectives/edgeware-proposals.jpg',
     title: 'Proposals',
-    description: 'Join Edgeware\'s Proposals channel to discuss, debate and develop proposals for the community to fund. Proposals cover chain upgrades, changes to core governance principles and a wide range of project plans by a wide range of teams.',
+    description:
+      "Join Edgeware's Proposals channel to discuss, debate and develop proposals for the community to fund. Proposals cover chain upgrades, changes to core governance principles and a wide range of project plans by a wide range of teams.",
     members: '+40',
     href: 'https://t.me/EdgewareGWG',
   },
@@ -82,14 +83,16 @@ const COLLECTIVES: CollectiveCardProps[] = [
   {
     imageSrc: '/images/collectives/edg-university.jpg',
     title: 'University',
-    description: 'The University group focuses on building bridges to academia and students via research grants and initiatives that can help unlock education around the power of Edgeware, blockchain technology in general and how applications can be created across different industries.',
+    description:
+      'The University group focuses on building bridges to academia and students via research grants and initiatives that can help unlock education around the power of Edgeware, blockchain technology in general and how applications can be created across different industries.',
     members: '+10',
     href: 'https://t.me/EDGuniWG',
   },
   {
     imageSrc: '/images/collectives/zk-wg.jpg',
     title: 'ZK Working Group',
-    description: 'The ZK Working Group is interested in advancing zero-knowledge and privacy primitives for Edgeware and for the Substrate ecosystem for a variety of applications such as bridges, DeFi, identity, and governance. The group\'s core focus is on identifying research that can be used in novel ways in the ecosystem.',
+    description:
+      "The ZK Working Group is interested in advancing zero-knowledge and privacy primitives for Edgeware and for the Substrate ecosystem for a variety of applications such as bridges, DeFi, identity, and governance. The group's core focus is on identifying research that can be used in novel ways in the ecosystem.",
     members: '+20',
     href: 'https://t.me/zkedge',
   },
@@ -127,7 +130,11 @@ export default function Collectives() {
           <IconLogo />
           <H2 size="2">Start your own collective</H2>
           <P style="lead">
-            In Edgeware, working groups function as mission-based development organisations that are composed of members who share interests, needs, and passions. Where an Ambassador team is largely formed to promote a network in a variety of ways, Working Groups are intended to solve issues specific to a community while also expanding the awareness and utility of the network.
+            In Edgeware, working groups function as mission-based development organisations that are
+            composed of members who share interests, needs, and passions. Where an Ambassador team
+            is largely formed to promote a network in a variety of ways, Working Groups are intended
+            to solve issues specific to a community while also expanding the awareness and utility
+            of the network.
           </P>
         </HeadlineSection>
 
@@ -153,7 +160,8 @@ export default function Collectives() {
               <IconAndText>
                 <Icon component={IconEarth} />
                 <p>
-                  Regional groups are designed to drive awareness of the network, research key areas of interest and solve problems within distinct geographical areas.
+                  Regional groups are designed to drive awareness of the network, research key areas
+                  of interest and solve problems within distinct geographical areas.
                 </p>
               </IconAndText>
             </div>
@@ -171,7 +179,8 @@ export default function Collectives() {
               <IconAndText>
                 <Icon component={IconCompass} />
                 <p>
-                  Utilise Commonwealth's open-source interface to organize your group, project or community initiative.
+                  Utilise Commonwealth's open-source interface to organize your group, project or
+                  community initiative.
                 </p>
               </IconAndText>
             </div>
