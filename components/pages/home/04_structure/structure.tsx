@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Image from 'next/image';
 
 import { SvgBubbleBig, SvgBubbleMedium, SvgBubbleSmall } from '../../../common/bubbles/bubbles';
 

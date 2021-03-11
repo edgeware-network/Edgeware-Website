@@ -47,11 +47,10 @@ export const GetStartedModal: React.FC<GetStartedModalProps> = ({ isOpen, onClos
 };
 
 interface AnimatedCardsListProps {
-  onButtonClick: () => void
+  onButtonClick: () => void;
 }
 
-
-export const AnimatedCardsList: React.FC<AnimatedCardsListProps> = ({onButtonClick}) => {
+export const AnimatedCardsList: React.FC<AnimatedCardsListProps> = ({ onButtonClick }) => {
   const list = {
     hidden: {
       opacity: 1,

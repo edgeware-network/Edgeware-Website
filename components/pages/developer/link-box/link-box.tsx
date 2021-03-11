@@ -5,15 +5,16 @@ import styles from './link-box.module.scss';
 
 const LINKS_GET_STARTED = {
   'Block Explorer': 'https://edgeware.subscan.io/',
-  'Wallet & Governance': 'https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fmainnet4.edgewa.re#/accounts',
-  'Forum & Proposals': 'https://commonwealth.im/edgeware'
-}
+  'Wallet & Governance':
+    'https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fmainnet4.edgewa.re#/accounts',
+  'Forum & Proposals': 'https://commonwealth.im/edgeware',
+};
 
 const LINKS_DEVELOP = {
-  'Docs': 'https://docs.edgewa.re/',
+  Docs: 'https://docs.edgewa.re/',
   'Smart Contracts Workshop': 'https://contracts.edgewa.re/#/',
-  'Developer Chat': 'https://t.me/edg_developers'
-}
+  'Developer Chat': 'https://t.me/edg_developers',
+};
 
 export const LinkBox: React.FC = () => {
   return (

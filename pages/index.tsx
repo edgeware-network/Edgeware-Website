@@ -46,10 +46,11 @@ export default function Home() {
             <strong>cryptography, social identity, collective organisation</strong>, and more.
           </P>
           <P>
-            On <strong>Edgeware</strong> developers can forgo managing their own chain
-            and focus on building more advanced applications using the simplicity and flexibility of smart contracts.
-            Ethereum developers can deploy <strong>Solidity/EVM</strong> smart contracts with few or no changes,
-            while new developers can get started with <strong>Rust and WebAssembly</strong>.
+            On <strong>Edgeware</strong> developers can forgo managing their own chain and focus on
+            building more advanced applications using the simplicity and flexibility of smart
+            contracts. Ethereum developers can deploy <strong>Solidity/EVM</strong> smart contracts
+            with few or no changes, while new developers can get started with{' '}
+            <strong>Rust and WebAssembly</strong>.
           </P>
           <P>
             <strong>Builders and organisers</strong> can find a place in one of Edgeware’s many
@@ -58,8 +59,8 @@ export default function Home() {
           </P>
           <P>
             The treasury and chain are governed by a fairly-launched,{' '}
-            <strong>widely-distributed set of stakeholders</strong> established during the
-            lockdrop, one of the largest Ethereum token generation events in 2018.
+            <strong>widely-distributed set of stakeholders</strong> established during the lockdrop,
+            one of the largest Ethereum token generation events in 2018.
           </P>
           <P>
             <em>Governed by thousands, owned by no-one, open to all.</em>
@@ -95,7 +96,7 @@ export default function Home() {
               Focuses on technical strategy, culture and operations and rely on stable funding.
             </HeaderAndText>
             <HeaderAndText headline="Working Groups">
-            Focuses on emerging challenges, opportunities and and rely on seed funding.
+              Focuses on emerging challenges, opportunities and and rely on seed funding.
             </HeaderAndText>
             <HeaderAndText headline="Project Teams">
               Put forward proposals that are funded based on the completion of agreed milestones.
@@ -134,13 +135,13 @@ export default function Home() {
             usefulness and awareness of the network.
           </P>
           <P>
-            The token has one of the widest distributions in cryptocurrencies.
-            Oer 15 million unique addresses received the token as part of the 2019 lockdrop.
+            The token has one of the widest distributions in cryptocurrencies. Oer 15 million unique
+            addresses received the token as part of the 2019 lockdrop.
           </P>
           <P>
-            This offers the project a huge advantage over many less well-distributed projects
-            in terms of the breadth of its ownership,
-            lack of outside influence and the scale of the opportunity to increase its value.
+            This offers the project a huge advantage over many less well-distributed projects in
+            terms of the breadth of its ownership, lack of outside influence and the scale of the
+            opportunity to increase its value.
           </P>
           <P>The primary features of the EDG token and economic system:</P>
         </Token>

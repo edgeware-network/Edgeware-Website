@@ -2,7 +2,6 @@ import * as React from 'react';
 
 import Icon404 from '../../../public/images/custom/404.svg';
 import Icon500 from '../../../public/images/custom/500.svg';
-import { Icon } from '../icon/icon';
 
 import styles from './error-icon.module.scss';
 

@@ -3,7 +3,6 @@ import cn from 'classnames';
 import { useQuery } from 'react-query';
 
 import TokenSvg from '../../../../../public/images/logo/edg-token.svg';
-import CoingGeckoSvg from '../../../../../public/images/home/token/coingecko-logo.svg';
 import styles from './token-widget.module.scss';
 
 const fetchToken = () => {
@@ -49,7 +48,7 @@ export const TokenWidget: React.FC = () => {
       </div>
       <div className={styles.tokenInfo}>
         <span className={styles.coingeckoLogo}>
-          <img src="/images/home/token/coingecko-logo.png" alt="CoinGecko" loading="lazy"/>
+          <img src="/images/home/token/coingecko-logo.png" alt="CoinGecko" loading="lazy" />
         </span>
         Live prices from CoinGecko
       </div>

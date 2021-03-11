@@ -9,7 +9,7 @@ interface ButtonProps {
   style?: 'primary' | 'secondary' | 'white' | 'black';
   fullWidth?: boolean;
   onClick?: () => void;
-  download?: boolean
+  download?: boolean;
   href?: string;
 }
 
@@ -43,7 +43,7 @@ export const Button: React.FC<ButtonProps> = ({
         onClick();
       }
     },
-    [href]
+    [href, onClick, router]
   );
 
   return (
