@@ -97,7 +97,7 @@ const StructureChart: React.FC<{ inView: boolean }> = ({ inView }) => {
           height="1094"
           loading="lazy"
           // quality="100"
-          alt="Edgeware organization simple model"
+          alt="Edgeware organisation simple model"
         />
       </div>
       <div className={styles.treasuryModelFull}>
@@ -107,7 +107,7 @@ const StructureChart: React.FC<{ inView: boolean }> = ({ inView }) => {
           height="1094"
           loading="lazy"
           // quality="100"
-          alt="Edgeware organization full model"
+          alt="Edgeware organisation full model"
         />
       </div>
     </motion.div>

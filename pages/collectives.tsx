@@ -25,8 +25,15 @@ import { Newsletter } from '../components/common/newsletter/newsletter';
 
 const COLLECTIVES: CollectiveCardProps[] = [
   {
+    imageSrc: '/images/collectives/edgeware-proposals.jpg',
+    title: 'Proposals',
+    description: 'Join Edgeware\'s Proposals channel to discuss, debate and develop proposals for the community to fund. Proposals cover chain upgrades, changes to core governance principles and a wide range of project plans by a wide range of teams.',
+    members: '+40',
+    href: 'https://t.me/EdgewareGWG',
+  },
+  {
     imageSrc: '/images/collectives/edgeware-agency.jpg',
-    title: 'Edgeware Agency',
+    title: 'The Agency',
     description:
       'Focuses on developing and exploring the brand, including visual, emotional, experiential values of Edgeware, evangelizing use cases, and developing assets to communicate the above.',
     members: '+80',
@@ -34,7 +41,7 @@ const COLLECTIVES: CollectiveCardProps[] = [
   },
   {
     imageSrc: '/images/collectives/builders.jpg',
-    title: 'Builders',
+    title: 'Builders Guild',
     description:
       'Works to create an ecosystem of support for developers and application builders in the network. Resources, Q/A, and discussion about technical advancement of the network are the usual activities.',
     members: '+90',
@@ -44,7 +51,7 @@ const COLLECTIVES: CollectiveCardProps[] = [
     imageSrc: '/images/collectives/dao-working-group.jpg',
     title: 'DAO Working Group',
     description:
-      'Works to enable a robust infrastructure and cutting-edge support for DAOs and organizational primitives within Edgeware: Legal bridging, budgeting tools, organizational structures, reputation and deployment of DAOs.',
+      'Works to enable a robust infrastructure and cutting-edge support for DAOs and organisational primitives within Edgeware: Legal bridging, budgeting tools, organisational structures, reputation and deployment of DAOs.',
     members: '20+',
     href: 'https://t.me/EDGDAOWG',
   },
@@ -57,24 +64,16 @@ const COLLECTIVES: CollectiveCardProps[] = [
     href: 'https://t.me/EdgewareNFTs',
   },
   {
-    imageSrc: '/images/collectives/edgeware-proposals.jpg',
-    title: 'Edgeware Proposals',
-    description:
-      'This WG leverages network connections and expertise to ensure that EDG tokens are inclusively accessible to all people, that liquidity of tokens is healthy and monitor the economic health of the network.',
-    members: '+40',
-    href: 'https://t.me/EdgewareGWG',
-  },
-  {
     imageSrc: '/images/collectives/edgeware-economics.jpg',
-    title: 'Edgeware Economics',
+    title: 'Economics',
     description:
-      'This working group draws community members from Edgeware, other blockchain projects and curisous people  to talk about market chatter, parachain economics, token price Qs, memes and moons.',
+      'This working group draws community members from Edgeware, other blockchain projects and curious people  to talk about market chatter, parachain economics, token price Qs, memes and moons.',
     members: '+400',
     href: 'https://t.me/edgewareeconomics',
   },
   {
     imageSrc: '/images/collectives/edg-games.jpg',
-    title: 'EDG Games',
+    title: 'Games',
     description:
       'Dedicated to cutting-edge technology but also having a good time, the Gaming Working Group is for discussing all things cryptographic and how they might be used in building games of the future.',
     members: '+10',
@@ -82,9 +81,8 @@ const COLLECTIVES: CollectiveCardProps[] = [
   },
   {
     imageSrc: '/images/collectives/edg-university.jpg',
-    title: 'EDG University',
-    description:
-      'This working group focuses on helping people understand the power of Edgeware and blockchain technology in general and how its applications can be used across different industries.',
+    title: 'University',
+    description: 'The University group focuses on building bridges to academia and students via research grants and initiatives that can help unlock education around the power of Edgeware, blockchain technology in general and how applications can be created across different industries.',
     members: '+10',
     href: 'https://t.me/EDGuniWG',
   },
@@ -98,7 +96,7 @@ const COLLECTIVES: CollectiveCardProps[] = [
   // {
   //   title: 'Start your own',
   //   description:
-  //     'Contact @thom_ivy on Telegram, and he will work with you to create a discussion forum on Commonwealth.im, open a chat channel on your preferred platform, and help organize and communicate your new community to all of Edgeware.',
+  //     'Contact @thom_ivy on Telegram, and he will work with you to create a discussion forum on Commonwealth.im, open a chat channel on your preferred platform, and help organise and communicate your new community to all of Edgeware.',
   //   promo: true,
   //   href: 'https://t.me/thom_ivy',
   // },
@@ -129,10 +127,7 @@ export default function Collectives() {
           <IconLogo />
           <H2 size="2">Start your own collective</H2>
           <P style="lead">
-            In Edgeware, working groups function as mission-based development orgs that are composed
-            of members who share interests, needs, and passions. Where an Ambassador team is largely
-            formed to promote a network in a variety of ways, Working Groups are intended to solve
-            issues specific to a community while also growing community.
+            In Edgeware, working groups function as mission-based development organisations that are composed of members who share interests, needs, and passions. Where an Ambassador team is largely formed to promote a network in a variety of ways, Working Groups are intended to solve issues specific to a community while also expanding the awareness and utility of the network.
           </P>
         </HeadlineSection>
 
@@ -158,8 +153,7 @@ export default function Collectives() {
               <IconAndText>
                 <Icon component={IconEarth} />
                 <p>
-                  Regional groups that serve to promote and use Edgeware and improve problems within
-                  certain geographical regions.
+                  Regional groups are designed to drive awareness of the network, research key areas of interest and solve problems within distinct geographical areas.
                 </p>
               </IconAndText>
             </div>
@@ -177,8 +171,7 @@ export default function Collectives() {
               <IconAndText>
                 <Icon component={IconCompass} />
                 <p>
-                  Gain and use a free forum that interfaces with your favorite chains to organize
-                  your group.
+                  Utilise Commonwealth's open-source interface to organize your group, project or community initiative.
                 </p>
               </IconAndText>
             </div>
@@ -197,7 +190,7 @@ export default function Collectives() {
             <div className="col-md">
               <IconAndText>
                 <Icon component={IconScale} />
-                <p>Organize your community into a political power within the network.</p>
+                <p>Organise your community into a political power within the network.</p>
               </IconAndText>
             </div>
             <div className="col-md">
