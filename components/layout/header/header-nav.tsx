@@ -81,6 +81,9 @@ export const NavItems: React.FC<NavItemsProps> = ({ style, onClick, onToggleModa
       <NavItem href="/mission" onClick={onClick} showArrow={false}>
         Mission
       </NavItem>
+      <NavItem href="https://blog.edgewa.re" onClick={onClick} showArrow={false}>
+        News
+      </NavItem>
       <NavButtonItem onClick={handleGetStartedClick}>Get Started</NavButtonItem>
     </nav>
   );

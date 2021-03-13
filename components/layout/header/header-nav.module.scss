@@ -27,7 +27,7 @@
 }
 
 .navItem {
-  margin: 0 0.25rem;
+  margin: 0;
   color: var(--bw-white);
   position: relative;
   padding: var(--spacing-xs) var(--spacing-m);
@@ -35,7 +35,11 @@
   outline: none;
 
   @include media-breakpoint-up(lg) {
-    padding: var(--spacing-xs) var(--spacing-m);
+    margin: 0 var(--spacing-s);
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: var(--spacing-xs) var(--spacing-xs);
   }
 
   svg {
@@ -55,6 +59,7 @@
 .navItemSpecial:link,
 .navItemSpecial:visited {
   margin: 0 0.5rem 0 1.5rem;
+  padding: var(--spacing-xs) var(--spacing-m);
   background: var(--grey-800);
   border-radius: var(--br-m);
   text-decoration: none;
