@@ -42,13 +42,10 @@ export default function Home() {
           <H2 size="1">Your blockchain project starts here.</H2>
           <P>
             <strong>Edgeware</strong> is a platform for the next generation of decentralised
-            applications with a rich ecosystem of modules for advanced{' '}
-            <strong>cryptography, social identity, collective organisation</strong>, and more.
+            applications.
           </P>
           <P>
-            On <strong>Edgeware</strong> developers can forgo managing their own chain and focus on
-            building more advanced applications using the simplicity and flexibility of smart
-            contracts. Ethereum developers can deploy <strong>Solidity/EVM</strong> smart contracts
+            On Edgeware, Ethereum developers can deploy <strong>Solidity/EVM</strong> smart contracts
             with few or no changes, while new developers can get started with{' '}
             <strong>Rust and WebAssembly</strong>.
           </P>
@@ -76,7 +73,7 @@ export default function Home() {
         <Collective headline="Find your people.">
           <P>
             Rather than attempting to coordinate a single community, Edgeware’s evolving
-            organisational structure is designed to devolve power to small groups who become masters
+            organisational structure is designed to delegate power to small groups who become masters
             of their destiny, whilst still accountable to their peers.
           </P>
           <P>
@@ -93,13 +90,13 @@ export default function Home() {
         <div className="container">
           <HeaderAndTextList>
             <HeaderAndText headline="Chain Workers">
-              Focuses on technical strategy, culture and operations and rely on stable funding.
+              Focuses on technical strategy, culture and operations. Supported by contractor funding.
             </HeaderAndText>
             <HeaderAndText headline="Working Groups">
-              Focuses on emerging challenges, opportunities and and rely on seed funding.
+              Focuses on emerging challenges and opportunities. Supported by seed funding.
             </HeaderAndText>
             <HeaderAndText headline="Project Teams">
-              Put forward proposals that are funded based on the completion of agreed milestones.
+              Puts forward proposals that are funded based on the completion of agreed milestones.
             </HeaderAndText>
             <HeaderAndText headline="Ecosystem DAOs">
               More ambitious entities that take larger grants and return value to the treasury.
@@ -130,16 +127,16 @@ export default function Home() {
             An introduction to the <em>EDG</em> token.
           </H2>
           <P>
-            The <strong>EDG</strong> token incentivises and rewards the participants in the
+            The <strong>EDG</strong> token incentivises and rewards participants in the
             ecosystem, ensuring everyone remains aligned to a common purpose of expanding both the
             usefulness and awareness of the network.
           </P>
           <P>
-            The token has one of the widest distributions in cryptocurrencies. Oer 15 million unique
+            The token has one of the widest distributions in cryptocurrency. Over 15 million unique
             addresses received the token as part of the 2019 lockdrop.
           </P>
           <P>
-            This offers the project a huge advantage over many less well-distributed projects in
+            This offers the project a huge advantage over less well-distributed projects in
             terms of the breadth of its ownership, lack of outside influence and the scale of the
             opportunity to increase its value.
           </P>
