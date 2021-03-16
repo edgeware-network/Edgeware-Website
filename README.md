@@ -9,6 +9,10 @@ members.
 
 This project is a repository of its public-facing website: [https://edgewa.re](https://edgewa.re/)
 
+## Task Management
+See
+https://trello.com/b/qCuXqLpP/edg-agency-tasks 
+
 ## Contributing
 
 TBD
