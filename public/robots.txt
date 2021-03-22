@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /dashboard/
+Host: https://edgewa.re/
