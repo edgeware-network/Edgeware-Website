@@ -1,0 +1,22 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+
+      - name: Install and Build 🔧
+        run: |
+          yarn
+          yarn export
+
+      - name: Deploy 🚀 # https://github.com/marketplace/actions/deploy-to-github-pages
+        uses: JamesIves/github-pages-deploy-action@4.1.0
+        with:
+          branch: gh-pages
+          folder: out
