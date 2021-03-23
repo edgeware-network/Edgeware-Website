@@ -22,7 +22,7 @@
 .content {
   padding: var(--spacing-s);
   background: var(--bw-white);
-  border-radius: var(--br-m);
+  border-radius: var(--br-m) 0px 0px;
 
 
   @include media-breakpoint-up(lg) {
