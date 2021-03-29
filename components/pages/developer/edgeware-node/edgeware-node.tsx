@@ -13,7 +13,7 @@ export const EdgewareNode: React.FC = () => {
         </H2>
         <P inverted>Find out the benefits and how easy it is to set it up.</P>
         <div className={styles.cta}>
-          <Button href="https://docs.edgewa.re/quickstart/set-up-a-validator" style="black">
+          <Button href="https://main.edgeware.wiki/quickstart/set-up-a-validator" style="black">
             Learn more
           </Button>
         </div>

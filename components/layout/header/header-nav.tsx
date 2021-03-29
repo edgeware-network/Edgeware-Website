@@ -78,13 +78,13 @@ export const NavItems: React.FC<NavItemsProps> = ({ style, onClick, onToggleModa
       <NavItem href="/developers" onClick={onClick}>
         Developers
       </NavItem>
-      <NavItem href="/mission" onClick={onClick} showArrow={false}>
+      <NavItem href="/mission" onClick={onClick}>
         Mission
       </NavItem>
-      <NavItem href="https://blog.edgewa.re" onClick={onClick} showArrow={false}>
+      <NavItem href="https://blog.edgewa.re/" onClick={onClick} showArrow={false}>
         News
       </NavItem>
-      <NavItem href="https://main.edgeware.wiki" onClick={onClick} showArrow={false}>
+      <NavItem href="https://main.edgeware.wiki/" onClick={onClick} showArrow={false}>
         Docs
       </NavItem>
       <NavButtonItem onClick={handleGetStartedClick}>Get Started</NavButtonItem>
