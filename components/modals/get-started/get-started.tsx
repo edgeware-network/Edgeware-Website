@@ -99,7 +99,7 @@ export const AnimatedCardsList: React.FC<AnimatedCardsListProps> = ({ onButtonCl
           headline="Start Developing"
           text="Access our documentation to start developing on Edgeware"
           buttonText="Read the docs"
-          buttonHref="https://docs.edgewa.re/"
+          buttonHref="https://main.edgeware.wiki/"
           iconComponent={IconCode}
         />
       </motion.div>
