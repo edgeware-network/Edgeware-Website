@@ -11,7 +11,7 @@ const LINKS_GET_STARTED = {
 };
 
 const LINKS_DEVELOP = {
-  Docs: 'https://docs.edgewa.re/',
+  Docs: 'https://main.edgeware.wiki/',
   'Smart Contracts Workshop': 'https://contracts.edgewa.re/#/',
   'Developer Chat': 'https://t.me/edg_developers',
 };

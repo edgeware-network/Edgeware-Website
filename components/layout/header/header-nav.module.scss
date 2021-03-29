@@ -35,11 +35,12 @@
   outline: none;
 
   @include media-breakpoint-up(lg) {
-    margin: 0 var(--spacing-s);
+    margin: 0 var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-xs);
   }
 
-  @include media-breakpoint-up(lg) {
-    padding: var(--spacing-xs) var(--spacing-xs);
+  @include media-breakpoint-up(xl) {
+    margin: 0 var(--spacing-s);
   }
 
   svg {
