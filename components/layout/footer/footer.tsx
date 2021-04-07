@@ -22,6 +22,7 @@ const FOOTER_LINKS: FooterLinksGroup[] = [
       Collectives: '/collectives',
       Lockdrop: 'https://commonwealth.im/edgeware/stats',
       Press: '/press',
+      'Swag Store': 'https://edgeware.store/#',
     },
   },
   {
