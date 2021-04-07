@@ -35,8 +35,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Deployment
 
-To publish latest version to Github pages deployment simply run the command:
-```bash
-yarn deploy
-```
-
+The site is automatically build and published via github actions for every commit that lands on `main` branch. No need to manually update anything.
