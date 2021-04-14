@@ -1,3 +1,9 @@
+# *
 User-agent: *
-Disallow: /dashboard/
-Host: https://edgewa.re/
+Allow: /
+
+# Host
+Host: https://edgewa.re
+
+# Sitemaps
+Sitemap: https://edgewa.re/sitemap.xml
