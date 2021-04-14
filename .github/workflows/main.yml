@@ -7,13 +7,17 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: Code checkout 🛎️
         uses: actions/checkout@v2
 
-      - name: Install and Build 🔧
-        run: |
-          yarn
-          yarn export
+      - name: Install dependencies 🔧
+        run: yarn
+
+      - name: Test 🎢
+        run: yarn test
+
+      - name: Build and generate static export 🏗
+        run: yarn export
 
       - name: Deploy 🚀 # https://github.com/marketplace/actions/deploy-to-github-pages
         uses: JamesIves/github-pages-deploy-action@4.1.0
