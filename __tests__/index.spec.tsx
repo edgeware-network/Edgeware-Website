@@ -1,4 +1,4 @@
-import { screen } from '@testing-library/react'
+import { fireEvent, screen } from '@testing-library/react'
 import { render } from '../test'
 
 import Home from '../pages/index'
@@ -31,5 +31,17 @@ describe('Homepage', () => {
 
     // Mentions
     expect(getByText(/Mentions from the cryptoverse/)).toBeInTheDocument()
+  })
+
+  it('Renders the "Get Started" modal', async () => {
+    render(<Home />)
+
+    const button = screen.getByRole('button', { name: 'Start your journey' })
+    fireEvent.click(button)
+
+    // check if modal actually appeared
+    await screen.findByText(/Join the Conversation/)
+    await screen.findByText(/Browse Collectives/)
+    await screen.findByText(/Start Developing/)
   })
 })

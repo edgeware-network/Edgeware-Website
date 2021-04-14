@@ -54,15 +54,15 @@ export const AnimatedCardsList: React.FC<AnimatedCardsListProps> = ({ onButtonCl
   const list = {
     hidden: {
       opacity: 1,
-      // transition: {
-      //   when: "afterChildren",
-      // },
+      transition: {
+        when: "afterChildren",
+      },
     },
     visible: {
       opacity: 1,
       transition: {
         when: 'beforeChildren',
-        staggerChildren: 0.1,
+        staggerChildren: 0.2,
         type: 'spring',
       },
     },
@@ -75,7 +75,7 @@ export const AnimatedCardsList: React.FC<AnimatedCardsListProps> = ({ onButtonCl
 
   return (
     <motion.div className={styles.cards} variants={list} initial="hidden" animate="visible">
-      <motion.div className={styles.cardItem} variants={item} initial="hidden">
+      <motion.div className={styles.cardItem} variants={item}>
         <ActionCard
           headline="Join the Conversation"
           text="Start talking to all of the groups and participate in the ecosystem"
@@ -84,7 +84,7 @@ export const AnimatedCardsList: React.FC<AnimatedCardsListProps> = ({ onButtonCl
           iconComponent={IconDiscord}
         />
       </motion.div>
-      <motion.div className={styles.cardItem} variants={item} initial="hidden">
+      <motion.div className={styles.cardItem} variants={item}>
         <ActionCard
           headline="Browse Collectives"
           text="See all open collectives and join them or start you own"
@@ -94,7 +94,7 @@ export const AnimatedCardsList: React.FC<AnimatedCardsListProps> = ({ onButtonCl
           onButtonClick={onButtonClick}
         />
       </motion.div>
-      <motion.div className={styles.cardItem} variants={item} initial="hidden">
+      <motion.div className={styles.cardItem} variants={item}>
         <ActionCard
           headline="Start Developing"
           text="Access our documentation to start developing on Edgeware"
