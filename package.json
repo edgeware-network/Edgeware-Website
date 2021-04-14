@@ -10,7 +10,6 @@
     "build": "next build",
     "start": "next start",
     "export": "next build && next export",
-    "deploy": "yarn export && gh-pages -t -d out",
     "lint": "eslint ./ --ext .ts,.tsx",
     "lint:fix": "npm run lint -- --fix",
     "test": "jest"
