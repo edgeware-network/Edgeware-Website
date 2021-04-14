@@ -2,6 +2,8 @@ import React, { ReactElement } from 'react';
 import { render } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
+import { Layout } from '../components/layout/layout';
+
 const queryClient = new QueryClient({
   defaultOptions: {
     // Force the cache to clear to ensure responses
@@ -15,7 +17,14 @@ const queryClient = new QueryClient({
 
 const AllTheProviders: React.FC = ({ children }) => {
   return (
-    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+    // <Layout>
+    <>
+      <QueryClientProvider client={queryClient}>
+        {children}
+      </QueryClientProvider>
+      <div id="modal-root"></div>
+    </>
+    // </Layout>
   );
 };
 

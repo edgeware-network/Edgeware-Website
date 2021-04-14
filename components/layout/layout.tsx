@@ -12,10 +12,9 @@ interface LayoutProps {
     title: string;
     description: string;
   };
-  currentPath: string;
-  title: string;
+  currentPath?: string;
   simpleLayout?: boolean;
-  particles: boolean;
+  particles?: boolean;
 }
 
 const DOMAIN = 'https://edgewa.re';
@@ -25,8 +24,8 @@ export const Layout: React.FC<LayoutProps> = ({
   meta = {},
   children,
   simpleLayout,
-  particles,
-  currentPath,
+  particles = false,
+  currentPath = "/",
 }) => {
   const { title, description } = meta;
 
