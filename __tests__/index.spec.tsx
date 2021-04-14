@@ -4,7 +4,6 @@ import { render } from '../test'
 import Home from '../pages/index'
 
 describe('Homepage', () => {
-
   it('Renders homepage with all text sections', async () => {
     const { getByText } = render(<Home />)
 
