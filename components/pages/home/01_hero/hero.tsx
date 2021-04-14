@@ -38,9 +38,12 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ headline, highlightWords, lead }) => {
-  const isMounted = useMountedState();
-
+  const [isMounted, setMounted] = React.useState(false)
   const staticHeadline = headline.replace('###', highlightWords[0]);
+
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
 
   return (
     <div className={styles.hero}>
