@@ -1,0 +1,57 @@
+@import '../../../../styles/custom.scss';
+
+.list {
+  margin: 0;
+  padding: var(--spacing-l) 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: var(--spacing-l) var(--spacing-m);
+
+  }
+}
+
+.listItem {
+  margin: var(--spacing-m) 0;
+  padding: 0;
+
+  @include media-breakpoint-up(md) {
+    padding: var(--spacing-m);
+    margin: 0;
+    flex: 1 1 50%;
+    max-width: 50%;;
+  }
+}
+
+.jobsCard {
+  padding: var(--spacing-m) var(--spacing-m) var(--spacing-m) var(--spacing-m);
+  border-radius: var(--br-m);
+  background-color: var(--grey-900);
+  border-radius: 13px;
+  border: solid 1px var(--grey-800);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  text-align: left;
+}
+
+.title {
+  font-size: var(--fs-headline-100);
+  font-weight: var(--fw-semibold);
+}
+
+.role {
+  font-size: var(--fs-text-s);
+  color: var(--grey-300);
+}
+
+.button {
+  margin-top: var(--spacing-m);
+}

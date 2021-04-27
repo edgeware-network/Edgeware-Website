@@ -1,16 +1,18 @@
 import * as React from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link'
 
 import cn from 'classnames';
 
 import styles from './button.module.scss';
 
 interface ButtonProps {
-  style?: 'primary' | 'secondary' | 'white' | 'black';
+  style?: 'primary' | 'primary-small' | 'secondary' | 'white' | 'black';
   fullWidth?: boolean;
   onClick?: () => void;
   download?: boolean;
   href?: string;
+  as?: 'button' | 'link'
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -19,9 +21,11 @@ export const Button: React.FC<ButtonProps> = ({
   fullWidth,
   onClick,
   href,
+  as = 'button'
 }) => {
   const buttonClasses = cn(styles.button, {
     [`${styles.buttonPrimary}`]: style === 'primary',
+    [`${styles.buttonPrimarySmall}`]: style === 'primary-small',
     [`${styles.buttonSecondary}`]: style === 'secondary',
     [`${styles.buttonWhite}`]: style === 'white',
     [`${styles.buttonBlack}`]: style === 'black',
@@ -45,6 +49,14 @@ export const Button: React.FC<ButtonProps> = ({
     },
     [href, onClick, router]
   );
+
+  if (as === 'link') {
+    return <Link href={href}>
+      <a className={buttonClasses}>
+        {children}
+      </a>
+    </Link>
+  }
 
   return (
     <button className={buttonClasses} onClick={handleClick}>
