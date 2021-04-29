@@ -2,10 +2,10 @@ import * as React from 'react';
 
 import { H2, P } from '../../components/common/typography/typography';
 import { Section } from '../../components/common/section/section';
-
-import { getAllJobs } from '../../lib/api';
 import { JobsCardList, JobsCard } from '../../components/pages/jobs/jobs-card/jobs-card';
 import { StaticHero } from '../../components/common/static-hero/static-hero';
+
+import { getAllJobs } from '../../lib/api';
 
 export default function Jobs({ allJobs }) {
   const hasJobs = allJobs.length > 0
@@ -20,7 +20,7 @@ export default function Jobs({ allJobs }) {
 
       <Section id="roles" width="narrow">
         <div className="text-center">
-          <H2 size="1">Open Roles</H2>
+          <H2 size="2">Open Roles</H2>
         </div>
 
         {hasJobs && <JobsCardList>
@@ -28,10 +28,10 @@ export default function Jobs({ allJobs }) {
         </JobsCardList>}
 
         <div className="text-center">
-          <P style="large">
+          <P style="lead" bold>
             Is your role not listed?
             {' '}
-            <a href="#">Message us</a>
+            <a href="mailto:ops@edgware.agency" className="link">Message us.</a>
           </P>
         </div>
       </Section>

@@ -27,7 +27,6 @@
     right: 0;
     height: 200px;
     background-image: linear-gradient(to top, var(--grey-900), rgba(21, 21, 21, 0) 90%);
-
   }
 }
 
@@ -62,6 +61,11 @@
 
 .headlineWrapper {
   max-width: 760px;
+
+  @include media-breakpoint-up(md) {
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 .headline {

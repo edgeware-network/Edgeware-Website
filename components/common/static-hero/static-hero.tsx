@@ -1,11 +1,10 @@
 import * as React from 'react';
+
 import { H1 } from '../typography/typography';
 
 import styles from './static-hero.module.scss';
 
-interface StaticHeroProps {
-
- }
+interface StaticHeroProps {}
 
 export const StaticHero: React.FC<StaticHeroProps> = ({ children }) => {
   return (
