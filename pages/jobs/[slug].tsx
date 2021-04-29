@@ -1,12 +1,14 @@
 import * as React from 'react';
 
+import Link from 'next/link';
+
 import { H1, P } from '../../components/common/typography/typography';
 import { Section } from '../../components/common/section/section';
+import { JobContent } from '../../components/pages/jobs/job-content/job-content';
+import { Button } from '../../components/common/button/button';
 
 import { getAllJobs, getJobBySlug } from '../../lib/api';
-import { JobContent } from '../../components/pages/jobs/job-content/job-content';
 import { markdownToHtml } from '../../lib/markdown';
-import { Button } from '../../components/common/button/button';
 
 export default function Job({ job }) {
   return (
@@ -18,7 +20,15 @@ export default function Job({ job }) {
         <JobContent content={job.content} />
 
         <div className="py-4">
-          <Button href="https://commonwealth.im/">Apply for this position</Button>
+          <Button href="mailto:ops@edgeware.agency">Apply for this position</Button>
+          <P secondary>
+            Or email us at <a href="mailto:ops@edgeware.agency" className="link">ops@edgeware.agency</a><br/>
+          </P>
+          <P secondary>
+            <Link href="/jobs">
+              <a className="link-secondary">Back to Jobs</a>
+            </Link>
+          </P>
         </div>
       </Section>
     </>
