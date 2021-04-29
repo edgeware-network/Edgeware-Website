@@ -24,7 +24,7 @@ export default function Jobs({ allJobs }) {
         </div>
 
         {hasJobs && <JobsCardList>
-          {allJobs.map(job => <JobsCard title={job.data.title} role={job.data.role} buttonHref={`/jobs/${job.data.slug}`}></JobsCard>)}
+          {allJobs.map(job => <JobsCard title={job.data.title} role={job.data.role} buttonHref={`/jobs/${job.data.slug}`} key={job.data.slug}></JobsCard>)}
         </JobsCardList>}
 
         <div className="text-center">
