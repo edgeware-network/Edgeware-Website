@@ -13,7 +13,7 @@ export const StaticHero: React.FC<StaticHeroProps> = ({ children }) => {
       <div className={styles.wrapper}>
         <div className={styles.container}>
           <div className={styles.headlineWrapper}>
-            <H1 size="1">
+            <H1 size="1" className={styles.headline}>
               {children}
             </H1>
           </div>
