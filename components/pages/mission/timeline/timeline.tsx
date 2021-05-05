@@ -67,6 +67,15 @@ export const Timeline: React.FC<TimelineProps> = () => {
         </li>
 
         <li className={cn(styles.timelineItem, styles.timelineItemRight)}>
+          <TimelineItem name="Edgeware Bridges to Ethereum" date="TBD">
+            Demand to bridge assets in Ethereum or wrap EDG on ETH open up a world of use-cases for
+            Edgeware. Teams like Chainsafe and other technologies are being developed to create the
+            first bridge to crypto’s original smart contract platform, while giving EDG users access
+            to the dapp ecosystem on ETH.
+          </TimelineItem>
+        </li>
+
+        <li className={cn(styles.timelineItem, styles.timelineItemLeft)}>
           <TimelineItem name="The Edgeware Canary network launches" date="TBD">
             Canary networks are the new and value bearing testnet concept pioneered by Kusama. This
             approach helps Edgeware test and incentivize development on the mainnet. Edgeware’s
@@ -74,7 +83,8 @@ export const Timeline: React.FC<TimelineProps> = () => {
             auctions.
           </TimelineItem>
         </li>
-        <li className={cn(styles.timelineItem, styles.timelineItemLeft)}>
+
+        <li className={cn(styles.timelineItem, styles.timelineItemRight)}>
           <TimelineItem name="Edgeware bonds for a Polkadot Parachain Slot" date="TBD">
             Edgeware’s core proposal of a cutting edge smart contract platform on Polkadot will be
             realized when the bidding is complete and DOT holders support Edgeware in their auction
@@ -82,14 +92,6 @@ export const Timeline: React.FC<TimelineProps> = () => {
             more will be available and the daily costs of securing the network in nPoS will decrease
             through the shared security benefits of Polkadot, allowing Edgeware's existing monetary
             inflation to drop.
-          </TimelineItem>
-        </li>
-        <li className={cn(styles.timelineItem, styles.timelineItemRight)}>
-          <TimelineItem name="Edgeware Bridges to Ethereum" date="TBD">
-            Demand to bridge assets in Ethereum or wrap EDG on ETH open up a world of use-cases for
-            Edgeware. Teams like Chainsafe and other technologies are being developed to create the
-            first bridge to crypto’s original smart contract platform, while giving EDG users access
-            to the dapp ecosystem on ETH.
           </TimelineItem>
         </li>
       </ol>
