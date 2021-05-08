@@ -7,7 +7,7 @@ interface SectionProps {
   id: string;
   background?: 'none' | 'waves' | 'waves-middle' | 'waves-top';
   width: 'narrow' | 'normal' | 'wide' | 'fluid';
-  gap?: 'none' | 'standard';
+  gap?: 'none' | 'narrow' | 'standard';
 }
 
 export const Section: React.FC<SectionProps> = ({
