@@ -1,6 +1,6 @@
 {
   "name": "Edgeware-Website",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "private": true,
   "engines": {
     "node": "^14.16.0"
