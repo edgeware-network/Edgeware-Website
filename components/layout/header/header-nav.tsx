@@ -67,24 +67,19 @@ export const NavItems: React.FC<NavItemsProps> = ({ style, onClick, onToggleModa
       <NavItem href="/collectives" onClick={onClick}>
         Collectives
       </NavItem>
-      <NavDropdown label="Proposals" style={style}>
-        <NavItem href="https://commonwealth.im/" onClick={onClick}>
-          Commonwealth.im
-        </NavItem>
-        <NavItem href="https://polkadot.js.org/apps/" onClick={onClick}>
-          Polkadot Apps
-        </NavItem>
-      </NavDropdown>
+      <NavItem href="https://commonwealth.im/edgeware/proposals" onClick={onClick}>
+      Proposals
+      </NavItem>
       <NavItem href="/developers" onClick={onClick}>
         Developers
       </NavItem>
       <NavItem href="/mission" onClick={onClick}>
         Mission
       </NavItem>
-      <NavItem href="https://blog.edgewa.re/" onClick={onClick} showArrow={false}>
+      <NavItem href="https://blog.edgewa.re/" onClick={onClick}>
         News
       </NavItem>
-      <NavItem href="https://main.edgeware.wiki/" onClick={onClick} showArrow={false}>
+      <NavItem href="https://main.edgeware.wiki/" onClick={onClick}>
         Docs
       </NavItem>
       <NavButtonItem onClick={handleGetStartedClick}>Get Started</NavButtonItem>
@@ -95,10 +90,9 @@ export const NavItems: React.FC<NavItemsProps> = ({ style, onClick, onToggleModa
 interface NavItemProps {
   href?: string;
   onClick?: (e: React.MouseEvent) => void;
-  showArrow?: boolean;
 }
 
-const NavItem: React.FC<NavItemProps> = ({ href, children, onClick, showArrow = true }) => {
+const NavItem: React.FC<NavItemProps> = ({ href, children, onClick }) => {
   const isExternal = href.match(/https/);
 
   if (isExternal) {
@@ -111,7 +105,6 @@ const NavItem: React.FC<NavItemProps> = ({ href, children, onClick, showArrow = 
         rel="noopener noreferrer"
       >
         {children}
-        {showArrow && <Icon component={IconArrow} />}
       </a>
     );
   }
@@ -130,28 +123,5 @@ const NavButtonItem: React.FC<NavItemProps> = ({ children, onClick }) => {
     <button className={cn(styles.navItem, styles.navItemSpecial)} onClick={onClick}>
       {children}
     </button>
-  );
-};
-
-interface NavDropdownProps {
-  label: string;
-  style?: 'desktop' | 'mobile';
-}
-
-const NavDropdown: React.FC<NavDropdownProps> = ({ style, label, children }) => {
-  const [isOpen, toggleOpen] = React.useState(false);
-
-  // toggle only for mobile, on desktop we use CSS hover
-  const onToggle = () => {
-    style === 'mobile' && toggleOpen(!isOpen);
-  };
-
-  return (
-    <div className={cn(styles.navDropdown, isOpen && styles.navDropdownOpen)}>
-      <span className={styles.navDropdownLabel} onClick={onToggle}>
-        {label}
-      </span>
-      <div className={styles.navDropdownBody}>{children}</div>
-    </div>
   );
 };
