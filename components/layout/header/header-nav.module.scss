@@ -96,25 +96,6 @@
     }
   }
 
-  .navDropdown {
-    margin: 0;
-    padding: 0rem 0;
-    font-size: 1.125rem;
-  }
-
-  .navDropdown.navDropdownOpen{
-    .navItem {
-      width: 100%;
-    }
-  }
-
-  .navDropdownLabel {
-    padding: 0.5rem 0;
-    display: block;
-    font-weight: var(--fw-semibold);
-    border-bottom: 1px solid var(--grey-800);
-  }
-
   .navItemSpecial {
     position: absolute;
     margin: 0 var(--spacing-s);
