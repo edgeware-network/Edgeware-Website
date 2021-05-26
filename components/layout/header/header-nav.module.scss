@@ -2,6 +2,7 @@
 
 .navWrapper {
   display: none;
+
   @include media-breakpoint-up(lg) {
     display: block;
   }
