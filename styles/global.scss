@@ -34,12 +34,11 @@
 
   --secondary-500: #00e4b3;
 
-  --ff-plex: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --ff-text: 'Space Grotesk', -apple-system, sans-serif;
 
-  --fw-normal: 300;
+  --fw-normal: 400;
   --fw-semibold: 500;
-  --fw-bold: 600;
+  --fw-bold: 700;
 
   --fs-text-xs: 12px;
   --fs-text-sm: 14px;
@@ -93,7 +92,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: var(--ff-plex);
+  font-family: var(--ff-text);
   font-weight: var(--fw-normal);
   font-kerning: normal;
   font-feature-settings: "kern", "liga", "clig", "calt";
