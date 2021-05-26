@@ -1,25 +1,28 @@
 @import '../../../styles/custom.scss';
 
-
 .header {
-  border-top: 0.5rem solid var(--primary-500);
   position: relative;
   z-index: 3;
 
   padding: 2rem 0;
+
   @include media-breakpoint-up(lg) {
-    padding-top: 8rem;
+    padding-top: 4rem;
   }
 }
 
 .logo {
   z-index: 10;
 
+  @include media-breakpoint-up(lg) {
+
+  }
+
   svg {
-    height: 30px;
+    height: 64px;
 
     @include media-breakpoint-up(lg) {
-      height: 32px;
+      height: 64px;
     }
   }
 }
@@ -27,4 +30,5 @@
 .wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
