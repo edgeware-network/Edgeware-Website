@@ -83,9 +83,16 @@
 .assetTypes {
   font-size: var(--fs-text-xs);
   text-transform: uppercase;
-  color: var(--grey-500);
 
   a {
     margin-left: var(--spacing-xs);
+
+    &:link, &:visited {
+      color: var(--grey-500);
+    }
+
+    &:hover, &:active {
+      color: var(--primary-500);
+    }
   }
 }
