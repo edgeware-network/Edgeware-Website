@@ -1,0 +1,62 @@
+@import '../../../../../styles/custom.scss';
+
+.wrapper {
+  width: 100vw;
+  overflow: hidden;
+
+  @include media-breakpoint-up(lg) {
+    width: auto;
+    overflow: initial;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  overflow-x: auto;
+  margin: 0;
+  padding: var(--spacing-m);
+
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+
+  @include media-breakpoint-up(md) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @include media-breakpoint-up(lg) {
+  }
+}
+
+
+
+.item {
+  scroll-snap-align: start;
+  display: block;
+  flex: 0 0 312px;
+  padding: var(--spacing-s);
+  transition: all 0.18s cubic-bezier(.86,-0.17,.41,2.28);
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.link {
+  border: 1px solid var(--grey-400);
+  overflow: hidden;
+  border-radius: var(--br-s);
+  display: block;
+
+
+  img {
+    width: 100%;
+    display: block;
+  }
+}

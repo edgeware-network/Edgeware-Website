@@ -7,7 +7,7 @@
   z-index: 1;
   overflow: hidden;
 
-  margin-top: -4rem;
+  margin-top: -8rem;
 
   @include media-breakpoint-up(lg) {
     margin-top: -10rem;
@@ -27,7 +27,7 @@
   height: calc(100vh + 6rem);
 
   @include media-breakpoint-up(lg) {
-    height: 100vh;
+    height: 75vh;
     min-height: 720px;
   }
 }
