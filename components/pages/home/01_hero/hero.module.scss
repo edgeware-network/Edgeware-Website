@@ -1,8 +1,8 @@
 @import '../../../../styles/custom.scss';
 
 .hero {
-  background: url('/images/hero/blocks.png') 50% 100%;
-  background-size: 75%;
+  background: url('/images/hero/blocks.jpg') 100% 50%;
+  background-size:  cover;
   position: relative;
   z-index: 1;
   overflow: hidden;
