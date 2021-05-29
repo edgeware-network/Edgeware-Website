@@ -42,6 +42,8 @@ const FOOTER_LINKS: FooterLinksGroup[] = [
       'Decent Partners': 'https://www.decent.partners/',
       BuilDAO:
         'https://www.notion.so/hicommonwealth/BuilDAO-Ecosystem-Fund-Paper-35d451f814014f9cbff96b6c8ab443a4#2deb99dadb794069a75ca969b6d369cf',
+      'Edgeware Agency':
+        'https://airtable.com/shr3kHXsDBxXznuWS/tbl9UHADMhU5uJ3oB',  
     },
   },
   {
