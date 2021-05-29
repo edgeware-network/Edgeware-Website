@@ -3,7 +3,7 @@
 .wrapper {
   position: relative;
   overflow: hidden;
-  padding: var(--spacing-l) 0;
+  padding: var(--spacing-l) var(--spacing-s);
 
   @include media-breakpoint-up(lg) {
     margin: 0;
