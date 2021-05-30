@@ -7,10 +7,21 @@
   z-index: 1;
   overflow: hidden;
 
-  margin-top: -4rem;
+  margin-top: -8rem;
 
   @include media-breakpoint-up(lg) {
     margin-top: -10rem;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to top, #151515, rgba(0,0,0, 0));
   }
 }
 
@@ -27,7 +38,7 @@
   height: calc(100vh + 6rem);
 
   @include media-breakpoint-up(lg) {
-    height: 100vh;
+    height: 75vh;
     min-height: 720px;
   }
 }

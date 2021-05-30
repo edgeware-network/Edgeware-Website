@@ -18,6 +18,7 @@ import {
   HeaderAndTextList,
   HeaderAndText,
 } from '../components/common/header-and-text/header-and-text';
+import { Banners } from '../components/pages/home/01_hero/banners/banners';
 
 export default function Home() {
   return (
@@ -36,6 +37,10 @@ export default function Home() {
         ]}
         lead="Edgeware is a smart contract chain with a community-managed treasury, decentralised proposal system and network of DAOs."
       />
+
+      <Section id="banners" width="wide">
+        <Banners />
+      </Section>
 
       <Section id="intro" width="fluid">
         <Intro>
