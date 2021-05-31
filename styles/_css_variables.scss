@@ -1,0 +1,115 @@
+:root {
+  /* Colours */
+  --bw-black: #000000;
+  --bw-white: #ffffff;
+
+  --primary-100: #fbeaf0;
+  --primary-200: #f2bfd2;
+  --primary-300: #ea95b4;
+  --primary-400: #dd5587;
+  --primary-500: #d42b69;
+  --primary-600: #aa2254;
+  --primary-700: #7f1a3f;
+  --primary-800: #55112a;
+  --primary-900: #400d1f;
+
+  --grey-100: #f1f1f1;
+  --grey-200: #c5c5c5;
+  --grey-300: #a8a8a8;
+  --grey-400: #8b8b8b;
+  --grey-500: #6e6e6e;
+  --grey-600: #525252;
+  --grey-650: #434343;
+  --grey-700: #383838;
+  --grey-800: #292929;
+  --grey-900: #151515;
+
+  --primary-100: #fbeaf0;
+  --primary-200: #ffcbde;
+  --primary-300: #ffa4c5;
+  --primary-400: #fb6c9f;
+  --primary-500: #ff3b80;
+  --primary-600: #af1850;
+  --primary-700: #660c2d;
+  --primary-800: #300515;
+  --primary-900: #1a000f;
+
+  --grey-100: #f1f1f1;
+  --grey-200: #c5c5c5;
+  --grey-300: #a8a8a8;
+  --grey-400: #8b8b8b;
+  --grey-500: #6e6e6e;
+  --grey-600: #525252;
+  --grey-700: #383838;
+  --grey-800: #292929;
+  --grey-900: #151515;
+
+  --secondary-100: #eafcf9;
+  --secondary-200: #c0f6ee;
+  --secondary-300: #97f0e2;
+  --secondary-400: #6dead6;
+  --secondary-500: #2ee1c5;
+  --secondary-600: #25b49e;
+  --secondary-700: #1c8776;
+  --secondary-800: #0e433b;
+  --secondary-900: #051614;
+
+  --bw-black: #000000;
+  --bw-white: #ffffff;
+
+  /* Typography */
+  --ff-text: 'Space Grotesk', -apple-system, sans-serif;
+
+  --fw-normal: 400;
+  --fw-semibold: 500;
+  --fw-bold: 700;
+
+  --fs-text-xs: 12px;
+  --fs-text-sm: 14px;
+  --fs-text-md: 16px;
+  --fs-text-lg: 18px;
+  --fs-text-xl: 20px;
+  --fs-text-xxl: 24px;
+
+  --ls-headline--sm: -0.92px;
+  --ls-headline--md: -1.12px;
+  --ls-headline--lg: -1.36px;
+
+  --fs-headline-100: 26px;
+  --fs-headline-200: 36px;
+
+  --fs-headline-300--sm: 32px;
+  --fs-headline-300: 40px;
+
+  --fs-headline-400--sm: 46px;
+  --fs-headline-400: 56px;
+
+  --fs-headline-500--sm: 56px;
+  --fs-headline-500: 76px;
+
+  --ls-text--md: -0.36px;
+  --ls-text--lg: -1.92px;
+
+  /* Spacings */
+  --spacing-xxs: 4px;
+  --spacing-xs: 8px;
+  --spacing-s: 16px;
+  --spacing-m: 24px;
+  --spacing-ml: 24px;
+  --spacing-l: 48px;
+  --spacing-xl: 64px;
+  --spacing-xxl: 96px;
+  --spacing-xxl: 96px;
+  --spacing-xxxl: 192px;
+  --spacing-xxxxl: 256px;
+
+  /* Borders */
+  --br-xs: 4px;
+  --br-s: 8px;
+  --br-m: 10px;
+  --br-l: 12px;
+  --br-xl: 16px;
+
+  /* Custom */
+  --swiper-pagination-color: #fff;
+}
