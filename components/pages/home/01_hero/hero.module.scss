@@ -38,7 +38,7 @@
   height: calc(100vh + 6rem);
 
   @include media-breakpoint-up(lg) {
-    height: 75vh;
+    height: 100vh;
     min-height: 720px;
   }
 }
