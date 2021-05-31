@@ -26,8 +26,8 @@ export const Banners: React.FC = () => {
     <div className={styles.wrapper}>
       <ul className={styles.list}>
         {Object.keys(BANNERS).map(key => (
-          <li className={styles.item}>
-            <a href={BANNERS[key].href} className={styles.link} target="_blank" rel="noopener noreferrer" key={key}>
+          <li className={styles.item} key={key}>
+            <a href={BANNERS[key].href} className={styles.link} target="_blank" rel="noopener noreferrer">
               <img src={`/images/home/banners/banners-${key}.jpg`} alt={BANNERS[key].alt} width="280" />
             </a>
           </li>
