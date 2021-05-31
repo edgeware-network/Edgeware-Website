@@ -43,7 +43,7 @@ const FOOTER_LINKS: FooterLinksGroup[] = [
       BuilDAO:
         'https://www.notion.so/hicommonwealth/BuilDAO-Ecosystem-Fund-Paper-35d451f814014f9cbff96b6c8ab443a4#2deb99dadb794069a75ca969b6d369cf',
       'Edgeware Agency':
-        'https://airtable.com/shr3kHXsDBxXznuWS/tbl9UHADMhU5uJ3oB',  
+        'https://airtable.com/shr3kHXsDBxXznuWS/tbl9UHADMhU5uJ3oB',
     },
   },
   {
@@ -79,7 +79,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className={styles.copyright}>
-          <p>© {new Date().getFullYear()} Edgeware built by the Commonwealth Community</p>
+          <p>© 2019 - {new Date().getFullYear()} Edgeware built by the Commonwealth Community</p>
           <span className={styles.copyrightMinor}>
             Edgeware is a blockchain network focused on funding and promoting open collectives
             through decentralised governance. This governance process is used to fund, manage, and
