@@ -14,14 +14,13 @@
 .logo {
   z-index: 10;
 
-  @include media-breakpoint-up(lg) {
-
-  }
-
   svg {
+    width: 40px;
     height: 32px;
 
+
     @include media-breakpoint-up(lg) {
+      width: 64px;
       height: 64px;
     }
   }
