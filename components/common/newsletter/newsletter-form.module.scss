@@ -28,41 +28,43 @@
 
 .input {
   width: 100%;
+  background: var(--grey-900);
+  color: var(--grey-grey-500);
   border-radius: var(--br-m);
-  border: solid 1px var(--grey-600);
+  border: solid 1px var(--grey-800);
   padding: 12px var(--spacing-s) 12px var(--spacing-s);
   margin: 0 0 var(--spacing-xs) 0;
-  font-size: 1rem;
+  font-size: var(--fs-text-lg);
   font-family: var(--ff-text);
 
   &:focus {
     outline: none;
-    border: solid 1px var(--grey-900);
+    border: solid 1px var(--grey-600);
   }
 
   @include media-breakpoint-up(lg) {
     padding: 12px var(--spacing-s);
     margin: 0;
-    width: 320px;
-    max-width: 320px;
-    height: 61px;
+    width: 280px;
+    max-width: 280px;
+    height: 60px;
   }
 }
 
 .button {
-  font-size: 1.25rem;
+  font-size: var(--fs-text-lg);
   color: var(--bw-white);
   background-color: var(--grey-800);
   border-radius: var(--br-m);
   border: solid 1px var(--grey-700);
   padding: 10px var(--spacing-m);
   display: block;
-  width: 100%;
+  flex: 0 1 12rem;
 
   @include media-breakpoint-up(lg) {
-    width: auto;
+    width: 12rem;
     display: inline-block;
-    padding: 12px var(--spacing-m);
+    padding: 12px 0;
     border-radius: 0 var(--br-m) var(--br-m) 0;
     margin-left: -8px;
   }
