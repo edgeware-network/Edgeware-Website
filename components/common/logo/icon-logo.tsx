@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Icon from '../../../public/images/logo/edgeware-single-icon.svg';
+import Icon from '../../../public/images/logo/edgeware-icon.svg';
 
 import styles from './icon-logo.module.scss';
 

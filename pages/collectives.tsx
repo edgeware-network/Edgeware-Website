@@ -34,7 +34,7 @@ const COLLECTIVES: CollectiveCardProps[] = [
   },
   {
     imageSrc: '/images/collectives/edgeware-agency.jpg',
-    title: 'The Agency',
+    title: 'Edgeware Agency',
     description:
       'Focuses on developing and exploring the brand, including visual, emotional, experiential values of Edgeware, evangelizing use cases, and developing assets to communicate the above.',
     members: '+80',
@@ -128,7 +128,7 @@ export default function Collectives() {
         {/* Start collective promo */}
         <HeadlineSection center>
           <IconLogo />
-          <H2 size="2">Start your own collective</H2>
+          <H2 size="1">Start your own collective</H2>
           <P style="lead">
             In Edgeware, working groups function as mission-based development organisations that are
             composed of members who share interests, needs, and passions. Where an Ambassador team
