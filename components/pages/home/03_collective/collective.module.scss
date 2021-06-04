@@ -11,7 +11,7 @@
   position: relative;
 
   @include media-breakpoint-up(lg) {
-    padding: var(--spacing-xxxl) 0;
+    padding: var(--spacing-xxxl) 0 0;
     margin-top: -200px;
   }
 }
