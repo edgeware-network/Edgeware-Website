@@ -26,12 +26,13 @@
 }
 
 .headline {
-  font-size: 1.625rem;
+  font-size: var(--fs-text-xxl);
   font-weight: var(--fw-semibold);
 }
 
 .text {
   color: var(--grey-300);
+  font-weight: var(--fw-normal);
 }
 
 .button {
