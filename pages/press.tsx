@@ -14,7 +14,7 @@ export default function Press() {
   return (
     <>
       <Intro>
-        <H1 size="2">
+        <H1 size="1">
           For the latest news follow
           <br />
           <em>@HeyEdgeware</em> on Twitter
@@ -31,8 +31,7 @@ export default function Press() {
         <P>
           The Edgeware logo displayed in the official colors and usage patterns.
           <br />
-          Do not place the logo on top of other objects and leave a reasonable amount of margin{' '}
-          <br />
+          Do not place the logo on top of other objects and leave a reasonable amount of margin
           around the outside so the logo is clearly visible.
         </P>
       </Intro>
