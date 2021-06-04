@@ -59,7 +59,6 @@
   border: solid 1px var(--grey-700);
   padding: 10px var(--spacing-m);
   display: block;
-  flex: 0 1 12rem;
 
   @include media-breakpoint-up(lg) {
     width: 12rem;
