@@ -51,16 +51,16 @@ const MobileBackground: React.FC<{ section: 'top' | 'bottom' }> = ({ section }) 
       className: styles.backgroundMobileUp,
       image: {
         src: '/images/home/collectives-mobile-1.png',
-        width: 572,
-        height: 478,
+        width: Math.round(958 * 0.75),
+        height: Math.round(894 * 0.75),
       },
     },
     bottom: {
       className: styles.backgroundMobileDown,
       image: {
         src: '/images/home/collectives-mobile-2.png',
-        width: 572,
-        height: 562,
+        width: Math.round(822 * 0.5),
+        height: Math.round(1056 * 0.5),
       },
     },
   };
@@ -108,9 +108,9 @@ const DesktopBackground: React.FC = () => {
           src="/images/home/collectives-desktop.png"
           alt="Edgeware Collectives"
           // layout="fixed"
-          width="1732"
+          width="1712"
           loading="eager"
-          height="1479"
+          height="1442"
           // quality={100}
         />
       </div>
