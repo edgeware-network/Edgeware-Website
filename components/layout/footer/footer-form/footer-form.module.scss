@@ -33,13 +33,13 @@
   background: transparent;
   border-radius: var(--br-m);
   border: solid 1px var(--grey-700);
-  color: var(--grey-700);
+  color: var(--grey-500);
   flex: 1;
 
   &:focus {
     border: solid 1px var(--grey-500);
     outline: none;
-    color: var(--grey-600);
+    color: var(--grey-400);
   }
 }
 
