@@ -19,7 +19,6 @@ export const Structure: React.FC = () => {
 
   return (
     <div className={styles.wrapper} ref={intersectionRef}>
-      <Bubbles />
       <div className="container">
         <div className="row">
           <div className="col-lg-6 order-2 order-lg-1">
@@ -46,6 +45,7 @@ export const Structure: React.FC = () => {
           </div>
         </div>
       </div>
+      <Bubbles />
     </div>
   );
 };
@@ -53,16 +53,7 @@ export const Structure: React.FC = () => {
 const Bubbles: React.FC = () => {
   return (
     <div className={styles.bubbles}>
-      <span className={styles.bigBubble}>
-        <SvgBubbleBig />
-      </span>
-      <span className={styles.mediumBubble}>
-        <SvgBubbleMedium />
-      </span>
-      <span className={styles.smallBubble1}>
-        <SvgBubbleSmall />
-      </span>
-      <span className={styles.smallBubble2}>
+      <span className={styles.smallBubble}>
         <SvgBubbleSmall />
       </span>
     </div>
