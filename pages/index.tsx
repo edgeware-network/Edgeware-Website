@@ -126,7 +126,7 @@ export default function Home() {
       </Section>
       */}
 
-      <Section id="token" width="fluid">
+      <Section id="token" width="fluid" gap="none">
         <Token>
           <H2 size="1">
             An introduction to the <em>EDG</em> token.
@@ -149,7 +149,7 @@ export default function Home() {
         </Token>
       </Section>
 
-      <Section id="build" width="fluid">
+      <Section id="build" width="fluid" background="blocks" gap="none">
         <Build />
       </Section>
 

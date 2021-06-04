@@ -27,7 +27,7 @@ import { Icon } from '../components/common/icon/icon';
 export default function Developer() {
   return (
     <>
-      <Section id="main-info" background="waves" width="normal">
+      <Section id="main-info" width="normal">
         <MainPromo>
           <H1 size="1">Build governance focused smart contracts with Edgeware</H1>
           <br />
@@ -78,7 +78,7 @@ export default function Developer() {
         </div>
       </Section>
 
-      <Section id="tech-features" background="waves" width="narrow">
+      <Section id="tech-features" width="narrow">
         <div className="mb-5">
           <div className="row">
             <div className="col-lg d-flex align-items-center">
@@ -188,7 +188,7 @@ export default function Developer() {
         </IconBoxList>
       </Section>
 
-      <Section id="resources" background="waves-middle" width="narrow">
+      <Section id="resources" width="narrow">
         <div className="p-md-5">
           <div className="row">
             <div className="col-lg">

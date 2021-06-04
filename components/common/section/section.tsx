@@ -5,7 +5,7 @@ import styles from './section.module.scss';
 
 interface SectionProps {
   id: string;
-  background?: 'none' | 'waves' | 'waves-middle' | 'waves-top';
+  background?: 'none' | 'blocks';
   width: 'narrow' | 'normal' | 'wide' | 'fluid';
   gap?: 'none' | 'narrow' | 'standard';
 }
@@ -20,9 +20,7 @@ export const Section: React.FC<SectionProps> = ({
   const sectionClasses = cn(
     styles.section,
     styles[`sectionGap-${gap}`],
-    background === 'waves' && styles.backgroundWaves,
-    background === 'waves-middle' && styles.backgroundMiddle,
-    background === 'waves-top' && styles.backgroundTop
+    background === 'blocks' && styles.backgroundBlocks,
   );
 
   const containerClass = cn(
