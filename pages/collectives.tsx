@@ -124,7 +124,7 @@ export default function Collectives() {
         </div>
       </Section>
 
-      <Section id="start-collective" width="fluid" background="waves-top">
+      <Section id="start-collective" width="fluid">
         {/* Start collective promo */}
         <HeadlineSection center>
           <IconLogo />
