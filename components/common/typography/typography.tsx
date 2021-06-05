@@ -7,7 +7,7 @@ interface BaseProps {
   className?: string;
   size?: '1' | '2';
   inverted?: boolean;
-  margin: 'none' | 'small' | 'normal' | 'large'
+  margin?: 'none' | 'small' | 'normal' | 'large'
 }
 
 type HeadlineProps = BaseProps;
