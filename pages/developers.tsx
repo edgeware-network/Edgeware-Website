@@ -5,8 +5,6 @@ import IconPrompt from 'remixicon/icons/Development/terminal-line.svg';
 import IconTerminal from 'remixicon/icons/Development/terminal-window-line.svg';
 import IconServer from 'remixicon/icons/Device/server-line.svg';
 
-import IconGithub from 'remixicon/icons/Logos/github-fill.svg';
-
 import { H1, H2, P } from '../components/common/typography/typography';
 import { IconCard } from '../components/pages/developer/icon-card/icon-card';
 import { IconCardList } from '../components/pages/developer/icon-card/icon-card-list';
@@ -22,7 +20,6 @@ import { MainPromo } from '../components/pages/developer/main-promo/main-promo';
 import { Section } from '../components/common/section/section';
 import { EdgewareNode } from '../components/pages/developer/edgeware-node/edgeware-node';
 import { CodeIcon } from '../components/pages/developer/code-icon/code-icon';
-import { Icon } from '../components/common/icon/icon';
 
 export default function Developer() {
   return (
@@ -30,7 +27,6 @@ export default function Developer() {
       <Section id="main-info" width="normal">
         <MainPromo>
           <H1 size="1">Build governance focused smart contracts with Edgeware</H1>
-          <br />
           <P>
             Edgeware aims to solve the scalability problem by adopting a fundamentally different
             architecture. Edgeware token holders can vote to upgrade the network using on-chain
@@ -195,15 +191,11 @@ export default function Developer() {
               <div className="mt-md-5 pt-md-4">
                 <HeadlineSection center>
                   <OvalIcon />
-                  <H2 size="1">Resources</H2>
+                  <H2 size="1" margin="none">Resources</H2>
                   <div className="px-md-5">
-                    <P>
-                      Jump straight into our developer tutorials and easy to follow documentation.
-                    </P>
-                    <br />
+                    <P>Jump straight into our developer tutorials and easy to follow documentation.</P>
                     <Button style="white" href="https://github.com/Edgeware-Network">
                       Follow us on Github
-                      <Icon component={IconGithub} />
                     </Button>
                   </div>
                 </HeadlineSection>
