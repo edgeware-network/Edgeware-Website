@@ -1,13 +1,11 @@
 import * as React from 'react';
 
-import Icon from '../../../public/images/logo/edgeware-icon.svg';
-
 import styles from './icon-logo.module.scss';
 
 export const IconLogo: React.FC = () => {
   return (
     <div className={styles.logo}>
-      <Icon />
+      <img src="/images/logo/edg-profile-image-magenta@2x.png" width="196" height="196" alt="Edgeware" />
     </div>
   );
 };
