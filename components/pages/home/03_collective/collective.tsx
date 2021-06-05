@@ -97,7 +97,7 @@ const DesktopBackground: React.FC = () => {
   const [val, setValue] = React.useState(0);
 
   React.useEffect(() => {
-    const diff = (1732 - width) / 2 + 60;
+    const diff = (1712 - width) / 2 + 30;
     setValue(-1 * diff);
   }, [width]);
 
