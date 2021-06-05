@@ -4,11 +4,11 @@
   font-size: var(--fs-headline-400--sm);
   letter-spacing: var(--ls-headline--sm);
   font-weight: var(--fw-semibold);
-  margin: 0 0 var(--spacing-m) 0;
+  margin: 0 0 var(--spacing-s) 0;
 
   @include media-breakpoint-up(md) {
     font-size: var(--fs-headline-400);
-    margin: 0 0 var(--spacing-l) 0;
+    margin: 0 0 var(--spacing-m) 0;
     line-height: 1.16;
     letter-spacing: var(--ls-headline--md);
   }
