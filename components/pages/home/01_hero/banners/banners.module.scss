@@ -7,6 +7,10 @@
   @include media-breakpoint-up(lg) {
     width: auto;
     overflow: initial;
+
+    position: relative;
+    top: -150px;
+    z-index: 10;
   }
 }
 
@@ -31,8 +35,6 @@
   @include media-breakpoint-up(lg) {
   }
 }
-
-
 
 .item {
   scroll-snap-align: start;
