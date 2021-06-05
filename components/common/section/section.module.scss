@@ -48,4 +48,31 @@
     background: url('/images/backgrounds/blocks.jpg') 50% 50% repeat-x;
     background-size: 100%;
   }
+
+}
+
+.backgroundWaves {
+  padding: 0 0 100px 0;
+
+  background:
+    url('/images/backgrounds/wave-light.svg') 95% 100% repeat-x,
+    url('/images/backgrounds/wave-dark.svg') 60% 70% repeat-x;
+
+  @include media-breakpoint-up(md) {
+    background:
+      url('/images/backgrounds/wave-light.svg') 0% 100% repeat-x,
+      url('/images/backgrounds/wave-dark.svg') 50% 80% repeat-x;
+  }
+}
+
+.backgroundTop {
+  background:
+    url('/images/backgrounds/wave-light.svg') 45% 10% repeat-x,
+    url('/images/backgrounds/wave-dark.svg') 30% 18% repeat-x;
+}
+
+.backgroundMiddle {
+  background:
+    url('/images/backgrounds/wave-light.svg') 35% 70% repeat-x,
+    url('/images/backgrounds/wave-dark.svg') 70% 45% repeat-x;
 }

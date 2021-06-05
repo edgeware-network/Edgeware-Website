@@ -78,7 +78,7 @@ export default function Developer() {
         </div>
       </Section>
 
-      <Section id="tech-features" width="narrow">
+      <Section id="tech-features" background="waves-middle" width="narrow">
         <div className="mb-5">
           <div className="row">
             <div className="col-lg d-flex align-items-center">
