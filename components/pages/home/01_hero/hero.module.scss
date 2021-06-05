@@ -45,7 +45,7 @@
 
   @include media-breakpoint-up(lg) {
     text-align: center;
-    height: 75vh;
+    height: 100vh;
     min-height: 650px;
   }
 }
@@ -61,7 +61,6 @@
   @include media-breakpoint-up(lg) {
     font-size: var(--fs-headline-600--sm);
     letter-spacing: var(--ls-text--sm);
-    margin: 1rem 0;
   }
 
   @include media-breakpoint-up(xl) {

@@ -38,7 +38,7 @@ export default function Home() {
         lead="Edgeware is a smart contract chain with a community-managed treasury, decentralised proposal system and network of DAOs."
       />
 
-      <Section id="banners" width="wide">
+      <Section id="banners" width="wide" gap="none">
         <Banners />
       </Section>
 
