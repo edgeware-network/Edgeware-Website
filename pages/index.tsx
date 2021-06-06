@@ -29,13 +29,13 @@ export default function Home() {
           'build',
           'create',
           'fund',
-          'organise',
+          'organize',
           'develop',
           'start',
           'grow',
           'launch',
         ]}
-        lead="Edgeware is a smart contract chain with a community-managed treasury, decentralised proposal system and network of DAOs."
+        lead="Edgeware is a smart contract chain with a community-managed treasury, decentralized proposal system and network of DAOs."
       />
 
       <Section id="banners" width="wide" gap="none">
@@ -46,7 +46,7 @@ export default function Home() {
         <Intro>
           <H2 size="1">Your blockchain project starts here.</H2>
           <P>
-            <strong>Edgeware</strong> is a platform for the next generation of decentralised
+            <strong>Edgeware</strong> is a platform for the next generation of decentralized
             applications.
           </P>
           <P>
@@ -61,7 +61,7 @@ export default function Home() {
           </P>
           <P>
             The treasury and chain are governed by a fairly-launched,{' '}
-            <strong>widely-distributed set of stakeholders</strong> established during the lockdrop,
+            <strong>widely distributed set of stakeholders</strong> established during the lockdrop,
             one of the largest Ethereum token generation events in 2018.
           </P>
           <P>

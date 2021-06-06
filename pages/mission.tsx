@@ -15,7 +15,7 @@ export default function Mission() {
         <P>
           Edgeware serves as a platform for the developers, creators and members of its community to
           build, fund and manage their projects effectively. Our sustainable funding, evolving
-          organisational structure and open culture welcomes the next generation of blockchain
+          organizational structure and open culture welcomes the next generation of blockchain
           enabled concepts, tools and services. While the community's interests are always evolving,
           our core commitment to collective ownership and governance is the heart of Edgeware.
         </P>

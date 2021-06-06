@@ -22,20 +22,20 @@ export const Structure: React.FC = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-6 order-2 order-lg-1">
-            <H2 size="1">A crypto-native organisational structure</H2>
+            <H2 size="1">A crypto-native organizational structure</H2>
             <P>
               Edgeware has one of the widest and fairest distributions in crypto, however the core
               challenge remains how best to connect, coordinate and accelerate the collective
-              endeavours of its nascent community.
+              endeavors of its nascent community.
             </P>
             <P>
               With no central authority dictating activities, the answer lies in progressively
-              decentralising the management and development of the network via a tiered system of
-              organisational structures and reward mechanics that enable different roles to push
+              decentralizing the management and development of the network via a tiered system of
+              organizational structures and reward mechanics that enable different roles to push
               things forward.
             </P>
             <P>
-              This framework enables the project to organise its emerging resource pool
+              This framework enables the project to organize its emerging resource pool
               intelligently and efficiently whilst working to expand the utility, value and
               awareness of the network.
             </P>

@@ -113,9 +113,7 @@ export default function Developer() {
           <HeadlineSection center>
             <H2 size="1">Get Started on Edgeware</H2>
             <P>
-              This is your launchpad to find what you need to integrate Edgeware.
-              <br />
-              Unsure of where to start?{' '}
+              This is your launchpad to find what you need to integrate Edgeware. Unsure of where to start?{' '}
               <Link href="https://t.me/edg_developers">Join the Developer Chat</Link>
             </P>
           </HeadlineSection>
@@ -142,9 +140,7 @@ export default function Developer() {
         <HeadlineSection center>
           <H2 size="1">DAPPs developed on Edgeware</H2>
           <P>
-            Learn more about the latest launched applications
-            <br />
-            developed on Edgeware ecosystem.
+            Learn more about the latest launched applications developed on Edgeware ecosystem.
           </P>
         </HeadlineSection>
 
@@ -176,7 +172,7 @@ export default function Developer() {
             imageHeight="28"
             targetButton="https://dtrade.org/"
           >
-            Decentralised Synthetic Options &amp; Futures - derivatives trading powered by
+            Decentralized Synthetic Options &amp; Futures - derivatives trading powered by
             Substrate.
             <br />
             Community run.
