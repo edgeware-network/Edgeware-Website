@@ -18,30 +18,31 @@ const FOOTER_LINKS: FooterLinksGroup[] = [
   {
     headline: 'Ecosystem',
     items: {
-      Mission: '/mission',
-      Collectives: '/collectives',
-      Lockdrop: 'https://commonwealth.im/edgeware/stats',
-      Press: '/press',
+      'Mission': '/mission',
+      'Collectives': '/collectives',
+      'Lockdrop': 'https://commonwealth.im/edgeware/stats',
+      'Press': '/press',
       'Swag Store': 'https://edgeware.store/#',
     },
   },
   {
     headline: 'Developers',
     items: {
-      // 'Get started': '/developers',
-      Documentation: 'https://main.edgeware.wiki/',
-      Validators: 'https://main.edgeware.wiki/quickstart/set-up-a-validator',
-      Whitepaper:
+      'Get started': '/developers',
+      'Documentation': 'https://main.edgeware.wiki/',
+      'Validators': 'https://main.edgeware.wiki/quickstart/set-up-a-validator',
+      'Whitepaper':
         'https://arena-attachments.s3.amazonaws.com/4643268/c8d128724f36b716660e4bf21823e760.pdf?1563310093',
+      'Keygen': '/keygen'
     },
   },
   {
     headline: 'Community',
     items: {
-      Commonwealth: 'https://commonwealth.im/',
+      'Collectives': '/collectives',
+      'Commonwealth': 'https://commonwealth.im/',
       'Decent Partners': 'https://www.decent.partners/',
-      BuilDAO:
-        'https://www.notion.so/hicommonwealth/BuilDAO-Ecosystem-Fund-Paper-35d451f814014f9cbff96b6c8ab443a4#2deb99dadb794069a75ca969b6d369cf',
+      'Edgeware Agency': 'https://edgeware.agency/'
     },
   },
   {
@@ -77,7 +78,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className={styles.copyright}>
-          <p>© {new Date().getFullYear()} Edgeware built by the Commonwealth Community</p>
+          <p>© 2019 - {new Date().getFullYear()} Edgeware built by the Commonwealth Community</p>
           <span className={styles.copyrightMinor}>
             Edgeware is a blockchain network focused on funding and promoting open collectives
             through decentralised governance. This governance process is used to fund, manage, and

@@ -14,7 +14,7 @@ export default function Press() {
   return (
     <>
       <Intro>
-        <H1 size="2">
+        <H1 size="1">
           For the latest news follow
           <br />
           <em>@HeyEdgeware</em> on Twitter
@@ -31,28 +31,27 @@ export default function Press() {
         <P>
           The Edgeware logo displayed in the official colors and usage patterns.
           <br />
-          Do not place the logo on top of other objects and leave a reasonable amount of margin{' '}
-          <br />
+          Do not place the logo on top of other objects and leave a reasonable amount of margin
           around the outside so the logo is clearly visible.
         </P>
       </Intro>
 
       <Section id="brand-assets" width="narrow">
         <BrandAssetList>
-          <BrandAsset name="Logo White" type="logo" color="white" />
-          <BrandAsset name="Logo Dark Grey" type="logo" color="dark" />
-          <BrandAsset name="Logo Magenta" type="logo" color="magenta" />
+          <BrandAsset name="Main Logotype" type="logotype" color="main" />
+          <BrandAsset name="Dark Logotype" type="logotype" color="dark" />
+          <BrandAsset name="White Logotype" type="logotype" color="white" />
         </BrandAssetList>
 
         <BrandAssetList>
-          <BrandAsset name="Logo Mark White" type="logomark" color="white" />
-          <BrandAsset name="Logo Mark Dark Grey" type="logomark" color="dark" />
-          <BrandAsset name="Logo Mark Magenta" type="logomark" color="magenta" />
+          <BrandAsset name="Main Logo Mark" type="logomark" color="main" />
+          <BrandAsset name="Dark Logo Mark" type="logomark" color="dark" />
+          <BrandAsset name="White Logo Mark" type="logomark" color="white" />
         </BrandAssetList>
 
         <div className="text-center">
           <Button href="/assets/press/edg-brand-assets.zip" download style="white">
-            Download Brand Assets
+            Download all Brand Assets (zip)
           </Button>
         </div>
       </Section>

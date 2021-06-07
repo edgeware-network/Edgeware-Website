@@ -34,7 +34,7 @@ const COLLECTIVES: CollectiveCardProps[] = [
   },
   {
     imageSrc: '/images/collectives/edgeware-agency.jpg',
-    title: 'The Agency',
+    title: 'Edgeware Agency',
     description:
       'Focuses on developing and exploring the brand, including visual, emotional, experiential values of Edgeware, evangelizing use cases, and developing assets to communicate the above.',
     members: '+80',
@@ -52,7 +52,7 @@ const COLLECTIVES: CollectiveCardProps[] = [
     imageSrc: '/images/collectives/dao-working-group.jpg',
     title: 'DAO Working Group',
     description:
-      'Works to enable a robust infrastructure and cutting-edge support for DAOs and organisational primitives within Edgeware: Legal bridging, budgeting tools, organisational structures, reputation and deployment of DAOs.',
+      'Works to enable a robust infrastructure and cutting-edge support for DAOs and organizational primitives within Edgeware: Legal bridging, budgeting tools, organizational structures, reputation and deployment of DAOs.',
     members: '20+',
     href: 'https://t.me/EDGDAOWG',
   },
@@ -124,16 +124,16 @@ export default function Collectives() {
         </div>
       </Section>
 
-      <Section id="start-collective" width="fluid" background="waves-top">
+      <Section id="start-collective" width="fluid">
         {/* Start collective promo */}
         <HeadlineSection center>
           <IconLogo />
-          <H2 size="2">Start your own collective</H2>
-          <P style="lead">
-            In Edgeware, working groups function as mission-based development organisations that are
-            composed of members who share interests, needs, and passions. Where an Ambassador team
-            is largely formed to promote a network in a variety of ways, Working Groups are intended
-            to solve issues specific to a community while also expanding the awareness and utility
+          <H2 size="1">Start your own collective</H2>
+          <P>
+            In Edgeware, working groups function as mission-based development organizations that are
+            composed of members who share interests, needs, and passions. <br/>
+            Where an Ambassador team is largely formed to promote a network in a variety of ways,
+            Working Groups are intended to solve issues specific to a community while also expanding the awareness and utility
             of the network.
           </P>
         </HeadlineSection>
@@ -199,7 +199,7 @@ export default function Collectives() {
             <div className="col-md">
               <IconAndText>
                 <Icon component={IconScale} />
-                <p>Organise your community into a political power within the network.</p>
+                <p>Organize your community into a political power within the network.</p>
               </IconAndText>
             </div>
             <div className="col-md">

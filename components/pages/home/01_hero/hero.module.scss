@@ -1,40 +1,33 @@
 @import '../../../../styles/custom.scss';
 
 .hero {
-  background: url('/images/hero/herobg@2x.jpg?v1') 50% 50% no-repeat;
+  background: url('/images/hero/blocks-mobile.jpg') 100% 0%;
   background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
   z-index: 1;
   overflow: hidden;
+  margin-top: -4rem;
 
-  margin-top: -6rem;
-
-  @include media-breakpoint-up(lg) {
-    margin-top: -12.5rem;
+  @include media-breakpoint-up(md) {
+    margin-top: -6rem;
   }
-}
-
-.heroBgWrapper {
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
-
-.heroBg {
-  width: 100%;
-  height: 100vh;
-  background: url('/images/hero/herobg@2x.png?v1') 50% 100%;
-  background-size: cover;
-
 
   @include media-breakpoint-up(lg) {
-    background: url('/images/hero/herobg@2x.png?v1') 50% 100%;
+    background: url('/images/hero/blocks.jpg') 100% 50%;
     background-size: cover;
-    position: relative;
+    margin-top: -9rem;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to top, #151515, rgba(0,0,0, 0));
   }
 }
 
@@ -45,34 +38,33 @@
   justify-content: center;
   align-items: stretch;
   position: relative;
-  text-align: center;
+
   z-index: 2;
 
-  height: calc(100vh + 6rem);
+  height: calc(100vh + 4rem);
 
   @include media-breakpoint-up(lg) {
+    text-align: center;
     height: 100vh;
-    min-height: 720px;
+    min-height: 650px;
   }
 }
 
 .headline {
   font-weight: var(--fw-bold);
   color: var(--bw-white);
-  font-size: 2.875rem;
-  line-height: 1.15;
+  font-size: var(--fs-headline-600--sm);
+  line-height: 96px;
   letter-spacing: var(--ls-text--sm);
   margin: var(--spacing-m) 0;
 
   @include media-breakpoint-up(lg) {
-    font-size: 4rem;
-    line-height: 96px;
+    font-size: var(--fs-headline-600--sm);
     letter-spacing: var(--ls-text--sm);
-    margin: 1rem 0;
   }
 
   @include media-breakpoint-up(xl) {
-    font-size: 6rem;
+    font-size: var(--fs-headline-600);
     line-height: 105px;
     letter-spacing: var(--ls-text--lg);
   }
@@ -84,16 +76,14 @@
 }
 
 .lead {
+  font-size: var(--fs-text-xxl);
   font-weight: var(--fw-normal);
   color: var(--bw-white);
 
-  margin: var(--spacing-m) 0 var(--spacing-l) 0;
-
-  font-size: 1.25rem;
+  margin: var(--spacing-m) 0 0 0;
 
   @include media-breakpoint-up(lg) {
-    font-size: 1.625rem;
-    max-width: 740px;
-    margin: var(--spacing-m) auto;
+    max-width: 760px;
+    margin: var(--spacing-m) auto 0 auto;
   }
 }

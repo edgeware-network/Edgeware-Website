@@ -2,6 +2,7 @@
 
 .navWrapper {
   display: none;
+
   @include media-breakpoint-up(lg) {
     display: block;
   }
@@ -11,6 +12,10 @@
   display: block;
   z-index: 10;
   position: relative;
+
+  svg {
+    height: 30px;
+  }
 
   @include media-breakpoint-up(lg) {
     display: none;
@@ -31,7 +36,7 @@
   color: var(--bw-white);
   position: relative;
   padding: var(--spacing-xs) var(--spacing-m);
-  font-weight: var(--fw-semibold);
+  font-weight: var(--fw-normal);
   outline: none;
 
   @include media-breakpoint-up(lg) {
@@ -40,7 +45,7 @@
   }
 
   @include media-breakpoint-up(xl) {
-    margin: 0 var(--spacing-s);
+    margin: 0 var(--spacing-xs);
   }
 
   svg {
@@ -95,25 +100,6 @@
     }
   }
 
-  .navDropdown {
-    margin: 0;
-    padding: 0rem 0;
-    font-size: 1.125rem;
-  }
-
-  .navDropdown.navDropdownOpen{
-    .navItem {
-      width: 100%;
-    }
-  }
-
-  .navDropdownLabel {
-    padding: 0.5rem 0;
-    display: block;
-    font-weight: var(--fw-semibold);
-    border-bottom: 1px solid var(--grey-800);
-  }
-
   .navItemSpecial {
     position: absolute;
     margin: 0 var(--spacing-s);
@@ -136,73 +122,3 @@
   z-index: 2;
   background: var(--grey-900);
 }
-
-.navDropdown {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  margin: 0 0.5rem;
-  color: var(--bw-white);
-  cursor: pointer;
-  position: relative;
-
-  .navDropdownLabel {
-    font-weight: var(--fw-semibold);
-  }
-
-  &.navDropdownOpen {
-    .navDropdownLabel {
-      font-weight: var(--fw-semibold);
-      color: var(--grey-400);
-    }
-
-    .navDropdownBody {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-
-  @include media-breakpoint-up(lg) {
-    &:hover, &.navDropdownOpen {
-      .navDropdownLabel {
-        color: var(--grey-400);
-      }
-
-      .navDropdownBody {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        left: 1rem;
-        margin-top: 0.5rem;
-        padding: 0.25rem 0.5rem;
-        background: var(--grey-650);
-        border-radius: var(--br-m);
-      }
-    }
-  }
-}
-
-.navDropdownBody {
-  display: none;
-
-  .navItem {
-    width: 15rem;
-    padding: 0.5rem 0.5rem;
-    margin: 0.5rem 0;
-    border-radius: var(--br-m);
-    background: var(--grey-800);
-
-    &:hover {
-      color: var(--bw-white);
-      background: var(--grey-600);
-    }
-
-    &:active {
-      color: var(--bw-white);
-      background: var(--primary-500);
-    }
-  }
-}
-
-
-
-

@@ -39,6 +39,18 @@
   width: 100%;
 }
 
+.backgroundBlocks {
+  padding: 50px 0;
+
+  background: url('/images/backgrounds/blocks-mobile.jpg') 50% 50% repeat-x;
+
+  @include media-breakpoint-up(md) {
+    background: url('/images/backgrounds/blocks.jpg') 50% 50% repeat-x;
+    background-size: 100%;
+  }
+
+}
+
 .backgroundWaves {
   padding: 0 0 100px 0;
 

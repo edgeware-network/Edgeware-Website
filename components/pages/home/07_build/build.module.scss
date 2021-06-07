@@ -2,30 +2,14 @@
 
 .wrapper {
   margin: -150px 0 0 0;
-  padding: var(--spacing-sm) 0;
+  padding: var(--spacing-sm) 0 0px 0;
   position: relative;
-
-  &::before {
-    content: '';
-    display: block;
-
-    position: absolute;
-    top: -400px;
-    left: 0;
-    right: 0;
-    height: 475px;
-    z-index: 0;
-
-    background:
-      url('/images/backgrounds/wave-light.svg') 50% 100% repeat-x,
-      url('/images/backgrounds/wave-dark.svg') 0% 0% repeat-x;
-  }
 }
 
 .container {
   margin: 0 auto;
   max-width: 960px;
-  padding: 0 12px;
+  padding: 0 12px 50px 12px;
 }
 
 .content {

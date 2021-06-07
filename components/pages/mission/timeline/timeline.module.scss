@@ -20,7 +20,7 @@
     display: block;
     position: absolute;
     top: 50px;
-    bottom: 100px;
+    bottom: 30px;
     left: 50%;
     width: 2px;
     margin-left: -1px;
@@ -29,7 +29,7 @@
 
     @include media-breakpoint-up(lg) {
       top: 160px;
-      bottom: 160px;
+      bottom: 10px;
     }
   }
 }
@@ -84,6 +84,10 @@
       left: -138px;
     }
   }
+}
+
+.timelineItemUnknown {
+  margin-top: 200px;
 }
 
 .iconCheckmark {

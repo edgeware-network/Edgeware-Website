@@ -3,8 +3,8 @@
 .navLink {
   display: block;
   color: var(--grey-500);
+  font-weight: var(--fw-normal);
   outline: none;
-
   padding: 0.25rem 0;
 
   @include media-breakpoint-up(md) {

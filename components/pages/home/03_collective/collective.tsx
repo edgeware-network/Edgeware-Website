@@ -51,16 +51,16 @@ const MobileBackground: React.FC<{ section: 'top' | 'bottom' }> = ({ section }) 
       className: styles.backgroundMobileUp,
       image: {
         src: '/images/home/collectives-mobile-1.png',
-        width: 572,
-        height: 478,
+        width: Math.round(958 * 0.5),
+        height: Math.round(894 * 0.5),
       },
     },
     bottom: {
       className: styles.backgroundMobileDown,
       image: {
         src: '/images/home/collectives-mobile-2.png',
-        width: 572,
-        height: 562,
+        width: Math.round(822 * 0.52),
+        height: Math.round(1056 * 0.52),
       },
     },
   };
@@ -71,7 +71,7 @@ const MobileBackground: React.FC<{ section: 'top' | 'bottom' }> = ({ section }) 
   const [val, setValue] = React.useState(0);
 
   React.useEffect(() => {
-    const diff = (bg.image.width - width) / 2 + 10;
+    const diff = (bg.image.width - width) / 2;
     setValue(diff > 0 ? -1 * diff : 0);
   }, [bg.image.width, width]);
 
@@ -97,7 +97,7 @@ const DesktopBackground: React.FC = () => {
   const [val, setValue] = React.useState(0);
 
   React.useEffect(() => {
-    const diff = (1732 - width) / 2 + 60;
+    const diff = (1712 - width) / 2 + 30;
     setValue(-1 * diff);
   }, [width]);
 
@@ -108,9 +108,9 @@ const DesktopBackground: React.FC = () => {
           src="/images/home/collectives-desktop.png"
           alt="Edgeware Collectives"
           // layout="fixed"
-          width="1732"
+          width="1712"
           loading="eager"
-          height="1479"
+          height="1442"
           // quality={100}
         />
       </div>

@@ -4,7 +4,8 @@ import { Icon } from '../../../common/icon/icon';
 import { Button } from '../../../common/button/button';
 
 import SvgFile from 'remixicon/icons/Document/file-list-3-line.svg';
-import SvgCompas from 'remixicon/icons/Map/compass-discover-line.svg';
+import IconDiscord from 'remixicon/icons/Logos/discord-fill.svg';
+
 
 import styles from './build.module.scss';
 import { H2, P } from '../../../common/typography/typography';
@@ -45,14 +46,14 @@ export const Build: React.FC = () => {
             </li>
             <li className={styles.docItem}>
               <a
-                href="https://commonwealth.im/edgeware"
+                href="https://discord.com/invite/bDktqyj"
                 className={styles.docLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span className={styles.docIcon}>
                   <span className={styles.docIconInner}>
-                    <Icon component={SvgCompas} />
+                    <Icon component={IconDiscord} />
                   </span>
                 </span>
                 <div className={styles.docLinkInfo}>

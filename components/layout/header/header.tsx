@@ -24,9 +24,7 @@ export const Header: React.FC<HeaderProps> = ({ isStatic = false }) => {
               <EdgewareLogo />
             </a>
           </Link>
-
           <HeaderNav onToggleModal={toggleModal} />
-
           <GetStartedModal isOpen={isOpen} onClose={toggleModal} />
         </div>
       </div>
