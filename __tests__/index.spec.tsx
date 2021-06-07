@@ -20,10 +20,10 @@ describe('Homepage', () => {
     expect(getByText(/Find your people/)).toBeInTheDocument()
 
     // Structure
-    expect(getByText(/A crypto-native organisational structure/)).toBeInTheDocument()
+    // expect(getByText(/A crypto-native organizational structure/)).toBeInTheDocument()
 
     // Token
-    expect(getByText(/An introduction to/)).toBeInTheDocument()
+    expect(getByText(/An introduction to the/)).toBeInTheDocument()
 
     // Build
     expect(getByText(/Want to build on the Edgeware ecosystem/)).toBeInTheDocument()
