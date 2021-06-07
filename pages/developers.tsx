@@ -78,7 +78,7 @@ export default function Developer() {
         <div className="mb-5">
           <div className="row">
             <div className="col-lg d-flex align-items-center">
-              <div className="ps-md-4 ms-md-4 me-md-3">
+              <div className="ps-md-4 ms-md-4 me-md-3 text-center text-md-start">
                 <H2 size="1">Technical features</H2>
                 <P secondary>
                   Edgeware is a smart contract blockchain that compiles to a client runtime, a blob
