@@ -55,7 +55,7 @@ export default function Home() {
             <strong>Rust and WebAssembly</strong>.
           </P>
           <P>
-            <strong>Builders and organisers</strong> can find a place in one of Edgeware’s many
+            <strong>Builders and organizers</strong> can find a place in one of Edgeware’s many
             collectives <strong>funded by the on-chain treasury</strong> to expand the network and
             explore new ideas.
           </P>
@@ -78,7 +78,7 @@ export default function Home() {
         <Collective headline="Find your people.">
           <P>
             Rather than attempting to coordinate a single community, Edgeware’s evolving
-            organisational structure is designed to delegate power to small groups who become masters
+            organizational structure is designed to delegate power to small groups who become masters
             of their destiny, whilst still accountable to their peers.
           </P>
           <P>
@@ -132,7 +132,7 @@ export default function Home() {
             An introduction to the <em>EDG</em> token.
           </H2>
           <P>
-            The <strong>EDG</strong> token incentivises and rewards participants in the
+            The <strong>EDG</strong> token incentivizes and rewards participants in the
             ecosystem, ensuring everyone remains aligned to a common purpose of expanding both the
             usefulness and awareness of the network.
           </P>

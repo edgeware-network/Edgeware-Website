@@ -52,7 +52,7 @@ const COLLECTIVES: CollectiveCardProps[] = [
     imageSrc: '/images/collectives/dao-working-group.jpg',
     title: 'DAO Working Group',
     description:
-      'Works to enable a robust infrastructure and cutting-edge support for DAOs and organisational primitives within Edgeware: Legal bridging, budgeting tools, organisational structures, reputation and deployment of DAOs.',
+      'Works to enable a robust infrastructure and cutting-edge support for DAOs and organizational primitives within Edgeware: Legal bridging, budgeting tools, organizational structures, reputation and deployment of DAOs.',
     members: '20+',
     href: 'https://t.me/EDGDAOWG',
   },
@@ -130,7 +130,7 @@ export default function Collectives() {
           <IconLogo />
           <H2 size="1">Start your own collective</H2>
           <P>
-            In Edgeware, working groups function as mission-based development organisations that are
+            In Edgeware, working groups function as mission-based development organizations that are
             composed of members who share interests, needs, and passions. <br/>
             Where an Ambassador team is largely formed to promote a network in a variety of ways,
             Working Groups are intended to solve issues specific to a community while also expanding the awareness and utility
@@ -199,7 +199,7 @@ export default function Collectives() {
             <div className="col-md">
               <IconAndText>
                 <Icon component={IconScale} />
-                <p>Organise your community into a political power within the network.</p>
+                <p>Organize your community into a political power within the network.</p>
               </IconAndText>
             </div>
             <div className="col-md">
