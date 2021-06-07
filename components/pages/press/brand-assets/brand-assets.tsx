@@ -4,13 +4,13 @@ import cn from 'classnames';
 import styles from './brand-assets.module.scss';
 
 interface BrandAssetProps {
-  type: 'logo' | 'logomark';
+  type: 'logotype' | 'logomark';
   name: string;
   color: string;
 }
 
 const logoPath = (type: string, color: string, format: string) =>
-  `/assets/press/edgeware-${type}-${color}.${format}`;
+  `/assets/press/edgeware-${color}-${type}.${format}`;
 
 export const BrandAsset: React.FC<BrandAssetProps> = ({ type, name, color }) => {
   return (
