@@ -37,12 +37,11 @@
   @include media-breakpoint-up(md) {
     background-size: contain;
     margin: 0 0 0 86px;
-
   }
 
   @include media-breakpoint-up(lg) {
     order: 2;
-    background: url('/images/developer/blockchain-grid.png') 50% 50% no-repeat;
+    background: url('/images/developer/blockchain-grid.png') 50% 25% no-repeat;
     background-size: 90%;
   }
 }

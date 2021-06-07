@@ -5,8 +5,6 @@ import IconPrompt from 'remixicon/icons/Development/terminal-line.svg';
 import IconTerminal from 'remixicon/icons/Development/terminal-window-line.svg';
 import IconServer from 'remixicon/icons/Device/server-line.svg';
 
-import IconGithub from 'remixicon/icons/Logos/github-fill.svg';
-
 import { H1, H2, P } from '../components/common/typography/typography';
 import { IconCard } from '../components/pages/developer/icon-card/icon-card';
 import { IconCardList } from '../components/pages/developer/icon-card/icon-card-list';
@@ -22,15 +20,13 @@ import { MainPromo } from '../components/pages/developer/main-promo/main-promo';
 import { Section } from '../components/common/section/section';
 import { EdgewareNode } from '../components/pages/developer/edgeware-node/edgeware-node';
 import { CodeIcon } from '../components/pages/developer/code-icon/code-icon';
-import { Icon } from '../components/common/icon/icon';
 
 export default function Developer() {
   return (
     <>
-      <Section id="main-info" background="waves" width="normal">
+      <Section id="main-info" width="normal">
         <MainPromo>
           <H1 size="1">Build governance focused smart contracts with Edgeware</H1>
-          <br />
           <P>
             Edgeware aims to solve the scalability problem by adopting a fundamentally different
             architecture. Edgeware token holders can vote to upgrade the network using on-chain
@@ -78,11 +74,11 @@ export default function Developer() {
         </div>
       </Section>
 
-      <Section id="tech-features" background="waves" width="narrow">
+      <Section id="tech-features" background="waves-middle" width="narrow">
         <div className="mb-5">
           <div className="row">
             <div className="col-lg d-flex align-items-center">
-              <div className="ps-md-4 ms-md-4 me-md-3">
+              <div className="ps-md-4 ms-md-4 me-md-3 text-center text-md-start">
                 <H2 size="1">Technical features</H2>
                 <P secondary>
                   Edgeware is a smart contract blockchain that compiles to a client runtime, a blob
@@ -117,9 +113,7 @@ export default function Developer() {
           <HeadlineSection center>
             <H2 size="1">Get Started on Edgeware</H2>
             <P>
-              This is your launchpad to find what you need to integrate Edgeware.
-              <br />
-              Unsure of where to start?{' '}
+              This is your launchpad to find what you need to integrate Edgeware. Unsure of where to start?{' '}
               <Link href="https://t.me/edg_developers">Join the Developer Chat</Link>
             </P>
           </HeadlineSection>
@@ -146,9 +140,7 @@ export default function Developer() {
         <HeadlineSection center>
           <H2 size="1">DAPPs developed on Edgeware</H2>
           <P>
-            Learn more about the latest launched applications
-            <br />
-            developed on Edgeware ecosystem.
+            Learn more about the latest launched applications developed on Edgeware ecosystem.
           </P>
         </HeadlineSection>
 
@@ -180,7 +172,7 @@ export default function Developer() {
             imageHeight="28"
             targetButton="https://dtrade.org/"
           >
-            Decentralised Synthetic Options &amp; Futures - derivatives trading powered by
+            Decentralized Synthetic Options &amp; Futures - derivatives trading powered by
             Substrate.
             <br />
             Community run.
@@ -188,22 +180,18 @@ export default function Developer() {
         </IconBoxList>
       </Section>
 
-      <Section id="resources" background="waves-middle" width="narrow">
+      <Section id="resources" width="narrow">
         <div className="p-md-5">
           <div className="row">
             <div className="col-lg">
               <div className="mt-md-5 pt-md-4">
                 <HeadlineSection center>
                   <OvalIcon />
-                  <H2 size="1">Resources</H2>
+                  <H2 size="1" margin="none">Resources</H2>
                   <div className="px-md-5">
-                    <P>
-                      Jump straight into our developer tutorials and easy to follow documentation.
-                    </P>
-                    <br />
+                    <P>Jump straight into our developer tutorials and easy to follow documentation.</P>
                     <Button style="white" href="https://github.com/Edgeware-Network">
                       Follow us on Github
-                      <Icon component={IconGithub} />
                     </Button>
                   </div>
                 </HeadlineSection>

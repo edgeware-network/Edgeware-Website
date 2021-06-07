@@ -18,6 +18,7 @@ import {
   HeaderAndTextList,
   HeaderAndText,
 } from '../components/common/header-and-text/header-and-text';
+import { Banners } from '../components/pages/home/01_hero/banners/banners';
 
 export default function Home() {
   return (
@@ -28,20 +29,24 @@ export default function Home() {
           'build',
           'create',
           'fund',
-          'organise',
+          'organize',
           'develop',
           'start',
           'grow',
           'launch',
         ]}
-        lead="Edgeware is a smart contract chain with a community-managed treasury, decentralised proposal system and network of DAOs."
+        lead="Edgeware is a smart contract chain with a community-managed treasury, decentralized proposal system and network of DAOs."
       />
+
+      <Section id="banners" width="wide" gap="none">
+        <Banners />
+      </Section>
 
       <Section id="intro" width="fluid">
         <Intro>
           <H2 size="1">Your blockchain project starts here.</H2>
           <P>
-            <strong>Edgeware</strong> is a platform for the next generation of decentralised
+            <strong>Edgeware</strong> is a platform for the next generation of decentralized
             applications.
           </P>
           <P>
@@ -50,13 +55,13 @@ export default function Home() {
             <strong>Rust and WebAssembly</strong>.
           </P>
           <P>
-            <strong>Builders and organisers</strong> can find a place in one of Edgeware’s many
+            <strong>Builders and organizers</strong> can find a place in one of Edgeware’s many
             collectives <strong>funded by the on-chain treasury</strong> to expand the network and
             explore new ideas.
           </P>
           <P>
             The treasury and chain are governed by a fairly-launched,{' '}
-            <strong>widely-distributed set of stakeholders</strong> established during the lockdrop,
+            <strong>widely distributed set of stakeholders</strong> established during the lockdrop,
             one of the largest Ethereum token generation events in 2018.
           </P>
           <P>
@@ -73,7 +78,7 @@ export default function Home() {
         <Collective headline="Find your people.">
           <P>
             Rather than attempting to coordinate a single community, Edgeware’s evolving
-            organisational structure is designed to delegate power to small groups who become masters
+            organizational structure is designed to delegate power to small groups who become masters
             of their destiny, whilst still accountable to their peers.
           </P>
           <P>
@@ -121,13 +126,13 @@ export default function Home() {
       </Section>
       */}
 
-      <Section id="token" width="fluid">
+      <Section id="token" width="fluid" gap="none">
         <Token>
           <H2 size="1">
             An introduction to the <em>EDG</em> token.
           </H2>
           <P>
-            The <strong>EDG</strong> token incentivises and rewards participants in the
+            The <strong>EDG</strong> token incentivizes and rewards participants in the
             ecosystem, ensuring everyone remains aligned to a common purpose of expanding both the
             usefulness and awareness of the network.
           </P>
@@ -144,7 +149,7 @@ export default function Home() {
         </Token>
       </Section>
 
-      <Section id="build" width="fluid">
+      <Section id="build" width="fluid" background="blocks" gap="none">
         <Build />
       </Section>
 

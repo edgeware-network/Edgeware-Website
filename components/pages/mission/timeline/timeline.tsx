@@ -94,6 +94,11 @@ export const Timeline: React.FC<TimelineProps> = () => {
             inflation to drop.
           </TimelineItem>
         </li>
+
+        <li className={cn(styles.timelineItem, styles.timelineItemLeft, styles.timelineItemUnknown)}>
+          <TimelineItem unknown name="" date="" />
+        </li>
+
       </ol>
     </div>
   );

@@ -31,9 +31,7 @@ export const NewsletterForm: React.FC = () => {
               defaultValue=""
             />
           </div>
-          <button type="submit" className={styles.button}>
-            Sign up
-          </button>
+          <input type="submit" className={styles.button} value="Sign up" />
         </div>
       </fieldset>
     </form>

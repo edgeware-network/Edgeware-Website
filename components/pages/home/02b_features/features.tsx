@@ -60,7 +60,7 @@ export const Features: React.FC = () => {
                 </IconWithText>
 
                 <IconWithText headline="Request funding from the treasury" iconComponent={IconBank}>
-                  Utilise Edgeware’s community treasury to receive seed funding for your new Working
+                  Utilize Edgeware’s community treasury to receive seed funding for your new Working
                   Group or request larger amounts for a fully developed project plan.
                 </IconWithText>
 

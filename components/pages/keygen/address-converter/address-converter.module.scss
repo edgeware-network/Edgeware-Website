@@ -29,15 +29,17 @@
 .input {
   width: 100%;
   border-radius: var(--br-m);
-  border: solid 1px var(--grey-600);
+  background: var(--grey-900);
+  color: var(--grey-grey-500);
+  border: solid 1px var(--grey-800);
   padding: 12px var(--spacing-s) 12px var(--spacing-s);
   margin: 0 0 var(--spacing-xs) 0;
   font-size: 1rem;
-  font-family: var(--ff-plex);
+  font-family: var(--ff-text);
 
   &:focus {
     outline: none;
-    border: solid 1px var(--grey-900);
+    border: solid 1px var(--grey-600);
   }
 
   @include media-breakpoint-up(lg) {

@@ -55,6 +55,7 @@
 
   @include media-breakpoint-up(md) {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
@@ -62,8 +63,8 @@
   margin: 0 0 calc(2 * var(--spacing-xs)) 0;
 
   @include media-breakpoint-up(md) {
-    margin: 0 var(--spacing-m);
-    flex: 1 1 0;
+    margin: var(--spacing-xs) var(--spacing-m);
+    flex: 1 1 0%;
   }
 
   @include media-breakpoint-up(xl) {

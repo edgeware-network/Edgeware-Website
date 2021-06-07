@@ -9,7 +9,7 @@
 
   @include media-breakpoint-up(lg) {
     padding: 100px 0 0;
-    margin: 0 0 -50px 0;
+    margin: 0 0 -30px 0;
   }
 }
 
@@ -84,67 +84,7 @@
   width: 100%;
 }
 
-
-.bigBubble {
-  position: absolute;
-  z-index: 0;
-
-  right: -250px;
-  top: -300px;
-
-  @include media-breakpoint-up(lg) {
-    right: auto;
-    left: -250px;
-    top: -450px;
-  }
-
-  svg {
-    transform: scale(0.7);
-    @include media-breakpoint-up(lg) {
-      transform: scale(0.9);
-    }
-  }
-}
-
-.mediumBubble {
-  position: absolute;
-  z-index: -1;
-
-  right: -200px;
-  bottom: 10px;
-
-  @include media-breakpoint-up(lg) {
-    right: -100px;
-    bottom: auto;
-    top: -350px;
-  }
-}
-
-.smallBubble1 {
-  position: absolute;
-  z-index: 0;
-
-  top: 0%;
-  left: -100px;
-
-  @include media-breakpoint-up(lg) {
-    top: -100px;
-    left: auto;
-    right: 30%;
-    transform: scale(0.6);
-  }
-
-  svg {
-    transform: scale(0.75);
-    @include media-breakpoint-up(lg) {
-      transform: scale(0.6);
-    }
-  }
-
-
-}
-
-.smallBubble2 {
+.smallBubble {
   position: absolute;
   z-index: 1;
 
@@ -153,14 +93,13 @@
 
   @include media-breakpoint-up(lg) {
     top: auto;
-    bottom: 0px;
-    left: auto;
-    right: -75px;
+    bottom: -350px;
+    left: 10px;
   }
 
   svg {
     @include media-breakpoint-up(lg) {
-      transform: scale(0.6);
+      transform: scale(1);
     }
   }
 }

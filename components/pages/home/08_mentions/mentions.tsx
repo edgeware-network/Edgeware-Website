@@ -45,7 +45,7 @@ const TWEETS: TweetCardProps[] = [
       'Huge congrats to @hicommonwealth as @HeyEdgeware #Lockdrop just passed 1 million ETH locked &/or signalled, absolutely crushing our most optimistic projections. 🙌 The global community rising up around this protocol is inspiring, especially the excitement out here in China.🇨🇳✌️',
     date: '11:58 PM · Jun 12, 2019',
     avatar:
-      'https://pbs.twimg.com/profile_images/1192930256694329344/dE3bE6OQ_reasonably_small.jpg',
+      'https://pbs.twimg.com/profile_images/1367858227866710022/w0g67HO1_400x400.jpg',
   },
   {
     name: 'Du Capital',
@@ -54,7 +54,7 @@ const TWEETS: TweetCardProps[] = [
       'Amazing turnout at the @web3foundation @polkadotnetwork & ecosystem meetup in China’s tech hub Shenzhen. Crowd also got excited by @HeyEdgeware and @chainx_org , both of which has a token distribution mechanism that really emphasises on the community. Pleasure hosting you guys!',
     date: '6:36 PM · Jun 11, 2019',
     avatar:
-      'https://pbs.twimg.com/profile_images/1037239349543194625/6-nu5UOC_reasonably_small.jpg',
+      'https://pbs.twimg.com/profile_images/1037239349543194625/6-nu5UOC_400x400.jpg',
   },
   {
     name: 'Parity Technologies',
@@ -63,14 +63,14 @@ const TWEETS: TweetCardProps[] = [
       'Congratulations to @HeyEdgeware for launching! 🎉 Check out this #Substrate-based chain at https://t.co/Eo5ugKqK1K. https://t.co/lmpkUvWtpa',
     date: '5:11 PM · Feb 17, 2020',
     avatar:
-      'https://pbs.twimg.com/profile_images/1010173347659993089/zbuCwSRG_reasonably_small.jpg',
+      'https://pbs.twimg.com/profile_images/1010173347659993089/zbuCwSRG_400x400.jpg',
   },
   {
     name: 'Quantstamp',
     handle: '@Quantstamp',
     text: 'Congratulations @HeyEdgeware on the continued traction! #securedbyqsp',
     date: '6:47 PM · Jun 17, 2019',
-    avatar: 'https://pbs.twimg.com/profile_images/973356164581810177/c5O-DcFd_reasonably_small.jpg',
+    avatar: 'https://pbs.twimg.com/profile_images/973356164581810177/c5O-DcFd_400x400.jpg',
   },
 ];
 
@@ -83,9 +83,9 @@ export const Mentions: React.FC = () => {
 
       <div className={styles.carousel}>
         <Swiper {...swiperOptions}>
-          {TWEETS.map((tweet, index) => (
-            <SwiperSlide key={index}>
-              <TweetCard {...tweet} />
+          {TWEETS.map((tweet) => (
+            <SwiperSlide key={tweet.handle}>
+              <TweetCard {...tweet} key={tweet.handle} />
             </SwiperSlide>
           ))}
         </Swiper>
