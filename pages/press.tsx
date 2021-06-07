@@ -38,9 +38,9 @@ export default function Press() {
 
       <Section id="brand-assets" width="narrow">
         <BrandAssetList>
-          <BrandAsset name="Main Logotype" type="logo" color="main" />
-          <BrandAsset name="Dark Logotype" type="logo" color="dark" />
-          <BrandAsset name="White Logotype" type="logo" color="white" />
+          <BrandAsset name="Main Logotype" type="logotype" color="main" />
+          <BrandAsset name="Dark Logotype" type="logotype" color="dark" />
+          <BrandAsset name="White Logotype" type="logotype" color="white" />
         </BrandAssetList>
 
         <BrandAssetList>
@@ -51,7 +51,7 @@ export default function Press() {
 
         <div className="text-center">
           <Button href="/assets/press/edg-brand-assets.zip" download style="white">
-            Download Brand Assets
+            Download all Brand Assets (zip)
           </Button>
         </div>
       </Section>
