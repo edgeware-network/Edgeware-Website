@@ -32,7 +32,7 @@ export const Layout: React.FC<LayoutProps> = ({
   const path = currentPath.substring(1);
   const pageTitle = `${title} | Edgeware`;
   const pageUrl = `${DOMAIN}/${path}`;
-  const ogImage = `/images/og/og-image-${path === '' ? 'home' : path}.jpg`;
+  const ogImage = `/images/og/og-image-${path === '' ? 'home' : path}.jpg?v3`;
 
   return (
     <>
