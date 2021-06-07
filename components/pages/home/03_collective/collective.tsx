@@ -51,16 +51,16 @@ const MobileBackground: React.FC<{ section: 'top' | 'bottom' }> = ({ section }) 
       className: styles.backgroundMobileUp,
       image: {
         src: '/images/home/collectives-mobile-1.png',
-        width: Math.round(958 * 0.75),
-        height: Math.round(894 * 0.75),
+        width: Math.round(958 * 0.5),
+        height: Math.round(894 * 0.5),
       },
     },
     bottom: {
       className: styles.backgroundMobileDown,
       image: {
         src: '/images/home/collectives-mobile-2.png',
-        width: Math.round(822 * 0.5),
-        height: Math.round(1056 * 0.5),
+        width: Math.round(822 * 0.52),
+        height: Math.round(1056 * 0.52),
       },
     },
   };
@@ -71,7 +71,7 @@ const MobileBackground: React.FC<{ section: 'top' | 'bottom' }> = ({ section }) 
   const [val, setValue] = React.useState(0);
 
   React.useEffect(() => {
-    const diff = (bg.image.width - width) / 2 + 10;
+    const diff = (bg.image.width - width) / 2;
     setValue(diff > 0 ? -1 * diff : 0);
   }, [bg.image.width, width]);
 
