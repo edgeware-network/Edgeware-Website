@@ -32,7 +32,7 @@ export const Layout: React.FC<LayoutProps> = ({
   const path = currentPath.substring(1);
   const pageTitle = `${title} | Edgeware`;
   const pageUrl = `${DOMAIN}/${path}`;
-  const ogImage = `/images/og/og-image-${path === '' ? 'home' : path}.jpg?v3`;
+  const ogImageUrl = `${DOMAIN}/images/og/og-image-${path === '' ? 'home' : path}.jpg?v3`;
 
   return (
     <>
@@ -54,7 +54,7 @@ export const Layout: React.FC<LayoutProps> = ({
         <meta property="og:type" content="website" />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
+        <meta property="og:image" content={ogImageUrl} />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@HeyEdgeware" />
@@ -62,7 +62,7 @@ export const Layout: React.FC<LayoutProps> = ({
         <meta property="twitter:url" content={pageUrl} />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter:image" content={ogImageUrl} />
       </Head>
       <Header />
       <Main layout={simpleLayout ? 'simple' : 'advanced'}>{children}</Main>
