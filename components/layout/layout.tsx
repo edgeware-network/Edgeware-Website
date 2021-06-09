@@ -11,6 +11,7 @@ interface LayoutProps {
   meta?: {
     title: string;
     description: string;
+    robots?: string
   };
   currentPath?: string;
   simpleLayout?: boolean;
@@ -27,7 +28,7 @@ export const Layout: React.FC<LayoutProps> = ({
   particles = false,
   currentPath = '/',
 }) => {
-  const { title, description } = meta;
+  const { title, description, robots } = meta;
 
   const path = currentPath.substring(1);
   const pageTitle = `${title} | Edgeware`;
@@ -52,6 +53,8 @@ export const Layout: React.FC<LayoutProps> = ({
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff3b80" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
+
+        {robots && <meta name="robots" content={robots} />}
 
         <meta property="og:url" content={pageUrl} />
         <meta property="og:type" content="website" />
