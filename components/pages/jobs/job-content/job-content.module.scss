@@ -1,0 +1,32 @@
+.content {
+  margin: 4rem 0 0 0;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  margin: 2rem 0 1rem 0;
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin: 4rem 0 1rem 0;
+}
+
+.content h3 {
+  font-size: 2rem;
+  margin: 3rem 0 1rem 0;
+}
+
+.content p, .content li {
+  font-size: 1rem;
+}
+
+.content a {
+  &:link, &:visited {
+    color: var(--primary-500);
+  }
+
+  &:hover, &:active {
+    color: var(--primary-300);
+  }
+}

@@ -53,6 +53,18 @@ a {
   }
 }
 
+.link-secondary {
+  text-decoration: underline;
+
+  &:link, &:visited {
+    color: var(--grey-500);
+  }
+
+  &:hover, &:active {
+    color: var(--primary-300);
+  }
+}
+
 .swiper-wrapper {
   .swiper-slide {
     height: auto;
