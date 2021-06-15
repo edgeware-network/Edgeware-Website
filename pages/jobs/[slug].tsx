@@ -20,9 +20,9 @@ export default function Job({ job }) {
         <JobContent content={job.content} />
 
         <div className="py-4">
-          <Button href="mailto:ops@edgeware.agency">Apply for this position</Button>
+          <Button href={`mailto:ops@edgeware.agency?subject=${job.data.title} at Edgeware`}>Apply for this position</Button>
           <P secondary>
-            Or email us at <a href="mailto:ops@edgeware.agency" className="link">ops@edgeware.agency</a><br/>
+            Or email us at <a href={`mailto:ops@edgeware.agency?subject=${job.data.title}  at Edgeware`} className="link">ops@edgeware.agency</a><br/>
           </P>
           <P secondary>
             <Link href="/jobs">
