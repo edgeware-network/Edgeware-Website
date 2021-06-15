@@ -43,7 +43,7 @@ export async function getStaticProps({ params }) {
     props: {
       meta: {
         title: `${job.data.title}`,
-        description: 'The latest jobs at Edgeware - We\'re a growing open source community looking for talents!',
+        description: `We are looking for ${job.data.title} here at Edgeware. Join our growing community and help build awesome things!`,
       },
       job: {
         ...job,
