@@ -6,7 +6,7 @@
   position: relative;
   z-index: 1;
   overflow: hidden;
-  margin-top: -6rem;
+  margin-top: -4rem;
 
   @include media-breakpoint-up(md) {
     background: url('/images/jobs/hero-jobs.jpg') 50% 50%;
@@ -15,7 +15,7 @@
   }
 
   @include media-breakpoint-up(lg) {
-    margin-top: -12.5rem;
+    margin-top: -10rem;
   }
 
   &::after {
@@ -37,10 +37,10 @@
   justify-content: center;
   align-items: stretch;
   position: relative;
-  text-align: left;
+  text-align: center;
   z-index: 2;
 
-  height: calc(80vh);
+  height: calc(85vh);
 
   @include media-breakpoint-up(lg) {
     height: 70vh;
