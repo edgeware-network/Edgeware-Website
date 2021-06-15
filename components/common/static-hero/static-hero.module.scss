@@ -1,0 +1,73 @@
+@import '../../../styles/custom.scss';
+
+.hero {
+  background: url('/images/jobs/hero-jobs-mobile.jpg') 50% 100%;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  margin-top: -6rem;
+
+  @include media-breakpoint-up(md) {
+    background: url('/images/jobs/hero-jobs.jpg') 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-top: -12.5rem;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background-image: linear-gradient(to top, var(--grey-900), rgba(21, 21, 21, 0) 90%);
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  position: relative;
+  text-align: left;
+  z-index: 2;
+
+  height: calc(80vh);
+
+  @include media-breakpoint-up(lg) {
+    height: 70vh;
+    min-height: 640px;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1150px;
+  padding: 0 14px;
+
+  @include media-breakpoint-up(lg) {
+    padding: 120px 72px 0 72px;
+  }
+}
+
+.headlineWrapper {
+  max-width: 760px;
+
+  @include media-breakpoint-up(md) {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.headline {
+  margin: 0;
+}

@@ -62,6 +62,7 @@ export const H2: React.FC<HeadlineProps> = ({
 interface ParagraphProps extends BaseProps {
   secondary?: boolean;
   style?: 'regular' | 'secondary' | 'lead' | 'large' | 'small';
+  bold?: boolean
 }
 
 export const P: React.FC<ParagraphProps> = ({
@@ -70,12 +71,14 @@ export const P: React.FC<ParagraphProps> = ({
   className,
   style = 'regular',
   inverted = false,
+  bold = false,
   ...restProps
 }) => {
   const pClass = cn(
     styles.p,
     secondary && styles.secondary,
     inverted && styles.inverted,
+    bold && styles.bold,
     styles[style],
     className
   );
