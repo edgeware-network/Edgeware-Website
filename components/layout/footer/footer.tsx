@@ -42,7 +42,8 @@ const FOOTER_LINKS: FooterLinksGroup[] = [
       'Collectives': '/collectives',
       'Commonwealth': 'https://commonwealth.im/',
       'Decent Partners': 'https://www.decent.partners/',
-      'Edgeware Agency': 'https://edgeware.agency/'
+      'Edgeware Agency': 'https://edgeware.agency/',
+      'Jobs': '/jobs'
     },
   },
   {
