@@ -31,7 +31,7 @@ export default function Jobs({ allJobs }) {
           <P style="lead" bold>
             Is your role not listed?
             {' '}
-            <a href="mailto:ops@edgware.agency" className="link">Message us.</a>
+            <a href="mailto:ops@edgware.agency" className="link">Message us</a>.
           </P>
         </div>
       </Section>
