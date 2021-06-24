@@ -13,7 +13,13 @@ interface TimelineItemProps {
   unknown?: boolean;
 }
 
-export const TimelineItem: React.FC<TimelineItemProps> = ({ name, date, children, isDone = false, unknown = false}) => {
+export const TimelineItem: React.FC<TimelineItemProps> = ({
+  name,
+  date,
+  children,
+  isDone = false,
+  unknown = false,
+}) => {
   return (
     <>
       <span className={styles.timelineItemSymbol}>
@@ -21,13 +27,15 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({ name, date, children
           {isDone ? <IconDone /> : unknown ? <IconUnknown /> : <IconTodo />}
         </span>
       </span>
-      {!unknown && <div className={styles.item}>
-        <span className={styles.itemDate}>{date}</span>
-        <h3 className={styles.itemName}>{name}</h3>
-        <div className={styles.itemContent}>
-          <p>{children}</p>
+      {!unknown && (
+        <div className={styles.item}>
+          <span className={styles.itemDate}>{date}</span>
+          <h3 className={styles.itemName}>{name}</h3>
+          <div className={styles.itemContent}>
+            <p>{children}</p>
+          </div>
         </div>
-      </div>}
+      )}
     </>
   );
 };

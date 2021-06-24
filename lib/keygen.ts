@@ -4,13 +4,13 @@ import { blake2AsU8a } from '@polkadot/util-crypto/blake2';
 import Keyring from '@polkadot/keyring';
 import { createPair } from '@polkadot/keyring/pair';
 
-const KEYRING_TYPE = 'sr25519'
+const KEYRING_TYPE = 'sr25519';
 
 export interface KeyPairData {
   phrase: string;
   publicKey: string;
   testnetAddress: string;
-  mainnetAddress: string
+  mainnetAddress: string;
 }
 
 export function generateKeyPair(): KeyPairData {
@@ -24,8 +24,8 @@ export function generateKeyPair(): KeyPairData {
     phrase,
     publicKey: u8aToHex(testnetKeyringPair.publicKey),
     testnetAddress: testnetKeyringPair.address,
-    mainnetAddress: mainnetKeyringPair.address
-  }
+    mainnetAddress: mainnetKeyringPair.address,
+  };
 }
 
 export function evmConvert(evmAddress = '') {
@@ -35,12 +35,15 @@ export function evmConvert(evmAddress = '') {
     const res = blake2AsU8a(u8aConcat(data, addr));
 
     const mainnetKeyring = new Keyring({ type: 'sr25519', ss58Format: 7 });
-    const mainnetPair = createPair({ toSS58: mainnetKeyring.encodeAddress, type: 'sr25519' }, { publicKey: res });
+    const mainnetPair = createPair(
+      { toSS58: mainnetKeyring.encodeAddress, type: 'sr25519' },
+      { publicKey: res }
+    );
 
     const convertedMainnetAddress = mainnetPair.address;
-    return convertedMainnetAddress
+    return convertedMainnetAddress;
   } catch (e) {
-    return 'error'
+    return 'error';
   }
 }
 
@@ -49,26 +52,32 @@ export function ss58Convert(address = '') {
   try {
     keyring.addFromAddress(address);
     const publicKey = u8aToHex(keyring.getPublicKeys()[0]);
-    return publicKey
+    return publicKey;
   } catch (e) {
-    return 'error'
+    return 'error';
   }
 }
 
 export function publicKeyConvert(publicKey = '') {
   try {
     const testnetKeyring = new Keyring({ type: 'sr25519' });
-    const testnetPair = createPair({ toSS58: testnetKeyring.encodeAddress, type: 'sr25519' }, { publicKey: hexToU8a(publicKey) });
+    const testnetPair = createPair(
+      { toSS58: testnetKeyring.encodeAddress, type: 'sr25519' },
+      { publicKey: hexToU8a(publicKey) }
+    );
     const testnetAddress = testnetPair.address;
 
     const mainnetKeyring = new Keyring({ type: 'sr25519', ss58Format: 7 });
-    const mainnetPair = createPair({ toSS58: mainnetKeyring.encodeAddress, type: 'sr25519' }, { publicKey: hexToU8a(publicKey) });
+    const mainnetPair = createPair(
+      { toSS58: mainnetKeyring.encodeAddress, type: 'sr25519' },
+      { publicKey: hexToU8a(publicKey) }
+    );
     const mainnetAddress = mainnetPair.address;
 
     return {
       testnetAddress,
-      mainnetAddress
-    }
+      mainnetAddress,
+    };
   } catch (e) {
     return 'error';
   }

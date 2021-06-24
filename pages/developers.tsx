@@ -113,8 +113,8 @@ export default function Developer() {
           <HeadlineSection center>
             <H2 size="1">Get Started on Edgeware</H2>
             <P>
-              This is your launchpad to find what you need to integrate Edgeware. Unsure of where to start?{' '}
-              <Link href="https://t.me/edg_developers">Join the Developer Chat</Link>
+              This is your launchpad to find what you need to integrate Edgeware. Unsure of where to
+              start? <Link href="https://t.me/edg_developers">Join the Developer Chat</Link>
             </P>
           </HeadlineSection>
 
@@ -139,9 +139,7 @@ export default function Developer() {
       <Section id="edgeware-dapps" width="normal">
         <HeadlineSection center>
           <H2 size="1">DAPPs developed on Edgeware</H2>
-          <P>
-            Learn more about the latest launched applications developed on Edgeware ecosystem.
-          </P>
+          <P>Learn more about the latest launched applications developed on Edgeware ecosystem.</P>
         </HeadlineSection>
 
         <IconBoxList>
@@ -187,9 +185,13 @@ export default function Developer() {
               <div className="mt-md-5 pt-md-4">
                 <HeadlineSection center>
                   <OvalIcon />
-                  <H2 size="1" margin="none">Resources</H2>
+                  <H2 size="1" margin="none">
+                    Resources
+                  </H2>
                   <div className="px-md-5">
-                    <P>Jump straight into our developer tutorials and easy to follow documentation.</P>
+                    <P>
+                      Jump straight into our developer tutorials and easy to follow documentation.
+                    </P>
                     <Button style="white" href="https://github.com/Edgeware-Network">
                       Follow us on Github
                     </Button>

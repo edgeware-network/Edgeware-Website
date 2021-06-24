@@ -3,10 +3,6 @@ import cn from 'classnames';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import IconArrow from 'remixicon/icons/System/arrow-drop-right-line.svg';
-
-import { Icon } from '../../common/icon/icon';
-
 import styles from './header-nav.module.scss';
 import { HeaderOverlayNav } from './header-nav-overlay';
 import { NavToggle } from './nav/nav-toggle';
@@ -68,7 +64,7 @@ export const NavItems: React.FC<NavItemsProps> = ({ style, onClick, onToggleModa
         Collectives
       </NavItem>
       <NavItem href="https://commonwealth.im/edgeware/proposals" onClick={onClick}>
-      Proposals
+        Proposals
       </NavItem>
       <NavItem href="/developers" onClick={onClick}>
         Developers

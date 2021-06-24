@@ -7,7 +7,7 @@ interface BaseProps {
   className?: string;
   size?: '1' | '2';
   inverted?: boolean;
-  margin?: 'none' | 'small' | 'normal' | 'large'
+  margin?: 'none' | 'small' | 'normal' | 'large';
 }
 
 type HeadlineProps = BaseProps;
@@ -20,7 +20,6 @@ export const H1: React.FC<HeadlineProps> = ({
   margin = 'normal',
   ...restProps
 }) => {
-
   const hClasses = cn(
     size === '1' && styles.h1,
     size === '2' && styles.h2,
@@ -62,7 +61,7 @@ export const H2: React.FC<HeadlineProps> = ({
 interface ParagraphProps extends BaseProps {
   secondary?: boolean;
   style?: 'regular' | 'secondary' | 'lead' | 'large' | 'small';
-  bold?: boolean
+  bold?: boolean;
 }
 
 export const P: React.FC<ParagraphProps> = ({

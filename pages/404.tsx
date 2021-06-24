@@ -7,9 +7,9 @@ import { H1, P } from '../components/common/typography/typography';
 export default function NotFoundPage() {
   React.useEffect(() => {
     if (window.location.pathname === '/keygen/') {
-      window.location.href = '/keygen'
+      window.location.href = '/keygen';
     }
-  }, [])
+  }, []);
 
   return (
     <>

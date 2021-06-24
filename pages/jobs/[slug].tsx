@@ -15,14 +15,26 @@ export default function Job({ job }) {
     <>
       <Section id="content" width="narrow">
         <H1 size="1">{job.data.title}</H1>
-        <P>All roles with Edgeware are globally remote based. We encourage you to apply regardless of your location.</P>
+        <P>
+          All roles with Edgeware are globally remote based. We encourage you to apply regardless of
+          your location.
+        </P>
 
         <JobContent content={job.content} />
 
         <div className="py-4">
-          <Button href={`mailto:ops@edgeware.agency?subject=${job.data.title} at Edgeware`}>Apply for this position</Button>
+          <Button href={`mailto:ops@edgeware.agency?subject=${job.data.title} at Edgeware`}>
+            Apply for this position
+          </Button>
           <P secondary>
-            Or email us at <a href={`mailto:ops@edgeware.agency?subject=${job.data.title}  at Edgeware`} className="link">ops@edgeware.agency</a><br/>
+            Or email us at{' '}
+            <a
+              href={`mailto:ops@edgeware.agency?subject=${job.data.title}  at Edgeware`}
+              className="link"
+            >
+              ops@edgeware.agency
+            </a>
+            <br />
           </P>
           <P secondary>
             <Link href="/jobs">
@@ -36,8 +48,8 @@ export default function Job({ job }) {
 }
 
 export async function getStaticProps({ params }) {
-  const job = getJobBySlug(params.slug)
-  const content = await markdownToHtml(job.content || '')
+  const job = getJobBySlug(params.slug);
+  const content = await markdownToHtml(job.content || '');
 
   return {
     props: {
@@ -47,14 +59,14 @@ export async function getStaticProps({ params }) {
       },
       job: {
         ...job,
-        content
-      }
+        content,
+      },
     },
   };
 }
 
 export async function getStaticPaths() {
-  const jobs = getAllJobs()
+  const jobs = getAllJobs();
 
   return {
     paths: jobs.map((job) => {
@@ -62,9 +74,8 @@ export async function getStaticPaths() {
         params: {
           slug: job.data.slug,
         },
-      }
+      };
     }),
     fallback: false,
-  }
-
+  };
 }

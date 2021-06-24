@@ -4,9 +4,7 @@ import { H1 } from '../typography/typography';
 
 import styles from './static-hero.module.scss';
 
-interface StaticHeroProps {}
-
-export const StaticHero: React.FC<StaticHeroProps> = ({ children }) => {
+export const StaticHero: React.FC = ({ children }) => {
   return (
     <div className={styles.hero}>
       <div className={styles.wrapper}>

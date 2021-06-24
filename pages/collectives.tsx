@@ -131,10 +131,10 @@ export default function Collectives() {
           <H2 size="1">Start your own collective</H2>
           <P>
             In Edgeware, working groups function as mission-based development organizations that are
-            composed of members who share interests, needs, and passions. <br/>
+            composed of members who share interests, needs, and passions. <br />
             Where an Ambassador team is largely formed to promote a network in a variety of ways,
-            Working Groups are intended to solve issues specific to a community while also expanding the awareness and utility
-            of the network.
+            Working Groups are intended to solve issues specific to a community while also expanding
+            the awareness and utility of the network.
           </P>
         </HeadlineSection>
 

@@ -50,8 +50,8 @@ export default function Home() {
             applications.
           </P>
           <P>
-            On Edgeware, Ethereum developers can deploy <strong>Solidity/EVM</strong> smart contracts
-            with few or no changes, while new developers can get started with{' '}
+            On Edgeware, Ethereum developers can deploy <strong>Solidity/EVM</strong> smart
+            contracts with few or no changes, while new developers can get started with{' '}
             <strong>Rust and WebAssembly</strong>.
           </P>
           <P>
@@ -78,8 +78,8 @@ export default function Home() {
         <Collective headline="Find your people.">
           <P>
             Rather than attempting to coordinate a single community, Edgeware’s evolving
-            organizational structure is designed to delegate power to small groups who become masters
-            of their destiny, whilst still accountable to their peers.
+            organizational structure is designed to delegate power to small groups who become
+            masters of their destiny, whilst still accountable to their peers.
           </P>
           <P>
             Whether you are looking to develop an idea, a team looking to launch a project or an
@@ -95,7 +95,8 @@ export default function Home() {
         <div className="container">
           <HeaderAndTextList>
             <HeaderAndText headline="Chain Workers">
-              Focuses on technical strategy, culture and operations. Supported by contractor funding.
+              Focuses on technical strategy, culture and operations. Supported by contractor
+              funding.
             </HeaderAndText>
             <HeaderAndText headline="Working Groups">
               Focuses on emerging challenges and opportunities. Supported by seed funding.
@@ -132,18 +133,18 @@ export default function Home() {
             An introduction to the <em>EDG</em> token.
           </H2>
           <P>
-            The <strong>EDG</strong> token incentivizes and rewards participants in the
-            ecosystem, ensuring everyone remains aligned to a common purpose of expanding both the
-            usefulness and awareness of the network.
+            The <strong>EDG</strong> token incentivizes and rewards participants in the ecosystem,
+            ensuring everyone remains aligned to a common purpose of expanding both the usefulness
+            and awareness of the network.
           </P>
           <P>
             The token has one of the widest distributions in cryptocurrency. Over 15 million unique
             addresses received the token as part of the 2019 lockdrop.
           </P>
           <P>
-            This offers the project a huge advantage over less well-distributed projects in
-            terms of the breadth of its ownership, lack of outside influence and the scale of the
-            opportunity to increase its value.
+            This offers the project a huge advantage over less well-distributed projects in terms of
+            the breadth of its ownership, lack of outside influence and the scale of the opportunity
+            to increase its value.
           </P>
           <P>The primary features of the EDG token and economic system:</P>
         </Token>

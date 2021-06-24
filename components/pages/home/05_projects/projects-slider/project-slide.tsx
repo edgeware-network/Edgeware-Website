@@ -15,7 +15,7 @@ interface ProjectSlideProps {
 }
 
 export const ProjectSlide: React.FC<ProjectSlideProps> = (props) => {
-  const { funding, headline, subHeadline, children, href, imageUrl } = props;
+  const { funding, headline, subHeadline, children, imageUrl } = props;
 
   return (
     <div className={styles.slide}>

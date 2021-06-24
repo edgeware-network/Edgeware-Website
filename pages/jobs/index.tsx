@@ -8,14 +8,12 @@ import { StaticHero } from '../../components/common/static-hero/static-hero';
 import { getAllJobs } from '../../lib/api';
 
 export default function Jobs({ allJobs }) {
-  const hasJobs = allJobs.length > 0
+  const hasJobs = allJobs.length > 0;
 
   return (
     <>
       <StaticHero>
-        We're a growing open source community looking for talent.
-        {' '}
-        <em>Join Edgeware</em>
+        We're a growing open source community looking for talent. <em>Join Edgeware</em>
       </StaticHero>
 
       <Section id="roles" width="narrow">
@@ -23,15 +21,26 @@ export default function Jobs({ allJobs }) {
           <H2 size="2">Open Roles</H2>
         </div>
 
-        {hasJobs && <JobsCardList>
-          {allJobs.map(job => <JobsCard title={job.data.title} role={job.data.role} buttonHref={`/jobs/${job.data.slug}`} key={job.data.slug}></JobsCard>)}
-        </JobsCardList>}
+        {hasJobs && (
+          <JobsCardList>
+            {allJobs.map((job) => (
+              <JobsCard
+                title={job.data.title}
+                role={job.data.role}
+                buttonHref={`/jobs/${job.data.slug}`}
+                key={job.data.slug}
+              ></JobsCard>
+            ))}
+          </JobsCardList>
+        )}
 
         <div className="text-center">
           <P style="lead" bold>
-            Is your role not listed?
-            {' '}
-            <a href="mailto:ops@edgware.agency" className="link">Message us</a>.
+            Is your role not listed?{' '}
+            <a href="mailto:ops@edgware.agency" className="link">
+              Message us
+            </a>
+            .
           </P>
         </div>
       </Section>
@@ -40,14 +49,15 @@ export default function Jobs({ allJobs }) {
 }
 
 export async function getStaticProps() {
-  const allJobs = await getAllJobs()
+  const allJobs = await getAllJobs();
   return {
     props: {
       meta: {
         title: 'Jobs at Edgeware',
-        description: 'The latest jobs at Edgeware - We\'re a growing open source community looking for talents!',
+        description:
+          "The latest jobs at Edgeware - We're a growing open source community looking for talents!",
       },
-      allJobs
+      allJobs,
     },
   };
 }

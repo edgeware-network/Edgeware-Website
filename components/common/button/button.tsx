@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useRouter } from 'next/router';
-import Link from 'next/link'
+import Link from 'next/link';
 
 import cn from 'classnames';
 
@@ -12,7 +12,7 @@ interface ButtonProps {
   onClick?: () => void;
   download?: boolean;
   href?: string;
-  as?: 'button' | 'link'
+  as?: 'button' | 'link';
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -21,7 +21,7 @@ export const Button: React.FC<ButtonProps> = ({
   fullWidth,
   onClick,
   href,
-  as = 'button'
+  as = 'button',
 }) => {
   const buttonClasses = cn(styles.button, {
     [`${styles.buttonPrimary}`]: style === 'primary',
@@ -51,11 +51,11 @@ export const Button: React.FC<ButtonProps> = ({
   );
 
   if (as === 'link') {
-    return <Link href={href}>
-      <a className={buttonClasses}>
-        {children}
-      </a>
-    </Link>
+    return (
+      <Link href={href}>
+        <a className={buttonClasses}>{children}</a>
+      </Link>
+    );
   }
 
   return (
