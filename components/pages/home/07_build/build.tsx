@@ -6,7 +6,6 @@ import { Button } from '../../../common/button/button';
 import SvgFile from 'remixicon/icons/Document/file-list-3-line.svg';
 import IconDiscord from 'remixicon/icons/Logos/discord-fill.svg';
 
-
 import styles from './build.module.scss';
 import { H2, P } from '../../../common/typography/typography';
 

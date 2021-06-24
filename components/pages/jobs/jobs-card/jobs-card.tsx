@@ -11,14 +11,17 @@ export interface JobsCardProps {
   buttonHref: string;
 }
 
-export const JobsCard: React.FC<JobsCardProps> = ({ title, role, buttonText = "Learn more", buttonHref } ) => {
+export const JobsCard: React.FC<JobsCardProps> = ({
+  title,
+  role,
+  buttonText = 'Learn more',
+  buttonHref,
+}) => {
   return (
     <div className={styles.jobsCard}>
       <div className={styles.content}>
         <h3 className={styles.title}>{title}</h3>
-        <p className={styles.role}>
-          {role}
-        </p>
+        <p className={styles.role}>{role}</p>
       </div>
       <div className={styles.button}>
         <Button href={buttonHref} style="primary-small" as="link">
@@ -27,7 +30,7 @@ export const JobsCard: React.FC<JobsCardProps> = ({ title, role, buttonText = "L
       </div>
     </div>
   );
-}
+};
 
 export const JobsCardList: React.FC = ({ children }) => {
   return (
@@ -38,5 +41,5 @@ export const JobsCardList: React.FC = ({ children }) => {
         </li>
       ))}
     </ul>
-  )
-}
+  );
+};

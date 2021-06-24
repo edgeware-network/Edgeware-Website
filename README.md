@@ -1,5 +1,7 @@
 # Edgeware Website
 
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
 [Edgeware](https://edgewa.re/) is a smart contract chain with a community-managed treasury, decentralised proposal system and network of DAOs.
 
 Edgeware is launched by [Commonwealth Labs](https://commonwealth.im/)
@@ -11,7 +13,7 @@ This project is a repository of its public-facing website: [https://edgewa.re](h
 
 ## Task Management
 See
-https://trello.com/b/qCuXqLpP/edg-agency-tasks 
+https://trello.com/b/qCuXqLpP/edg-agency-tasks
 
 ## Contributing
 

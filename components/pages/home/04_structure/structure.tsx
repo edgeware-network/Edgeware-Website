@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { SvgBubbleBig, SvgBubbleMedium, SvgBubbleSmall } from '../../../common/bubbles/bubbles';
+import { SvgBubbleSmall } from '../../../common/bubbles/bubbles';
 
 import styles from './structure.module.scss';
 import { H2, P } from '../../../common/typography/typography';

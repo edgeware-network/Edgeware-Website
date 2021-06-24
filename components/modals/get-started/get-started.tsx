@@ -55,7 +55,7 @@ export const AnimatedCardsList: React.FC<AnimatedCardsListProps> = ({ onButtonCl
     hidden: {
       opacity: 1,
       transition: {
-        when: "afterChildren",
+        when: 'afterChildren',
       },
     },
     visible: {

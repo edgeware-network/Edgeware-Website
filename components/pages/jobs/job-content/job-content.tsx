@@ -1,7 +1,7 @@
-import * as React from 'react'
+import * as React from 'react';
 
 interface JobContentProps {
-  content: string
+  content: string;
 }
 
 import styles from './job-content.module.scss';
@@ -11,5 +11,5 @@ export const JobContent: React.FC<JobContentProps> = ({ content }) => {
     <div className={styles.content}>
       <div dangerouslySetInnerHTML={{ __html: content }} />
     </div>
-  )
-}
+  );
+};
