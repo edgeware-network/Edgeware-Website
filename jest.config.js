@@ -11,4 +11,5 @@ module.exports = {
     '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/__mocks__/fileMock.js',
   },
   setupFilesAfterEnv: ["./jest.setup.ts"],
+  testEnvironment: 'jsdom'
 }
