@@ -11,10 +11,6 @@ const BANNERS = {
     href: 'https://blog.edgewa.re/evm-launch-on-edgeware-brings-wealth-of-ethereum-contracts-and-developers-to-substrate/',
     alt: 'Use EVM on EDG today',
   },
-  coinbase: {
-    href: 'https://ventures.coinbase.com/',
-    alt: 'Coinbase Ventures ❤️ EDG',
-  },
   events: {
     href: 'https://calendar.google.com/calendar/u/0/embed?src=commonwealth.im_ihbs892pqubvogtoim6c1hf7ck@group.calendar.google.com',
     alt: 'Community Events every week',
