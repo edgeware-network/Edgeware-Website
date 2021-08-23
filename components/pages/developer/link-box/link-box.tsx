@@ -12,7 +12,7 @@ const LINKS_GET_STARTED = {
 
 const LINKS_DEVELOP = {
   Docs: 'https://main.edgeware.wiki/',
-  'Smart Contracts Workshop': 'https://contracts.edgewa.re/#/',
+  'Smart Contracts Workshop': 'https://main.edgeware.wiki/development/develop/smart-contracts',
   'Developer Chat': 'https://t.me/edg_developers',
 };
 
