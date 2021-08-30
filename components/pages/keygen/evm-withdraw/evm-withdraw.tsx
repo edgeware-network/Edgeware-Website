@@ -24,6 +24,7 @@ if (typeof window !== 'undefined') {
 interface EvmWithdrawFormState {
   text?: string;
   error?: boolean;
+  showAddNetwork?: boolean;
 }
 
 export const EvmWithdraw = () => {
@@ -62,6 +63,7 @@ export const EvmWithdraw = () => {
       setFormState({
         text: 'Wallet must be configured to EVM chain ID 2021 for Edgeware',
         error: true,
+        showAddNetwork: true,
       });
       return;
     }
@@ -120,6 +122,7 @@ export const EvmWithdraw = () => {
       setFormState({
         text: 'Wallet must be configured to EVM chain ID 2021 for Edgeware',
         error: true,
+        showAddNetwork: true,
       });
       return;
     }
@@ -179,6 +182,31 @@ export const EvmWithdraw = () => {
       });
   };
 
+  const addNetwork = async (e) => {
+    e.preventDefault();
+
+    try {
+      await (window as any).ethereum.request({
+        method: 'wallet_addEthereumChain',
+        params: [
+          {
+            chainId: '0x7E5',
+            chainName: 'Edgeware',
+            rpcUrls: ['https://mainnet.edgewa.re/evm'],
+            nativeCurrency: {
+              name: 'Edgeware',
+              symbol: 'EDG',
+              decimals: 18,
+            },
+            blockExplorerUrls: ['https://mainnet.edgscan.com/'],
+          },
+        ],
+      });
+    } catch (err) {
+      setFormState({ text: err.message, error: true, showAddNetwork: true });
+    }
+  };
+
   return (
     <>
       <form onSubmit={(e) => e.preventDefault()}>
@@ -221,6 +249,11 @@ export const EvmWithdraw = () => {
         <div className={formState.error ? styles.errorText : styles.successText}>
           {formState.text}
         </div>
+        {formState.showAddNetwork && (window as any).ethereum && (
+          <a className={styles.linkText} href="#" onClick={addNetwork}>
+            Switch to Edgeware
+          </a>
+        )}
       </form>
     </>
   );
