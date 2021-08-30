@@ -55,3 +55,10 @@
     color: #008787;
     margin-top: 1rem;
 }
+.linkText {
+    color: #ff6e66;
+    text-decoration: underline;
+    &:hover, &:active {
+        color: lighten(#ff6e66, 10%);
+    }
+}
