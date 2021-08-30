@@ -25,6 +25,28 @@
   }
 }
 
+.button {
+  color: var(--bw-white);
+  background-color: var(--grey-800);
+  border-radius: var(--br-m);
+  border: solid 1px var(--grey-700);
+  padding: 12px var(--spacing-m);
+  display: block;
+  width: 100%;
+
+  @include media-breakpoint-up(lg) {
+    width: auto;
+    display: inline-block;
+    padding: 12px var(--spacing-m);
+    border-radius: 0 var(--br-m) var(--br-m) 0;
+    margin-left: -220px;
+    width: 220px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 12px var(--spacing-l);
+  }
+}
 .errorText {
     color: #ff6e66;
     margin-top: 1rem;

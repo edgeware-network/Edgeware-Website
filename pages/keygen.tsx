@@ -26,7 +26,8 @@ export default function Keygen() {
         <H2>Deposit to EVM</H2>
         <P>
           If you have an Metamask address (e.g. 0x1234...), this tool converts it
-          into a mainnet address (e.g. i76Ux...) where you can send balances from polkadot-js.
+          into a mainnet address (e.g. i76Ux...) where you can send balances from polkadot-js,
+          to be immediately deposited into Metamask.
         </P>
 
         <AddressConverter type="evm-address" />
@@ -35,8 +36,8 @@ export default function Keygen() {
       <Section id="withdraw-evm" width="normal" gap="standard">
         <H2>Withdraw from EVM</H2>
         <P>
-          To withdraw EDG from Metamask to polkadot-js, first send it to the withdraw
-          address which corresponds to your polkadot-js address. Then, execute an
+          To withdraw from Metamask to polkadot-js, first send EDG to the withdraw
+          address corresponding to your polkadot-js address. Then, you must execute an
           withdraw transaction from that address.
         </P>
         <P>
