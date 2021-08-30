@@ -40,6 +40,12 @@ export const EvmWithdraw = () => {
 
     const web3 = new Web3((window as any).ethereum);
     const currentProvider = web3?.eth?.accounts?.currentProvider as any;
+    try {
+      await (window as any).ethereum.request({ method: 'eth_requestAccounts' });
+    } catch (e) {
+      setFormState({ text: 'Metamask or compatible Web3 wallet required', error: true });
+      return;
+    }
     const account = currentProvider?.selectedAddress;
     if (!account) {
       setFormState({ text: 'Metamask or compatible Web3 wallet required', error: true });
@@ -97,7 +103,13 @@ export const EvmWithdraw = () => {
 
     const web3 = new Web3((window as any).ethereum);
     const currentProvider = web3?.eth?.accounts?.currentProvider as any;
-    if (!web3?.eth) {
+    try {
+      await (window as any).ethereum.request({ method: 'eth_requestAccounts' });
+    } catch (e) {
+      setFormState({ text: 'Metamask or compatible Web3 wallet required', error: true });
+      return;
+    }
+    if (!currentProvider) {
       setFormState({ text: 'Metamask or compatible Web3 wallet required', error: true });
       return;
     }
