@@ -16,10 +16,15 @@
     "test": "jest"
   },
   "dependencies": {
-    "@polkadot/keyring": "^6.3.1",
-    "@polkadot/util": "^6.3.1",
-    "@polkadot/util-crypto": "^6.3.1",
+    "@edgeware/node-types": "^3.6.2-wako",
+    "@polkadot/api": "^5.6.1",
+    "@polkadot/extension-dapp": "^0.39.4-4",
+    "@polkadot/keyring": "^7.3.1",
+    "@polkadot/types": "^5.6.1",
+    "@polkadot/util": "^7.3.1",
+    "@polkadot/util-crypto": "^7.3.1",
     "@popperjs/core": "^2.9.2",
+    "bignumber.js": "^9.0.1",
     "bootstrap": "^5.0.2",
     "classnames": "^2.3.1",
     "eslint-config-prettier": "^8.3.0",
@@ -40,6 +45,7 @@
     "remixicon": "^2.5.0",
     "sass": "1.32.0",
     "swiper": "^6.7.1",
+    "web3": "^1.5.2",
     "whatwg-fetch": "^3.6.2"
   },
   "devDependencies": {
@@ -71,7 +77,10 @@
     "typescript": "^4.3.4"
   },
   "lint-staged": {
-    "./**/*.{ts,tsx}": ["npm run lint:fix", "prettier --write"]
+    "./**/*.{ts,tsx}": [
+      "npm run lint:fix",
+      "prettier --write"
+    ]
   },
   "husky": {
     "hooks": {
