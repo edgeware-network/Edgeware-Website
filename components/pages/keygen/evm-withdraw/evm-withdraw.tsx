@@ -54,6 +54,7 @@ export const EvmWithdraw = () => {
     }
 
     try {
+      setFormState({ text: 'Confirm the transaction in your wallet', error: true });
       const addressBytes = decodeAddress(substrateAddress);
       const evmAddress = Buffer.from(addressBytes.subarray(0, 20)).toString('hex');
       await web3.eth.sendTransaction({
@@ -62,9 +63,9 @@ export const EvmWithdraw = () => {
         value: Web3.utils.toWei(amount),
         gas: '55000',
       }).on('transactionHash', (_) => {
-        setFormState({ text: 'Transaction sent, wait for confirmation...', error: true });
+        setFormState({ text: 'Transaction sent, waiting for confirmation...', error: true });
       });
-      setFormState({ text: 'Transaction success, please continue to step 2.' });
+      setFormState({ text: 'Transfer to withdraw address succeeded. Please continue to step 2.' });
     } catch (err) {
       if (err.code === 4001) {
         setFormState({ text: 'Transaction canceled', error: true });
@@ -92,6 +93,14 @@ export const EvmWithdraw = () => {
     const addressHex = u8aToHex(addressBytes);
     const evmAddress = '0x' + Buffer.from(addressBytes.subarray(0, 20)).toString('hex');
 
+    const web3 = new Web3(window.ethereum);
+    if (+web3.eth.accounts.currentProvider.chainId !== 2021 &&
+        +web3.eth.accounts.currentProvider.chainId !== 2022) {
+      setFormState({ text: 'Wallet must be configured to EVM chain ID 2021 for Edgeware', error: true });
+      return;
+    }
+
+    setFormState({ text: 'Connecting to polkadot-js...', error: true });
     const polkadotUrl = 'wss://mainnet.edgewa.re';
     const registry = new TypeRegistry();
     const api = await (new ApiPromise({
@@ -107,10 +116,17 @@ export const EvmWithdraw = () => {
     const allAccounts = await web3Accounts();
     const allAccountsHex = allAccounts.map(({ address }) => u8aToHex(keyring.decodeAddress(address)));
     if (allAccountsHex.indexOf(addressHex) === -1) {
-      setFormState({ text: 'Address not found in wallet', error: true });
+      setFormState({ text: 'Address not found in polkadot-js', error: true });
       return;
     }
 
+    const availableBalance = `${await web3.eth.getBalance(evmAddress) / (10 ** 18)} EDG`;
+    const withdrawingBalance = `${amount} EDG`;
+
+    setFormState({
+      text: `Withdrawing ${withdrawingBalance} of ${availableBalance} available, please confirm in polkadot-js`,
+      error: true
+    });
     const injector = await web3FromAddress(sender);
     const tx = api.tx.evm.withdraw(
       evmAddress,
@@ -118,10 +134,22 @@ export const EvmWithdraw = () => {
     ).signAndSend(sender, { signer: injector.signer }, (result) => {
       if (result.isError) {
         setFormState({ text: 'Transaction error', error: true });
+      } else if (result.dispatchError && withdrawingBalance > availableBalance) {
+        setFormState({
+          text: `Transaction error. Attempted to withdraw ${withdrawingBalance} with only ${availableBalance} available`,
+          error: true
+        });
+      } else if (result.dispatchError) {
+        setFormState({ text: 'Transaction error', error: true });
+      } else if (result.isCompleted && withdrawingBalance === availableBalance) {
+        setFormState({ text: `Transaction success. Withdrew ${withdrawingBalance}!` });
+      } else if (result.isCompleted) {
+        setFormState({
+          text: `Transaction success. Withdrew ${withdrawingBalance} of ${availableBalance} available in the withdraw address`
+        });
       }
-      if (result.isCompleted) {
-        setFormState({ text: 'Transaction success. Withdrawal complete!' });
-      }
+    }).catch((err) => {
+      setFormState({ text: message, error: true });
     });
   };
 
@@ -143,6 +171,8 @@ export const EvmWithdraw = () => {
             autoCapitalize="off"
 	    autoCorrect="off"
           />
+        </label>
+        <label className={styles.label} htmlFor="ac-input-withdraw-amount" aria-label="Amount">
           <input
             id="ac-input-withdraw-amount"
             className={styles.input}
