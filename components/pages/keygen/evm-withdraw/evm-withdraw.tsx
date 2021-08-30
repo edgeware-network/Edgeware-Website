@@ -35,16 +35,22 @@ export const EvmWithdraw = () => {
 
     const web3 = new Web3(window.ethereum);
     const account = web3?.eth?.accounts?.currentProvider?.selectedAddress;
+    if (!account) {
+      setFormState({ text: 'Metamask or compatible Web3 wallet required', error: true });
+      return;
+    }
+
     const substrateAddress = inputEl.current.value;
+    if (!substrateAddress) {
+      setFormState({ text: 'Invalid Substrate address', error: true });
+      return;
+    }
+
     const amount = amountEl.current.value;
     if (isNaN(+amount)) {
       setFormState({ text: 'Invalid amount', error: true });
       return;
     };
-    if (!account || !substrateAddress) {
-      setFormState({ text: 'Invalid Substrate address', error: true });
-      return;
-    }
 
     // are we on the right network?
     if (+web3.eth.accounts.currentProvider.chainId !== 2021 &&
@@ -78,22 +84,28 @@ export const EvmWithdraw = () => {
   const evmWithdraw = async () => {
     setFormState({});
 
-    const sender = inputEl.current.value;
-    const amount = amountEl.current.value;
-    if (isNaN(+amount)) {
-      setFormState({ text: 'Invalid amount', error: true });
+    const web3 = new Web3(window.ethereum);
+    if (!web3?.eth) {
+      setFormState({ text: 'Metamask or compatible Web3 wallet required', error: true });
       return;
-    };
+    }
+
+    const sender = inputEl.current.value;
     if (!sender) {
       setFormState({ text: 'Invalid Substrate address', error: true });
       return;
     }
 
+    const amount = amountEl.current.value;
+    if (isNaN(+amount)) {
+      setFormState({ text: 'Invalid amount', error: true });
+      return;
+    };
+
     const addressBytes = decodeAddress(sender);
     const addressHex = u8aToHex(addressBytes);
     const evmAddress = '0x' + Buffer.from(addressBytes.subarray(0, 20)).toString('hex');
 
-    const web3 = new Web3(window.ethereum);
     if (+web3.eth.accounts.currentProvider.chainId !== 2021 &&
         +web3.eth.accounts.currentProvider.chainId !== 2022) {
       setFormState({ text: 'Wallet must be configured to EVM chain ID 2021 for Edgeware', error: true });
@@ -149,7 +161,7 @@ export const EvmWithdraw = () => {
         });
       }
     }).catch((err) => {
-      setFormState({ text: message, error: true });
+      setFormState({ text: err.message, error: true });
     });
   };
 
