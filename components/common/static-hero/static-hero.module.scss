@@ -1,7 +1,6 @@
 @import '../../../styles/custom.scss';
 
 .hero {
-  background: url('/images/jobs/hero-jobs-mobile.jpg') 50% 100%;
   background-size: cover;
   position: relative;
   z-index: 1;
@@ -9,7 +8,6 @@
   margin-top: -4rem;
 
   @include media-breakpoint-up(md) {
-    background: url('/images/jobs/hero-jobs.jpg') 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -27,6 +25,21 @@
     right: 0;
     height: 200px;
     background-image: linear-gradient(to top, var(--grey-900), rgba(21, 21, 21, 0) 90%);
+  }
+
+  &--jobs {
+    background: url('/images/jobs/hero-jobs-mobile.jpg') 50% 100%;
+    @include media-breakpoint-up(md) {
+      background: url('/images/jobs/hero-jobs.jpg') 50% 50%;
+    }
+  }
+
+  &--partners {
+    background: url('/images/partners/partners-bg-mobile.jpg') 50% 100%;
+
+    @include media-breakpoint-up(md) {
+      background: url('/images/partners/partners-bg.jpg') 50% 50%;
+    }
   }
 }
 

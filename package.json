@@ -46,7 +46,8 @@
     "sass": "1.32.0",
     "swiper": "^6.7.1",
     "web3": "^1.5.2",
-    "whatwg-fetch": "^3.6.2"
+    "whatwg-fetch": "^3.6.2",
+    "yaml": "^1.10.2"
   },
   "devDependencies": {
     "@testing-library/dom": "^8.0.0",

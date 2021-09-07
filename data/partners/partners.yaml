@@ -1,0 +1,103 @@
+partners:
+  - category: DeFi
+    partners:
+    - name: Stafi Protocol
+      description: Send and receive messages between blockchain addresses through a simple, email-like interface.
+      link: https://medium.com/stafi/stafi-dao-enters-exploration-phase-partners-with-commonwealth-and-edgeware-65bcdaaf30a9
+    - name: Sublime Finance
+      description: Sublime is a new lending protocol aimed at providing a more diversified and robust lending experience.
+      link: https://commonwealth.im/edgeware/proposal/discussion/636-announcing-sublime
+    - name: Tidal Finance
+      description: Flexible insurance for the DeFi economy.
+      link: https://blog.edgewa.re/edgeware-partners-with-tidal-finance-to-bring-insurance-cover-to-edg-ecosystem/
+    - name: PicoSwap
+      description: Pico is a protocol for decentralized exchange built on Edgeware, a pioneering Polkadot smart contract blockchain.
+      link: https://picoswap.medium.com/
+  - category: Governance
+    partners:
+      - name: Edgeware Agency
+        description: Edgeware Agency is a metaDAO that supports the growth and adoption of the Edgeware Ecosystem
+        link: https://edgeware.agency/
+        funded: true
+      - name: Mailchain
+        description: Send and receive messages between blockchain addresses through a simple, email-like interface.
+        link: https://medium.com/@Mailchain_xyz/sending-mailchain-messages-with-substrate-on-edgeware-f185eddd76ab
+      - name: Decent Partners
+        description: Decent develops community networks that are funded, governed and owned by the people they represent.
+        link: https://decent.partners/
+
+  - category: Infrastructure
+    partners:
+      - name: OnFinality
+        description: OnFinality provides support for blockchain developers by providing infrastructure and API services to automate blockchain DevOps.
+        link: https://onfinality.medium.com/run-public-edgeware-nodes-on-onfinality-2ea656262446
+        funded: true
+      - name: Patract Elara
+        description: Elara provides Polkadot developers with free, instant and scalable blockchain API access services, including Polkadot, Kusama, etc.
+        link: Elara provides Polkadot developers with free, instant and scalable blockchain API access services, including Polkadot, Kusama, etc.
+      - name: Covalent
+        description: Covalent provides a unified API bringing visibility to billions of blockchain data points.
+        link: Covalent provides a unified API bringing visibility to billions of blockchain data points.
+      - name: Knit Finance
+        description: Knit is a protocol for creating cross-chain wrappers for the top-200 assets. Deposit to insured custody and mint K-Assets.
+        link: Knit is a protocol for creating cross-chain wrappers for the top-200 assets. Deposit to insured custody and mint K-Assets.
+      - name: Biconomy
+        description: Biconomy enables simple blockchain transactions by leveraging scalable relayer infrastructure.
+        link: Biconomy enables simple blockchain transactions by leveraging scalable relayer infrastructure.
+        funded: true
+  - category: Oracles
+    partners:
+      - name: Paralink Network
+        description: Paralink Network offers a multi-chain oracle platform for DeFi and other blockchain applications.
+        link: https://blog.edgewa.re/paralink-network-announces-full-support-for-edgeware-bringing-oracles-and-validator-participation/
+      - name: Kylin Network
+        description: Kyline provides data Infrastructure for DeFi and Web 3.0 Powered by Polkadot.
+        link: https://blog.edgewa.re/strategic-partnership-between-edgeware-and-kylin-network-brings-oracles-and-data-marketplaces-to-edg/
+      - name: Chainlink
+        description: Chainlink provides reliable, tamper-proof inputs and outputs for complex smart contracts on any blockchain.
+        link: https://blog.edgewa.re/chainlink-oracles-on-edgeware-powered-by-volta/
+  - category: NFT & Art
+    partners:
+      - name: Zien
+        description: Zien is a platform providing NFT Airdrops on WhatsApp.
+        link: https://commonwealth.im/edgeware/proposal/discussion/1129-proposal-bring-zien-nfts-via-whatsapp-to-edgeware
+        funded: true
+      - name: MoCDA
+        description: MoCDA provides digital art education and technology to artists, collectors, institutions and art lovers.
+        link: https://commonwealth.im/edgeware/proposal/discussion/639-artistic-residencies-community-call-w-mocda-haute-to-death
+  - category: Privacy
+    partners:
+      - name: Webb Protocol
+        description: Webb develops private interoperable bridges for the Web3 ecosystem using zero-knowledge proofs and distributed systems technology.
+        link: https://commonwealth.im/edgeware/proposal/discussion/976-edgeware-mixer-by-webb
+        funded: true
+  - category: Legal
+    partners:
+      - name: LexBridge
+        description: Lexbridge is a technological bridge to jurisdictions in the US.
+        link: https://commonwealth.im/edgeware/proposal/discussion/948-proposal-lexbridge-legal-entitydocument-panel
+      - name: 4thPillarTech
+        description: 4thPillarTech provides blockchain metadata & data file exchange, while providing a digital identity solutions.
+        link: https://commonwealth.im/edgeware/proposal/discussion/1063-4thpillar-technologies-has-integrated-edgeware-for-their-ecommerce-and-document-exchange-platform
+  - category: Media
+    partners:
+      - name: How to make it in Crypto Media Podcast
+        description: How to Make it in Crypto Media will take you through the main pillars of a media business—from distribution to editorial and sales—applied to the fascinating vertical crypto.
+        link: https://commonwealth.im/edgeware/proposal/discussion/1135-how-to-make-it-in-crypto-media-an-original-podcast-series
+        funded: true
+      - name: Exit Theory
+        description: A Content and Community Project that aims to deliver creative assets to the chain, provide user feedback from the creator perspective and add value to Edgeware’s Citizen Benefits.
+        link: https://commonwealth.im/edgeware/proposal/discussion/1131-exit-theory-a-content-and-community-project
+        funded: true
+  - category: Other
+    partners:
+      - name: Commonwealth
+        description: Commonwealth facilitates scalable governance and decision making for protocols and organizations.
+        link: https://commonwealth.im/
+        funded: true
+      - name: Zondax
+        description: Zondax is a team of software developers, engineers and cryptographers that build innovative tech products.
+        link: https://medium.com/zondax/edgeware-ledger-app-by-zondax-7cf12c0ea3af
+      - name: ICON
+        description: ICON is a blockchain protocol for decentralized applications. As an aggregator chain, it achieves interoperability.
+        link: https://medium.com/helloiconworld/blockchain-transmission-protocol-btp-working-group-update-icon-joins-forces-with-the-polkadot-63694290e15b

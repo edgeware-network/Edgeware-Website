@@ -28,6 +28,20 @@
   }
 }
 
+.h3 {
+  font-size: var(--fs-headline-100);
+  letter-spacing: var(--ls-headline--sm);
+  font-weight: var(--fw-semibold);
+  margin: 0 0 var(--spacing-s) 0;
+
+  @include media-breakpoint-up(md) {
+    font-size: var(--fs-headline-100);
+    margin: 0 0 var(--spacing-s) 0;
+    line-height: 1.16;
+    letter-spacing: var(--ls-headline--md);
+  }
+}
+
 .h1, .h2, .h3 {
   & em {
     font-style: normal;
