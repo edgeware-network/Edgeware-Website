@@ -1,6 +1,9 @@
 import * as React from 'react';
+import slugify from 'slugify';
+import IconFunds from 'remixicon/icons/Finance/funds-line.svg';
 
 import { Link } from 'components/common/link/link';
+import { Icon } from 'components/common/icon/icon';
 
 import styles from './partner-card.module.scss';
 
@@ -12,7 +15,7 @@ export interface PartnerCardProps {
 }
 
 const getImagePathFromName = (name: string) => {
-  const filename = name.toLowerCase().replace(/\s/gi, '-')
+  const filename = slugify(name, { lower: true })
   return `/images/partners/${filename}.png`
 }
 
@@ -20,12 +23,13 @@ export const PartnerCard: React.FC<PartnerCardProps> = ({
   name,
   description,
   link,
+  funded = false
 }) => {
 
   const iconHref = getImagePathFromName(name)
 
   return (
-    <div className={styles.partnerCard}>
+    <div className={styles.partnerCard} data-name={name}>
       <div className={styles.content}>
         <span className={styles.logoImageWrapper}>
           <span className={styles.logoImage}>
@@ -33,14 +37,17 @@ export const PartnerCard: React.FC<PartnerCardProps> = ({
               src={iconHref}
               alt={name}
               loading="lazy"
-              // layout="fixed"
-              // width={imageWidth}
-              // height={imageHeight}
             />
           </span>
         </span>
         <h4 className={styles.name}>{name}</h4>
         <p className={styles.description}>{description}</p>
+        {funded && (
+          <span className={styles.funded}>
+            <Icon component={IconFunds} />
+            Funded by the Edgeware Treasury
+          </span>
+        )}
       </div>
       <div className={styles.action}>
         <Link href={link}>Learn more</Link>

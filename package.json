@@ -44,6 +44,7 @@
     "remark-html": "^13.0.1",
     "remixicon": "^2.5.0",
     "sass": "1.32.0",
+    "slugify": "^1.6.0",
     "swiper": "^6.7.1",
     "web3": "^1.5.2",
     "whatwg-fetch": "^3.6.2",

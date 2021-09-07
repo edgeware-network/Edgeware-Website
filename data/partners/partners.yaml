@@ -25,7 +25,6 @@ partners:
       - name: Decent Partners
         description: Decent develops community networks that are funded, governed and owned by the people they represent.
         link: https://decent.partners/
-
   - category: Infrastructure
     partners:
       - name: OnFinality

@@ -18,6 +18,7 @@ type PartnersCategory = {
 
 export type AllPartnersData = PartnersCategory[]
 
+
 export function getAllPartners() {
   const file = fs.readFileSync(sourcePath, 'utf8')
   const data = YAML.parse(file)

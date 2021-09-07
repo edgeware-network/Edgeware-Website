@@ -2,7 +2,7 @@
 
 .list {
   margin: 0;
-  padding: var(--spacing-m) 0;
+  padding: var(--spacing-m) var(--spacing-s);
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -21,11 +21,13 @@
 
   @include media-breakpoint-up(md) {
     margin: var(--spacing-m) var(--spacing-m);
-    flex: 1 1 0%;
+    flex: 1 1 320px;
+    max-width: 360px;
   }
 
   @include media-breakpoint-up(xl) {
-    flex: 0 1 320px;
+    flex: 0 0 320px;
+    max-width: 360px;
   }
 }
 
@@ -39,11 +41,30 @@
 
   display: flex;
   flex-direction: column;
+
+  position: relative;
+}
+
+.partnerCard[data-name="Zien"] {
+  .logoImageWrapper {
+    img {
+      height: 24px;
+    }
+  }
+}
+
+.partnerCard[data-name="Biconomy"] {
+  .logoImageWrapper {
+    img {
+      height: 26px;
+    }
+  }
 }
 
 .logoImageWrapper {
   display: block;
   margin-bottom: var(--spacing-s);
+  margin-top: 6px;
   height: 36px;
   display: flex;
   flex-direction: column;
@@ -56,6 +77,8 @@
     height: auto;
   }
 }
+
+
 
 .name {
   font-size: var(--fs-text-lg);
@@ -70,6 +93,28 @@
 .description {
   font-size: var(--fs-text-sm);
   color: var(--grey-300);
+}
+
+.funded {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  border-radius: 0px var(--br-m) 0 var(--br-xs);
+  padding: 2px var(--spacing-s) 2px var(--spacing-xs);
+  font-size: var(--fs-text-xs);
+  font-weight: var(--fw-semibold);
+  background: var(--secondary-300);
+  color: var(--secondary-700);
+
+  svg {
+    width: 16px;
+    fill: var(--secondary-700);
+    vertical-align: sub;
+    margin-right: 4px;
+    position: relative;
+    top: 1px;
+  }
 }
 
 .action {
