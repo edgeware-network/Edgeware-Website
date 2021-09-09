@@ -1,0 +1,122 @@
+@import '../../../../styles/custom.scss';
+
+.list {
+  margin: 0;
+  padding: var(--spacing-m) var(--spacing-s);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0 var(--spacing-m) var(--spacing-m) var(--spacing-m);
+  }
+}
+
+.listItem {
+  margin: 0 0 calc(2 * var(--spacing-xs)) 0;
+
+  @include media-breakpoint-up(md) {
+    margin: var(--spacing-m) var(--spacing-m);
+    flex: 1 1 320px;
+    max-width: 360px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    flex: 0 0 320px;
+    max-width: 360px;
+  }
+}
+
+.partnerCard {
+  padding: var(--spacing-m) var(--spacing-m) var(--spacing-m) var(--spacing-m);
+  border-radius: var(--br-m);
+  background-color: var(--grey-900);
+  border-radius: 13px;
+  border: solid 1px var(--grey-800);
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.partnerCard[data-name="Zien"] {
+  .logoImageWrapper {
+    img {
+      height: 24px;
+    }
+  }
+}
+
+.partnerCard[data-name="Biconomy"] {
+  .logoImageWrapper {
+    img {
+      height: 26px;
+    }
+  }
+}
+
+.logoImageWrapper {
+  display: block;
+  margin-bottom: var(--spacing-s);
+  margin-top: 6px;
+  height: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  img {
+    max-height: 36px;
+    max-width: 192px;
+    width: auto;
+    height: auto;
+  }
+}
+
+
+
+.name {
+  font-size: var(--fs-text-lg);
+  font-weight: var(--fw-normal);
+}
+
+.content {
+  text-align: left;
+  flex-grow: 1;
+}
+
+.description {
+  font-size: var(--fs-text-sm);
+  color: var(--grey-300);
+}
+
+.funded {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  border-radius: 0px var(--br-m) 0 var(--br-xs);
+  padding: 2px var(--spacing-s) 2px var(--spacing-xs);
+  font-size: var(--fs-text-xs);
+  font-weight: var(--fw-semibold);
+  background: var(--secondary-300);
+  color: var(--secondary-700);
+
+  svg {
+    width: 16px;
+    fill: var(--secondary-700);
+    vertical-align: sub;
+    margin-right: 4px;
+    position: relative;
+    top: 1px;
+  }
+}
+
+.action {
+  margin-top: var(--spacing-m);
+}
