@@ -1,0 +1,27 @@
+.items {
+  text-align: center;
+  padding: var(--spacing-m) 0;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.anchorLink {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  margin: 0.5rem 1rem;
+  border-radius: 0.5rem;
+
+  &:link, &:visited {
+    background-color: var(--grey-800);
+  }
+
+  &:hover {
+    color: var(--bw-white);
+    background: var(--grey-600);
+  }
+
+  &:active {
+    color: var(--bw-white);
+    background: var(--primary-500);
+  }
+}

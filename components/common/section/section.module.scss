@@ -4,15 +4,15 @@
   display: block;
 }
 
-.sectionGap-none {
+.sectionGap--none {
   padding: var(--spacing-xs) 0;
 }
 
-.sectionGap-narrow {
+.sectionGap--narrow {
   padding: var(--spacing-s) 0;
 }
 
-.sectionGap-standard {
+.sectionGap--standard {
   padding: var(--spacing-m) 0;
   margin: 0 0 var(--spacing-m) 0;
 
@@ -22,7 +22,7 @@
   }
 }
 
-.containerNarrow {
+.container--narrow {
   margin: 0 var(--spacing-s);
 
   @include media-breakpoint-up(lg) {
@@ -31,13 +31,21 @@
   }
 }
 
-.containerNormal {}
-.containerWide {}
-.containerFluid {
+.container--normal {
+  margin: 0;
+  display: block
+}
+.container--wide {
+  margin: 0;
+  display: block;
+}
+
+.container--fluid {
+  margin: 0;
   width: 100%;
 }
 
-.backgroundBlocks {
+.background--blocks {
   padding: 50px 0;
 
   background: url('/images/backgrounds/blocks-mobile.jpg') 50% 50% repeat-x;
@@ -49,7 +57,7 @@
 
 }
 
-.backgroundWaves {
+.background--waves {
   padding: 0 0 100px 0;
 
   background:
@@ -63,13 +71,13 @@
   }
 }
 
-.backgroundTop {
+.background--waves-top {
   background:
     url('/images/backgrounds/wave-light.svg') 45% 10% repeat-x,
     url('/images/backgrounds/wave-dark.svg') 30% 18% repeat-x;
 }
 
-.backgroundMiddle {
+.background--waves-middle {
   background:
     url('/images/backgrounds/wave-light.svg') 35% 70% repeat-x,
     url('/images/backgrounds/wave-dark.svg') 70% 45% repeat-x;

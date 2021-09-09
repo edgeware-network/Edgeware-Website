@@ -20,6 +20,7 @@ const FOOTER_LINKS: FooterLinksGroup[] = [
     items: {
       Mission: '/mission',
       Collectives: '/collectives',
+      Partners: '/partners',
       Lockdrop: 'https://commonwealth.im/edgeware/stats',
       Press: '/press',
       'Swag Store': 'https://edgeware.store/#',
