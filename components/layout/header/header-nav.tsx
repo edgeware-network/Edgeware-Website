@@ -55,29 +55,23 @@ export const NavItems: React.FC<NavItemsProps> = ({ style, onClick, onToggleModa
     onToggleModal();
   };
 
+  const ITEMS = {
+    Home: '/',
+    Collectives: '/collectives',
+    Partners: '/partners',
+    Developers: '/developers',
+    Mission: '/mission',
+    News: 'https://blog.edgewa.re/',
+    Docs: 'https://main.edgeware.wiki/',
+  };
+
   return (
     <nav className={cn(styles.nav, style === 'mobile' && styles.navMobile)}>
-      <NavItem href="/" onClick={onClick}>
-        Home
-      </NavItem>
-      <NavItem href="/collectives" onClick={onClick}>
-        Collectives
-      </NavItem>
-      <NavItem href="https://commonwealth.im/edgeware/proposals" onClick={onClick}>
-        Proposals
-      </NavItem>
-      <NavItem href="/developers" onClick={onClick}>
-        Developers
-      </NavItem>
-      <NavItem href="/mission" onClick={onClick}>
-        Mission
-      </NavItem>
-      <NavItem href="https://blog.edgewa.re/" onClick={onClick}>
-        News
-      </NavItem>
-      <NavItem href="https://main.edgeware.wiki/" onClick={onClick}>
-        Docs
-      </NavItem>
+      {Object.entries(ITEMS).map((entry) => (
+        <NavItem key={entry[0]} href={entry[1]} onClick={onClick}>
+          {entry[0]}
+        </NavItem>
+      ))}
       <NavButtonItem onClick={handleGetStartedClick}>Get Started</NavButtonItem>
     </nav>
   );
