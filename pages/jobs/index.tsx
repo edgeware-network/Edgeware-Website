@@ -13,10 +13,13 @@ export default function Jobs({ allJobs }) {
   return (
     <>
       <StaticHero
-        headline={<>We're a growing open source community looking for talent. <em>Join Edgeware</em></>}
+        headline={
+          <>
+            We're a growing open source community looking for talent. <em>Join Edgeware</em>
+          </>
+        }
         heroStyle="jobs"
       />
-
 
       <Section id="roles" width="narrow">
         <div className="text-center">

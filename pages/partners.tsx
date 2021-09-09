@@ -1,18 +1,21 @@
 import * as React from 'react';
-import { GetStaticProps, NextPage } from 'next'
-import slugify from 'slugify'
+import { GetStaticProps, NextPage } from 'next';
+import slugify from 'slugify';
 import { H2 } from '../components/common/typography/typography';
 import { Section } from '../components/common/section/section';
 import { StaticHero } from '../components/common/static-hero/static-hero';
 
-import { PartnerCardList, PartnerCard } from '../components/pages/partners/partner-card/partner-card';
+import {
+  PartnerCardList,
+  PartnerCard,
+} from '../components/pages/partners/partner-card/partner-card';
 import { PartnerCategory } from 'components/pages/partners/partner-category/partner-category';
 import { PartnerNav } from 'components/pages/partners/partner-nav/partner-nav';
 
 import { getAllPartners, AllPartnersData } from 'lib/api';
 
 interface PartnersPageStaticProps {
-  allPartnersByCategory: AllPartnersData
+  allPartnersByCategory: AllPartnersData;
 }
 
 const PartnersPage: NextPage<PartnersPageStaticProps> = ({ allPartnersByCategory }) => {
@@ -29,24 +32,27 @@ const PartnersPage: NextPage<PartnersPageStaticProps> = ({ allPartnersByCategory
           <H2 size="2">Our Partners</H2>
         </div>
 
-        <PartnerNav items={allPartnersByCategory.map(g => g.category)} />
+        <PartnerNav items={allPartnersByCategory.map((g) => g.category)} />
 
         <div>
           {allPartnersByCategory.map((partnerGroup) => (
-            <PartnerCategory categoryName={partnerGroup.category} id={slugify(partnerGroup.category, { lower: true })}>
+            <PartnerCategory
+              key={partnerGroup.category}
+              categoryName={partnerGroup.category}
+              id={slugify(partnerGroup.category, { lower: true })}
+            >
               <PartnerCardList>
-                {partnerGroup.partners.map( (partner) => (
+                {partnerGroup.partners.map((partner) => (
                   <PartnerCard {...partner} key={partner.name} />
                 ))}
               </PartnerCardList>
             </PartnerCategory>
           ))}
         </div>
-
       </Section>
     </>
   );
-}
+};
 
 export const getStaticProps: GetStaticProps<PartnersPageStaticProps> = async () => {
   const allPartnersByCategory = getAllPartners();
@@ -55,11 +61,12 @@ export const getStaticProps: GetStaticProps<PartnersPageStaticProps> = async () 
     props: {
       meta: {
         title: 'Conquering crypto together',
-        description: 'Edgeware is partnering with leading cryptocurrency brands and digital communities to build the future of crypto ecosystem.',
+        description:
+          'Edgeware is partnering with leading cryptocurrency brands and digital communities to build the future of crypto ecosystem.',
       },
-      allPartnersByCategory
+      allPartnersByCategory,
     },
   };
-}
+};
 
-export default PartnersPage
+export default PartnersPage;
