@@ -23,10 +23,7 @@ export const Section: React.FC<SectionProps> = ({
     styles[`background--${background}`]
   );
 
-  const containerClass = cn(
-    styles.container,
-    styles[`container--${width}`]
-  );
+  const containerClass = cn(styles.container, styles[`container--${width}`]);
 
   return (
     <section id={id} className={sectionClasses}>

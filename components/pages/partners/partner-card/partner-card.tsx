@@ -15,29 +15,24 @@ export interface PartnerCardProps {
 }
 
 const getImagePathFromName = (name: string) => {
-  const filename = slugify(name, { lower: true })
-  return `/images/partners/${filename}.png`
-}
+  const filename = slugify(name, { lower: true });
+  return `/images/partners/${filename}.png`;
+};
 
 export const PartnerCard: React.FC<PartnerCardProps> = ({
   name,
   description,
   link,
-  funded = false
+  funded = false,
 }) => {
-
-  const iconHref = getImagePathFromName(name)
+  const iconHref = getImagePathFromName(name);
 
   return (
     <div className={styles.partnerCard} data-name={name}>
       <div className={styles.content}>
         <span className={styles.logoImageWrapper}>
           <span className={styles.logoImage}>
-            <img
-              src={iconHref}
-              alt={name}
-              loading="lazy"
-            />
+            <img src={iconHref} alt={name} loading="lazy" />
           </span>
         </span>
         <h4 className={styles.name}>{name}</h4>
