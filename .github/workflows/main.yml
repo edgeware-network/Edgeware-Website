@@ -24,3 +24,5 @@ jobs:
         with:
           branch: gh-pages
           folder: out
+          git-config-name: Edgeware.Agency
+          git-config-email: ops@edgeware.agency
