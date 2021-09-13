@@ -27,13 +27,18 @@
 
   @include media-breakpoint-up(lg) {
     margin: var(--spacing-xl) auto;
-    max-width: 1150px;
+    max-width: 1140px;
   }
 }
 
 .container--normal {
   margin: 0;
-  display: block
+  display: block;
+
+  @include media-breakpoint-up(lg) {
+    margin: var(--spacing-xl) auto;
+    max-width: 1140px;
+  }
 }
 .container--wide {
   margin: 0;
