@@ -4,9 +4,6 @@ partners:
     - name: Stafi Protocol
       description: Send and receive messages between blockchain addresses through a simple, email-like interface.
       link: https://medium.com/stafi/stafi-dao-enters-exploration-phase-partners-with-commonwealth-and-edgeware-65bcdaaf30a9
-    - name: Sublime Finance
-      description: Sublime is a new lending protocol aimed at providing a more diversified and robust lending experience.
-      link: https://commonwealth.im/edgeware/proposal/discussion/636-announcing-sublime
     - name: Tidal Finance
       description: Flexible insurance for the DeFi economy.
       link: https://blog.edgewa.re/edgeware-partners-with-tidal-finance-to-bring-insurance-cover-to-edg-ecosystem/

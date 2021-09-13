@@ -154,11 +154,11 @@ export default function Developer() {
             interface.
           </IconBox>
           <IconBox
-            headline="Sublime Finance"
-            imageUrl="/images/developer/dapps-sublime.png"
-            imageWidth="128"
-            imageHeight="26"
-            targetButton="https://commonwealth.im/edgeware/proposal/discussion/636-announcing-sublim"
+            headline="Tidal Finance"
+            imageUrl="/images/developer/dapps-tidal-finance.png"
+            imageWidth="118"
+            imageHeight="33"
+            targetButton="https://blog.edgewa.re/edgeware-partners-with-tidal-finance-to-bring-insurance-cover-to-edg-ecosystem/"
           >
             Sublime is a new lending protocol aimed at providing a more diversified and robust
             lending experience.
