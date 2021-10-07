@@ -62,7 +62,7 @@ export const NavItems: React.FC<NavItemsProps> = ({ style, onClick, onToggleModa
     Developers: '/developers',
     Mission: '/mission',
     News: 'https://blog.edgewa.re/',
-    Docs: 'https://main.edgeware.wiki/',
+    Docs: 'https://docs.edgeware.wiki/',
   };
 
   return (
