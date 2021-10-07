@@ -25,7 +25,7 @@ export const Build: React.FC = () => {
           <ul className={styles.docList}>
             <li className={styles.docItem}>
               <a
-                href="https://main.edgeware.wiki/"
+                href="https://docs.edgeware.wiki/"
                 className={styles.docLink}
                 target="_blank"
                 rel="noopener noreferrer"
