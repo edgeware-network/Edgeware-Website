@@ -1,6 +1,6 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import styles from './dev-banner.module.scss'
+import styles from './dev-banner.module.scss';
 
 interface DevBannerProps {
   headline: string;
@@ -8,14 +8,20 @@ interface DevBannerProps {
   href: string;
 }
 
-export const DevBanner: React.FC<DevBannerProps> = ({headline, leadText, href}) => {
-  const isExternal = href.match(/https/)
+export const DevBanner: React.FC<DevBannerProps> = ({ headline, leadText, href }) => {
+  const isExternal = href.match(/https/);
   return (
     <div className={styles.wrapper}>
-      <a className={styles.banner} href={href} target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener noreferrer' : 'internal'}>
+      {/* eslint-disable-next-line react/jsx-no-target-blank */}
+      <a
+        className={styles.banner}
+        href={href}
+        target={isExternal ? '_blank' : undefined}
+        rel={isExternal ? 'noopener noreferrer' : 'internal'}
+      >
         <strong className={styles.headline}>{headline}</strong>
         <span className={styles.leadText}>{leadText}</span>
       </a>
     </div>
-  )
-}
+  );
+};
