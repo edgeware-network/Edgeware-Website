@@ -36,8 +36,8 @@ import IconMarkets from 'remixicon/icons/Business/line-chart-line.svg';
 
 import { H1 } from '../components/common/typography/typography';
 import { Section } from '../components/common/section/section';
-import { LinksList, LinkItem } from 'components/pages/get-started/links-list/links-list';
-import { DevBanner } from 'components/pages/get-started/dev-banner/dev-banner';
+import { LinksList, LinkItem } from '../components/pages/get-started/links-list/links-list';
+import { DevBanner } from '../components/pages/get-started/dev-banner/dev-banner';
 
 const LINKS: Record<string, LinkItem[]> = {
   builders: [

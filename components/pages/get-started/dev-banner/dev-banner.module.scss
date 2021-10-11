@@ -30,10 +30,14 @@
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 
   &:hover, &:active {
-    border-color: var(--grey-700);
-    color: var(--primary-500);
+    border-color: var(--secondary-500);
+    color: var(--secondary-500);
     background: url('/images/hero/blocks-pattern.jpg') 50% 25%;
-    background-size: auto 120%;
+    background-size: auto 130%;
+
+    .headline, .leadText {
+      color: var(--secondary-500);
+    }
   }
 }
 
