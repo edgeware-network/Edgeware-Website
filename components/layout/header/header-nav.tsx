@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import styles from './header-nav.module.scss';
 import { HeaderOverlayNav } from './header-nav-overlay';
 import { NavToggle } from './nav/nav-toggle';
+import { useRouter } from 'next/router';
 
 const setBodyOverlay = (flag: boolean) => {
   if (flag) {
@@ -50,9 +51,11 @@ interface NavItemsProps {
 }
 
 export const NavItems: React.FC<NavItemsProps> = ({ style, onClick, onToggleModal }) => {
+  const router = useRouter()
+
   const handleGetStartedClick = (event: React.MouseEvent) => {
     event.preventDefault();
-    onToggleModal();
+    router.push('/get-started')
   };
 
   const ITEMS = {
