@@ -51,11 +51,11 @@ interface NavItemsProps {
 }
 
 export const NavItems: React.FC<NavItemsProps> = ({ style, onClick, onToggleModal }) => {
-  const router = useRouter()
+  const router = useRouter();
 
   const handleGetStartedClick = (event: React.MouseEvent) => {
     event.preventDefault();
-    router.push('/get-started')
+    router.push('/get-started');
   };
 
   const ITEMS = {
