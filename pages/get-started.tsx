@@ -41,15 +41,15 @@ import { DevBanner } from '../components/pages/get-started/dev-banner/dev-banner
 
 const LINKS: Record<string, LinkItem[]> = {
   builders: [
-    { label: 'Launch Your Dapp', icon: IconWindow, href: '' },
-    { label: 'Mint a Token', icon: IconToken, href: '' },
-    { label: 'Integrate Exchange', icon: IconExchange, href: '' },
+    { label: 'Launch Your Dapp', icon: IconWindow, href: 'https://docs.edgeware.wiki/development/develop/smart-contracts' },
+    { label: 'Mint a Token', icon: IconToken, href: 'https://docs.edgeware.wiki/development/develop/smart-contracts/evm-smart-contracts/tutorials/deploy-an-evm-contract/using-truffle' },
+    { label: 'Integrate Exchange', icon: IconExchange, href: 'https://edgeware-a.slab.com/public/posts/yqrtzorf' },
     {
       label: 'List your Resume',
       icon: IconResume,
       href: 'https://commonwealth.im/edgeware/proposal/discussion/756-job-board',
     },
-    { label: 'Builders Chat', icon: IconChat, href: '' },
+    { label: 'Builders Chat', icon: IconChat, href: 'https://t.me/edg_developers' },
   ],
   venture: [
     {
@@ -63,17 +63,17 @@ const LINKS: Record<string, LinkItem[]> = {
       href: 'https://commonwealth.im/edgeware/proposals',
     },
     { label: 'View Proposals', icon: IconList, href: 'https://commonwealth.im/edgeware/proposals' },
-    { label: 'Join Community', icon: IconUser, href: '' },
+    { label: 'Join Community', icon: IconUser, href: 'https://gov.edgewa.re/proposal/discussion/959--new-to-edgeware-start-here/' },
   ],
   holders: [
-    { label: 'Governance', icon: IconGov, href: 'https://commonwealth.im/edgeware' },
-    { label: 'Benefits', icon: IconFunds, href: '' },
+    { label: 'Governance', icon: IconGov, href: 'https:/gov.edgewa.re' },
+    { label: 'Benefits', icon: IconFunds, href: 'https://gov.edgewa.re/proposal/discussion/1101-concept-edgpass-citizen-benefits' },
     {
       label: 'Whitepaper',
       icon: IconPaper,
       href: 'https://arena-attachments.s3.amazonaws.com/4643268/c8d128724f36b716660e4bf21823e760.pdf?1563310093',
     },
-    { label: 'Discord', icon: IconDiscord, href: '' },
+    { label: 'Discord', icon: IconDiscord, href: 'https://discord.gg/bkBctVs5F5' },
     { label: 'Collectives', icon: IconBubbles, href: '/collectives' },
   ],
   staking: [
@@ -82,22 +82,22 @@ const LINKS: Record<string, LinkItem[]> = {
       icon: IconTerminal,
       href: 'https://docs.edgeware.wiki/quickstart/set-up-a-validator',
     },
-    { label: 'Infrastructure WG', icon: IconCommand, href: '' },
-    { label: 'Nominate EDG', icon: IconOrga, href: '' },
-    { label: 'Stake EDG', icon: IconStake, href: '' },
+    { label: 'Infrastructure WG', icon: IconCommand, href: 'https://t.me/edgewareinfra' },
+    { label: 'Nominate EDG', icon: IconOrga, href: 'https://docs.edgeware.wiki/edgeware-stack/staking/nominating' },
+    { label: 'Stake EDG', icon: IconStake, href: 'https://docs.edgeware.wiki/edgeware-stack/staking/' },
   ],
   wallets: [
-    { label: 'Edgeware Apps', icon: IconWallet, href: 'https://www.edgeware.app/' },
-    { label: 'Polkadot Apps', icon: IconWallet, href: 'https://polkadot.js.org/apps/' },
-    { label: 'Ledger Wallet', icon: IconWallet, href: 'https://www.ledger.com/' },
+    { label: 'Edgeware Apps', icon: IconWallet, href: 'https://www.edgeware.app/?rpc=wss%3A%2F%2Fmainnet.edgewa.re#/' },
+    { label: 'Polkadot Apps', icon: IconWallet, href: 'https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fmainnet.edgewa.re#/' },
+    { label: 'Ledger Wallet', icon: IconWallet, href: 'https://docs.edgeware.wiki/quickstart/ledger' },
     { label: 'Polkadot Extension', icon: IconWallet, href: 'https://polkadot.js.org/extension/' },
-    { label: 'Four Wallet', icon: IconWallet, href: '' },
+    { label: 'Four Wallet', icon: IconWallet, href: 'https://wiki.4thtech.io/intro/assets.html#wallet' },
     { label: 'Mathwallet', icon: IconWallet, href: 'https://mathwallet.org/' },
     { label: 'Polkawallet', icon: IconWallet, href: 'https://polkawallet.io/' },
     { label: 'Clover Wallet', icon: IconWallet, href: 'https://clover.finance/' },
   ],
   other: [
-    { label: 'Subscan Explorer', icon: IconSearch, href: '' },
+    { label: 'Subscan Explorer', icon: IconSearch, href: 'https://edgeware.subscan.io/' },
     { label: 'Commonwealth', icon: IconCompass, href: 'https://commonwealth.im/' },
     { label: 'Node Telemetry', icon: IconApps, href: 'https://telemetry.polkadot.io/' },
     { label: 'Dev Digest', icon: IconArticle, href: 'https://blog.edgewa.re/' },
@@ -108,7 +108,7 @@ const LINKS: Record<string, LinkItem[]> = {
       icon: IconYoutube,
       href: 'https://www.youtube.com/channel/UC7LAzthbMfggA28kE1fihaA',
     },
-    { label: 'Markets', icon: IconMarkets, href: '' },
+    { label: 'Markets', icon: IconMarkets, href: 'https://www.coingecko.com/en/coins/edgeware#markets' },
   ],
 };
 
