@@ -1,0 +1,92 @@
+@import '../../../../styles/custom.scss';
+
+.wrapper {
+  margin: 0 auto var(--spacing-ml) auto;
+  padding: 0 var(--spacing-m);
+
+  @include media-breakpoint-up(xl) {
+    max-width: 1296px;
+  }
+}
+
+.headline {
+  color: var(--primary-500);
+  font-size: var(--fs-text-lg);
+  border-bottom: 1px solid var(--grey-800);
+  padding: var(--spacing-xs) 0;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 calc(-1 * var(--spacing-xs));
+
+  flex-direction: column;
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+  }
+}
+
+.listItem {
+  margin: var(--spacing-xs);
+}
+
+.link {
+  width: 100%;
+
+  @include media-breakpoint-up(md) {
+    width: 235px;
+  }
+
+  display: block;
+  padding: var(--spacing-s) var(--spacing-s);
+  border: 1px solid var(--grey-800);
+  border-radius: var(--br-m);
+  font-size: var(--fs-text-lg);
+
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:hover, &:active {
+    border-color: var(--secondary-500);
+    color: var(--secondary-500);
+
+    .icon {
+      svg {
+        fill: var(--secondary-500);
+      }
+    }
+  }
+}
+
+.icon {
+  margin: 0 var(--spacing-xs) 0 0;
+  position: relative;
+  top: -2px;
+  svg {
+    fill: #fff;
+    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    width: 24px;
+  }
+}
+
+.linkHighlight {
+  background: url('/images/hero/blocks-pattern.jpg') 50% 50%;
+  background-size: auto 250%;
+  text-align: center;
+
+  &:hover, &:active {
+    background-size: auto 200%;
+  }
+
+  .icon {
+    display: block;
+
+    svg {
+      width: 32px;
+    }
+  }
+}
+

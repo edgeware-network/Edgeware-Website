@@ -25,7 +25,7 @@ export const Header: React.FC<HeaderProps> = ({ isStatic = false }) => {
             </a>
           </Link>
           <HeaderNav onToggleModal={toggleModal} />
-          <GetStartedModal isOpen={isOpen} onClose={toggleModal} />
+          {/* <GetStartedModal isOpen={isOpen} onClose={toggleModal} /> */}
         </div>
       </div>
     </header>
