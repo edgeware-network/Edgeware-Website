@@ -22,8 +22,14 @@ const PartnersPage: NextPage<PartnersPageStaticProps> = ({ allPartnersByCategory
   return (
     <>
       <StaticHero
-        headline="Conquering crypto together"
-        leadText="Edgeware is partnering with leading cryptocurrency brands and digital communities to build the future of crypto ecosystem."
+        headline="Home to next generation networks"
+        leadText={
+          <>
+            Edgeware partners with leading cryptocurrency teams,
+            <br />
+            projects and collectives to create the future of Web3
+          </>
+        }
         heroStyle="partners"
       />
 
@@ -60,9 +66,9 @@ export const getStaticProps: GetStaticProps<PartnersPageStaticProps> = async () 
   return {
     props: {
       meta: {
-        title: 'Conquering crypto together',
+        title: 'Our Partners - Home to next generation networks',
         description:
-          'Edgeware is partnering with leading cryptocurrency brands and digital communities to build the future of crypto ecosystem.',
+          'Edgeware partners with leading cryptocurrency teams, projects and collectives to create the future of Web3',
       },
       allPartnersByCategory,
     },

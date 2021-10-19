@@ -8,7 +8,7 @@ import styles from './static-hero.module.scss';
 
 interface StaticHeroProps {
   headline: React.ReactNode;
-  leadText?: string;
+  leadText?: string | React.ReactNode;
   heroStyle: 'jobs' | 'partners';
 }
 
