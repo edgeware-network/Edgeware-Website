@@ -56,13 +56,13 @@
   }
 }
 
-.assetImage-dark {
+.assetImage-dark, .assetImage-solid-dark {
   background: var(--bw-white);
 }
 
 .assetImage-logotype {
   img {
-    height: 72px;
+    height: 64px;
   }
 }
 
