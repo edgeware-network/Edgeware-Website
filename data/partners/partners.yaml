@@ -58,9 +58,9 @@ partners:
         description: Zien is a platform providing NFT Airdrops on WhatsApp.
         link: https://commonwealth.im/edgeware/proposal/discussion/1129-proposal-bring-zien-nfts-via-whatsapp-to-edgeware
         funded: true
-      - name: MoCDA
-        description: MoCDA provides digital art education and technology to artists, collectors, institutions and art lovers.
-        link: https://commonwealth.im/edgeware/proposal/discussion/639-artistic-residencies-community-call-w-mocda-haute-to-death
+      - name: New Futures
+        description: Web3 media launchpad and creative DAO/NFT platform uniting art, culture and technology based on RMRK.
+        link: https://www.new-futures.co/
   - category: Privacy
     partners:
       - name: Webb Protocol
@@ -72,6 +72,7 @@ partners:
       - name: LexBridge
         description: Lexbridge is a technological bridge to jurisdictions in the US.
         link: https://commonwealth.im/edgeware/proposal/discussion/948-proposal-lexbridge-legal-entitydocument-panel
+        funded: true
       - name: 4thPillarTech
         description: 4thPillarTech provides blockchain metadata & data file exchange, while providing a digital identity solutions.
         link: https://commonwealth.im/edgeware/proposal/discussion/1063-4thpillar-technologies-has-integrated-edgeware-for-their-ecommerce-and-document-exchange-platform
