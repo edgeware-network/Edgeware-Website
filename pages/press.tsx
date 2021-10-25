@@ -44,9 +44,21 @@ export default function Press() {
         </BrandAssetList>
 
         <BrandAssetList>
+          <BrandAsset name="Main Logotype (alternative)" type="logotype" color="solid-main" />
+          <BrandAsset name="Dark Logotype (alternative)" type="logotype" color="solid-dark" />
+          <BrandAsset name="White Logotype (alternative)" type="logotype" color="solid-white" />
+        </BrandAssetList>
+
+        <BrandAssetList>
           <BrandAsset name="Main Logo Mark" type="logomark" color="main" />
           <BrandAsset name="Dark Logo Mark" type="logomark" color="dark" />
           <BrandAsset name="White Logo Mark" type="logomark" color="white" />
+        </BrandAssetList>
+
+        <BrandAssetList>
+          <BrandAsset name="Main Logo Mark (alternative)" type="logomark" color="solid-main" />
+          <BrandAsset name="Dark Logo Mark (alternative)" type="logomark" color="solid-dark" />
+          <BrandAsset name="White Logo Mark (alternative)" type="logomark" color="solid-white" />
         </BrandAssetList>
 
         <div className="text-center">
