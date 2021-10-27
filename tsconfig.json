@@ -2,8 +2,12 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@polkadot/api/augment": ["./node_modules/@edgeware/node-types/interfaces/augment-api.d.ts"],
-      "@polkadot/types/augment": ["./node_modules/@edgeware/node-types/interfaces/augment-types.d.ts"],
+      "@polkadot/api/augment": [
+        "./node_modules/@edgeware/node-types/interfaces/augment-api.d.ts"
+      ],
+      "@polkadot/types/augment": [
+        "./node_modules/@edgeware/node-types/interfaces/augment-types.d.ts"
+      ]
     },
     "target": "es5",
     "lib": [
@@ -21,13 +25,15 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "incremental": true
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "jest.setup.ts"  ],
+    "**/*.tsx",
+    "jest.setup.ts"
+  ],
   "exclude": [
     "node_modules"
   ]
