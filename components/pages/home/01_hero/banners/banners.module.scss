@@ -41,7 +41,7 @@
   display: block;
   flex: 0 0 312px;
   padding: var(--spacing-s);
-  transition: transform 0.2s cubic-bezier(.77,0,.18,1);
+  transition: transform 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
 
   &:hover {
     transform: scale(1.1);
@@ -49,11 +49,8 @@
 }
 
 .link {
-  border: 1px solid var(--grey-400);
   overflow: hidden;
-  border-radius: var(--br-s);
   display: block;
-
 
   img {
     width: 100%;
