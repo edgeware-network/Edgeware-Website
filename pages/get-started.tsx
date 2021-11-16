@@ -102,7 +102,7 @@ const LINKS: Record<string, LinkItem[]> = {
       icon: IconTerminal,
       href: 'https://docs.edgeware.wiki/quickstart/set-up-a-validator',
     },
-    { label: 'Infrastructure WG', icon: IconCommand, href: 'https://t.me/edgewareinfra' },
+    { label: 'Infrastructure Chat', icon: IconCommand, href: 'https://t.me/edgewareinfra' },
     {
       label: 'Nominate EDG',
       icon: IconOrga,
@@ -132,11 +132,12 @@ const LINKS: Record<string, LinkItem[]> = {
     },
     { label: 'Polkadot Extension', icon: IconWallet, href: 'https://polkadot.js.org/extension/' },
     {
-      label: 'Four Wallet',
+      label: '4THTECH Wallet',
       icon: IconWallet,
       href: 'https://wiki.4thtech.io/intro/assets.html#wallet',
     },
-    { label: 'Mathwallet', icon: IconWallet, href: 'https://mathwallet.org/' },
+    { label: 'Nova Wallet', icon: IconWallet, href: 'https://novawallet.io/' },
+    { label: 'Math Wallet', icon: IconWallet, href: 'https://mathwallet.org/' },
     { label: 'Polkawallet', icon: IconWallet, href: 'https://polkawallet.io/' },
     { label: 'Clover Wallet', icon: IconWallet, href: 'https://clover.finance/' },
   ],

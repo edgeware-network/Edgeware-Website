@@ -55,6 +55,7 @@
   @include media-breakpoint-up(lg) {
     flex-direction: row;
     justify-content: center;
+    align-items: center;
   }
 }
 

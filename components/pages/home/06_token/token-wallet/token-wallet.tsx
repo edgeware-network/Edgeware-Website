@@ -12,7 +12,27 @@ export const TokenWallet: React.FC<TokenWalletProps> = ({ headline }) => {
       <h4 className={styles.walletHeadline}>{headline}</h4>
 
       <div className={styles.walletLinks}>
-        <a href="https://polkadot.js.org/apps/" className={styles.walletLink}>
+        <a
+          href="https://novawallet.io/"
+          className={styles.walletLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/images/home/token/logo-nova-wallet.png"
+            // layout="fixed"
+            width="139"
+            height="41"
+            alt="Nova Wallet"
+            loading="lazy"
+          />
+        </a>
+        <a
+          href="https://polkadot.js.org/apps/"
+          className={styles.walletLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             src="/images/home/token/logo-polkadot.png"
             // layout="fixed"
@@ -22,7 +42,12 @@ export const TokenWallet: React.FC<TokenWalletProps> = ({ headline }) => {
             loading="lazy"
           />
         </a>
-        <a href="https://mathwallet.org/en-us/" className={styles.walletLink}>
+        <a
+          href="https://mathwallet.org/en-us/"
+          className={styles.walletLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             src="/images/home/token/logo-mathwallet.png"
             // layout="fixed"
