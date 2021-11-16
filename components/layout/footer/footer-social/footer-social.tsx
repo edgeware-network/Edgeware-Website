@@ -6,6 +6,7 @@ import IconTwitter from 'remixicon/icons/Logos/twitter-fill.svg';
 import IconTelegram from 'remixicon/icons/Logos/telegram-fill.svg';
 import IconDiscord from 'remixicon/icons/Logos/discord-fill.svg';
 import IconGithub from 'remixicon/icons/Logos/github-fill.svg';
+import IconReddit from 'remixicon/icons/Logos/reddit-fill.svg';
 
 import { Icon } from '../../../common/icon/icon';
 
@@ -25,6 +26,10 @@ const SOCIAL_LINKS = {
   Github: {
     icon: IconGithub,
     href: 'https://github.com/orgs/Edgeware-Network',
+  },
+  IconReddit: {
+    icon: IconReddit,
+    href: 'https://www.reddit.com/r/edgeware',
   },
 };
 
