@@ -112,4 +112,8 @@
   --br-m: 10px;
   --br-l: 12px;
   --br-xl: 16px;
+
+  // need to undo smooth scroll behavior
+  // see -> https://stackoverflow.com/a/68769366/873073
+  scroll-behavior: initial;
 }
