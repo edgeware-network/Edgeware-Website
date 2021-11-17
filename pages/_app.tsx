@@ -8,8 +8,6 @@ import * as gtag from '../utils/gtag';
 const queryClient = new QueryClient();
 
 import '../styles/global.scss';
-import 'swiper/swiper.scss';
-import 'swiper/components/pagination/pagination.scss';
 
 import { Layout } from '../components/layout/layout';
 

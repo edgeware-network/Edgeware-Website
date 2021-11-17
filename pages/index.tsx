@@ -1,4 +1,8 @@
 import React from 'react';
+import { NextPage } from 'next';
+import dynamic from 'next/dynamic';
+
+import { getAllTwitterMentions, TwitterMention } from '../lib/api/twitter';
 
 import { Section } from '../components/common/section/section';
 import { H2, P } from '../components/common/typography/typography';
@@ -11,7 +15,11 @@ import { Structure } from '../components/pages/home/04_structure/structure';
 // import { Projects } from '../components/pages/home/05_projects/projects';
 import { Token } from '../components/pages/home/06_token/token';
 import { Build } from '../components/pages/home/07_build/build';
-import { Mentions } from '../components/pages/home/08_mentions/mentions';
+
+// Load Twitter Mentions slider as dynamic component
+const Mentions = dynamic(() =>
+  import('../components/pages/home/08_mentions/mentions').then((mod) => mod.Mentions)
+);
 
 import { Newsletter } from '../components/common/newsletter/newsletter';
 import {
@@ -20,7 +28,11 @@ import {
 } from '../components/common/header-and-text/header-and-text';
 import { Banners } from '../components/pages/home/01_hero/banners/banners';
 
-export default function Home() {
+interface HomePageStaticProps {
+  mentions: TwitterMention[];
+}
+
+const HomePage: NextPage<HomePageStaticProps> = ({ mentions }) => {
   return (
     <>
       <Hero
@@ -111,22 +123,6 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* TODO: Temporary disabled
-      <Section id="projects" width="normal">
-        <div className="text-center">
-          <H2 size="2">
-            Funded Projects
-          </H2>
-          <P>
-            Edgeware is a community-owned and operated platform funding
-            <br />
-            ambitious project teams and the infrastructure to support them.
-          </P>
-        </div>
-        <Projects />
-      </Section>
-      */}
-
       <Section id="token" width="fluid" gap="none">
         <Token>
           <H2 size="1">
@@ -155,7 +151,7 @@ export default function Home() {
       </Section>
 
       <Section id="mentions" width="fluid">
-        <Mentions />
+        <Mentions mentions={mentions} />
       </Section>
 
       <Section id="newsletter" width="normal" gap="none">
@@ -163,9 +159,11 @@ export default function Home() {
       </Section>
     </>
   );
-}
+};
 
 export async function getStaticProps() {
+  const mentions = getAllTwitterMentions();
+
   return {
     props: {
       meta: {
@@ -173,6 +171,9 @@ export async function getStaticProps() {
         description:
           'Edgeware is a smart contract blockchain with a community-managed treasury, decentralised proposal system and network of DAOs.',
       },
+      mentions,
     },
   };
 }
+
+export default HomePage;
