@@ -5,7 +5,7 @@ import Home from '../pages/index';
 
 describe('Homepage', () => {
   it('Renders homepage with all text sections', async () => {
-    const { getByText } = render(<Home />);
+    const { getByText } = render(<Home mentions={[]} />);
 
     // HERO (async check due to animated text component render)
     await screen.findByText(/What will you/);
@@ -27,13 +27,10 @@ describe('Homepage', () => {
 
     // Build
     expect(getByText(/Want to build on the Edgeware ecosystem/)).toBeInTheDocument();
-
-    // Mentions
-    expect(getByText(/Mentions from the cryptoverse/)).toBeInTheDocument();
   });
 
   it('Renders the "Get Started" modal', async () => {
-    render(<Home />);
+    render(<Home mentions={[]} />);
 
     const button = screen.getByRole('button', { name: 'Start your journey' });
     fireEvent.click(button);

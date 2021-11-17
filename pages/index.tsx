@@ -1,7 +1,8 @@
 import React from 'react';
 import { NextPage } from 'next';
+import dynamic from 'next/dynamic';
 
-import { getAllTwitterMentions, TwitterMention } from 'lib/api/twitter';
+import { getAllTwitterMentions, TwitterMention } from '../lib/api/twitter';
 
 import { Section } from '../components/common/section/section';
 import { H2, P } from '../components/common/typography/typography';
@@ -26,7 +27,6 @@ import {
   HeaderAndText,
 } from '../components/common/header-and-text/header-and-text';
 import { Banners } from '../components/pages/home/01_hero/banners/banners';
-import dynamic from 'next/dynamic';
 
 interface HomePageStaticProps {
   mentions: TwitterMention[];
