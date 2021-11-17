@@ -11,21 +11,19 @@ export interface TweetCardProps {
   name: string;
   handle: string;
   avatar: string;
+  url?: string;
 }
 
-export const TweetCard: React.FC<TweetCardProps> = ({ name, handle, text, date, avatar }) => {
-  const url = `https://twitter.com/${handle}`;
-  const onLinkClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    window.open(url);
-  };
+export const TweetCard: React.FC<TweetCardProps> = ({ name, handle, text, date, avatar, url }) => {
+  const profileUrl = `https://twitter.com/${handle}`;
+
   return (
     <div className={styles.card}>
       <div className={styles.header}>
         <img src={avatar} className={styles.avatar} alt={name} loading="lazy" />
         <strong className={styles.name}>{name}</strong>
         <span className={styles.handle}>
-          <a href={url} className="link" onClick={onLinkClick}>
+          <a href={profileUrl} className="link" target="_blank" rel="noopener noreferrer">
             {handle}
           </a>
         </span>
@@ -34,7 +32,15 @@ export const TweetCard: React.FC<TweetCardProps> = ({ name, handle, text, date, 
         </span>
       </div>
       <div className={styles.body}>{text}</div>
-      <div className={styles.footer}>{date}</div>
+      <div className={styles.footer}>
+        {url ? (
+          <a href={url} className="link" target="_blank" rel="noopener noreferrer">
+            {date}
+          </a>
+        ) : (
+          date
+        )}
+      </div>
     </div>
   );
 };
