@@ -1,27 +1,33 @@
 import * as React from 'react';
 
-import { H2, P } from '../../components/common/typography/typography';
-import { Section } from '../../components/common/section/section';
-import { JobsCardList, JobsCard } from '../../components/pages/jobs/jobs-card/jobs-card';
+// import { H2, P } from '../../components/common/typography/typography';
+// import { Section } from '../../components/common/section/section';
+// import { JobsCardList, JobsCard } from '../../components/pages/jobs/jobs-card/jobs-card';
 import { StaticHero } from '../../components/common/static-hero/static-hero';
 
 import { getAllJobs } from '../../lib/api';
+import Link from 'next/link';
 
-export default function Jobs({ allJobs }) {
-  const hasJobs = allJobs.length > 0;
+export default function Jobs() {
+  // const hasJobs = allJobs.length > 0;
 
   return (
     <>
       <StaticHero
         headline={
           <>
-            We're a growing open source community looking for talent. <em>Join Edgeware</em>
+            We're a growing open source community always looking for new talents. <br />
+            <Link href="/get-started">
+              <a>
+                <em>Join Edgeware</em>
+              </a>
+            </Link>{' '}
           </>
         }
         heroStyle="jobs"
       />
 
-      <Section id="roles" width="narrow">
+      {/* <Section id="roles" width="narrow">
         <div className="text-center">
           <H2 size="2">Open Roles</H2>
         </div>
@@ -48,7 +54,7 @@ export default function Jobs({ allJobs }) {
             .
           </P>
         </div>
-      </Section>
+      </Section> */}
     </>
   );
 }
