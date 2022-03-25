@@ -3,9 +3,9 @@ import * as React from 'react';
 import styles from './banners.module.scss';
 
 const BANNERS = {
-  kucoin: {
-    href: 'https://www.kucoin.com/news/en-edg-gets-listed-on-kucoin',
-    alt: 'Kucoin Lists Edgeware',
+  binance: {
+    href: 'https://blog.edgewa.re/binance-distributes-10-of-edg-supply-to-users-2/',
+    alt: 'Binance sends out EDG',
   },
   evm: {
     href: 'https://docs.edgeware.wiki/development/develop/smart-contracts/evm-smart-contracts',
