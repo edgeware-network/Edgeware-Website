@@ -1,0 +1,16 @@
+@import '../../../../styles/custom.scss';
+
+.wrapper {
+  text-align: center;
+
+  padding: 48px 0;
+  max-width: 720px;
+  margin: 0 auto;
+
+  background: url('/images/backgrounds/edg-logomark-bg.svg') 50% 50% repeat-x;
+
+  @include media-breakpoint-up(md) {
+    background: url('/images/backgrounds/edg-logomark-bg.svg') 50% 50% no-repeat;
+    background-size: 520px 520px;
+  }
+}

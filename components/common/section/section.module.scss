@@ -22,6 +22,15 @@
   }
 }
 
+.container--very-narrow {
+  margin: 0 var(--spacing-s);
+
+  @include media-breakpoint-up(lg) {
+    margin: var(--spacing-xl) auto;
+    max-width: 960px;
+  }
+}
+
 .container--narrow {
   margin: 0 var(--spacing-s);
 
@@ -59,7 +68,6 @@
     background: url('/images/backgrounds/blocks.jpg') 50% 50% repeat-x;
     background-size: 100%;
   }
-
 }
 
 .background--waves {

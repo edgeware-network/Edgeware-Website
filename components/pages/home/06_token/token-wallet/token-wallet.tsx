@@ -4,9 +4,10 @@ import styles from './token-wallet.module.scss';
 
 interface TokenWalletProps {
   headline: string;
+  designStyle?: 'normal' | 'v3';
 }
 
-export const TokenWallet: React.FC<TokenWalletProps> = ({ headline }) => {
+export const TokenWallet: React.FC<TokenWalletProps> = ({ headline, designStyle = 'normal' }) => {
   return (
     <div className={styles.walletBox}>
       <h4 className={styles.walletHeadline}>{headline}</h4>
@@ -54,6 +55,21 @@ export const TokenWallet: React.FC<TokenWalletProps> = ({ headline }) => {
             width="96"
             height="53"
             alt="Math Wallet"
+            loading="lazy"
+          />
+        </a>
+        <a
+          href="https://edgeware.app/"
+          className={styles.walletLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/images/home/token/logo-edgeware-app.png"
+            // layout="fixed"
+            width="107"
+            height="82.5"
+            alt="Edgeware App"
             loading="lazy"
           />
         </a>

@@ -6,7 +6,7 @@ import styles from './section.module.scss';
 interface SectionProps {
   id: string;
   background?: 'none' | 'blocks' | 'waves' | 'waves-middle' | 'waves-top';
-  width: 'narrow' | 'normal' | 'wide' | 'fluid';
+  width: 'very-narrow' | 'narrow' | 'normal' | 'wide' | 'fluid';
   gap?: 'none' | 'narrow' | 'standard';
 }
 
