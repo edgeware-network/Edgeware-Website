@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
-
 import { useEffect } from 'react';
+import Script from 'next/script';
 
 const widgetStyles = `
   .srw-container {
@@ -153,10 +153,10 @@ export const StakingRewardsWidget = () => {
 
   return (
     <div className="widget">
-      <script
-        type="text/javascript"
+      <Script
         src="https://storage.googleapis.com/stakingrewards-widget/sr-basic-widget.js"
-      ></script>
+        strategy="beforeInteractive"
+      />
       <sr-basic-widget
         apikey="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJJQWpSdG1ra1VPWDRmbWdPdFNFVXg5enpxZDEzIiwiaWF0IjoxNjMzNTU0MzIyLCJpc3MiOiJTdGFraW5ncmV3YXJkcyBQdWJsaWMgQVBJIn0.i6jrAvba9LrVcj7QfuMWwlPM9ZfC2X377Bke7iyxM2U"
         asset="edgeware"
