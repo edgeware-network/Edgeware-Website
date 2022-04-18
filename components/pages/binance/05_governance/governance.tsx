@@ -15,7 +15,7 @@ export const Governance = () => {
         indirectly by delegating your EDG to a responsible holder in the ecosystem.
       </P>
       <div>
-        <Button style="primary" href="https://www.edgeware.app/#/council">
+        <Button style="primary" href="https://www.edgeware.app/#/delegation">
           Delegate on Edgeware App
         </Button>
       </div>
