@@ -28,7 +28,7 @@ const widgetStyles = `
 
   /* Left column */
 
-  /* Left column: Currency
+  /* Left column: Currency */
   .srw-input-currency-wrapper {
     border: 1px solid var(--grey-700);
     border-radius: var(--br-s);
