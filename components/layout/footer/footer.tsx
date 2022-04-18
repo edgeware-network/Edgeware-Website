@@ -80,7 +80,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className={styles.copyright}>
-          <p>© 2019 - {new Date().getFullYear()} Edgeware built by the Commonwealth Community</p>
+          <p>© 2019 - {new Date().getFullYear()} Edgeware built by the Edgeware Community</p>
           <span className={styles.copyrightMinor}>
             Edgeware is a blockchain network focused on funding and promoting open collectives
             through decentralised governance. This governance process is used to fund, manage, and
