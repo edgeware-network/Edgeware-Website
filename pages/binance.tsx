@@ -1,9 +1,11 @@
 import { GetStaticProps } from 'next';
 
 import { Section } from 'components/common/section/section';
+
 import { BinanceHero } from 'components/pages/binance/01_hero/binance-hero';
 import { EdgewareIntro } from 'components/pages/binance/02_intro/edgeware-intro';
-import { StakeAndEarn } from 'components/pages/binance/03_stake/stake-and-earn';
+import { KabochaIntro } from 'components/pages/binance/03_kabocha/kabocha-intro';
+import { StakeAndEarn } from 'components/pages/binance/04_stake/stake-and-earn';
 
 export default function BinancePage() {
   return (
@@ -12,6 +14,10 @@ export default function BinancePage() {
 
       <Section id="edgeware-intro" width="normal" gap="none">
         <EdgewareIntro />
+      </Section>
+
+      <Section id="kabocha" width="normal" gap="none">
+        <KabochaIntro />
       </Section>
 
       <Section id="stake" width="very-narrow" gap="none">

@@ -9,7 +9,7 @@ interface TokenWalletProps {
 
 export const TokenWallet: React.FC<TokenWalletProps> = ({ headline, designStyle = 'normal' }) => {
   return (
-    <div className={styles.walletBox}>
+    <div className={designStyle === 'normal' ? styles.walletBox : styles.walletBoxV3}>
       <h4 className={styles.walletHeadline}>{headline}</h4>
 
       <div className={styles.walletLinks}>
