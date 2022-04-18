@@ -7,14 +7,19 @@ const widgetStyles = `
   .srw-container {
     border-color: var(--grey-700);
     font-family: var(--ff-text);
-    color: var(--white);
     padding: var(--spacing-m) var(--spacing-m) 12px var(--spacing-m);
   }
 
   .srw-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .srw-container.desktop .srw-content {
     padding: 0 0 var(--spacing-m) 0;
     border-color: var(--grey-700);
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
 
@@ -33,13 +38,15 @@ const widgetStyles = `
     border: 1px solid var(--grey-700);
     border-radius: var(--br-s);
     position: relative;
+    margin-left: var(--spacing-m);
   }
+
 
   .srw-input-currency-wrapper::after {
     content: '';
     position: absolute;
-    right: 32px;
-    top: 45px;
+    right: 20px;
+    top: 18px;
     width: 0;
     height: 0;
     display: block;
@@ -50,8 +57,14 @@ const widgetStyles = `
     z-index: 2;
   }
 
+  .srw-container.desktop .srw-input-currency-wrapper::after {
+        right: 32px;
+    top: 45px;
+  }
+
   .srw-input-wrapper {
     border: none;
+    padding-right: var(--spacing-s);
   }
 
   .srw-input {
@@ -71,18 +84,17 @@ const widgetStyles = `
   }
 
   /* Left column: Value and compound */
-  .srw-container.desktop .srw-exchange-value {
+  .srw-container .srw-exchange-value {
     font-size: var(--fs-text-xxl);
     font-weight: var(--fw-normal);
     font-family: var(--ff-text);
-    color: var(--white);
   }
 
-  .srw-container.desktop .srw-exchange-toggle {
+  .srw-container .srw-exchange-toggle {
     flex-basis: unset;
   }
 
-  .srw-container.desktop .srw-toggle-compound-wrapper {
+  .srw-container .srw-toggle-compound-wrapper {
     flex-basis: unset;
   }
 
@@ -105,7 +117,7 @@ const widgetStyles = `
     font-weight: normal;
     font-size: var(--fs-text-md);
     font-family: var(--ff-text);
-    color: var(--white);
+    line-height: 1.2;
   }
 
   .srw-earning-result2 {
