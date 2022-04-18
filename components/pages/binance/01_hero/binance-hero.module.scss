@@ -13,7 +13,7 @@
   }
 
   @include media-breakpoint-up(lg) {
-    margin-top: -10rem;
+    margin-top: -4rem;
   }
 
   &::after {
@@ -29,7 +29,7 @@
 
   background-image: url('/images/binance/hero-binance-mobile.jpg');
   background-position: 50% 100%;
-  @include media-breakpoint-up (md) {
+  @include media-breakpoint-up(md) {
     background-image: url('/images/binance/hero-binance.jpg');
     background-position: 50% 50%;
   }

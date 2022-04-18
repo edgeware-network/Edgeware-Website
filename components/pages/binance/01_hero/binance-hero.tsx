@@ -34,11 +34,11 @@ export const BinanceHero: React.FC = () => {
             </P>
             <Button
               style="primary"
-              href="https://blog.edgewa.re/binance-distributes-10-of-edg-supply-to-users-2/"
+              href="https://www.binance.com/en/support/announcement/aa00aba48425441683b23994ad25ee45"
             >
               Read more at Binance announcement
             </Button>
-            <P className={styles.leadText}>
+            <P style="large">
               <br />
               Don't just <em>hodl</em> - find out about how you can benefit from EDG!
             </P>

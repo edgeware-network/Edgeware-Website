@@ -2,15 +2,20 @@
 
 .wrapper {
   text-align: center;
-
-  padding: 48px 0;
-  max-width: 720px;
+  max-width: 760px;
   margin: 0 auto;
+  border: 1px solid var(--grey-500);
+  padding: var(--spacing-xl) var(--spacing-xxl);
+  border-radius: var(--br-s);
 
-  background: url('/images/backgrounds/edg-logomark-bg.svg') 50% 50% repeat-x;
+  background: url('/images/backgrounds/edg-logomark-bg.svg') 50% 20% no-repeat;
 
   @include media-breakpoint-up(md) {
-    background: url('/images/backgrounds/edg-logomark-bg.svg') 50% 50% no-repeat;
+    background: url('/images/backgrounds/edg-logomark-bg.svg') 50% 20% no-repeat;
     background-size: 520px 520px;
   }
+}
+
+.paragraph {
+  margin: var(--spacing-m) 0;
 }
