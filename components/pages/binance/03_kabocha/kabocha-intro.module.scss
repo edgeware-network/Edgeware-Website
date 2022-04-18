@@ -1,0 +1,27 @@
+@import '../../../../styles/custom.scss';
+
+.wrapper {
+  max-width: 860px;
+  text-align: center;
+  margin: 0 var(--spacing-m) var(--spacing-xl) var(--spacing-m);
+
+  @include media-breakpoint-up(md) {
+    margin: 0 auto;
+  }
+}
+
+.logo {
+  text-align: center;
+  padding: var(--spacing-m) 0;
+}
+
+.logoLabel {
+  display: block;
+  color: #fff85b;
+  font-size: var(--fs-text-lg);
+}
+
+.leadText {
+  max-width: 720px;
+  margin: 0 auto var(--spacing-l) auto;
+}

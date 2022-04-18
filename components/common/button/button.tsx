@@ -7,7 +7,7 @@ import cn from 'classnames';
 import styles from './button.module.scss';
 
 interface ButtonProps {
-  style?: 'primary' | 'primary-small' | 'secondary' | 'white' | 'black';
+  style?: 'primary' | 'primary-small' | 'secondary' | 'secondary-big' | 'white' | 'black';
   fullWidth?: boolean;
   onClick?: () => void;
   download?: boolean;
@@ -27,6 +27,7 @@ export const Button: React.FC<ButtonProps> = ({
     [`${styles.buttonPrimary}`]: style === 'primary',
     [`${styles.buttonPrimarySmall}`]: style === 'primary-small',
     [`${styles.buttonSecondary}`]: style === 'secondary',
+    [`${styles.buttonSecondaryBig}`]: style === 'secondary-big',
     [`${styles.buttonWhite}`]: style === 'white',
     [`${styles.buttonBlack}`]: style === 'black',
     [`${styles.buttonBlock}`]: fullWidth === true,

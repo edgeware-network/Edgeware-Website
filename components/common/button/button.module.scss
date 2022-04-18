@@ -21,11 +21,13 @@
     max-width: fit-content;
   }
 
-  &:link, &:visited {
+  &:link,
+  &:visited {
     color: var(--bw-white);
   }
 
-  &:focus, &:active {
+  &:focus,
+  &:active {
     outline: none;
     border: none;
   }
@@ -35,7 +37,8 @@
   font-size: var(--fs-text-xl);
   background: var(--primary-500);
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background: var(--primary-400);
   }
 
@@ -50,7 +53,8 @@
   display: inline-block;
   width: auto;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background: var(--primary-400);
   }
 
@@ -70,7 +74,8 @@
   color: var(--grey-900);
   font-weight: var(--fw-semibold);
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background: var(--grey-200);
   }
 
@@ -91,7 +96,8 @@
   font-size: 20px;
   font-weight: var(--fw-semibold);
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background: var(--grey-600);
   }
 
@@ -109,7 +115,24 @@
   background: var(--grey-800);
   padding: var(--spacing-xs) var(--spacing-m);
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
+    background: var(--grey-600);
+  }
+
+  &:active {
+    background: var(--grey-800);
+  }
+}
+
+.buttonSecondaryBig {
+  border-radius: var(--br-s);
+  font-size: var(--fs-text-xl);
+  line-height: 1.5;
+  background: var(--grey-800);
+
+  &:hover,
+  &:focus {
     background: var(--grey-600);
   }
 
@@ -139,11 +162,13 @@
     padding: var(--spacing-xs) var(--spacing-m);
   }
 
-  &:link, &:visited {
+  &:link,
+  &:visited {
     color: var(--grey-900);
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background: var(--grey-200);
   }
 
@@ -152,7 +177,8 @@
   }
 }
 
-.CTAButton-normal {}
+.CTAButton-normal {
+}
 
 .CTAButton-large {
   min-width: 288px;
@@ -161,7 +187,6 @@
 
 .CTAButtonWithArrow {
   padding-left: var(--spacing-xs);
-
 }
 
 .CTAButtonIcon {

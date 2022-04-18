@@ -49,6 +49,15 @@
   }
 }
 
+.walletBoxV3 {
+  border: 1px solid var(--secondary-500);
+  border-radius: var(--br-m);
+  text-align: center;
+  padding: var(--spacing-l);
+
+  position: relative;
+}
+
 .walletLinks {
   display: flex;
   flex-direction: column;
@@ -67,5 +76,5 @@
 
 .hint {
   font-size: 1rem;
-  color: var(--grey-500)
+  color: var(--grey-500);
 }

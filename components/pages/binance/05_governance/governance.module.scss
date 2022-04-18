@@ -1,0 +1,30 @@
+.wrapper {
+  text-align: center;
+}
+
+.learnMore {
+  padding: var(--spacing-l) 0;
+
+  a,
+  a:link,
+  a:visited {
+    display: inline-block;
+    color: var(--bw-white);
+  }
+
+  a:hover {
+    color: var(--primary-500);
+  }
+
+  img {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: var(--br-m);
+  }
+
+  span {
+    margin: var(--spacing-m) 0;
+    display: block;
+
+    text-decoration: underline;
+  }
+}
