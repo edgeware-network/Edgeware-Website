@@ -1,15 +1,12 @@
-import * as React from 'react';
 import Link from 'next/link';
-
-import styles from './footer-nav.module.scss';
-
-interface FooterNavProps {
-  items: Record<string, string>;
-}
 
 const isExternal = (link: string) => link.match(/http/);
 
-export const FooterNav: React.FC<FooterNavProps> = ({ items }) => {
+type FooterNavProps = {
+  items: Record<string, string>;
+};
+
+export const FooterNav = ({ items }: FooterNavProps) => {
   const entries = Object.entries(items);
 
   return (
@@ -22,7 +19,7 @@ export const FooterNav: React.FC<FooterNavProps> = ({ items }) => {
             <a
               href={href}
               key={`link-${label}`}
-              className={styles.navLink}
+              className="block text-zinc-500 text-normal py-1 md:my-1 py-2 hover:text-white"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -33,7 +30,9 @@ export const FooterNav: React.FC<FooterNavProps> = ({ items }) => {
 
         return (
           <Link href={href} key={`link-${label}`}>
-            <a className={styles.navLink}>{label}</a>
+            <a className="block text-zinc-500 text-normal py-1 md:my-1 py-2 hover:text-white">
+              {label}
+            </a>
           </Link>
         );
       })}

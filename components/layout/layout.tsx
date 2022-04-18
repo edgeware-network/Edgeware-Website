@@ -3,8 +3,8 @@ import Head from 'next/head';
 import dynamic from 'next/dynamic';
 
 import { Header } from './header/header';
-import { Main } from './main/main';
-import { Footer } from './footer/footer';
+import { LayoutMain } from './layout-main';
+import { Footer } from './footer/layout-footer';
 
 const Particles = dynamic(() => import('./particles/particles'), { ssr: false });
 interface LayoutProps {
@@ -23,7 +23,6 @@ const SITE_NAME = 'edgewa.re';
 export const Layout: React.FC<LayoutProps> = ({
   meta = {},
   children,
-  simpleLayout,
   particles = false,
   currentPath = '/',
 }) => {
@@ -68,7 +67,7 @@ export const Layout: React.FC<LayoutProps> = ({
         <meta name="twitter:image" content={ogImageUrl} />
       </Head>
       <Header />
-      <Main layout={simpleLayout ? 'simple' : 'advanced'}>{children}</Main>
+      <LayoutMain>{children}</LayoutMain>
       <Footer />
       <div id="modal-root" />
       {particles && <Particles />}

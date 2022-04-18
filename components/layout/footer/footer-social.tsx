@@ -1,14 +1,12 @@
 import * as React from 'react';
 
-import styles from './footer-social.module.scss';
-
 import IconTwitter from 'remixicon/icons/Logos/twitter-fill.svg';
 import IconTelegram from 'remixicon/icons/Logos/telegram-fill.svg';
 import IconDiscord from 'remixicon/icons/Logos/discord-fill.svg';
 import IconGithub from 'remixicon/icons/Logos/github-fill.svg';
 import IconReddit from 'remixicon/icons/Logos/reddit-fill.svg';
 
-import { Icon } from '../../../common/icon/icon';
+import { Icon } from '../../common/icon/icon';
 
 const SOCIAL_LINKS = {
   Twitter: {
@@ -33,14 +31,14 @@ const SOCIAL_LINKS = {
   },
 };
 
-export const FooterSocial: React.FC = () => {
+export const FooterSocial = () => {
   const linkEntries = Object.entries(SOCIAL_LINKS);
   return (
-    <div className={styles.socialLinks}>
+    <div className="flex flex-row">
       {linkEntries.map(([key, linkData]) => (
         <a
           href={linkData.href}
-          className={styles.socialLink}
+          className="ml-4 opacity-25 hover:opacity-50"
           target="_blank"
           rel="noopener noreferrer"
           key={key}
