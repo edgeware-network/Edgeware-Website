@@ -17,7 +17,7 @@ export default function Press() {
         <H1 size="1">
           For the latest news follow
           <br />
-          <em>@HeyEdgeware</em> on Twitter
+          <em>@EdgewareDAO</em> on Twitter
         </H1>
         <P>Want to keep up to date with all our collectives and wonderings?</P>
         <Button style="white" href="https://twitter.com/HeyEdgeware">
