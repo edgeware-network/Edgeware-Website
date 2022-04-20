@@ -60,7 +60,7 @@ export const Layout: React.FC<LayoutProps> = ({
         <meta property="og:image" content={ogImageUrl} />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@HeyEdgeware" />
+        <meta name="twitter:site" content="@EdgewareDAO" />
         <meta property="twitter:domain" content={SITE_NAME} />
         <meta property="twitter:url" content={pageUrl} />
         <meta name="twitter:title" content={pageTitle} />
