@@ -20,7 +20,7 @@ export default function Press() {
           <em>@EdgewareDAO</em> on Twitter
         </H1>
         <P>Want to keep up to date with all our collectives and wonderings?</P>
-        <Button style="white" href="https://twitter.com/HeyEdgeware">
+        <Button style="white" href="https://twitter.com/EdgewareDAO">
           Follow us on Twitter
           <Icon component={IconTwitter} />
         </Button>

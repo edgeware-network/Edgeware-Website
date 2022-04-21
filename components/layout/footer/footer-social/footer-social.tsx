@@ -13,7 +13,7 @@ import { Icon } from '../../../common/icon/icon';
 const SOCIAL_LINKS = {
   Twitter: {
     icon: IconTwitter,
-    href: 'https://twitter.com/HeyEdgeware',
+    href: 'https://twitter.com/EdgewareDAO',
   },
   Telegram: {
     icon: IconTelegram,
