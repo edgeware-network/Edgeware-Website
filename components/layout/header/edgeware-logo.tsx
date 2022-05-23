@@ -1,6 +1,10 @@
 import * as React from 'react';
 
-export const EdgewareLogo: React.FC = () => {
+type EdgewareLogoProps = {
+  className?: string;
+};
+
+export const EdgewareLogo = (props: EdgewareLogoProps) => {
   return (
     <svg
       width="64px"
@@ -8,6 +12,7 @@ export const EdgewareLogo: React.FC = () => {
       viewBox="0 0 64 55"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <title>Brand/LogoIcon</title>
       <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">

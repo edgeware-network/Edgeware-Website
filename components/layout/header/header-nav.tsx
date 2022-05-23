@@ -16,11 +16,7 @@ const setBodyOverlay = (flag: boolean) => {
   }
 };
 
-interface HeaderNavProps {
-  onToggleModal: () => void;
-}
-
-export const HeaderNav: React.FC<HeaderNavProps> = ({ onToggleModal }) => {
+export const HeaderNav = () => {
   const [isOpen, setOpen] = React.useState(false);
   const containerRef = React.useRef(null);
 
@@ -32,25 +28,22 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({ onToggleModal }) => {
   return (
     <motion.div initial={false} animate={isOpen ? 'open' : 'closed'} ref={containerRef}>
       <div className={styles.navWrapper}>
-        <NavItems onToggleModal={onToggleModal} />
+        <NavItems />
       </div>
       <div className={styles.navBurger}>
         <NavToggle onToggle={toggleOpen} />
       </div>
-      <AnimatePresence>
-        {isOpen && <HeaderOverlayNav onClose={toggleOpen} onToggleModal={onToggleModal} />}
-      </AnimatePresence>
+      <AnimatePresence>{isOpen && <HeaderOverlayNav onClose={toggleOpen} />}</AnimatePresence>
     </motion.div>
   );
 };
 
-interface NavItemsProps {
+type NavItemsProps = {
   style?: 'desktop' | 'mobile';
-  onToggleModal: () => void;
   onClick?: () => void;
-}
+};
 
-export const NavItems: React.FC<NavItemsProps> = ({ style, onClick, onToggleModal }) => {
+export const NavItems = ({ style, onClick }: NavItemsProps) => {
   const router = useRouter();
 
   const handleGetStartedClick = (event: React.MouseEvent) => {
@@ -60,12 +53,11 @@ export const NavItems: React.FC<NavItemsProps> = ({ style, onClick, onToggleModa
 
   const ITEMS = {
     Home: '/',
-    Collectives: '/collectives',
-    Partners: '/partners',
-    Developers: '/developers',
-    Mission: '/mission',
-    News: 'https://blog.edgewa.re/',
-    Docs: 'https://docs.edgeware.wiki/',
+    'Contribute & Earn': '/contribute',
+    Build: '/developers',
+    Society: '/',
+    Governance: '/',
+    Ecosystem: '/',
   };
 
   return (
@@ -80,12 +72,13 @@ export const NavItems: React.FC<NavItemsProps> = ({ style, onClick, onToggleModa
   );
 };
 
-interface NavItemProps {
+type NavItemProps = {
+  children: React.ReactNode;
   href?: string;
   onClick?: (e: React.MouseEvent) => void;
-}
+};
 
-const NavItem: React.FC<NavItemProps> = ({ href, children, onClick }) => {
+const NavItem = ({ children, href, onClick }: NavItemProps) => {
   const isExternal = href.match(/https/);
 
   if (isExternal) {

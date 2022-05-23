@@ -5,27 +5,18 @@ import { EdgewareLogo } from './edgeware-logo';
 import { HeaderNav } from './header-nav';
 
 import styles from './header.module.scss';
-import { GetStartedModal } from '../../modals/get-started/get-started';
-import { useModalState } from '../../modals/useModalState';
 
-interface HeaderProps {
-  isStatic?: boolean;
-}
-
-export const Header: React.FC<HeaderProps> = ({ isStatic = false }) => {
-  const { isOpen, toggleModal } = useModalState();
-
+export const Header = () => {
   return (
-    <header className={`${styles.header} ${isStatic && styles.headerStatic}`}>
-      <div className="container-lg">
-        <div className={styles.wrapper}>
+    <header className="relative">
+      <div className="container mx-auto py-12">
+        <div className="flex flex-row justify-between items-center">
           <Link href="/">
             <a className={styles.logo} aria-label="Edgeware">
-              <EdgewareLogo />
+              <EdgewareLogo className="w-8 h-8" />
             </a>
           </Link>
-          <HeaderNav onToggleModal={toggleModal} />
-          {/* <GetStartedModal isOpen={isOpen} onClose={toggleModal} /> */}
+          <HeaderNav />
         </div>
       </div>
     </header>

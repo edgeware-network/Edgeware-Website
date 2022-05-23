@@ -5,12 +5,11 @@ import { NavItems } from './header-nav';
 
 import styles from './header-nav.module.scss';
 
-interface HeaderOverlayNavProps {
+type HeaderOverlayNavProps = {
   onClose: () => void;
-  onToggleModal: () => void;
-}
+};
 
-export const HeaderOverlayNav: React.FC<HeaderOverlayNavProps> = ({ onClose, onToggleModal }) => {
+export const HeaderOverlayNav = ({ onClose }: HeaderOverlayNavProps) => {
   const animationStates = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
@@ -20,7 +19,7 @@ export const HeaderOverlayNav: React.FC<HeaderOverlayNavProps> = ({ onClose, onT
     <motion.div {...animationStates} key="overlay">
       <div className={styles.navOverlay}>
         <div className={styles.navOverlayBody}>
-          <NavItems style="mobile" onClick={onClose} onToggleModal={onToggleModal} />
+          <NavItems style="mobile" onClick={onClose} />
         </div>
       </div>
     </motion.div>
