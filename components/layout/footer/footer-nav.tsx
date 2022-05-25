@@ -19,7 +19,7 @@ export const FooterNav = ({ items }: FooterNavProps) => {
             <a
               href={href}
               key={`link-${label}`}
-              className="block text-zinc-500 text-normal py-1 md:my-1 py-2 hover:text-white"
+              className="text-normal block py-2 text-grey-500 hover:text-green-500 md:my-1"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -30,7 +30,7 @@ export const FooterNav = ({ items }: FooterNavProps) => {
 
         return (
           <Link href={href} key={`link-${label}`}>
-            <a className="block text-zinc-500 text-normal py-1 md:my-1 py-2 hover:text-white">
+            <a className="text-normal block py-2 text-grey-500 hover:text-green-500 md:my-1">
               {label}
             </a>
           </Link>

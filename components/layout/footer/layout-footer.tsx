@@ -5,25 +5,25 @@ import { FooterSocial } from './footer-social';
 
 import { footerLinks } from './footer-nav-items';
 
-export const Footer: React.FC = () => {
+export const Footer = () => {
   return (
-    <footer className="text-white py-16 mt-8 relative z-10 lg:pt-12 lg:pb-24">
+    <footer className="relative z-10 mt-8 py-16 text-white lg:pt-12 lg:pb-24">
       <div className="container mx-auto">
-        <div className="flex flex-col justify-between md:flex-row md:flex-wrap p-4">
+        <div className="flex flex-col justify-between p-4 md:flex-row md:flex-wrap">
           {footerLinks.map((group, index) => (
             <div className="mb-4 md:mb-8 md:basis-1/3 lg:basis-1/6" key={`group-${index}`}>
-              <strong className="block mb-4">{group.headline}</strong>
+              <strong className="mb-4 block">{group.headline}</strong>
               <FooterNav items={group.items} />
             </div>
           ))}
 
           <div className="mb-4 md:mb-8 md:basis-1/3 lg:basis-1/5">
             <div>
-              <strong className="block mb-4">Sign up for our updates</strong>
+              <strong className="mb-4 block">Sign up for our updates</strong>
               <FooterForm />
             </div>
             <div>
-              <strong className="block mb-4">Find us on</strong>
+              <strong className="mb-4 block">Find us on</strong>
               <FooterSocial />
             </div>
           </div>

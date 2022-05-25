@@ -10,7 +10,7 @@ export const FooterForm = () => {
       name="mc-embedded-subscribe-form"
       target="_blank"
     >
-      <fieldset className="m-0 p-0 border-0">
+      <fieldset>
         <label
           className="flex flex-row"
           htmlFor="nl-footer-email"
@@ -19,7 +19,7 @@ export const FooterForm = () => {
         >
           <input
             id="nl-footer-email"
-            className="p-3 px-4 rounded-l-lg text-base bg-transparent border-1 border-slate-600 outline-none"
+            className="rounded-l-lg border border-grey-600 bg-transparent p-3 px-4 text-base outline-none"
             name="EMAIL"
             type="email"
             placeholder="email@domain.com"
@@ -35,7 +35,7 @@ export const FooterForm = () => {
           </div>
           <button
             type="submit"
-            className="border-0 p-3 bg-slate-600 text-gray-400 text-xl cursor-pointer rounded-r-lg "
+            className="cursor-pointer rounded-r-lg border-0 bg-grey-600 p-3 text-xl text-grey-400 "
           >
             →
           </button>
