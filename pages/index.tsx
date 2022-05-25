@@ -7,8 +7,9 @@ import { getAllTwitterMentions, TwitterMention } from '../lib/api/twitter';
 import { Section } from '../components/common/section/section';
 
 // Load Twitter Mentions slider as dynamic component
-const Mentions = dynamic(() =>
-  import('../components/pages/home/08_mentions/mentions').then((mod) => mod.Mentions)
+// @ts-expect-error TS props mismatch
+const HomepageMentions = dynamic(() =>
+  import('../components/pages/home/homepage-mentions').then((mod) => mod.HomepageMentions)
 );
 
 import { Newsletter } from '../components/common/newsletter/newsletter';
@@ -37,10 +38,8 @@ const HomePage: NextPage<HomePageStaticProps> = ({ mentions }) => {
       <HomepageBuild />
       <HomepageEconomics />
       <HomepageTokens />
-
-      <Section id="mentions" width="fluid">
-        <Mentions mentions={mentions} />
-      </Section>
+      {/* @ts-expect-error TS props mismatch */}
+      <HomepageMentions mentions={mentions} />
       <Section id="newsletter" width="normal" gap="none">
         <Newsletter />
       </Section>

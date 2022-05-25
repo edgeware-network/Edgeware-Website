@@ -1,16 +1,15 @@
 import * as React from 'react';
 import Slider from 'react-slick';
 
-import { H2 } from '../../../common/typography/typography';
+import { H2 } from '../../common/typography/typography';
 
-import styles from './mentions.module.scss';
-import { TweetCard, TweetCardProps } from '../../../common/tweet-card/tweet-card';
+import { TweetCard, TweetCardProps } from '../../common/tweet-card/tweet-card';
 
-interface MentionsProps {
+type HomepageMentionsProps = {
   mentions: TweetCardProps[];
-}
+};
 
-export const Mentions: React.FC<MentionsProps> = ({ mentions }) => {
+export const HomepageMentions = ({ mentions }: HomepageMentionsProps) => {
   const settings = {
     infinite: true,
     autoplay: true,
@@ -45,12 +44,12 @@ export const Mentions: React.FC<MentionsProps> = ({ mentions }) => {
   };
 
   return (
-    <div className={styles.wrapper}>
+    <div className="container mx-auto">
       <div className="text-center">
         <H2 size="2">Mentions from the cryptoverse</H2>
       </div>
 
-      <div className={styles.carousel}>
+      <div className="relative p-4 pb-0">
         <Slider {...settings}>
           {mentions.map((tweet) => (
             <TweetCard {...tweet} key={tweet.date} />

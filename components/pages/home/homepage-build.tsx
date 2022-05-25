@@ -20,7 +20,7 @@ export const HomepageBuild = () => {
           <li className="w-1/2">
             <a
               href="https://docs.edgeware.wiki/"
-              className="flex flex-row space-x-4 rounded-md border border-grey-800 bg-grey-900 p-4"
+              className="text-wh flex flex-row space-x-4 rounded-md border border-grey-800 bg-grey-900 p-4 hover:bg-grey-800 hover:text-white"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -38,7 +38,7 @@ export const HomepageBuild = () => {
           <li className="w-1/2">
             <a
               href={config.discordUrl}
-              className="flex flex-row space-x-4 rounded-md border border-grey-800 bg-grey-900 p-4"
+              className="text-wh flex flex-row space-x-4 rounded-md border border-grey-800 bg-grey-900 p-4 hover:bg-grey-800 hover:text-white"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -58,7 +58,9 @@ export const HomepageBuild = () => {
 
         <div className="my-8 text-center">
           <Link href="/developers">
-            <a className="inline-block rounded bg-primary-500 py-2.5 px-6">Start Building</a>
+            <a className="inline-block rounded bg-primary-500 py-2.5 px-6 text-white hover:bg-primary-600 hover:text-white">
+              Start Building
+            </a>
           </Link>
         </div>
       </div>

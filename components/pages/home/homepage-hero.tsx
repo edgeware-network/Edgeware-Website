@@ -19,11 +19,16 @@ export const HomepageHero = () => {
           </p>
 
           <div id="actions" className="space-x-8 py-4">
-            <a href={config.discordUrl} className="inline-block rounded bg-primary-500 py-2.5 px-6">
+            <a
+              href={config.discordUrl}
+              className="inline-block rounded bg-primary-500 py-2.5 px-6 text-white hover:bg-primary-600 hover:text-white"
+            >
               Join Discord
             </a>
             <Link href="/developers">
-              <a className="inline-block rounded bg-grey-800 py-2.5 px-6">Start Building</a>
+              <a className="inline-block rounded bg-grey-800 py-2.5 px-6 text-white hover:bg-grey-700 hover:text-white">
+                Start Building
+              </a>
             </Link>
           </div>
         </div>
