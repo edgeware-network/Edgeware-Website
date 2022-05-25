@@ -55,18 +55,18 @@
     top: 6px;
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: var(--grey-400);
   }
 }
-
 
 .navItemSpecial,
 .navItemSpecial:link,
 .navItemSpecial:visited {
   margin: 0 0.5rem 0 1.5rem;
   padding: var(--spacing-xs) var(--spacing-m);
-  background: var(--grey-800);
+  background: var(--primary-500);
   border-radius: var(--br-m);
   text-decoration: none;
   border: none;
@@ -109,7 +109,6 @@
     display: block;
     width: calc(100% - (2 * var(--spacing-s)));
   }
-
 }
 
 .navOverlay {

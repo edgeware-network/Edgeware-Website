@@ -20,45 +20,61 @@ export const HomepageCitizenship = () => {
       <div className="container mx-auto my-12 max-w-6xl">
         <div className="flex space-x-4">
           {/* Events */}
-          <div className="flex w-1/4 flex-col justify-center rounded-lg bg-grey-700 px-4 py-16 text-center">
-            <FileList3LineIcon className="mx-auto h-8 w-8 fill-primary-500" />
-            <h3 className="my-2 text-4xl font-medium">Events</h3>
-            <p>
-              We collectively support the development of character and knowledge through
-              conversations, presentations, funding and opportunities.
-            </p>
+          <div className="flex w-1/4 overflow-hidden rounded-xl">
+            <div className="bg-[url('/images/home/citizenship/events-box@2x.png')] bg-cover bg-center">
+              <div className="flex flex-col items-center justify-center px-4 py-16">
+                <FileList3LineIcon className="mx-auto h-8 w-8 fill-primary-500" />
+                <h3 className="my-2 text-4xl font-medium">Events</h3>
+                <p>
+                  We collectively support the development of character and knowledge through
+                  conversations, presentations, funding and opportunities.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Funding */}
-          <div className="flex w-1/4 flex-col justify-center rounded-lg bg-grey-700 px-4 py-16 text-center">
-            <FundsLineIcon className="mx-auto h-8 w-8 fill-primary-500" />
-            <h3 className="my-2 text-4xl font-medium">Funding</h3>
-            <p>
-              Our community wealth is open to proposals from all and includes a variety of
-              investments, token grants, or network share allocations designed to enhance and
-              upgrade the network and ecosystem.
-            </p>
+          <div className="flex w-1/4 overflow-hidden rounded-xl">
+            <div className="bg-[url('/images/home/citizenship/funding-box@2x.png')] bg-cover bg-center">
+              <div className="flex flex-col items-center justify-center px-4 py-16">
+                <FundsLineIcon className="mx-auto h-8 w-8 fill-primary-500" />
+                <h3 className="my-2 text-4xl font-medium">Funding</h3>
+                <p>
+                  Our community wealth is open to proposals from all and includes a variety of
+                  investments, token grants, or network share allocations designed to enhance and
+                  upgrade the network and ecosystem.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Ecosystem */}
-          <div className="flex w-1/4 flex-col justify-center rounded-lg bg-grey-700 px-4 py-16 text-center">
-            <BubbleChartLineIcon className="mx-auto h-8 w-8 fill-primary-500" />
-            <h3 className="my-2 text-4xl font-medium">Ecosystem</h3>
-            <p>
-              The democratization of tooling, programs, chains and economic opportunities help us
-              produce a robust and experimental economy.
-            </p>
+          <div className="flex w-1/4 overflow-hidden rounded-xl">
+            <div className="bg-[url('/images/home/citizenship/ecosystem-box@2x.png')] bg-cover bg-center">
+              <div className="flex flex-col items-center justify-center px-4 py-16">
+                <BubbleChartLineIcon className="mx-auto h-8 w-8 fill-primary-500" />
+                <h3 className="my-2 text-4xl font-medium">Ecosystem</h3>
+                <p>
+                  The democratization of tooling, programs, chains and economic opportunities help
+                  us produce a robust and experimental economy.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Governance */}
-          <div className="flex w-1/4 flex-col justify-center rounded-lg bg-grey-700 px-4 py-16 text-center">
-            <GovernmentLineIcon className="mx-auto h-8 w-8 fill-primary-500" />
-            <h3 className="my-2 text-4xl font-medium">Governance</h3>
-            <p>
-              The management of our community wealth and infrastructure is the primary way we
-              express the values of Edgeware. Liquid democracy, public referenda and permissionless
-              proposals are the start.
-            </p>
+          <div className="flex w-1/4 overflow-hidden rounded-xl">
+            <div className="bg-[url('/images/home/citizenship/governance-box@2x.png')] bg-cover bg-center">
+              <div className="flex flex-col items-center justify-center px-4 py-16">
+                <GovernmentLineIcon className="mx-auto h-8 w-8 fill-primary-500" />
+                <h3 className="my-2 text-4xl font-medium">Governance</h3>
+                <p>
+                  The management of our community wealth and infrastructure is the primary way we
+                  express the values of Edgeware. Liquid democracy, public referenda and
+                  permissionless proposals are the start.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

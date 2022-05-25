@@ -18,8 +18,7 @@ import { HomepageHero } from 'components/pages/home/homepage-hero';
 import { HomepageTeasers } from 'components/pages/home/homepage-teasers';
 import { HomepageEdgewareIntro } from 'components/pages/home/homepage-edgeware-intro';
 import { HomepageCitizenship } from 'components/pages/home/homepage-citizenship';
-import { HomepageSubstratePlatform } from 'components/pages/home/homepage-substrate-platform';
-import { HomepageBuild } from 'components/pages/home/homepage-build';
+import { HomepagePlatform } from 'components/pages/home/homepage-platform';
 import { HomepageEconomics } from 'components/pages/home/homepage-economics';
 import { HomepageTokens } from 'components/pages/home/homepage-tokens';
 
@@ -34,8 +33,7 @@ const HomePage: NextPage<HomePageStaticProps> = ({ mentions }) => {
       <HomepageTeasers />
       <HomepageEdgewareIntro />
       <HomepageCitizenship />
-      <HomepageSubstratePlatform />
-      <HomepageBuild />
+      <HomepagePlatform />
       <HomepageEconomics />
       <HomepageTokens />
       {/* @ts-expect-error TS props mismatch */}
@@ -56,6 +54,9 @@ export async function getStaticProps() {
         title: 'Smart contract blockchain with a community-managed treasury',
         description:
           'Edgeware is a smart contract blockchain with a community-managed treasury, decentralised proposal system and network of DAOs.',
+      },
+      layout: {
+        overlayHeader: true,
       },
       mentions,
     },

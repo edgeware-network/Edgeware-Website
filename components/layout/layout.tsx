@@ -7,26 +7,23 @@ import { LayoutMain } from './layout-main';
 import { Footer } from './footer/layout-footer';
 
 const Particles = dynamic(() => import('./particles/particles'), { ssr: false });
-interface LayoutProps {
-  meta?: {
+
+type LayoutProps = {
+  children: React.ReactNode;
+  meta: {
     title: string;
     description: string;
   };
   currentPath?: string;
   simpleLayout?: boolean;
-  particles?: boolean;
-}
+  overlayHeader?: boolean;
+};
 
 const DOMAIN = 'https://edgewa.re';
 const SITE_NAME = 'edgewa.re';
 
-export const Layout: React.FC<LayoutProps> = ({
-  meta = {},
-  children,
-  particles = false,
-  currentPath = '/',
-}) => {
-  const { title, description } = meta;
+export const Layout = ({ meta, children, currentPath = '/', overlayHeader }: LayoutProps) => {
+  const { title, description } = meta || {};
 
   const path = currentPath.substring(1);
   const pageTitle = `${title} | Edgeware`;
@@ -66,11 +63,10 @@ export const Layout: React.FC<LayoutProps> = ({
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={ogImageUrl} />
       </Head>
-      <Header />
+      <Header overlayHeader={overlayHeader} />
       <LayoutMain>{children}</LayoutMain>
       <Footer />
       <div id="modal-root" />
-      {particles && <Particles />}
     </>
   );
 };

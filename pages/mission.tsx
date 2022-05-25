@@ -40,9 +40,6 @@ export async function getStaticProps() {
         description:
           'In Edgeware, working groups function as mission-based development orgs that are composed of members who share interests, needs, and passions.',
       },
-      layout: {
-        particles: true,
-      },
     },
   };
 }
