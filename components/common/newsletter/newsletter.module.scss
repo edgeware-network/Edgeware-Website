@@ -10,8 +10,7 @@
   background-size: cover;
 
   @include media-breakpoint-up(lg) {
-    margin: var(--spacing-xl) auto;
-    max-width: 1120px;
+    margin: var(--spacing-xl) 0;
     padding: 0;
     background-size: contain;
     border-radius: var(--br-m);
@@ -40,4 +39,3 @@
 .headline {
   margin: 0 0 var(--spacing-s) 0;
 }
-

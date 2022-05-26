@@ -7,14 +7,16 @@ import { NewsletterForm } from './newsletter-form';
 
 export const Newsletter: React.FC = () => {
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.content}>
-        <h3 className={cn(typeStyles.h1, styles.headline)}>Stay tuned</h3>
-        <p className={typeStyles.p}>
-          Subscribe to our newsletter and never miss updates, announcements and opportunities.{' '}
-        </p>
-        <NewsletterForm />
+    <section id="newsletter" className="container mx-auto max-w-6xl">
+      <div className={styles.wrapper}>
+        <div className={styles.content}>
+          <h3 className={cn(typeStyles.h1, styles.headline)}>Stay tuned</h3>
+          <p className={typeStyles.p}>
+            Subscribe to our newsletter and never miss updates, announcements and opportunities.{' '}
+          </p>
+          <NewsletterForm />
+        </div>
       </div>
-    </div>
+    </section>
   );
 };

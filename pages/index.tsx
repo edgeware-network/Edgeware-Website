@@ -38,9 +38,7 @@ const HomePage: NextPage<HomePageStaticProps> = ({ mentions }) => {
       <HomepageTokens />
       {/* @ts-expect-error TS props mismatch */}
       <HomepageMentions mentions={mentions} />
-      <Section id="newsletter" width="normal" gap="none">
-        <Newsletter />
-      </Section>
+      <Newsletter />
     </>
   );
 };
