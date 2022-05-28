@@ -1,12 +1,13 @@
 export const ContributeExamples = () => {
   return (
-    <div className="container mx-auto max-w-5xl">
+    <div className="container mx-auto max-w-6xl">
       <div className="my-8 grid grid-cols-3 justify-center gap-12">
         <ContributeExampleCard
           tag="Case Study"
           title="Pizza Drop"
           url="https://gov.edgewa.re/discussion/3679-pizza-airdrop?comment=15878"
           prominent
+          bgCover="pizza"
         >
           Community members gamified Twitter marketing and made a community moment through publicly
           funded pizza.
@@ -16,6 +17,7 @@ export const ContributeExamples = () => {
           title="Exit Theory by Justin Murphy"
           url="https://commonwealth.im/edgeware/proposal/discussion/1131-exit-theory-a-content-and-community-project"
           prominent
+          bgCover="city"
         >
           EDG aligned with the values of the text, exploring crypto-seccession and more.
         </ContributeExampleCard>
@@ -24,6 +26,7 @@ export const ContributeExamples = () => {
           title="Edgeware Agency"
           url="https://edgeware.agency/"
           prominent
+          bgCover="atoms"
         >
           Decentralizing chain operations from core teams, the Agency proposal funded the growth of
           both talent and our chain’s development.
@@ -108,6 +111,7 @@ type ContributeExampleCardProps = {
   title: string;
   url: string;
   prominent?: boolean;
+  bgCover?: 'city' | 'atoms' | 'pizza';
 };
 
 const ContributeExampleCard = ({
@@ -116,6 +120,7 @@ const ContributeExampleCard = ({
   title,
   url,
   prominent,
+  bgCover,
 }: ContributeExampleCardProps) => {
   const tagColors = {
     'Case Study': 'bg-green-200 text-green-600',
@@ -124,8 +129,19 @@ const ContributeExampleCard = ({
     Governance: 'bg-[#ffdeb2] text-[#ff9528]',
   };
 
+  const bgClasses = {
+    base: 'bg-cover bg-bottom bg-no-repeat',
+    city: 'bg-[url(/images/contribute/city-bg.jpg)]',
+    atoms: 'bg-[url(/images/contribute/atoms-bg.jpg)]',
+    pizza: 'bg-[url(/images/contribute/pizza-bg.jpg)]',
+  };
+
+  const additionalClasses = bgCover ? `${bgClasses.base} ${bgClasses[bgCover]}` : '';
+
   return (
-    <div className="flex flex-col rounded-lg border border-grey-700 bg-grey-900 p-4">
+    <div
+      className={`flex flex-col rounded-lg border border-grey-700 bg-grey-900 p-4 ${additionalClasses}`}
+    >
       <div className={prominent ? 'mb-24' : ''}>
         <span className={`rounded-lg p-1 px-3 text-xs ${tagColors[tag]}`}>{tag}</span>
         <h3 className="my-4 text-xl text-white">{title}</h3>

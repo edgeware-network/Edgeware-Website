@@ -23,10 +23,10 @@ export const ContributeEDGizen = () => {
           </div>
         </div>
 
-        <div className="w-1/2">
+        <div className="w-1/2 bg-[url(/images/contribute/edgizen-bg.jpg)] bg-cover">
           <div className="rounded-xl border border-green-600 p-8">
             <span>Requirements:</span>
-            <ol className="mt-4 ml-5 list-decimal text-green-600">
+            <ol className="mt-4 ml-5 list-decimal space-y-2 text-green-600">
               <li>Have EDG</li>
               <li>Stake, Delegate or Vote</li>
               <li>Claim your custom on-chain ID</li>
