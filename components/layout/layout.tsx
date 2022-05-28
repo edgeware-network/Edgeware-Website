@@ -1,12 +1,9 @@
 import * as React from 'react';
 import Head from 'next/head';
-import dynamic from 'next/dynamic';
 
 import { Header } from './header/header';
 import { LayoutMain } from './layout-main';
 import { Footer } from './footer/layout-footer';
-
-const Particles = dynamic(() => import('./particles/particles'), { ssr: false });
 
 type LayoutProps = {
   children: React.ReactNode;

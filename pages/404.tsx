@@ -36,9 +36,6 @@ export async function getStaticProps() {
         description:
           'Edgeware is a smart contract blockchain with a community-managed treasury, decentralised proposal system and network of DAOs.',
       },
-      layout: {
-        particles: true,
-      },
     },
   };
 }
