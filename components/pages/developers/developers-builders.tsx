@@ -5,7 +5,7 @@ export const DevelopersBuilders = () => {
       <div className="flex flex-row items-center space-x-16">
         <div className="w-1/2">
           <img
-            src="/images/developer/code-s-slash-large.png"
+            src="/images/developers/code-s-slash-large.png"
             alt="Builders Guild Icon"
             loading="lazy"
             width="474"

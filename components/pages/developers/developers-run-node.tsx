@@ -6,7 +6,7 @@ export const DevelopersRunNode = () => {
       id="node"
       className="container mx-auto my-24 flex max-w-6xl flex-row rounded-md bg-white p-12"
     >
-      <div className="w-full bg-[url('/images/developer/node.png')] bg-contain bg-right bg-no-repeat p-12">
+      <div className="w-full bg-[url('/images/developers/node.png')] bg-contain bg-right bg-no-repeat p-12">
         <div className="max-w-lg">
           <h2 className="my-4 text-5xl font-medium text-black">
             Run a validator node and earn EDG
