@@ -13,7 +13,7 @@ const NAV_ITEMS = {
   'Contribute & Earn': '/contribute',
   Build: '/developers',
   Society: '/collectives',
-  Governance: '/',
+  Governance: 'https://gov.edgewa.re/',
   Ecosystem: '/',
 };
 
