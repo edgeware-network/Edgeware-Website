@@ -1,3 +1,4 @@
+import { Button } from 'components/common/button';
 import { config } from 'data/config';
 import Link from 'next/link';
 
@@ -20,17 +21,12 @@ export const HomepageHero = () => {
             </p>
 
             <div id="actions" className="space-x-8 py-4">
-              <a
-                href={config.discordUrl}
-                className="inline-block rounded bg-primary-500 py-2.5 px-6 text-white hover:bg-primary-600 hover:text-white"
-              >
+              <Button href={config.discordUrl} sizing="normal" colorStyle="primary">
                 Join Discord
-              </a>
-              <Link href="/developers">
-                <a className="inline-block rounded bg-grey-800 py-2.5 px-6 text-white hover:bg-grey-700 hover:text-white">
-                  Start Building
-                </a>
-              </Link>
+              </Button>
+              <Button href="/developers" sizing="normal" colorStyle="grey">
+                Start Building
+              </Button>
             </div>
           </div>
 

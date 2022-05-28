@@ -8,6 +8,15 @@ import { HeaderOverlayNav } from './header-nav-overlay';
 import { NavToggle } from './nav/nav-toggle';
 import { useRouter } from 'next/router';
 
+const NAV_ITEMS = {
+  Home: '/',
+  'Contribute & Earn': '/contribute',
+  Build: '/developers',
+  Society: '/collectives',
+  Governance: '/',
+  Ecosystem: '/',
+};
+
 const setBodyOverlay = (flag: boolean) => {
   if (flag) {
     document.body.classList.add('hasOverlay');
@@ -51,18 +60,9 @@ export const NavItems = ({ style, onClick }: NavItemsProps) => {
     router.push('/get-started');
   };
 
-  const ITEMS = {
-    Home: '/',
-    'Contribute & Earn': '/contribute',
-    Build: '/developers',
-    Society: '/',
-    Governance: '/',
-    Ecosystem: '/',
-  };
-
   return (
     <nav className={cn(styles.nav, style === 'mobile' && styles.navMobile)}>
-      {Object.entries(ITEMS).map((entry) => (
+      {Object.entries(NAV_ITEMS).map((entry) => (
         <NavItem key={entry[0]} href={entry[1]} onClick={onClick}>
           {entry[0]}
         </NavItem>

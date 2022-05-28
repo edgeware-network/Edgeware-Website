@@ -1,3 +1,4 @@
+import { Button } from 'components/common/button';
 import { config } from 'data/config';
 import Link from 'next/link';
 import FileList3LineIcon from 'remixicon/icons/Document/file-list-3-line.svg';
@@ -155,11 +156,9 @@ export const HomepagePlatform = () => {
           </ul>
 
           <div className="my-8 text-center">
-            <Link href="/developers">
-              <a className="inline-block rounded bg-primary-500 py-2.5 px-6 text-white hover:bg-primary-600 hover:text-white">
-                Start Building
-              </a>
-            </Link>
+            <Button href="/developers" sizing="normal" colorStyle="primary">
+              Start Building
+            </Button>
           </div>
         </div>
 

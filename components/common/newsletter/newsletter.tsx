@@ -7,7 +7,7 @@ import { NewsletterForm } from './newsletter-form';
 
 export const Newsletter: React.FC = () => {
   return (
-    <section id="newsletter" className="container mx-auto max-w-6xl">
+    <section id="newsletter" className="container mx-auto my-24 max-w-6xl">
       <div className={styles.wrapper}>
         <div className={styles.content}>
           <h3 className={cn(typeStyles.h1, styles.headline)}>Stay tuned</h3>
