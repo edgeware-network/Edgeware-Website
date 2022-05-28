@@ -11,7 +11,7 @@ export const HomepageHero = () => {
         <div className="my-auto">
           {/* Intro text & CTAs */}
           <div className="max-w-screen-md">
-            <h1 className="my-4 text-5xl font-medium">
+            <h1 className="my-8 text-5xl font-medium">
               A DAO-first smart contract platform for managing, <br />
               funding, and building decentralized communities.
             </h1>
@@ -20,18 +20,18 @@ export const HomepageHero = () => {
               a large public treasury, strong governing community, and a focus on DAO deployments.
             </p>
 
-            <div id="actions" className="space-x-8 py-4">
-              <Button href={config.discordUrl} sizing="normal" colorStyle="primary">
+            <div id="actions" className="my-8 space-x-8">
+              <Button href={config.discordUrl} sizing="large" colorStyle="primary">
                 Join Discord
               </Button>
-              <Button href="/developers" sizing="normal" colorStyle="grey">
+              <Button href="/developers" sizing="large" colorStyle="grey">
                 Start Building
               </Button>
             </div>
           </div>
 
           {/* Highlights */}
-          <div className="my-4">
+          <div className="my-8">
             <ul className="flex flex-row space-x-10">
               <li className="flex flex-row align-middle">
                 <CheckboxCircleFill className="mr-2 h-6 w-6 fill-green-500" />

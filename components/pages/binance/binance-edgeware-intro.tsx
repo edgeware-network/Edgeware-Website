@@ -6,7 +6,7 @@ export const BinanceEdgewareIntro = () => {
       id="edgeware"
       className="container my-24 mx-auto max-w-3xl rounded-md border border-grey-700"
     >
-      <div className="bg-[url('/images/backgrounds/edg-logomark-bg.svg')] bg-center bg-no-repeat py-8 px-16 text-center">
+      <div className="bg-[url('/images/backgrounds/edg-logomark-bg.svg')] bg-[center_top_25%] bg-no-repeat py-8 px-16 text-center">
         <p className="my-12 text-2xl">
           Edgeware is a scalable, sovereign and cooperatively owned smart contract platform with a
           large public treasury, strong governing community, and a focus on DAO deployments.
