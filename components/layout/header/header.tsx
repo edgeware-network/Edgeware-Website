@@ -4,8 +4,6 @@ import Link from 'next/link';
 import { EdgewareLogo } from './edgeware-logo';
 import { HeaderNav } from './header-nav';
 
-import styles from './header.module.scss';
-
 type HeaderProps = {
   overlayHeader?: boolean;
 };
@@ -16,8 +14,8 @@ export const Header = ({ overlayHeader = false }: HeaderProps) => {
       <div className="container mx-auto py-12">
         <div className="flex flex-row items-center justify-between">
           <Link href="/">
-            <a className={styles.logo} aria-label="Edgeware">
-              <EdgewareLogo className="h-8 w-8" />
+            <a className="z-10" aria-label="Edgeware">
+              <EdgewareLogo className="h-16 w-16" />
             </a>
           </Link>
           <HeaderNav />

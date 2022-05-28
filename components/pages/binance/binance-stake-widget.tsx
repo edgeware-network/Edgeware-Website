@@ -129,7 +129,6 @@ const widgetStyles = `
   }
 
   /* Footer */
-
   .srw-footer-link {
     font-weight: normal;
     font-size: var(--fs-text-md);

@@ -43,29 +43,39 @@ export const HomepageTokens = () => {
         </div>
 
         {/* wallets */}
-        <div className="container mx-auto max-w-6xl">
-          <div className="mx-auto my-24 max-w-4xl rounded-lg border border-green-500 bg-grey-900/70 p-8 text-center">
-            <h3 className="text-2xl">Wallets to store your EDG</h3>
-            <ul className="my-8 mx-16 flex flex-row items-center justify-between">
-              {Object.entries(WALLETS).map(([name, url]) => (
-                <li key={name} className="flex flex-col items-center">
-                  <a href={url} target="_blank" rel="noopener noreferrer" className="block">
-                    <img
-                      src={`/images/wallets/${name.toLowerCase().replace(/[\s.]/g, '-')}@3x.png`}
-                      alt={name}
-                      className="h-12 transition-transform duration-100 hover:scale-125"
-                    />
-                  </a>
-                </li>
-              ))}
-            </ul>
-
-            <p className="text-grey-300">More wallets coming soon</p>
-          </div>
-        </div>
+        <HomepageTokenWallets />
 
         <div className="h-32 bg-gradient-to-b from-transparent to-grey-900" />
       </div>
     </section>
+  );
+};
+
+type HomepageTokenWalletsProps = {
+  className?: string;
+};
+
+export const HomepageTokenWallets = ({ className }: HomepageTokenWalletsProps) => {
+  return (
+    <div className={className ? className : 'container mx-auto my-24 max-w-6xl'}>
+      <div className="mx-auto max-w-4xl rounded-lg border border-green-500 bg-grey-900/70 p-8 text-center">
+        <h3 className="text-2xl">Wallets to store your EDG</h3>
+        <ul className="my-8 mx-16 flex flex-row items-center justify-between">
+          {Object.entries(WALLETS).map(([name, url]) => (
+            <li key={name} className="flex flex-col items-center">
+              <a href={url} target="_blank" rel="noopener noreferrer" className="block">
+                <img
+                  src={`/images/wallets/${name.toLowerCase().replace(/[\s.]/g, '-')}@3x.png`}
+                  alt={name}
+                  className="h-12 transition-transform duration-100 hover:scale-125"
+                />
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <p className="text-grey-300">More wallets coming soon</p>
+      </div>
+    </div>
   );
 };
