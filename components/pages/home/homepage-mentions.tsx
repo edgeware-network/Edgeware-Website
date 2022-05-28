@@ -44,7 +44,7 @@ export const HomepageMentions = ({ mentions }: HomepageMentionsProps) => {
   };
 
   return (
-    <div className="container mx-auto">
+    <section className="container mx-auto" id="metions">
       <div className="text-center">
         <H2 size="2">Mentions from the cryptoverse</H2>
       </div>
@@ -56,6 +56,6 @@ export const HomepageMentions = ({ mentions }: HomepageMentionsProps) => {
           ))}
         </Slider>
       </div>
-    </div>
+    </section>
   );
 };

@@ -6,7 +6,7 @@ import CheckboxCircleFill from 'remixicon/icons/System/checkbox-circle-fill.svg'
 
 export const HomepageHero = () => {
   return (
-    <div className="bg-[url('/images/home/hero/hero-bg@2x.png')] bg-cover bg-center pt-24">
+    <section className="bg-[url('/images/home/hero/hero-bg@2x.png')] bg-cover bg-center pt-24">
       <div className="container mx-auto flex min-h-[75vh]">
         <div className="my-auto">
           {/* Intro text & CTAs */}
@@ -54,6 +54,6 @@ export const HomepageHero = () => {
         </div>
       </div>
       <div className="h-24 bg-gradient-to-b from-transparent to-grey-900" />
-    </div>
+    </section>
   );
 };

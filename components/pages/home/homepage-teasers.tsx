@@ -21,7 +21,7 @@ const TEASERS = {
 
 export const HomepageTeasers: React.FC = () => {
   return (
-    <div className="container mx-auto">
+    <section className="container mx-auto" id="teasers">
       <ul className="flex flex-row space-x-4">
         {Object.keys(TEASERS).map((key) => (
           <li className="block" key={key}>
@@ -36,6 +36,6 @@ export const HomepageTeasers: React.FC = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
