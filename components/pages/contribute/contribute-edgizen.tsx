@@ -17,7 +17,7 @@ export const ContributeEDGizen = () => {
             likeminded learners in the DAO and Substrate space.
           </p>
           <div className="mt-6">
-            <Button href={config.discordUrl} colorStyle="primary">
+            <Button href={config.discordUrl} colorStyle="primary" sizing="normal">
               Join us on Discord EDG
             </Button>
           </div>

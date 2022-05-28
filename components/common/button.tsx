@@ -4,7 +4,7 @@ import Link from 'next/link';
 type ButtonProps = {
   children: React.ReactNode;
   href?: string;
-  colorStyle: 'primary' | 'grey' | 'black';
+  colorStyle: 'primary' | 'grey' | 'black' | 'white';
   sizing: 'normal' | 'large';
 };
 
@@ -21,6 +21,8 @@ export const Button = ({ children, href, colorStyle, sizing }: ButtonProps) => {
       grey: 'bg-grey-800 text-white hover:bg-grey-700 hover:text-white active:bg-grey-700 active:text-white',
       black:
         'bg-grey-900 text-white hover:bg-grey-700 hover:text-white active:bg-grey-600 active:text-white',
+      white:
+        'bg-white text-grey-900 hover:bg-grey-100 hover:text-black hover:underline active:bg-grey-100 active:text-grey-900',
     },
   };
 

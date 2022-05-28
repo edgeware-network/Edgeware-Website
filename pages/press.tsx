@@ -69,7 +69,7 @@ export default function Press() {
       </Section>
 
       <Section id="press-enquiries" width="narrow" gap="none">
-        <div className="text-center py-3 mb-5">
+        <div className="mb-5 py-3 text-center">
           <H2 size="2">Press Enquiries</H2>
           <P>
             For media inquiries, please contact{' '}

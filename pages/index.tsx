@@ -4,8 +4,6 @@ import dynamic from 'next/dynamic';
 
 import { getAllTwitterMentions, TwitterMention } from '../lib/api/twitter';
 
-import { Section } from '../components/common/section/section';
-
 // Load Twitter Mentions slider as dynamic component
 // @ts-expect-error TS props mismatch
 const HomepageMentions = dynamic(() =>

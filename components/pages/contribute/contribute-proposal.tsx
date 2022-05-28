@@ -15,7 +15,7 @@ export const ContributeProposal = () => {
           Design your own and negotiate with the community.
         </p>
         <div className="mt-6">
-          <Button href={config.discordUrl} colorStyle="black">
+          <Button href={config.discordUrl} colorStyle="black" sizing="normal">
             Learn more
           </Button>
         </div>

@@ -9,15 +9,14 @@ import EarthLineIcon from 'remixicon/icons/Map/earth-line.svg';
 
 export const DevelopersGetStarted = () => {
   return (
-    <div className="container mx-auto max-w-6xl py-24">
+    <section className="container mx-auto max-w-7xl py-24" id="get-started">
       {/* Intro text*/}
-      <div className="flex flex-row space-x-16">
+      <div className="flex flex-row items-center space-x-24">
         <div className="w-1/2">
-          <h2 className="my-4 text-3xl font-medium">Get Started on Edgeware</h2>
-          <p className="text-md">
-            This is your launchpad to find what you need to integrate Edgware.
-            <br />
-            Unsure of where to start?
+          <h2 className="my-4 text-5xl font-medium">Get Started on Edgeware</h2>
+          <p className="my-8 text-lg">
+            This is your launchpad to find what you need to integrate Edgware. Unsure of where to
+            start?
             {'  '}
             <a
               href={config.discordUrl}
@@ -28,25 +27,25 @@ export const DevelopersGetStarted = () => {
               Join the Developer Chat →
             </a>
           </p>
-          <ul className="my-8 flex flex-col space-y-4">
-            <li className="flex flex-row">
-              <ServerLineIcon className="mr-2 h-5 w-5 fill-white" />
+          <ul className="my-8 flex flex-col space-y-4 text-lg font-semibold">
+            <li className="flex flex-row items-center">
+              <ServerLineIcon className="mr-4 h-6 w-6 fill-white" />
               Run Node/Connect to RPC Endpoint
             </li>
-            <li className="flex flex-row">
-              <EarthLineIcon className="mr-2 h-5 w-5 fill-white" />
+            <li className="flex flex-row items-center">
+              <EarthLineIcon className="mr-4 h-6 w-6 fill-white" />
               Choose Environment
             </li>
-            <li className="flex flex-row">
-              <CodeSSlashLineIcon className="mr-2 h-5 w-5 fill-white" />
+            <li className="flex flex-row items-center">
+              <CodeSSlashLineIcon className="mr-4 h-6 w-6 fill-white" />
               Build Dapps/Protocols
             </li>
-            <li className="flex flex-row">
-              <TerminalWindowLine className="mr-2 h-5 w-5 fill-white" />
+            <li className="flex flex-row items-center">
+              <TerminalWindowLine className="mr-4 h-6 w-6 fill-white" />
               Build a Pallet
             </li>
-            <li className="flex flex-row">
-              <TerminalLineIcon className="mr-2 h-5 w-5 fill-white" />
+            <li className="flex flex-row items-center">
+              <TerminalLineIcon className="mr-4 h-6 w-6 fill-white" />
               Build / Maintain Runtime
             </li>
           </ul>
@@ -55,7 +54,7 @@ export const DevelopersGetStarted = () => {
           <NetworksInfo />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -99,7 +98,7 @@ const NetworksInfo = () => {
             <Tab
               key={network}
               className={({ selected }) =>
-                `p-2 text-sm ${selected ? 'border-b border-b-primary-500' : ''}`
+                `py-4 px-2 text-sm ${selected ? 'border-b border-b-primary-500' : ''}`
               }
             >
               {network}
@@ -115,7 +114,7 @@ const NetworksInfo = () => {
                     <Tab
                       key={chain}
                       className={({ selected }) =>
-                        `p-2 text-sm ${selected ? 'border-b border-b-primary-500' : ''}`
+                        `py-4 px-2 text-sm ${selected ? 'border-b border-b-primary-500' : ''}`
                       }
                     >
                       {chain}

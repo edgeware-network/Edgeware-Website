@@ -2,19 +2,19 @@ import AsteriskIcon from 'remixicon/icons/Editor/asterisk.svg';
 
 export const DevelopersTechFeatures = () => {
   return (
-    <div className="container mx-auto max-w-5xl py-24">
+    <section className="container mx-auto my-24 max-w-5xl py-24" id="technical-featurer">
       {/* Intro text*/}
       <div className="flex flex-row items-center space-x-16">
         <div className="w-1/2">
           <h2 className="my-4 text-5xl font-medium">Technical Features</h2>
-          <p className="text-md my-4">
+          <p className="text-md my-4 leading-loose">
             Edgeware is a smart contract blockchain that compiles to a client runtime, a blob of{' '}
             <strong>WebAssembly (Wasm)</strong> code that may be built and run natively or executed
             within a Wasm virtual machine. Either way, when an Edgeware native binary is compiled,
             it includes a Wasm virtual machine which can be used to execute later versions of the
             client runtime downloaded from the network.
           </p>
-          <p className="text-md my-4">
+          <p className="text-md my-4 leading-loose">
             The client runtime interfaces with networking code and other components provided by{' '}
             <strong>Parity Substrate</strong>. Substrate includes{' '}
             <strong>
@@ -29,7 +29,7 @@ export const DevelopersTechFeatures = () => {
           <TechFeaturesList />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -83,7 +83,7 @@ const TechFeaturesListItem = ({ title, children }: TechFeaturesListItemProps) =>
         <AsteriskIcon className="mr-2 h-5 w-5 fill-primary-500" />
         {title}
       </strong>
-      <p className="mt-1 text-xs text-grey-300">{children}</p>
+      <p className="mt-1 text-xs leading-relaxed text-grey-300">{children}</p>
     </li>
   );
 };
