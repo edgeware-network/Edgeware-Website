@@ -9,7 +9,7 @@ export type LinkItem = {
 };
 
 export type LinksListProps = {
-  headline: string;
+  headline?: string;
   items: LinkItem[];
   highlight?: boolean;
 };
@@ -17,8 +17,10 @@ export type LinksListProps = {
 export const LinksList = ({ headline, items, highlight }: LinksListProps) => {
   return (
     <div className="container mx-auto max-w-7xl">
-      <h2 className="border-b border-b-grey-800 py-2 text-xl text-primary-500">{headline}</h2>
-      <ul className="flex flex-row flex-wrap py-4">
+      {headline && (
+        <h2 className="border-b border-b-grey-800 py-2 text-xl text-primary-500">{headline}</h2>
+      )}
+      <ul className="my-4 grid grid-cols-5 gap-4">
         {items.map((item, index) => {
           const isExternal = item.href.match(/https/);
           const Icon = item.icon;
@@ -28,7 +30,7 @@ export const LinksList = ({ headline, items, highlight }: LinksListProps) => {
             hover: 'hover:text-green-500 hover:border-green-500',
             regular: 'flex flex-row items-center',
             highlight:
-              'flex flex-col items-center bg-[url("/images/common/blocks-pattern.jpg")] bg-center bg-[length:auto_200%] hover:bg-[length:auto_150%]',
+              'text-lg flex flex-col items-center bg-[url("/images/common/blocks-pattern.jpg")] bg-center bg-[length:auto_200%] hover:bg-[length:auto_150%]',
           };
 
           const linkClass = cn(
@@ -38,12 +40,12 @@ export const LinksList = ({ headline, items, highlight }: LinksListProps) => {
           );
 
           return (
-            <li className="mb-4 mr-4" key={`ll-${index}`}>
+            <li key={`ll-${index}`}>
               {isExternal ? (
                 <a className={linkClass} href={item.href} target="_blank" rel="noopener noreferrer">
                   <Icon
                     className={`${
-                      highlight ? 'h-8 w-8' : 'mr-2 h-6 w-6'
+                      highlight ? 'mb-2 h-8 w-8' : 'mr-2 h-6 w-6'
                     } fill-white transition-all duration-300 group-hover:fill-green-500`}
                   />
                   {item.label}

@@ -7,6 +7,13 @@ import TerminalWindowLine from 'remixicon/icons/Development/terminal-window-line
 import ServerLineIcon from 'remixicon/icons/Device/server-line.svg';
 import EarthLineIcon from 'remixicon/icons/Map/earth-line.svg';
 
+import IconWindow from 'remixicon/icons/Business/window-line.svg';
+import IconExchange from 'remixicon/icons/Finance/exchange-line.svg';
+import IconResume from 'remixicon/icons/System/shield-user-line.svg';
+import IconToken from 'remixicon/icons/Finance/copper-coin-line.svg';
+import IconChat from 'remixicon/icons/Communication/chat-1-line.svg';
+import { LinksList } from '../get-started/links-list';
+
 export const DevelopersGetStarted = () => {
   return (
     <section className="container mx-auto max-w-7xl py-24" id="get-started">
@@ -53,6 +60,11 @@ export const DevelopersGetStarted = () => {
         <div className="w-1/2">
           <NetworksInfo />
         </div>
+      </div>
+
+      {/* Banners */}
+      <div className="my-16">
+        <DevelopersBanners />
       </div>
     </section>
   );
@@ -141,5 +153,52 @@ const NetworksInfo = () => {
         </Tab.Panels>
       </Tab.Group>
     </div>
+  );
+};
+
+const DevelopersBanners = () => {
+  const BUILDERS_LINKS = [
+    {
+      label: 'Launch Your Dapp',
+      icon: IconWindow,
+      href: 'https://docs.edgeware.wiki/development/develop/smart-contracts',
+    },
+    {
+      label: 'Mint a Token',
+      icon: IconToken,
+      href: 'https://docs.edgeware.wiki/development/develop/smart-contracts/evm-smart-contracts/tutorials/deploy-an-evm-contract/using-truffle',
+    },
+    {
+      label: 'Integrate Exchange',
+      icon: IconExchange,
+      href: 'https://edgeware-a.slab.com/public/posts/yqrtzorf',
+    },
+    {
+      label: 'List your Resume',
+      icon: IconResume,
+      href: 'https://commonwealth.im/edgeware/proposal/discussion/756-job-board',
+    },
+    { label: 'Builders Chat', icon: IconChat, href: 'https://t.me/edg_developers' },
+  ];
+
+  return (
+    <>
+      <div className="mt-4">
+        <LinksList items={BUILDERS_LINKS} highlight />
+      </div>
+      <div className="mb-4">
+        <a
+          href={config.discordUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:bg block rounded border border-grey-800 bg-[url('/images/common/blocks-pattern.jpg')] bg-[length:auto_200%] bg-center px-16 py-8 text-white transition-all duration-300 hover:bg-[length:auto_175%] hover:text-white"
+        >
+          <span className="text-4xl">Develop Edgeware Core</span>
+          <p className="mt-4 text-primary-500">
+            Join our core developers to help build the future of Edgeware
+          </p>
+        </a>
+      </div>
+    </>
   );
 };
