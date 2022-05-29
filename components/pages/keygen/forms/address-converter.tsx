@@ -1,16 +1,13 @@
 import * as React from 'react';
 
-import { Button } from '../../../common/button/button';
-
-import { evmConvert, ss58Convert, publicKeyConvert } from '../../../../lib/keygen';
-
-import styles from './address-converter.module.scss';
+import { evmConvert, ss58Convert, publicKeyConvert } from 'lib/keygen';
+import { Button } from 'components/common/button';
 
 type ConverterType = 'evm-address' | 'ss58-address' | 'public-key';
 
-interface AddressConverterProps {
+type AddressConverterProps = {
   type: ConverterType;
-}
+};
 
 const FORM_LABELS = {
   'evm-address': 'EVM Address (e.g. 0x1234...)',
@@ -28,7 +25,7 @@ function convertInputByType(input: string, type: ConverterType) {
   return FORM_CONVERTERS[type](input);
 }
 
-export const AddressConverter: React.FC<AddressConverterProps> = ({ type }) => {
+export const AddressConverter = ({ type }: AddressConverterProps) => {
   const [results, setResults] = React.useState({
     inputValue: '',
     data: undefined,
@@ -36,7 +33,7 @@ export const AddressConverter: React.FC<AddressConverterProps> = ({ type }) => {
 
   const inputEl = React.useRef(null);
 
-  const handleSubmit = (event) => {
+  const handleSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
     const inputValue = inputEl.current.value;
     const data = convertInputByType(inputValue, type);
@@ -71,10 +68,10 @@ Public Key: ${results.data}`;
 
     return (
       <>
-        <div className={styles.infoBox}>
+        <div className="my-4 rounded bg-grey-800 p-4">
           <pre>{resultText}</pre>
         </div>
-        <Button onClick={handleReset} style="secondary">
+        <Button onClick={handleReset} colorStyle="white" sizing="normal">
           Start over
         </Button>
       </>
@@ -82,27 +79,25 @@ Public Key: ${results.data}`;
   }
 
   return (
-    <form className={styles.form} action="#" onSubmit={handleSubmit}>
-      <fieldset className={styles.fieldset}>
-        <div className={styles.formRow}>
-          <label htmlFor={`ac-input-${type}`} aria-label={FORM_LABELS[type]}>
-            <input
-              id={`ac-input-${type}`}
-              className={styles.input}
-              type="text"
-              name="input"
-              placeholder={FORM_LABELS[type]}
-              ref={inputEl}
-              autoComplete="off"
-              autoCapitalize="off"
-              autoCorrect="off"
-            />
-          </label>
-          <button type="submit" className={styles.button}>
-            Convert
-          </button>
-        </div>
-      </fieldset>
+    <form className="max-w-2xl" action="#" onSubmit={handleSubmit}>
+      <label htmlFor={`ac-input-${type}`} aria-label={FORM_LABELS[type]} className="my-4 block">
+        <input
+          id={`ac-input-${type}`}
+          className="w-full rounded border border-grey-700 bg-grey-900 px-4 py-3"
+          type="text"
+          name="input"
+          placeholder={FORM_LABELS[type]}
+          ref={inputEl}
+          autoComplete="off"
+          autoCapitalize="off"
+          autoCorrect="off"
+        />
+      </label>
+      <div className="py-1">
+        <Button colorStyle="primary" sizing="normal" type="submit">
+          Convert
+        </Button>
+      </div>
     </form>
   );
 };

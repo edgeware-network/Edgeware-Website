@@ -7,9 +7,7 @@ import { decodeAddress } from '@polkadot/util-crypto';
 import Web3 from 'web3';
 import { useRef, useState } from 'react';
 
-import { Button } from '../../../common/button/button';
-
-import styles from './evm-withdraw.module.scss';
+import { Button } from 'components/common/button';
 
 // conditional import for extension-dapp
 let web3Accounts, web3Enable, web3FromAddress;
@@ -221,11 +219,11 @@ export const EvmWithdraw = () => {
 
   return (
     <>
-      <form onSubmit={(e) => e.preventDefault()}>
-        <label className={styles.label} htmlFor="ac-input-withdraw-address" aria-label="Address">
+      <form onSubmit={(e) => e.preventDefault()} className="my-8 max-w-2xl">
+        <label className="my-4 block" htmlFor="ac-input-withdraw-address" aria-label="Address">
           <input
             id="ac-input-withdraw-address"
-            className={styles.input}
+            className="w-full rounded border border-grey-700 bg-grey-900 px-4 py-3"
             type="text"
             name="input"
             placeholder="Substrate address (e.g. nJrsr...)"
@@ -235,10 +233,10 @@ export const EvmWithdraw = () => {
             autoCorrect="off"
           />
         </label>
-        <label className={styles.label} htmlFor="ac-input-withdraw-amount" aria-label="Amount">
+        <label className="my-4 block" htmlFor="ac-input-withdraw-amount" aria-label="Amount">
           <input
             id="ac-input-withdraw-amount"
-            className={styles.input}
+            className="w-full rounded border border-grey-700 bg-grey-900 px-4 py-3"
             type="text"
             name="input"
             placeholder="Amount (EDG)"
@@ -248,23 +246,23 @@ export const EvmWithdraw = () => {
             autoCorrect="off"
           />
         </label>
-        <div style={{ paddingRight: 10, paddingTop: 10 }}>
-          <Button onClick={evmToMainnet} style="primary-small">
+        <div className="py-1">
+          <Button onClick={evmToMainnet} colorStyle="primary" sizing="normal">
             1. Transfer to withdraw address
           </Button>
         </div>
-        <div style={{ paddingRight: 10, paddingTop: 10 }}>
-          <Button onClick={evmWithdraw} style="primary-small">
+        <div className="py-1">
+          <Button onClick={evmWithdraw} colorStyle="primary" sizing="normal">
             2. Withdraw from EVM
           </Button>
         </div>
-        <div className={formState.error ? styles.errorText : styles.successText}>
+        <div className={formState.error ? 'mt-4 text-[#DC2626]' : 'mt-4 text-green-600'}>
           {formState.text}
         </div>
         {formState.showAddNetwork && (window as any).ethereum && (
-          <a className={styles.linkText} href="#" onClick={addNetwork}>
+          <Button onClick={addNetwork} colorStyle="white" sizing="normal">
             Switch to Edgeware
-          </a>
+          </Button>
         )}
       </form>
     </>

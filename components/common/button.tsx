@@ -6,9 +6,9 @@ type ButtonProps = {
   href?: string;
   colorStyle: 'primary' | 'grey' | 'black' | 'white';
   sizing: 'normal' | 'large';
-};
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const Button = ({ children, href, colorStyle, sizing }: ButtonProps) => {
+export const Button = ({ children, href, colorStyle, sizing, ...restProps }: ButtonProps) => {
   const classes = {
     base: 'inline-flex items-center justify-center border border-transparent transition duration-150 ease-in-out focus:outline-none',
     sizing: {
@@ -25,6 +25,21 @@ export const Button = ({ children, href, colorStyle, sizing }: ButtonProps) => {
         'bg-white text-grey-900 hover:bg-grey-100 hover:text-black hover:underline active:bg-grey-100 active:text-grey-900',
     },
   };
+
+  if (!href) {
+    return (
+      <button
+        className={classNames(
+          classes.base,
+          classes.sizing[sizing],
+          classes.colorStyles[colorStyle]
+        )}
+        {...restProps}
+      >
+        {children}
+      </button>
+    );
+  }
 
   if (href.startsWith('http')) {
     return (
