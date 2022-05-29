@@ -1,7 +1,7 @@
 import React from 'react';
 import type { NextPage } from 'next';
 
-import { Newsletter } from '../components/common/newsletter/newsletter';
+import { Newsletter } from '../components/common/newsletter';
 import { ContributeHero } from 'components/pages/contribute/contribute-hero';
 import { ContributeEDGizen } from 'components/pages/contribute/contribute-edgizen';
 import { ContributeProposal } from 'components/pages/contribute/contribute-proposal';

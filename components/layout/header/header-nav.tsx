@@ -1,12 +1,5 @@
 import * as React from 'react';
-import cn from 'classnames';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-
-import styles from './header-nav.module.scss';
-import { HeaderOverlayNav } from './header-nav-overlay';
-import { NavToggle } from './nav/nav-toggle';
-import { useRouter } from 'next/router';
 
 const NAV_ITEMS = {
   Home: '/',
@@ -15,81 +8,37 @@ const NAV_ITEMS = {
   Society: '/collectives',
   Governance: 'https://gov.edgewa.re/',
   Ecosystem: '/partners',
-};
-
-const setBodyOverlay = (flag: boolean) => {
-  if (flag) {
-    document.body.classList.add('hasOverlay');
-  } else {
-    document.body.classList.remove('hasOverlay');
-  }
+  'Get Started': '/get-started',
 };
 
 export const HeaderNav = () => {
-  const [isOpen, setOpen] = React.useState(false);
-  const containerRef = React.useRef(null);
-
-  const toggleOpen = React.useCallback(() => {
-    setOpen(!isOpen);
-    setBodyOverlay(!isOpen);
-  }, [isOpen]);
-
   return (
-    <motion.div initial={false} animate={isOpen ? 'open' : 'closed'} ref={containerRef}>
-      <div className={styles.navWrapper}>
-        <NavItems />
-      </div>
-      <div className={styles.navBurger}>
-        <NavToggle onToggle={toggleOpen} />
-      </div>
-      <AnimatePresence>{isOpen && <HeaderOverlayNav onClose={toggleOpen} />}</AnimatePresence>
-    </motion.div>
-  );
-};
-
-type NavItemsProps = {
-  style?: 'desktop' | 'mobile';
-  onClick?: () => void;
-};
-
-export const NavItems = ({ style, onClick }: NavItemsProps) => {
-  const router = useRouter();
-
-  const handleGetStartedClick = (event: React.MouseEvent) => {
-    event.preventDefault();
-    router.push('/get-started');
-  };
-
-  return (
-    <nav className={cn(styles.nav, style === 'mobile' && styles.navMobile)}>
+    <nav className="flex-row space-x-6">
       {Object.entries(NAV_ITEMS).map((entry) => (
-        <NavItem key={entry[0]} href={entry[1]} onClick={onClick}>
+        <NavItem key={entry[0]} href={entry[1]}>
           {entry[0]}
         </NavItem>
       ))}
-      <NavButtonItem onClick={handleGetStartedClick}>Get Started</NavButtonItem>
     </nav>
   );
 };
 
 type NavItemProps = {
   children: React.ReactNode;
-  href?: string;
-  onClick?: (e: React.MouseEvent) => void;
+  href: string;
 };
 
-const NavItem = ({ children, href, onClick }: NavItemProps) => {
+const NavItem = ({ children, href }: NavItemProps) => {
   const isExternal = href.match(/https/);
+
+  const linkClasses =
+    href === '/get-started'
+      ? 'py-2.5 px-5 rounded-md bg-primary-500 text-white hover:bg-primary-600 hover:text-white'
+      : 'px-2 hover:text-primary-500';
 
   if (isExternal) {
     return (
-      <a
-        href={href}
-        className={styles.navItem}
-        onClick={onClick}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href={href} className={linkClasses} target="_blank" rel="noopener noreferrer">
         {children}
       </a>
     );
@@ -97,17 +46,7 @@ const NavItem = ({ children, href, onClick }: NavItemProps) => {
 
   return (
     <Link href={href}>
-      <a className={styles.navItem} onClick={onClick}>
-        {children}
-      </a>
+      <a className={linkClasses}>{children}</a>
     </Link>
-  );
-};
-
-const NavButtonItem: React.FC<NavItemProps> = ({ children, onClick }) => {
-  return (
-    <button className={cn(styles.navItem, styles.navItemSpecial)} onClick={onClick}>
-      {children}
-    </button>
   );
 };

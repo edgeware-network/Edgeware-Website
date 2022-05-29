@@ -1,6 +1,6 @@
 export default function Privacy() {
   return (
-    <section id="privacy-policy" className="container mx-auto">
+    <section id="privacy-policy" className="container mx-auto max-w-7xl">
       <div className="prose prose-xl prose-invert">
         <h1>Privacy Policy</h1>
         <p>Last updated: January 20, 2021</p>

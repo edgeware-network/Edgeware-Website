@@ -1,8 +1,6 @@
 import React from 'react';
-import { ErrorIcon } from '../components/common/error-icon/error-icon';
 
-import { Section } from '../components/common/section/section';
-import { H1, P } from '../components/common/typography/typography';
+import { ErrorIcon } from '../components/common/error-icon';
 
 export default function NotFoundPage() {
   React.useEffect(() => {
@@ -13,17 +11,17 @@ export default function NotFoundPage() {
 
   return (
     <>
-      <Section id="content" width="narrow">
+      <section id="content" className="container mx-auto my-24 max-w-7xl">
         <div className="text-center">
           <ErrorIcon code="404" />
-          <H1 size="2">Page not found</H1>
-          <P>
+          <h1 className="text-6xl">Page not found</h1>
+          <p className="my-4">
             You might have entered a wrong URL or this page may no longer exist.
             <br />
             But the links above or below might help you find what you were looking for.
-          </P>
+          </p>
         </div>
-      </Section>
+      </section>
     </>
   );
 }

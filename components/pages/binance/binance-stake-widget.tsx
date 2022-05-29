@@ -38,7 +38,7 @@ const widgetStyles = `
     border: 1px solid var(--grey-700);
     border-radius: var(--br-s);
     position: relative;
-    margin-left: var(--spacing-m);
+    margin-left: 0;
   }
 
 
@@ -85,7 +85,7 @@ const widgetStyles = `
 
   /* Left column: Value and compound */
   .srw-container .srw-exchange-value {
-    font-size: var(--fs-text-xxl);
+    font-size: var(--fs-text-lg);
     font-weight: var(--fw-normal);
     font-family: var(--ff-text);
   }

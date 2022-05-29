@@ -1,9 +1,7 @@
 import * as React from 'react';
 import Slider from 'react-slick';
 
-import { H2 } from '../../common/typography/typography';
-
-import { TweetCard, TweetCardProps } from '../../common/tweet-card/tweet-card';
+import { TweetCard, TweetCardProps } from '../../common/tweet-card';
 
 type HomepageMentionsProps = {
   mentions: TweetCardProps[];
@@ -44,12 +42,12 @@ export const HomepageMentions = ({ mentions }: HomepageMentionsProps) => {
   };
 
   return (
-    <section className="container mx-auto" id="metions">
+    <section className="container mx-auto my-24 mb-48" id="mentions">
       <div className="text-center">
-        <H2 size="2">Mentions from the cryptoverse</H2>
+        <h2 className="text-5xl">Mentions from the cryptoverse</h2>
       </div>
 
-      <div className="relative p-4 pb-0">
+      <div className="relative my-8 p-4 pb-0">
         <Slider {...settings}>
           {mentions.map((tweet) => (
             <TweetCard {...tweet} key={tweet.date} />

@@ -3,7 +3,7 @@ import TwitterFillIcon from 'remixicon/icons/Logos/twitter-fill.svg';
 
 export const PressIntro = () => {
   return (
-    <section className="container mx-auto py-16 text-center">
+    <section className="container mx-auto max-w-7xl py-16 text-center">
       <h1 className="text-6xl font-medium">
         For the latest news follow
         <br />

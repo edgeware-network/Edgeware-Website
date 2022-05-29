@@ -2,7 +2,7 @@ import { KeyPairGenerator } from './forms/keypair-generator';
 
 export const KeygenKeypairGenerator = () => {
   return (
-    <section id="keypair" className="container mx-auto my-48">
+    <section id="keypair" className="container mx-auto my-48 max-w-7xl">
       <h2 className="my-8 text-5xl">Generate keypair</h2>
       <p className="my-2 max-w-prose">
         Please keep in mind that this method to generate a public/private key pair is insecure!

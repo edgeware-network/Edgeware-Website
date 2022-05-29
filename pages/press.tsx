@@ -4,7 +4,7 @@ import { PressIntro } from 'components/pages/press/press-intro';
 import { PressBrandAssets } from 'components/pages/press/press-brand-assets';
 import { PressEnquiries } from 'components/pages/press/press-enquiries';
 
-import { Newsletter } from '../components/common/newsletter/newsletter';
+import { Newsletter } from '../components/common/newsletter';
 
 export default function Press() {
   return (

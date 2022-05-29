@@ -7,8 +7,7 @@ export const footerLinks: FooterLinksGroup[] = [
   {
     headline: 'Ecosystem',
     items: {
-      Mission: '/mission',
-      Collectives: '/collectives',
+      Society: '/collectives',
       Partners: '/partners',
       Lockdrop: 'https://commonwealth.im/edgeware/stats',
       Press: '/press',
@@ -29,11 +28,10 @@ export const footerLinks: FooterLinksGroup[] = [
   {
     headline: 'Community',
     items: {
-      Collectives: '/collectives',
+      Society: '/collectives',
       Commonwealth: 'https://commonwealth.im/',
       'Decent Partners': 'https://www.decent.partners/',
       'Edgeware Agency': 'https://edgeware.agency/',
-      Jobs: '/jobs',
     },
   },
   {

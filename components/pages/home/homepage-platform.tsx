@@ -10,7 +10,7 @@ export const HomepagePlatform = () => {
         <div className="h-32 bg-gradient-to-t from-transparent to-grey-900" />
 
         {/* Intro */}
-        <div className="container mx-auto text-center">
+        <div className="container mx-auto max-w-7xl text-center">
           <h2 className="text-6xl font-medium">Substrate Development Platform</h2>
           <p className="my-8 mx-auto max-w-2xl text-lg">
             Edgeware uses the same powerful framework as Kusama and Polkadot, but features three

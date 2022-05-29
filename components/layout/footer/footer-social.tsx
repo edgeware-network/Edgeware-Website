@@ -6,8 +6,6 @@ import IconDiscord from 'remixicon/icons/Logos/discord-fill.svg';
 import IconGithub from 'remixicon/icons/Logos/github-fill.svg';
 import IconReddit from 'remixicon/icons/Logos/reddit-fill.svg';
 
-import { Icon } from '../../common/icon/icon';
-
 const SOCIAL_LINKS = {
   Twitter: {
     icon: IconTwitter,
@@ -34,19 +32,22 @@ const SOCIAL_LINKS = {
 export const FooterSocial = () => {
   const linkEntries = Object.entries(SOCIAL_LINKS);
   return (
-    <div className="flex flex-row">
-      {linkEntries.map(([key, linkData]) => (
-        <a
-          href={linkData.href}
-          className="ml-4 opacity-25 hover:opacity-50"
-          target="_blank"
-          rel="noopener noreferrer"
-          key={key}
-          aria-label={key}
-        >
-          <Icon component={linkData.icon} />
-        </a>
-      ))}
+    <div className="flex flex-row justify-start">
+      {linkEntries.map(([key, linkData]) => {
+        const Icon = linkData.icon;
+        return (
+          <a
+            href={linkData.href}
+            className="mr-4 opacity-25 hover:opacity-50"
+            target="_blank"
+            rel="noopener noreferrer"
+            key={key}
+            aria-label={key}
+          >
+            <Icon className="h-6 w-6 fill-white" />
+          </a>
+        );
+      })}
     </div>
   );
 };

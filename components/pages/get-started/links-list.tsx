@@ -1,5 +1,5 @@
 import * as React from 'react';
-import cn from 'classnames';
+import classNames from 'classnames';
 import Link from 'next/link';
 
 export type LinkItem = {
@@ -33,7 +33,7 @@ export const LinksList = ({ headline, items, highlight }: LinksListProps) => {
               'text-lg flex flex-col items-center bg-[url("/images/common/blocks-pattern.jpg")] bg-center bg-[length:auto_200%] hover:bg-[length:auto_150%]',
           };
 
-          const linkClass = cn(
+          const linkClass = classNames(
             linkClasses.base,
             linkClasses.hover,
             highlight ? linkClasses.highlight : linkClasses.regular

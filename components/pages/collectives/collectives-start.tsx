@@ -1,4 +1,4 @@
-import { IconLogo } from 'components/common/logo/icon-logo';
+import { IconLogo } from 'components/common/icon-logo';
 
 import OpenArmLineIcon from 'remixicon/icons/User/open-arm-line.svg';
 import FundsLineIcon from 'remixicon/icons/Finance/funds-line.svg';
@@ -16,7 +16,7 @@ import { config } from 'data/config';
 
 export const CollectivesStart = () => {
   return (
-    <section id="start-collective" className="container mx-auto my-32">
+    <section id="start-collective" className="container mx-auto my-32 max-w-7xl">
       <div className="flex flex-col items-center text-center">
         <IconLogo />
         <h2 className="my-4 text-6xl">Start your own collective</h2>

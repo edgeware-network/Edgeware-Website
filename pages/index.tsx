@@ -10,7 +10,7 @@ const HomepageMentions = dynamic(() =>
   import('../components/pages/home/homepage-mentions').then((mod) => mod.HomepageMentions)
 );
 
-import { Newsletter } from '../components/common/newsletter/newsletter';
+import { Newsletter } from '../components/common/newsletter';
 
 import { HomepageHero } from 'components/pages/home/homepage-hero';
 import { HomepageTeasers } from 'components/pages/home/homepage-teasers';

@@ -40,6 +40,9 @@ module.exports = {
         900: '#051614',
       },
     },
+    fontFamily: {
+      sans: ['"Space Grotesk"', 'sans-serif'],
+    },
   },
   plugins: [require('@tailwindcss/typography')],
 };

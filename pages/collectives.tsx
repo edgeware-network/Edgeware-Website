@@ -1,4 +1,4 @@
-import { Newsletter } from '../components/common/newsletter/newsletter';
+import { Newsletter } from '../components/common/newsletter';
 
 import { CollectivesSocietyIntro } from 'components/pages/collectives/collectives-society-intro';
 import { CollectivesList } from 'components/pages/collectives/collectives-list';

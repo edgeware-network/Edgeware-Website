@@ -21,7 +21,7 @@ const TEASERS = {
 
 export const HomepageTeasers: React.FC = () => {
   return (
-    <section className="container mx-auto" id="teasers">
+    <section className="container mx-auto max-w-7xl" id="teasers">
       <ul className="flex flex-row space-x-4">
         {Object.keys(TEASERS).map((key) => (
           <li className="block" key={key}>

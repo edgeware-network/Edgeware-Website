@@ -7,8 +7,8 @@ import CheckboxCircleFill from 'remixicon/icons/System/checkbox-circle-fill.svg'
 export const HomepageHero = () => {
   return (
     <section className="bg-[url('/images/home/hero/hero-bg@2x.png')] bg-cover bg-center pt-24">
-      <div className="container mx-auto flex min-h-[75vh]">
-        <div className="my-auto">
+      <div className="container mx-auto flex min-h-[75vh] max-w-7xl">
+        <div className="my-auto py-8">
           {/* Intro text & CTAs */}
           <div className="max-w-screen-md">
             <h1 className="my-8 text-5xl font-medium">
