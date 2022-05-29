@@ -1,8 +1,4 @@
-import * as React from 'react';
-
 import TwitterFillIcon from 'remixicon/icons/Logos/twitter-fill.svg';
-
-import styles from './tweet-card.module.scss';
 
 export type TweetCardProps = {
   text: string;

@@ -1,5 +1,4 @@
 import { Button } from 'components/common/button';
-import Link from 'next/link';
 import Apps2LineIcon from 'remixicon/icons/System/apps-2-line.svg';
 
 export const DevelopersResources = () => {

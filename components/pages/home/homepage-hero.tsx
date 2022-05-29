@@ -1,6 +1,5 @@
 import { Button } from 'components/common/button';
 import { config } from 'data/config';
-import Link from 'next/link';
 
 import CheckboxCircleFill from 'remixicon/icons/System/checkbox-circle-fill.svg';
 
