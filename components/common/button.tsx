@@ -10,10 +10,10 @@ type ButtonProps = {
 
 export const Button = ({ children, href, colorStyle, sizing }: ButtonProps) => {
   const classes = {
-    base: 'inline-flex items-center justify-center rounded-md border border-transparent transition duration-150 ease-in-out focus:outline-none',
+    base: 'inline-flex items-center justify-center border border-transparent transition duration-150 ease-in-out focus:outline-none',
     sizing: {
-      normal: 'font-medium leading-6 px-6 py-2',
-      large: 'text-lg font-medium leading-6 px-8 py-4',
+      normal: 'font-medium leading-6 px-6 py-2 rounded-md',
+      large: 'text-lg font-medium leading-6 px-8 py-4 rounded-lg',
     },
     colorStyles: {
       primary:
