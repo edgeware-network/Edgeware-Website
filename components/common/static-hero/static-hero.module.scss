@@ -27,15 +27,6 @@
     background-image: linear-gradient(to top, var(--grey-900), rgba(21, 21, 21, 0) 90%);
   }
 
-  &--jobs {
-    background-image: url('/images/jobs/hero-jobs-mobile.jpg');
-    background-position: 50% 100%;
-    @include media-breakpoint-up (md) {
-      background-image: url('/images/jobs/hero-jobs.jpg');
-      background-position: 50% 50%;
-    }
-  }
-
   &--partners {
     background-image: url('/images/partners/partners-bg-mobile@2x.jpg');
     background-position: 50% 100%;

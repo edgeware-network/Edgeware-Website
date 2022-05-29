@@ -14,7 +14,7 @@ const NAV_ITEMS = {
   Build: '/developers',
   Society: '/collectives',
   Governance: 'https://gov.edgewa.re/',
-  Ecosystem: '/',
+  Ecosystem: '/partners',
 };
 
 const setBodyOverlay = (flag: boolean) => {
