@@ -1,12 +1,7 @@
-import * as React from 'react';
-import { Section } from '../components/common/section/section';
-
-import { SimpleText } from '../components/common/simple-text/simple-text';
-
 export default function Privacy() {
   return (
-    <Section id="privacy-policy" width="normal">
-      <SimpleText>
+    <section id="privacy-policy" className="container mx-auto">
+      <div className="prose prose-xl prose-invert">
         <h1>Privacy Policy</h1>
         <p>Last updated: January 20, 2021</p>
         <p>
@@ -1342,8 +1337,8 @@ export default function Privacy() {
             </a>
           </li>
         </ul>
-      </SimpleText>
-    </Section>
+      </div>
+    </section>
   );
 }
 

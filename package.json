@@ -25,6 +25,7 @@
     "@polkadot/util": "^7.3.1",
     "@polkadot/util-crypto": "^7.3.1",
     "@popperjs/core": "^2.10.1",
+    "@tailwindcss/typography": "^0.5.2",
     "autoprefixer": "^10.4.4",
     "bignumber.js": "^9.0.1",
     "bootstrap": "^5.1.1",
