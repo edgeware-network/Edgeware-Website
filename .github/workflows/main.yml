@@ -13,8 +13,8 @@ jobs:
       - name: Install dependencies 🔧
         run: yarn
 
-      - name: Test 🎢
-        run: yarn test
+      # - name: Test 🎢
+      #   run: yarn test
 
       - name: Build and generate static export 🏗
         run: yarn export
