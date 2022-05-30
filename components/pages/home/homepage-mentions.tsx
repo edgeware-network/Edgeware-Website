@@ -42,12 +42,12 @@ export const HomepageMentions = ({ mentions }: HomepageMentionsProps) => {
   };
 
   return (
-    <section className="container mx-auto my-24 mb-48" id="mentions">
+    <section className="container mx-auto my-6 mb-48 md:my-12 lg:my-24" id="mentions">
       <div className="text-center">
-        <h2 className="text-5xl">Mentions from the cryptoverse</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl">Mentions from the cryptoverse</h2>
       </div>
 
-      <div className="relative my-8 p-4 pb-0">
+      <div className="relative my-8 pb-0">
         <Slider {...settings}>
           {mentions.map((tweet) => (
             <TweetCard {...tweet} key={tweet.date} />

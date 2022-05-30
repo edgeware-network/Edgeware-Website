@@ -1,6 +1,6 @@
 export const DevelopersQuotes = () => {
   return (
-    <section className="container mx-auto my-24 max-w-3xl py-24" id="quotes">
+    <section className="container mx-auto my-24 max-w-3xl py-24 px-4" id="quotes">
       <div>
         <DevelopersQuoteEntry
           author="Depth Hoar"
@@ -29,8 +29,8 @@ const DevelopersQuoteEntry = ({ children, author, imageUrl }: DevelopersQuoteEnt
         loading="lazy"
         className="h-32 w-32 rounded-full border-4 border-white bg-white"
       />
-      <blockquote className="text-2xl">
-        <p className="my-4 text-2xl leading-relaxed">&ldquo;{children}&rdquo;</p>
+      <blockquote className="text-xl md:text-2xl">
+        <p className="my-4 text-xl leading-relaxed md:text-2xl">&ldquo;{children}&rdquo;</p>
         <cite className="text-normal non-italic mt-2 block text-primary-500">{author}</cite>
       </blockquote>
     </div>

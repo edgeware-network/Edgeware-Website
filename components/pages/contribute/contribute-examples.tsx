@@ -1,7 +1,7 @@
 export const ContributeExamples = () => {
   return (
-    <div className="container mx-auto max-w-6xl">
-      <div className="my-8 grid grid-cols-3 justify-center gap-12">
+    <div className="container mx-auto max-w-6xl px-4">
+      <div className="my-4 grid grid-cols-1 justify-center gap-4 md:gap-8 lg:my-8 lg:grid-cols-3 lg:gap-12">
         <ContributeExampleCard
           tag="Case Study"
           title="Pizza Drop"
@@ -32,7 +32,7 @@ export const ContributeExamples = () => {
           both talent and our chain’s development.
         </ContributeExampleCard>
       </div>
-      <div className="my-8 grid grid-cols-3 justify-center gap-12">
+      <div className="my-4 grid grid-cols-1 justify-center gap-4 md:grid-cols-2 md:gap-8 lg:my-8 lg:grid-cols-3 lg:gap-12">
         <ContributeExampleCard tag="DAO" title="Identity Registrar" url="https://edgewa.re/">
           Earn EDG for each user’s on-chain identity you manually or automatically verified.
         </ContributeExampleCard>

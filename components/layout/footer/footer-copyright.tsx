@@ -1,7 +1,7 @@
 export const FooterCopyright = () => {
   return (
-    <>
-      <p className="text-lg">
+    <div className="md:text-center">
+      <p className="md:text-lg">
         © 2019 - {new Date().getFullYear()} Edgeware is maintained by the Edgeware Community
       </p>
       <div className="m-auto max-w-3xl">
@@ -12,6 +12,6 @@ export const FooterCopyright = () => {
           supports its own development.
         </p>
       </div>
-    </>
+    </div>
   );
 };

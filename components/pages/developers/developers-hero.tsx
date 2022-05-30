@@ -1,10 +1,13 @@
 export const DevelopersHero = () => {
   return (
-    <section className="container mx-auto max-w-7xl py-24" id="build-on-cutting-edge">
+    <section
+      className="container mx-auto max-w-7xl py-6 px-4 md:py-12 lg:py-24"
+      id="build-on-cutting-edge"
+    >
       {/* Intro text*/}
-      <div className="flex flex-row items-center space-x-16">
-        <div className="w-4/6 p-4">
-          <h1 className="my-4 text-6xl font-medium">
+      <div className="flex flex-col items-center text-center md:flex-row md:space-x-16 md:text-left">
+        <div className="w-full md:w-4/6">
+          <h1 className="my-4 text-4xl font-medium md:text-5xl lg:text-6xl">
             Build on the
             <br />
             cutting-edge
@@ -15,8 +18,13 @@ export const DevelopersHero = () => {
             features.
           </p>
         </div>
-        <div className="w-3/6">
-          <img src="/images/developers/developers-hexagon.png" alt="" loading="lazy" />
+        <div className="w-full p-8 text-center md:w-3/6 md:p-0">
+          <img
+            src="/images/developers/developers-hexagon.png"
+            alt=""
+            loading="lazy"
+            className="inline-block w-full"
+          />
         </div>
       </div>
     </section>

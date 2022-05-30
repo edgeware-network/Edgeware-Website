@@ -10,7 +10,7 @@ export const FooterNav = ({ items }: FooterNavProps) => {
   const entries = Object.entries(items);
 
   return (
-    <nav>
+    <nav className="flex flex-col space-y-2 md:space-y-4">
       {entries.map((linkItem) => {
         const [label, href] = linkItem;
 
@@ -19,7 +19,7 @@ export const FooterNav = ({ items }: FooterNavProps) => {
             <a
               href={href}
               key={`link-${label}`}
-              className="text-normal block py-2 text-grey-500 hover:text-green-500 md:my-1"
+              className="text-normal text-grey-500 hover:text-green-500"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -30,9 +30,7 @@ export const FooterNav = ({ items }: FooterNavProps) => {
 
         return (
           <Link href={href} key={`link-${label}`}>
-            <a className="text-normal block py-2 text-grey-500 hover:text-green-500 md:my-1">
-              {label}
-            </a>
+            <a className="text-normal text-grey-500 hover:text-green-500">{label}</a>
           </Link>
         );
       })}

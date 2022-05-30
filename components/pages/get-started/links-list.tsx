@@ -20,7 +20,7 @@ export const LinksList = ({ headline, items, highlight }: LinksListProps) => {
       {headline && (
         <h2 className="border-b border-b-grey-800 py-2 text-xl text-primary-500">{headline}</h2>
       )}
-      <ul className="my-4 grid grid-cols-5 gap-4">
+      <ul className="my-4 grid grid-cols-1 gap-4 md:grid-cols-5">
         {items.map((item, index) => {
           const isExternal = item.href.match(/https/);
           const Icon = item.icon;
@@ -55,7 +55,7 @@ export const LinksList = ({ headline, items, highlight }: LinksListProps) => {
                   <a className={linkClass}>
                     <Icon
                       className={`${
-                        highlight ? 'h-8 w-8' : 'mr-2 h-6 w-6'
+                        highlight ? 'md:h-8 md:w-8' : 'mr-2 h-6 w-6'
                       } fill-white transition-all duration-300 group-hover:fill-green-500`}
                     />{' '}
                     {item.label}

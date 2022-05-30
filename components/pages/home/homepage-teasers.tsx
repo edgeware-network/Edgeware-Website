@@ -21,10 +21,10 @@ const TEASERS = {
 
 export const HomepageTeasers: React.FC = () => {
   return (
-    <section className="container mx-auto max-w-7xl" id="teasers">
-      <ul className="flex flex-row space-x-4">
+    <section className="container mx-auto max-w-7xl px-4" id="teasers">
+      <ul className="flex flex-wrap md:flex-row">
         {Object.keys(TEASERS).map((key) => (
-          <li className="block" key={key}>
+          <li className="m-4" key={key}>
             <a href={TEASERS[key].href} className="block" target="_blank" rel="noopener noreferrer">
               <img
                 className="block"

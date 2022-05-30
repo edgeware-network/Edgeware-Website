@@ -2,11 +2,14 @@ import AsteriskIcon from 'remixicon/icons/Editor/asterisk.svg';
 
 export const DevelopersTechFeatures = () => {
   return (
-    <section className="container mx-auto my-24 max-w-5xl py-24" id="technical-featurer">
+    <section
+      className="md-my-12 container mx-auto my-6 max-w-5xl py-24 px-4 lg:my-24"
+      id="technical-features"
+    >
       {/* Intro text*/}
-      <div className="flex flex-row items-center space-x-16">
-        <div className="w-1/2">
-          <h2 className="my-4 text-5xl font-medium">Technical Features</h2>
+      <div className="flex flex-col items-center space-y-4 md:flex-row md:space-y-0 md:space-x-16">
+        <div className="w-full md:w-1/2">
+          <h2 className="my-4 text-3xl font-medium md:text-4xl lg:text-5xl">Technical Features</h2>
           <p className="text-md my-4 leading-loose">
             Edgeware is a smart contract blockchain that compiles to a client runtime, a blob of{' '}
             <strong>WebAssembly (Wasm)</strong> code that may be built and run natively or executed
@@ -25,7 +28,7 @@ export const DevelopersTechFeatures = () => {
             blocks from the network.
           </p>
         </div>
-        <div className="w-1/2">
+        <div className="w-full md:w-1/2">
           <TechFeaturesList />
         </div>
       </div>

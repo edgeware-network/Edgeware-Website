@@ -13,7 +13,7 @@ const NAV_ITEMS = {
 
 export const HeaderNav = () => {
   return (
-    <nav className="flex-row space-x-6">
+    <nav className="hidden flex-row items-center justify-end lg:flex lg:space-x-6">
       {Object.entries(NAV_ITEMS).map((entry) => (
         <NavItem key={entry[0]} href={entry[1]}>
           {entry[0]}

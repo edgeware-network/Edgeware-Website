@@ -21,13 +21,13 @@ const LOCKDROP_STATS = {
 
 export const HomepageEconomics = () => {
   return (
-    <section id="edg-economics" className="mt-24">
+    <section id="edg-economics" className="mt-6 md:mt-12 lg:mt-24">
       <div className="bg-[url('/images/home/economics/edg-token-bg@2x.png')] bg-cover bg-center bg-no-repeat py-24">
         {/* basic info */}
-        <div className="container mx-auto max-w-7xl">
-          <div className="flex flex-row justify-between">
-            <div className="w-1/2">
-              <h2 className="my-8 text-5xl font-medium">EDG Economics</h2>
+        <div className="container mx-auto max-w-7xl px-4">
+          <div className="flex flex-col justify-between md:flex-row">
+            <div className="order-2 w-full md:order-1 md:w-2/4">
+              <h2 className="my-8 text-4xl font-medium lg:text-5xl">EDG Economics</h2>
               <p className="my-4 text-lg">
                 The EDG token incentivises and rewards the participants in the ecosystem, ensuring
                 everyone remains aligned to a common purpose of expanding both the usefulness and
@@ -43,21 +43,21 @@ export const HomepageEconomics = () => {
                 scale of the opportunity to increase its value.
               </p>
             </div>
-            <div className="w-1/4">
+            <div className="order-1 w-full md:order-2 md:w-1/4">
               <HomepageEconomicsTokenWidget />
             </div>
           </div>
         </div>
 
         {/* lockdrop stats */}
-        <div className="container mx-auto my-16 max-w-7xl">
-          <div className="flex h-8 flex-row overflow-hidden rounded-full bg-white">
+        <div className="container mx-auto my-16 max-w-7xl px-4">
+          <div className="flex h-5 flex-row overflow-hidden rounded-full bg-white md:h-8">
             {Object.entries(LOCKDROP_STATS).map(([name, stat]) => {
               return <span className={stat.color} key={name} style={{ width: `${stat.value}%` }} />;
             })}
           </div>
 
-          <ul className="my-8 flex flex-row justify-between">
+          <ul className="my-4 flex flex-col justify-between space-y-2 md:my-8 md:flex-row md:space-y-0 md:space-x-2">
             {Object.entries(LOCKDROP_STATS).map(([name, stat]) => {
               return (
                 <li
@@ -74,10 +74,10 @@ export const HomepageEconomics = () => {
         </div>
 
         {/* highlights */}
-        <div className="container mx-auto my-16 max-w-7xl">
-          <div className="flex flex-row justify-between space-x-36">
-            <div className="w-1/3">
-              <h3 className="my-4 border-b border-b-primary-500 py-2 text-lg">
+        <div className="container mx-auto my-4 max-w-7xl px-4 md:my-8 lg:my-16">
+          <div className="flex flex-col justify-between md:flex-row md:space-x-16 lg:space-x-36">
+            <div className="w-full md:w-1/3">
+              <h3 className="my-4 border-b border-b-primary-500 py-2 md:text-lg">
                 Fair &amp; Open Launch
               </h3>
               <p className="text-sm leading-relaxed text-grey-300">
@@ -86,7 +86,7 @@ export const HomepageEconomics = () => {
                 utility token with governance protections.
               </p>
             </div>
-            <div className="w-1/3">
+            <div className="w-full md:w-1/3">
               <h3 className="my-4 border-b border-b-primary-500 py-2 text-lg">
                 Decentralized Bootstrapping
               </h3>
@@ -96,7 +96,7 @@ export const HomepageEconomics = () => {
                 was enough to kickstart a large community treasury with value on the market.
               </p>
             </div>
-            <div className="w-1/3">
+            <div className="w-full md:w-1/3">
               <h3 className="my-4 border-b border-b-primary-500 py-2 text-lg">
                 Sustainable Growth
               </h3>

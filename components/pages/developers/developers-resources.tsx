@@ -3,9 +3,9 @@ import Apps2LineIcon from 'remixicon/icons/System/apps-2-line.svg';
 
 export const DevelopersResources = () => {
   return (
-    <section id="resources" className="container mx-auto my-24 max-w-4xl">
-      <div className="flex flex-row items-center space-x-24">
-        <div className="flex w-1/2 flex-col items-center text-center">
+    <section id="resources" className="container mx-auto my-6 max-w-4xl md:my-12 lg:my-24">
+      <div className="flex flex-col items-center space-y-4 px-4 md:flex-row md:space-y-0 md:space-x-24">
+        <div className="f-full flex flex-col items-center text-center md:w-1/2">
           <div className="py-4">
             <div className="mx-auto h-fit w-fit rounded-full bg-white p-6">
               <Apps2LineIcon className="h-8 w-8 fill-primary-500" />
@@ -19,7 +19,7 @@ export const DevelopersResources = () => {
             Follow us on Github
           </Button>
         </div>
-        <div className="w-1/2 py-4">
+        <div className="w-full py-4 md:w-1/2">
           <DevelopersResourcesLinks />
         </div>
       </div>

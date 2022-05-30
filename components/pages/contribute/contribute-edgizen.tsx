@@ -5,11 +5,11 @@ import OpenArmLineIcon from 'remixicon/icons/User/open-arm-line.svg';
 
 export const ContributeEDGizen = () => {
   return (
-    <div className="container mx-auto max-w-5xl py-24">
-      <div className="flex flex-row items-end space-x-32">
-        <div className="w-1/2">
+    <div className="container mx-auto max-w-5xl py-24 px-4">
+      <div className="flex flex-col items-end space-y-8 md:flex-row md:space-y-0 md:space-x-32">
+        <div className="w-full md:w-1/2">
           <OpenArmLineIcon className="h-12 w-12 fill-white text-white" />
-          <h2 className="my-4 text-4xl font-medium">Become an EDGizen</h2>
+          <h2 className="my-4 text-3xl font-medium md:text-4xl">Become an EDGizen</h2>
           <p className="my-4">
             Joining Edgeware is more than just a cryptocurrency.
             <br />
@@ -23,8 +23,8 @@ export const ContributeEDGizen = () => {
           </div>
         </div>
 
-        <div className="w-1/2 bg-[url(/images/contribute/edgizen-bg.jpg)] bg-cover">
-          <div className="rounded-xl border border-green-600 p-8">
+        <div className="w-full bg-[url(/images/contribute/edgizen-bg.jpg)] bg-cover md:w-1/2">
+          <div className="rounded-xl border border-green-600 p-4 py-8 md:p-8">
             <span>Requirements:</span>
             <ol className="mt-4 ml-5 list-decimal space-y-2 text-green-600">
               <li>Have EDG</li>

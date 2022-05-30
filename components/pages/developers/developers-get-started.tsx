@@ -16,12 +16,14 @@ import { LinksList } from '../get-started/links-list';
 
 export const DevelopersGetStarted = () => {
   return (
-    <section className="container mx-auto max-w-7xl py-24" id="get-started">
+    <section className="container mx-auto max-w-7xl py-24 px-4" id="get-started">
       {/* Intro text*/}
-      <div className="flex flex-row items-center space-x-24">
-        <div className="w-1/2">
-          <h2 className="my-4 text-5xl font-medium">Get Started on Edgeware</h2>
-          <p className="my-8 text-lg">
+      <div className="flex flex-col items-center md:flex-row md:space-x-24">
+        <div className="w-full md:w-1/2">
+          <h2 className="my-4 text-3xl font-medium md:text-4xl lg:text-5xl">
+            Get Started on Edgeware
+          </h2>
+          <p className="my-8 text-base md:text-lg">
             This is your launchpad to find what you need to integrate Edgware. Unsure of where to
             start?
             {'  '}
@@ -34,7 +36,7 @@ export const DevelopersGetStarted = () => {
               Join the Developer Chat →
             </a>
           </p>
-          <ul className="my-8 flex flex-col space-y-4 text-lg font-semibold">
+          <ul className="my-8 flex flex-col space-y-4 font-semibold md:text-lg">
             <li className="flex flex-row items-center">
               <ServerLineIcon className="mr-4 h-6 w-6 fill-white" />
               Run Node/Connect to RPC Endpoint
@@ -57,7 +59,7 @@ export const DevelopersGetStarted = () => {
             </li>
           </ul>
         </div>
-        <div className="w-1/2">
+        <div className="w-full md:w-1/2">
           <NetworksInfo />
         </div>
       </div>
@@ -191,7 +193,7 @@ const DevelopersBanners = () => {
           href={config.discordUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:bg block rounded border border-grey-800 bg-[url('/images/common/blocks-pattern.jpg')] bg-[length:auto_200%] bg-center px-16 py-8 text-white transition-all duration-300 hover:bg-[length:auto_175%] hover:text-white"
+          className="hover:bg block rounded border border-grey-800 bg-[url('/images/common/blocks-pattern.jpg')] bg-[length:auto_200%] bg-center px-8 py-8 text-white transition-all duration-300 hover:bg-[length:auto_175%] hover:text-white md:px-16"
         >
           <span className="text-4xl">Develop Edgeware Core</span>
           <p className="mt-4 text-primary-500">
