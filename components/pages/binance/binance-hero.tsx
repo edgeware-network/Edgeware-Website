@@ -1,3 +1,5 @@
+import { Button } from 'components/common/button';
+
 export const BinanceHero: React.FC = () => {
   return (
     <section className="bg-[url('/images/binance/hero-binance@2x.jpg')] bg-cover bg-center pt-36">
@@ -26,15 +28,21 @@ export const BinanceHero: React.FC = () => {
             per ETH.
           </p>
 
-          <div className="my-4">
-            <a
+          <div className="my-4 space-x-2">
+            <Button
               href="https://www.binance.com/en/support/announcement/aa00aba48425441683b23994ad25ee45"
-              className="inline-block rounded-lg bg-primary-500 py-4 px-12 text-xl font-medium text-white hover:bg-primary-600 hover:text-white"
-              target="_blank"
-              rel="noopener noreferrer"
+              sizing="large"
+              colorStyle="primary"
             >
               Read more at Binance announcement
-            </a>
+            </Button>
+            <Button
+              href="https://blog.edgewa.re/binance-distributes-10-of-edg-supply-to-users-2/"
+              sizing="large"
+              colorStyle="grey"
+            >
+              Read our blog post
+            </Button>
           </div>
 
           <p className="my-8 text-2xl">

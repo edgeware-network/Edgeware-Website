@@ -2,7 +2,7 @@ import * as React from 'react';
 
 const TEASERS = {
   binance: {
-    href: 'https://blog.edgewa.re/binance-distributes-10-of-edg-supply-to-users-2/',
+    href: '/binance',
     alt: 'Binance sends out EDG',
   },
   evm: {
@@ -23,18 +23,26 @@ export const HomepageTeasers: React.FC = () => {
   return (
     <section className="container mx-auto max-w-7xl px-4" id="teasers">
       <ul className="flex flex-wrap md:flex-row">
-        {Object.keys(TEASERS).map((key) => (
-          <li className="m-4" key={key}>
-            <a href={TEASERS[key].href} className="block" target="_blank" rel="noopener noreferrer">
-              <img
+        {Object.keys(TEASERS).map((key) => {
+          const isExternal = TEASERS[key].href.startsWith('http');
+
+          return (
+            <li className="m-4" key={key}>
+              <a
+                href={TEASERS[key].href}
                 className="block"
-                src={`/images/home/banners/banners-${key}.png`}
-                alt={TEASERS[key].alt}
-                width="280"
-              />
-            </a>
-          </li>
-        ))}
+                {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              >
+                <img
+                  className="block"
+                  src={`/images/home/banners/banners-${key}.png`}
+                  alt={TEASERS[key].alt}
+                  width="280"
+                />
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </section>
   );
