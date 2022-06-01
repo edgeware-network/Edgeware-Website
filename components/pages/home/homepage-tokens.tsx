@@ -15,13 +15,13 @@ const WALLETS = {
 
 export const HomepageTokens = () => {
   return (
-    <section id="buy-edg-tokens">
+    <section id="get-edg-tokens">
       <div className="bg-[url('/images/home/token/buy-edg-bg@2x.png')] bg-cover bg-center">
         <div className="h-8 bg-gradient-to-t from-transparent to-grey-900 md:h-16 lg:h-32" />
 
         {/* Intro */}
         <div className="container mx-auto max-w-xl px-4 text-center">
-          <h2 className="text-3xl font-medium md:text-4xl lg:text-5xl">Buy EDG Tokens</h2>
+          <h2 className="text-3xl font-medium md:text-4xl lg:text-5xl">Get EDG Tokens</h2>
           <p className="my-4">Edgeware tokens are available in the following exchanges</p>
         </div>
 
