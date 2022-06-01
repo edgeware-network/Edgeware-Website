@@ -1,4 +1,5 @@
 import { Button } from 'components/common/button';
+import { socialMediaUrls } from 'data/config';
 import Apps2LineIcon from 'remixicon/icons/System/apps-2-line.svg';
 
 export const DevelopersResources = () => {
@@ -15,7 +16,7 @@ export const DevelopersResources = () => {
               Jump straight into our developer tutorials and easy to follow documentation.
             </p>
           </div>
-          <Button href="https://github.com/Edgeware-Network" sizing="large" colorStyle="white">
+          <Button href={socialMediaUrls.githubUrl} sizing="large" colorStyle="white">
             Follow us on Github
           </Button>
         </div>

@@ -1,4 +1,4 @@
-import { config } from 'data/config';
+import { socialMediaUrls } from 'data/config';
 
 export const BinanceEdgewareIntro = () => {
   return (
@@ -22,7 +22,7 @@ export const BinanceEdgewareIntro = () => {
         </p>
         <div className="my-12">
           <a
-            href={config.discordUrl}
+            href={socialMediaUrls.discordUrl}
             className="inline-block rounded-lg bg-grey-500 py-4 px-12 text-xl font-medium text-white hover:bg-grey-600 hover:text-white"
           >
             Join our community on Discord

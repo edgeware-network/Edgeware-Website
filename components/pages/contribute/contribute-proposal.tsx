@@ -1,5 +1,4 @@
 import { Button } from 'components/common/button';
-import { config } from 'data/config';
 
 import CompassDiscoverLineIcon from 'remixicon/icons/Map/compass-discover-line.svg';
 
@@ -15,7 +14,11 @@ export const ContributeProposal = () => {
           Design your own and negotiate with the community.
         </p>
         <div className="mt-6">
-          <Button href={config.discordUrl} colorStyle="black" sizing="normal">
+          <Button
+            href="https://gov.edgewa.re/discussion/1132-edgeware-proposal-process-and-template"
+            colorStyle="black"
+            sizing="normal"
+          >
             Learn more
           </Button>
         </div>

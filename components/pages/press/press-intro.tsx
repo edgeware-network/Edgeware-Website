@@ -1,4 +1,5 @@
 import { Button } from 'components/common/button';
+import { socialMediaUrls } from 'data/config';
 import TwitterFillIcon from 'remixicon/icons/Logos/twitter-fill.svg';
 
 export const PressIntro = () => {
@@ -12,7 +13,7 @@ export const PressIntro = () => {
       <p className="my-8 text-lg">
         Want to keep up to date with all our collectives and wonderings?
       </p>
-      <Button href="https://twitter.com/EdgewareDAO" sizing="large" colorStyle="white">
+      <Button href={socialMediaUrls.twitterUrl} sizing="large" colorStyle="white">
         Follow us on Twitter
         <TwitterFillIcon className="ml-2 h-8 w-8" />
       </Button>

@@ -1,5 +1,5 @@
 import { Button } from 'components/common/button';
-import { config } from 'data/config';
+import { socialMediaUrls } from 'data/config';
 
 import CheckboxCircleFill from 'remixicon/icons/System/checkbox-circle-fill.svg';
 
@@ -23,7 +23,7 @@ export const HomepageHero = () => {
               id="actions"
               className="my-8 flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-8"
             >
-              <Button href={config.discordUrl} sizing="large" colorStyle="primary">
+              <Button href={socialMediaUrls.discordUrl} sizing="large" colorStyle="primary">
                 Join Discord
               </Button>
               <Button href="/developers" sizing="large" colorStyle="grey">

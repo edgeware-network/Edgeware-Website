@@ -1,5 +1,5 @@
 import { Tab } from '@headlessui/react';
-import { config } from 'data/config';
+import { socialMediaUrls } from 'data/config';
 
 import CodeSSlashLineIcon from 'remixicon/icons/Development/code-s-slash-line.svg';
 import TerminalLineIcon from 'remixicon/icons/Development/terminal-line.svg';
@@ -28,7 +28,7 @@ export const DevelopersGetStarted = () => {
             start?
             {'  '}
             <a
-              href={config.discordUrl}
+              href={socialMediaUrls.discordUrl}
               target="_blank"
               rel="noreferrer noopener"
               className="hover:text-green-500"
@@ -190,7 +190,7 @@ const DevelopersBanners = () => {
       </div>
       <div className="mb-4">
         <a
-          href={config.discordUrl}
+          href={socialMediaUrls.discordUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="hover:bg block rounded border border-grey-800 bg-[url('/images/common/blocks-pattern.jpg')] bg-[length:auto_200%] bg-center px-8 py-8 text-white transition-all duration-300 hover:bg-[length:auto_175%] hover:text-white md:px-16"

@@ -1,5 +1,5 @@
 import { Button } from 'components/common/button';
-import { config } from 'data/config';
+import { socialMediaUrls } from 'data/config';
 import FileList3LineIcon from 'remixicon/icons/Document/file-list-3-line.svg';
 import DiscordFillIcon from 'remixicon/icons/Logos/discord-fill.svg';
 
@@ -125,7 +125,7 @@ export const HomepagePlatform = () => {
             </li>
             <li className="w-full md:w-1/2">
               <a
-                href={config.discordUrl}
+                href={socialMediaUrls.discordUrl}
                 className="text-wh flex flex-row space-x-4 rounded-md border border-grey-800 bg-grey-900 p-4 hover:bg-grey-800 hover:text-white"
                 target="_blank"
                 rel="noopener noreferrer"

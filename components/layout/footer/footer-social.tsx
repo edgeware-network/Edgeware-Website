@@ -5,27 +5,28 @@ import IconTelegram from 'remixicon/icons/Logos/telegram-fill.svg';
 import IconDiscord from 'remixicon/icons/Logos/discord-fill.svg';
 import IconGithub from 'remixicon/icons/Logos/github-fill.svg';
 import IconReddit from 'remixicon/icons/Logos/reddit-fill.svg';
+import { socialMediaUrls } from 'data/config';
 
 const SOCIAL_LINKS = {
   Twitter: {
     icon: IconTwitter,
-    href: 'https://twitter.com/EdgewareDAO',
+    href: socialMediaUrls.twitterUrl,
   },
   Telegram: {
     icon: IconTelegram,
-    href: 'https://t.me/heyedgeware',
+    href: socialMediaUrls.telegramUrl,
   },
   Discord: {
     icon: IconDiscord,
-    href: 'https://discord.com/invite/bDktqyj',
+    href: socialMediaUrls.discordUrl,
   },
   Github: {
     icon: IconGithub,
-    href: 'https://github.com/orgs/Edgeware-Network',
+    href: socialMediaUrls.githubUrl,
   },
   IconReddit: {
     icon: IconReddit,
-    href: 'https://www.reddit.com/r/edgeware',
+    href: socialMediaUrls.redditUrl,
   },
 };
 

@@ -1137,11 +1137,11 @@ export default function Privacy() {
           <li>
             By visiting this page on our website:{' '}
             <a
-              href="https://github.com/hicommonwealth/edgeware-homepage/issues"
+              href="https://github.com/edgeware-network/Edgeware-Website/issues"
               rel="external nofollow noopener noreferrer"
               target="_blank"
             >
-              https://github.com/hicommonwealth/edgeware-homepage/issues
+              https://github.com/edgeware-network/Edgeware-Website/issues
             </a>
           </li>
         </ul>
@@ -1329,11 +1329,11 @@ export default function Privacy() {
           <li>
             By visiting this page on our website:{' '}
             <a
-              href="https://github.com/hicommonwealth/edgeware-homepage/issues"
+              href="https://github.com/edgeware-network/Edgeware-Website/issues"
               rel="external nofollow noopener noreferrer"
               target="_blank"
             >
-              https://github.com/hicommonwealth/edgeware-homepage/issues
+              https://github.com/edgeware-network/Edgeware-Website/issues
             </a>
           </li>
         </ul>

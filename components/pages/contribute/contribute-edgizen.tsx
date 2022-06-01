@@ -1,5 +1,5 @@
 import { Button } from 'components/common/button';
-import { config } from 'data/config';
+import { socialMediaUrls } from 'data/config';
 
 import OpenArmLineIcon from 'remixicon/icons/User/open-arm-line.svg';
 
@@ -17,7 +17,7 @@ export const ContributeEDGizen = () => {
             likeminded learners in the DAO and Substrate space.
           </p>
           <div className="mt-6">
-            <Button href={config.discordUrl} colorStyle="primary" sizing="normal">
+            <Button href={socialMediaUrls.discordUrl} colorStyle="primary" sizing="normal">
               Join us on Discord EDG
             </Button>
           </div>

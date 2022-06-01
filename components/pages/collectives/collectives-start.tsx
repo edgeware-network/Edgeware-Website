@@ -12,7 +12,7 @@ import ScalesLineIcon from 'remixicon/icons/Others/scales-line.svg';
 import CommandLineIcon from 'remixicon/icons/Development/command-line.svg';
 import Compass2LineIcon from 'remixicon/icons/Map/compass-2-line.svg';
 import { Button } from 'components/common/button';
-import { config } from 'data/config';
+import { socialMediaUrls } from 'data/config';
 
 export const CollectivesStart = () => {
   return (
@@ -88,7 +88,7 @@ export const CollectivesStart = () => {
       </div>
 
       <div className="my-4 text-center">
-        <Button colorStyle="primary" href={config.discordUrl} sizing="large">
+        <Button colorStyle="primary" href={socialMediaUrls.discordUrl} sizing="large">
           Start your collective
         </Button>
       </div>
