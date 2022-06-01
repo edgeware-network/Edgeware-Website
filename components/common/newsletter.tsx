@@ -29,7 +29,7 @@ const NewsletterForm: React.FC = () => {
         <label htmlFor="nl-email" aria-label="Your email address">
           <input
             id="nl-email"
-            className="md:rounded-r-0 w-full rounded-lg border border-grey-700 bg-grey-900 p-4 text-white lg:w-72"
+            className="w-full rounded-lg border border-grey-700 bg-grey-900 p-4 text-white md:rounded-r-none lg:w-72"
             type="email"
             name="EMAIL"
             placeholder="email@domain.com"
@@ -46,7 +46,7 @@ const NewsletterForm: React.FC = () => {
         </div>
         <input
           type="submit"
-          className="md:rounded-l-0 mt-4 rounded-lg bg-grey-700 py-4 px-4 text-white hover:bg-grey-800 md:mt-0 md:px-8"
+          className="curso mt-4 rounded-lg bg-grey-700 py-4 px-4 text-white hover:bg-grey-800 md:mt-0 md:rounded-l-none md:px-8"
           value="Sign up"
         />
       </fieldset>
