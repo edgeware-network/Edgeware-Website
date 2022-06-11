@@ -16,10 +16,10 @@ import { LinksList } from '../get-started/links-list';
 
 export const DevelopersGetStarted = () => {
   return (
-    <section className="container mx-auto max-w-7xl py-24 px-4" id="get-started">
+    <section className="container mx-auto max-w-7xl py-8 px-4 md:py-16 lg:py-24" id="get-started">
       {/* Intro text*/}
-      <div className="flex flex-col items-center md:flex-row md:space-x-24">
-        <div className="w-full md:w-1/2">
+      <div className="flex flex-col items-stretch md:flex-row md:space-x-24">
+        <div className="my-8 w-full md:my-0 md:w-1/2">
           <h2 className="my-4 text-3xl font-medium md:text-4xl lg:text-5xl">
             Get Started on Edgeware
           </h2>
@@ -36,7 +36,7 @@ export const DevelopersGetStarted = () => {
               Join the Developer Chat →
             </a>
           </p>
-          <ul className="my-8 flex flex-col space-y-4 font-semibold md:text-lg">
+          <ul className="mt-8 flex flex-col space-y-4 font-semibold md:text-lg">
             <li className="flex flex-row items-center">
               <ServerLineIcon className="mr-4 h-6 w-6 fill-white" />
               Run Node/Connect to RPC Endpoint
@@ -59,7 +59,7 @@ export const DevelopersGetStarted = () => {
             </li>
           </ul>
         </div>
-        <div className="w-full md:w-1/2">
+        <div className="my-8 w-full md:my-0 md:w-1/2">
           <NetworksInfo />
         </div>
       </div>
@@ -76,36 +76,37 @@ const NetworksInfo = () => {
   const networks = {
     Mainnet: {
       EdgeEVM: {
-        'RPC URL': 'https://edgeware.api.onfinality.io/public-ws/evm',
+        'RPC URL': 'https://mainnet.edgewa.re/evm',
+        'Alternative RPC URL': 'https://edgeware.api.onfinality.io/public-ws/evm',
         'Chain ID': '2021',
         Symbol: 'EDG',
-        Explorer: 'https://mainnet.edgscan.com/',
+        Explorer: 'https://evm.edgscan.live/',
       },
       EdgeWASM: {
-        'RPC URL': 'https://edgeware.api.onfinality.io/public-ws/wasm',
+        'RPC URL': 'wss://mainnet.edgewa.re',
+        'Alternative RPC URL': 'wss://edgeware.api.onfinality.io/public-ws',
         'Chain ID': '2021',
-        Symbol: 'EDG',
-        Explorer: 'https://mainnet.edgscan.com/',
+        'Chain Prefix': 7,
+        Explorer: 'https://edgeware.subscan.io/',
       },
     },
     Testnet: {
-      BearsheetEVM: {
-        'RPC URL': 'https://edgeware-testnet.api.onfinality.io/public-ws/evm',
-        'Chain ID': '2021',
-        Symbol: 'EDG',
-        Explorer: 'https://testnet.edgscan.com/',
+      BeresheetEVM: {
+        'RPC URL': 'https://beresheet.edgewa.re/evm',
+        'Chain ID': '2022',
+        Symbol: 'tEDG',
+        Explorer: 'https://testnet.edgscan.live/',
       },
-      BearsheetWASM: {
-        'RPC URL': 'https://edgeware-testnet.api.onfinality.io/public-ws/wasm',
-        'Chain ID': '2021',
-        Symbol: 'EDG',
-        Explorer: 'https://testnet.edgscan.com/',
+      BeresheetWASM: {
+        'RPC URL': 'wss://beresheet.edgewa.re',
+        'Chain Prefix': '7',
+        Explorer: 'https://beresheet.subscan.io/',
       },
     },
   };
 
   return (
-    <div className="rounded bg-grey-800">
+    <div className="h-full rounded bg-grey-800">
       <Tab.Group>
         <Tab.List className="border-b border-b-grey-700 px-4">
           {Object.keys(networks).map((network) => (

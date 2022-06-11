@@ -46,7 +46,7 @@ export const ContributeExamples = () => {
           url="https://docs.edgeware.wiki/quickstart/set-up-a-validator"
         >
           Provide security for the network, validate transactions, and earn block rewards.
-          <em className="text-green-500">17-20% APY for active set</em>
+          <em className="text-green-500">20%+ APY for active set</em>
         </ContributeExampleCard>
 
         <ContributeExampleCard
@@ -56,7 +56,7 @@ export const ContributeExamples = () => {
         >
           Help provide network security by nominating to keep validators in the live set, and earn a
           percentage of rewards.
-          <em className="text-green-500">15-17% APY</em>
+          <em className="text-green-500">20%+ APY</em>
         </ContributeExampleCard>
 
         <ContributeExampleCard
@@ -80,7 +80,7 @@ export const ContributeExamples = () => {
         >
           Become a protocol politician and lead your fellow EDGizens by collecting delegated EDG to
           vote with, becoming a trusted representative in governance on EDG.
-          <em className="text-green-500">15-17% APY</em>
+          <em className="text-green-500">20%+ APY</em>
         </ContributeExampleCard>
 
         <ContributeExampleCard

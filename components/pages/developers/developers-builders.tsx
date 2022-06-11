@@ -1,6 +1,6 @@
 export const DevelopersBuilders = () => {
   return (
-    <section className="container mx-auto max-w-6xl py-24 px-4" id="builders">
+    <section className="container mx-auto max-w-6xl py-6 px-4 md:py-12 lg:py-24" id="builders">
       {/* Intro text*/}
       <div className="flex flex-col items-center space-y-4 md:flex-row md:space-y-0 md:space-x-16">
         <div className="w-full md:w-1/2">
