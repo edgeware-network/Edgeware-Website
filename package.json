@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@edgeware/node-types": "^3.6.2-wako",
-    "@headlessui/react": "^1.6.3",
+    "@headlessui/react": "^1.6.4",
     "@polkadot/api": "^5.6.1",
     "@polkadot/extension-dapp": "^0.39.4-4",
     "@polkadot/keyring": "^7.3.1",
