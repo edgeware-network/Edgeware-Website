@@ -7,10 +7,11 @@ const EXCHANGES = {
 };
 
 const WALLETS = {
+  'Edge Apps': 'https://edgeware.app/',
+  Ledger: 'https://support.ledger.com/hc/en-us/articles/4409811412625-Edgeware-EDG-?docs=true',
   'NOVA Wallet': 'https://novawallet.io/',
   'Polkadot Apps': 'https://polkadot.js.org/apps/#/',
   'Math Wallet': 'https://mathwallet.org/en-us/',
-  'Edgeware App': 'https://edgeware.app/',
 };
 
 export const HomepageTokens = () => {
