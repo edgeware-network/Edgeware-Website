@@ -73,7 +73,7 @@ export const DevelopersGetStarted = () => {
 };
 
 const NetworksInfo = () => {
-  const networks = {
+  const NETWORKS = {
     Mainnet: {
       EdgeEVM: {
         'RPC URL': 'https://mainnet.edgewa.re/evm',
@@ -105,11 +105,34 @@ const NetworksInfo = () => {
     },
   };
 
+  const hasMetamask = typeof window !== 'undefined' && !!(window as any).ethereum;
+
+  const handleMetamaskAdd = (networkKey: string, chainKey: string) => {
+    const params = [
+      {
+        chainId: `0x${Number(NETWORKS[networkKey][chainKey]['Chain ID']).toString(16)}`,
+        chainName: chainKey,
+        nativeCurrency: {
+          name: NETWORKS[networkKey][chainKey].Symbol,
+          symbol: NETWORKS[networkKey][chainKey].Symbol,
+          decimals: 18,
+        },
+        rpcUrls: [NETWORKS[networkKey][chainKey]['RPC URL']],
+        blockExplorerUrls: [NETWORKS[networkKey][chainKey]['Explorer']],
+      },
+    ];
+
+    (window as any).ethereum
+      .request({ method: 'wallet_addEthereumChain', params })
+      .then(() => console.log('Success'))
+      .catch((error: Error) => console.log('Error', error.message));
+  };
+
   return (
     <div className="h-full rounded bg-grey-800">
       <Tab.Group>
         <Tab.List className="border-b border-b-grey-700 px-4">
-          {Object.keys(networks).map((network) => (
+          {Object.keys(NETWORKS).map((network) => (
             <Tab
               key={network}
               className={({ selected }) =>
@@ -121,7 +144,7 @@ const NetworksInfo = () => {
           ))}
         </Tab.List>
         <Tab.Panels>
-          {Object.entries(networks).map(([networkKey, networkInfo]) => (
+          {Object.entries(NETWORKS).map(([networkKey, networkInfo]) => (
             <Tab.Panel key={networkKey}>
               <Tab.Group>
                 <Tab.List className="border-b border-b-grey-700 px-4">
@@ -147,6 +170,19 @@ const NetworksInfo = () => {
                           </div>
                         ))}
                       </dl>
+                      {hasMetamask && chainKey.includes('EVM') && (
+                        <button
+                          onClick={() => handleMetamaskAdd(networkKey, chainKey)}
+                          className="mb-4 rounded bg-white p-2 text-grey-900"
+                        >
+                          <img
+                            alt=""
+                            src="/images/developers/metamask.png"
+                            className="mr-2 inline-block h-5 w-5 align-text-top"
+                          />
+                          Add network to Metamask
+                        </button>
+                      )}
                     </Tab.Panel>
                   ))}
                 </Tab.Panels>
