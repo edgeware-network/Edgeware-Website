@@ -134,7 +134,7 @@ const LINKS: Record<string, LinkItem[]> = {
 
 export default function GetStarted() {
   return (
-    <section id="get-started" className="container mx-auto my-24 max-w-7xl">
+    <section id="get-started" className="container mx-auto my-24 max-w-7xl px-4">
       <h1 className="text-center text-6xl">Get Started</h1>
 
       <LinksList headline="Holders" items={LINKS.holders} highlight />

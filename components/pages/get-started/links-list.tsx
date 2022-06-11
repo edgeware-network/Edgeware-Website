@@ -20,13 +20,13 @@ export const LinksList = ({ headline, items, highlight }: LinksListProps) => {
       {headline && (
         <h2 className="border-b border-b-grey-800 py-2 text-xl text-primary-500">{headline}</h2>
       )}
-      <ul className="my-4 grid grid-cols-1 gap-4 md:grid-cols-5">
+      <ul className="my-4 grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-5">
         {items.map((item, index) => {
           const isExternal = item.href.match(/https/);
           const Icon = item.icon;
 
           const linkClasses = {
-            base: 'group block min-w-[15rem] rounded border border-grey-800 p-4 text-white transition-all duration-300',
+            base: 'group block min-w-[14rem] rounded border border-grey-800 p-4 text-white transition-all duration-300',
             hover: 'hover:text-green-500 hover:border-green-500',
             regular: 'flex flex-row items-center',
             highlight:
@@ -45,7 +45,7 @@ export const LinksList = ({ headline, items, highlight }: LinksListProps) => {
                 <a className={linkClass} href={item.href} target="_blank" rel="noopener noreferrer">
                   <Icon
                     className={`${
-                      highlight ? 'mb-2 h-8 w-8' : 'mr-2 h-6 w-6'
+                      highlight ? 'mb-2 h-10 w-10' : 'mr-2 h-6 w-6'
                     } fill-white transition-all duration-300 group-hover:fill-green-500`}
                   />
                   {item.label}
@@ -55,7 +55,7 @@ export const LinksList = ({ headline, items, highlight }: LinksListProps) => {
                   <a className={linkClass}>
                     <Icon
                       className={`${
-                        highlight ? 'md:h-8 md:w-8' : 'mr-2 h-6 w-6'
+                        highlight ? 'mb-2 h-10 w-10' : 'mr-2 h-6 w-6'
                       } fill-white transition-all duration-300 group-hover:fill-green-500`}
                     />{' '}
                     {item.label}
