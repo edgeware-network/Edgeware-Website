@@ -17,7 +17,7 @@ import { socialMediaUrls } from 'data/config';
 export const CollectivesStart = () => {
   return (
     <section id="start-collective" className="container mx-auto my-32 max-w-7xl">
-      <div className="flex flex-col items-center text-center">
+      <div className="flex flex-col items-center px-4 text-center">
         <IconLogo />
         <h2 className="my-4 text-6xl">Start your own collective</h2>
         <p className="my-4 mx-auto max-w-prose text-lg leading-relaxed">

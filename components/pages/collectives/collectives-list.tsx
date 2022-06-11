@@ -77,8 +77,8 @@ const COLLECTIVES = [
 
 export const CollectivesList = () => {
   return (
-    <section id="collectives-list" className="my-24 mx-auto max-w-6xl">
-      <div className="grid grid-cols-3 gap-16">
+    <section id="collectives-list" className="my-24 mx-auto max-w-6xl px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-16">
         {COLLECTIVES.map((item, index) => (
           <div className="" key={index}>
             <CollectivesListItem {...item} />
