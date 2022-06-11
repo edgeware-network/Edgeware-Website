@@ -1,15 +1,35 @@
+import Slider from 'react-slick';
+
 export const DevelopersQuotes = () => {
+  const settings = {
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 10000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+  };
+
   return (
     <section className="container mx-auto my-24 max-w-3xl py-24 px-4" id="quotes">
-      <div>
-        <DevelopersQuoteEntry
-          author="Depth Hoar"
-          imageUrl="https://pbs.twimg.com/profile_images/1483878672570454017/bW-vOqqN_400x400.jpg"
-        >
+      <Slider {...settings}>
+        <DevelopersQuoteEntry author="Depth Hoar" imageUrl="/images/developers/quotes/depth.jpg">
           Working for Edgeware lets me choose my work while being part of a DAO of like-minded
           individuals, simultaneously learning and using my skills as a developer.
         </DevelopersQuoteEntry>
-      </div>
+        <DevelopersQuoteEntry author="Filip" imageUrl="/images/developers/quotes/filip.png">
+          Edgeware is the front runner of DAOs. A true community-operated autonomous network. Plus I
+          get to work with my favourite programming language Rust.
+        </DevelopersQuoteEntry>
+        <DevelopersQuoteEntry author="Ramsey" imageUrl="/images/developers/quotes/ramsey.png">
+          Edgeware has the grassroots values that allow for new ideas and paradigms to emerge.
+        </DevelopersQuoteEntry>
+        <DevelopersQuoteEntry author="Nimish" imageUrl="/images/developers/quotes/nimish.jpg">
+          I think of Edgeware as a one of a kind blockchain network which is truly being developed
+          by the community and not by some centralised entity.
+        </DevelopersQuoteEntry>
+      </Slider>
     </section>
   );
 };
