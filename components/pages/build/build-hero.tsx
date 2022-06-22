@@ -1,4 +1,4 @@
-export const DevelopersHero = () => {
+export const BuildHero = () => {
   return (
     <section
       className="container mx-auto max-w-7xl py-6 px-4 md:py-12 lg:py-24"
@@ -20,7 +20,7 @@ export const DevelopersHero = () => {
         </div>
         <div className="w-full p-8 text-center md:w-3/6 md:p-0">
           <img
-            src="/images/developers/developers-hexagon.png"
+            src="/images/build/developers-hexagon.png"
             alt=""
             loading="lazy"
             className="inline-block w-full"

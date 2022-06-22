@@ -26,7 +26,7 @@ export const HomepageHero = () => {
               <Button href={socialMediaUrls.discordUrl} sizing="large" colorStyle="primary">
                 Join Discord
               </Button>
-              <Button href="/developers" sizing="large" colorStyle="grey">
+              <Button href="/build" sizing="large" colorStyle="grey">
                 Start Building
               </Button>
             </div>

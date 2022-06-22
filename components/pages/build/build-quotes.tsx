@@ -1,6 +1,6 @@
 import Slider from 'react-slick';
 
-export const DevelopersQuotes = () => {
+export const BuildQuotes = () => {
   const settings = {
     infinite: true,
     autoplay: true,
@@ -14,33 +14,33 @@ export const DevelopersQuotes = () => {
   return (
     <section className="container mx-auto my-24 max-w-3xl py-24 px-4" id="quotes">
       <Slider {...settings}>
-        <DevelopersQuoteEntry author="Depth Hoar" imageUrl="/images/developers/quotes/depth.jpg">
+        <BuildQuoteEntry author="Depth Hoar" imageUrl="/images/build/quotes/depth.jpg">
           Working for Edgeware lets me choose my work while being part of a DAO of like-minded
           individuals, simultaneously learning and using my skills as a developer.
-        </DevelopersQuoteEntry>
-        <DevelopersQuoteEntry author="Filip" imageUrl="/images/developers/quotes/filip.png">
+        </BuildQuoteEntry>
+        <BuildQuoteEntry author="Filip" imageUrl="/images/build/quotes/filip.png">
           Edgeware is the front runner of DAOs. A true community-operated autonomous network. Plus I
           get to work with my favourite programming language Rust.
-        </DevelopersQuoteEntry>
-        <DevelopersQuoteEntry author="Ramsey" imageUrl="/images/developers/quotes/ramsey.png">
+        </BuildQuoteEntry>
+        <BuildQuoteEntry author="Ramsey" imageUrl="/images/build/quotes/ramsey.png">
           Edgeware has the grassroots values that allow for new ideas and paradigms to emerge.
-        </DevelopersQuoteEntry>
-        <DevelopersQuoteEntry author="Nimish" imageUrl="/images/developers/quotes/nimish.jpg">
+        </BuildQuoteEntry>
+        <BuildQuoteEntry author="Nimish" imageUrl="/images/build/quotes/nimish.jpg">
           I think of Edgeware as a one of a kind blockchain network which is truly being developed
           by the community and not by some centralised entity.
-        </DevelopersQuoteEntry>
+        </BuildQuoteEntry>
       </Slider>
     </section>
   );
 };
 
-type DevelopersQuoteEntryProps = {
+type BuildQuoteEntryProps = {
   children: React.ReactNode;
   author: string;
   imageUrl: string;
 };
 
-const DevelopersQuoteEntry = ({ children, author, imageUrl }: DevelopersQuoteEntryProps) => {
+const BuildQuoteEntry = ({ children, author, imageUrl }: BuildQuoteEntryProps) => {
   return (
     <div className="flex flex-col items-center space-y-4 text-center">
       <img

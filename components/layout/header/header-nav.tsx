@@ -7,7 +7,7 @@ import { Transition } from '@headlessui/react';
 const NAV_ITEMS = {
   Home: '/',
   'Contribute & Earn': '/contribute',
-  Build: '/developers',
+  Build: '/build',
   Society: '/collectives',
   Governance: 'https://gov.edgewa.re/',
   Ecosystem: '/partners',

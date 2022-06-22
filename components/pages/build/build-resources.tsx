@@ -2,7 +2,7 @@ import { Button } from 'components/common/button';
 import { socialMediaUrls } from 'data/config';
 import Apps2LineIcon from 'remixicon/icons/System/apps-2-line.svg';
 
-export const DevelopersResources = () => {
+export const BuildResources = () => {
   return (
     <section id="resources" className="container mx-auto my-6 max-w-4xl md:my-12 lg:my-24">
       <div className="flex flex-col items-center space-y-4 px-4 md:flex-row md:space-y-0 md:space-x-24">
@@ -21,14 +21,14 @@ export const DevelopersResources = () => {
           </Button>
         </div>
         <div className="w-full py-4 md:w-1/2">
-          <DevelopersResourcesLinks />
+          <BuildResourcesLinks />
         </div>
       </div>
     </section>
   );
 };
 
-const DevelopersResourcesLinks = () => {
+const BuildResourcesLinks = () => {
   const LINKS_GET_STARTED = {
     'Block Explorer': 'https://edgeware.subscan.io/',
     'Wallet & Governance':

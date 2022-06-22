@@ -14,7 +14,7 @@ import IconToken from 'remixicon/icons/Finance/copper-coin-line.svg';
 import IconChat from 'remixicon/icons/Communication/chat-1-line.svg';
 import { LinksList } from '../get-started/links-list';
 
-export const DevelopersGetStarted = () => {
+export const BuildGetStarted = () => {
   return (
     <section className="container mx-auto max-w-7xl py-8 px-4 md:py-16 lg:py-24" id="get-started">
       {/* Intro text*/}
@@ -66,7 +66,7 @@ export const DevelopersGetStarted = () => {
 
       {/* Banners */}
       <div className="my-16">
-        <DevelopersBanners />
+        <BuildBanners />
       </div>
     </section>
   );
@@ -177,7 +177,7 @@ const NetworksInfo = () => {
                         >
                           <img
                             alt=""
-                            src="/images/developers/metamask.png"
+                            src="/images/build/metamask.png"
                             className="mr-2 inline-block h-5 w-5 align-text-top"
                           />
                           Add network to Metamask
@@ -195,7 +195,7 @@ const NetworksInfo = () => {
   );
 };
 
-const DevelopersBanners = () => {
+const BuildBanners = () => {
   const BUILDERS_LINKS = [
     {
       label: 'Launch Your Dapp',

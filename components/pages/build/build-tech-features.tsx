@@ -1,6 +1,6 @@
 import AsteriskIcon from 'remixicon/icons/Editor/asterisk.svg';
 
-export const DevelopersTechFeatures = () => {
+export const BuildTechFeatures = () => {
   return (
     <section
       className="md-my-12 container mx-auto my-6 max-w-5xl py-24 px-4 lg:my-24"

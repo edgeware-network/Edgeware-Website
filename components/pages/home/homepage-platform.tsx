@@ -145,7 +145,7 @@ export const HomepagePlatform = () => {
           </ul>
 
           <div className="my-16 text-center">
-            <Button href="/developers" sizing="large" colorStyle="primary">
+            <Button href="/build" sizing="large" colorStyle="primary">
               Start Building
             </Button>
           </div>

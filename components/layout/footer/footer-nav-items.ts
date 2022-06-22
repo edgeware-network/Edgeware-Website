@@ -17,7 +17,7 @@ export const footerLinks: FooterLinksGroup[] = [
   {
     headline: 'Developers',
     items: {
-      'Get started': '/developers',
+      'Get started': '/build',
       Documentation: 'https://docs.edgeware.wiki/',
       Validators: 'https://docs.edgeware.wiki/quickstart/set-up-a-validator',
       Whitepaper:
