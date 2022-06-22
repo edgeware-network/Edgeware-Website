@@ -244,12 +244,12 @@ const BuildBanners = () => {
     {
       label: 'Build a Pallet',
       icon: TerminalLineIcon,
-      href: 'https://docs.edgeware.wiki/',
+      href: 'https://docs.edgeware.wiki/development/develop/smart-contracts/wasm-smart-contracts/#contracts-pallet',
     },
     {
       label: 'Build/Maintain Runtime',
       icon: ServerLineIcon,
-      href: 'https://github.com/hicommonwealth/edgeware-node/blob/master/README.md',
+      href: 'https://docs.edgeware.wiki/development/develop/smart-contracts/wasm-smart-contracts/#runtime-environment-types',
     },
   ];
 
