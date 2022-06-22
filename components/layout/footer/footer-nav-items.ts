@@ -5,33 +5,35 @@ type FooterLinksGroup = {
 
 export const footerLinks: FooterLinksGroup[] = [
   {
-    headline: 'Ecosystem',
+    headline: 'Community',
     items: {
-      Society: '/collectives',
-      Partners: '/partners',
-      Lockdrop: 'https://commonwealth.im/edgeware/stats',
+      Interface: 'https://www.edgeware.app/?rpc=wss%3A%2F%2Fmainnet.edgewa.re#/explorer',
+      Governance: 'https://gov.edgewa.re/',
+      Discord: 'http://edgeware.chat/',
+      Society: '/society',
       Press: '/press',
-      'Swag Store': 'https://edgeware.store/#',
     },
   },
   {
     headline: 'Developers',
     items: {
-      'Get started': '/build',
+      Build: '/build',
+      'Block Explorer': 'https://edgeware.subscan.io/',
+      Github: 'https://github.com/edgeware-network',
       Documentation: 'https://docs.edgeware.wiki/',
       Validators: 'https://docs.edgeware.wiki/quickstart/set-up-a-validator',
-      Whitepaper:
-        'https://arena-attachments.s3.amazonaws.com/4643268/c8d128724f36b716660e4bf21823e760.pdf?1563310093',
       Keygen: '/keygen',
     },
   },
   {
-    headline: 'Community',
+    headline: 'Decentralization',
     items: {
-      Society: '/collectives',
-      Commonwealth: 'https://commonwealth.im/',
+      Whitepaper: '/assets/whitepaper/edgeware-whitepaper.pdf',
+      'Lock Drop':
+        'https://commonwealth.im/edgeware/discussion/102-examining-the-edgeware-lockdrop-gini-coefficients-and-successes',
+      Democracy: 'https://docs.edgeware.wiki/edgeware-stack/governance/',
       'Decent Partners': 'https://www.decent.partners/',
-      'Edgeware Agency': 'https://edgeware.agency/',
+      Ecosystem: '/ecosystem',
     },
   },
   {
