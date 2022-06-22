@@ -10,12 +10,12 @@ export default function Developer() {
   return (
     <>
       <BuildHero />
-      <BuildQuotes />
-      <BuildGetStarted />
-      <BuildBuilders />
       <BuildTechFeatures />
+      <BuildGetStarted />
       <BuildResources />
+      <BuildBuilders />
       <BuildRunNode />
+      <BuildQuotes />
     </>
   );
 }

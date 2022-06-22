@@ -7,6 +7,8 @@ import TerminalWindowLine from 'remixicon/icons/Development/terminal-window-line
 import ServerLineIcon from 'remixicon/icons/Device/server-line.svg';
 import EarthLineIcon from 'remixicon/icons/Map/earth-line.svg';
 
+import IconGithub from 'remixicon/icons/Logos/github-fill.svg';
+
 import IconWindow from 'remixicon/icons/Business/window-line.svg';
 import IconExchange from 'remixicon/icons/Finance/exchange-line.svg';
 import IconResume from 'remixicon/icons/System/shield-user-line.svg';
@@ -31,33 +33,14 @@ export const BuildGetStarted = () => {
               href={socialMediaUrls.discordUrl}
               target="_blank"
               rel="noreferrer noopener"
-              className="hover:text-green-500"
+              className="text-green-500 hover:text-green-600"
             >
               Join the Developer Chat →
             </a>
           </p>
-          <ul className="mt-8 flex flex-col space-y-4 font-semibold md:text-lg">
-            <li className="flex flex-row items-center">
-              <ServerLineIcon className="mr-4 h-6 w-6 fill-white" />
-              Run Node/Connect to RPC Endpoint
-            </li>
-            <li className="flex flex-row items-center">
-              <EarthLineIcon className="mr-4 h-6 w-6 fill-white" />
-              Choose Environment
-            </li>
-            <li className="flex flex-row items-center">
-              <CodeSSlashLineIcon className="mr-4 h-6 w-6 fill-white" />
-              Build Dapps/Protocols
-            </li>
-            <li className="flex flex-row items-center">
-              <TerminalWindowLine className="mr-4 h-6 w-6 fill-white" />
-              Build a Pallet
-            </li>
-            <li className="flex flex-row items-center">
-              <TerminalLineIcon className="mr-4 h-6 w-6 fill-white" />
-              Build / Maintain Runtime
-            </li>
-          </ul>
+          <div className="mt-8">
+            <GetStartedLinks />
+          </div>
         </div>
         <div className="my-8 w-full md:my-0 md:w-1/2">
           <NetworksInfo />
@@ -195,29 +178,79 @@ const NetworksInfo = () => {
   );
 };
 
+const GetStartedLinks = () => {
+  const GET_STARTED_LINKS = [
+    {
+      label: 'Github',
+      icon: IconGithub,
+      href: 'https://github.com/edgeware-network',
+    },
+    {
+      label: 'Builders Chat',
+      icon: EarthLineIcon,
+      href: 'https://t.me/edg_developers',
+    },
+    {
+      href: 'https://docs.edgeware.wiki/',
+      icon: CodeSSlashLineIcon,
+      label: 'Documentation',
+    },
+    {
+      label: 'Block Explorer',
+      icon: TerminalWindowLine,
+      href: 'https://edgeware.subscan.io/',
+    },
+    {
+      label: 'Post your resume',
+      icon: IconResume,
+      href: 'https://commonwealth.im/edgeware/discussions/Recruitment',
+    },
+  ];
+
+  return (
+    <ul className="flex flex-col space-y-4 font-semibold md:text-lg">
+      {GET_STARTED_LINKS.map(({ label, icon, href }) => {
+        const Icon = icon;
+        return (
+          <li key={label}>
+            <a href={href} className="flex flex-row items-center hover:text-green-500">
+              <Icon className="mr-4 h-6 w-6 fill-white" />
+              {label}
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
+
 const BuildBanners = () => {
   const BUILDERS_LINKS = [
     {
-      label: 'Launch Your Dapp',
+      label: 'Launch a Dapp',
       icon: IconWindow,
       href: 'https://docs.edgeware.wiki/development/develop/smart-contracts',
     },
     {
-      label: 'Mint a Token',
+      label: 'Run a Node',
       icon: IconToken,
-      href: 'https://docs.edgeware.wiki/development/develop/smart-contracts/evm-smart-contracts/tutorials/deploy-an-evm-contract/using-truffle',
+      href: 'https://docs.edgeware.wiki/quickstart/set-up-a-full-node',
     },
     {
-      label: 'Integrate Exchange',
+      label: 'Run a Validator',
       icon: IconExchange,
-      href: 'https://edgeware-a.slab.com/public/posts/yqrtzorf',
+      href: 'https://docs.edgeware.wiki/quickstart/set-up-a-validator',
     },
     {
-      label: 'List your Resume',
-      icon: IconResume,
-      href: 'https://commonwealth.im/edgeware/proposal/discussion/756-job-board',
+      label: 'Build a Pallet',
+      icon: TerminalLineIcon,
+      href: 'https://docs.edgeware.wiki/',
     },
-    { label: 'Builders Chat', icon: IconChat, href: 'https://t.me/edg_developers' },
+    {
+      label: 'Build/Maintain Runtime',
+      icon: ServerLineIcon,
+      href: 'https://github.com/hicommonwealth/edgeware-node/blob/master/README.md',
+    },
   ];
 
   return (
