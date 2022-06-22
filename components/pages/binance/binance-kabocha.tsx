@@ -14,7 +14,7 @@ export const BinanceKabocha: React.FC = () => {
         </div>
 
         <h1 className="my-4 text-5xl font-medium">
-          We’re airdropping a new Kusama Parachain token to EDG holders
+          EDG holders will be receiving Kusama Parachain tokens
         </h1>
 
         <p className="my-8 text-lg">

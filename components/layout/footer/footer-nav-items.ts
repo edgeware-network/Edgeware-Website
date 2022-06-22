@@ -29,8 +29,8 @@ export const footerLinks: FooterLinksGroup[] = [
     headline: 'Decentralization',
     items: {
       Whitepaper: '/assets/whitepaper/edgeware-whitepaper.pdf',
-      'Lock Drop':
-        'https://commonwealth.im/edgeware/discussion/102-examining-the-edgeware-lockdrop-gini-coefficients-and-successes',
+      Lockdrop:
+        'https://gov.edgewa.re/discussion/102-examining-the-edgeware-lockdrop-gini-coefficients-and-successes',
       Democracy: 'https://docs.edgeware.wiki/edgeware-stack/governance/',
       'Decent Partners': 'https://www.decent.partners/',
       Ecosystem: '/ecosystem',

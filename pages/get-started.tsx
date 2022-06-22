@@ -31,9 +31,9 @@ import type { LinkItem } from '../components/pages/get-started/links-list';
 
 const LINKS: Record<string, LinkItem[]> = {
   holders: [
-    { label: 'Governance', icon: IconGov, href: 'https:/gov.edgewa.re' },
+    { label: 'Governance', icon: IconGov, href: 'https://gov.edgewa.re' },
     {
-      label: 'Edgeware Apps',
+      label: 'EdgeApps',
       icon: IconWallet,
       href: 'https://www.edgeware.app/?rpc=wss%3A%2F%2Fmainnet.edgewa.re#/',
     },
@@ -48,12 +48,12 @@ const LINKS: Record<string, LinkItem[]> = {
 
   wallets: [
     {
-      label: 'Edgeware Apps',
+      label: 'EdgeApps',
       icon: IconWallet,
       href: 'https://www.edgeware.app/?rpc=wss%3A%2F%2Fmainnet.edgewa.re#/',
     },
     {
-      label: 'Polkadot Apps',
+      label: 'PolkadotApps',
       icon: IconWallet,
       href: 'https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fmainnet.edgewa.re#/',
     },
@@ -97,14 +97,14 @@ const LINKS: Record<string, LinkItem[]> = {
     {
       label: 'Apply for Funding',
       icon: IconBank,
-      href: 'https://commonwealth.im/edgeware/treasury',
+      href: 'https://gov.edgewa.re/treasury',
     },
     {
       label: 'Post a Proposal',
       icon: IconPost,
-      href: 'https://commonwealth.im/edgeware/proposals',
+      href: 'https://gov.edgewa.re/proposals',
     },
-    { label: 'View Proposals', icon: IconList, href: 'https://commonwealth.im/edgeware/proposals' },
+    { label: 'View Proposals', icon: IconList, href: 'https://gov.edgewa.re/proposals' },
     {
       label: 'Join Community',
       icon: IconUser,

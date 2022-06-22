@@ -203,7 +203,7 @@ const GetStartedLinks = () => {
     {
       label: 'Post your resume',
       icon: IconResume,
-      href: 'https://commonwealth.im/edgeware/discussions/Recruitment',
+      href: 'https://gov.edgewa.re/discussions/Recruitment',
     },
   ];
 

@@ -26,7 +26,7 @@ export const getStaticProps: GetStaticProps<PartnersPageStaticProps> = async () 
   return {
     props: {
       meta: {
-        title: 'Our Partners - Home to next generation networks',
+        title: 'Ecosystem - Home to next generation networks',
         description:
           'Edgeware partners with leading cryptocurrency teams, projects and collectives to create the future of Web3',
       },

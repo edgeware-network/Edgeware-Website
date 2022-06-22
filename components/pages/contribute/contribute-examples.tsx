@@ -15,7 +15,7 @@ export const ContributeExamples = () => {
         <ContributeExampleCard
           tag="Case Study"
           title="Exit Theory by Justin Murphy"
-          url="https://commonwealth.im/edgeware/proposal/discussion/1131-exit-theory-a-content-and-community-project"
+          url="https://gov.edgewa.re/proposal/discussion/1131-exit-theory-a-content-and-community-project"
           prominent
           bgCover="city"
         >
@@ -45,7 +45,7 @@ export const ContributeExamples = () => {
           title="Validator"
           url="https://docs.edgeware.wiki/quickstart/set-up-a-validator"
         >
-          Provide security for the network, validate transactions, and earn block rewards.
+          Provide security for the network, validate transactions, and earn block rewards.{' '}
           <em className="text-green-500">20%+ APY for active set</em>
         </ContributeExampleCard>
 
@@ -55,8 +55,7 @@ export const ContributeExamples = () => {
           url="https://docs.edgeware.wiki/edgeware-stack/staking/nominating"
         >
           Help provide network security by nominating to keep validators in the live set, and earn a
-          percentage of rewards.
-          <em className="text-green-500">20%+ APY</em>
+          percentage of rewards. <em className="text-green-500">20%+ APY</em>
         </ContributeExampleCard>
 
         <ContributeExampleCard
@@ -74,19 +73,18 @@ export const ContributeExamples = () => {
         </ContributeExampleCard>
 
         <ContributeExampleCard
-          tag="Validator"
-          title="Delegate"
+          tag="Governance"
+          title="Delegate votes"
           url="https://docs.edgeware.wiki/edgeware-stack/governance/democracy/delegation"
         >
           Become a protocol politician and lead your fellow EDGizens by collecting delegated EDG to
           vote with, becoming a trusted representative in governance on EDG.
-          <em className="text-green-500">20%+ APY</em>
         </ContributeExampleCard>
 
         <ContributeExampleCard
           tag="Governance"
           title="Bounties"
-          url="https://commonwealth.im/edgeware/proposal/discussion/1398-onchain-bounties-ideas-meta-discussion"
+          url="https://gov.edgewa.re/proposal/discussion/1398-onchain-bounties-ideas-meta-discussion"
         >
           We support on-chain bounties; great for bugs, documentation improvements, translations,
           and more.

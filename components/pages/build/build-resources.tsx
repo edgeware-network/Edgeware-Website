@@ -33,7 +33,7 @@ const BuildResourcesLinks = () => {
     'Block Explorer': 'https://edgeware.subscan.io/',
     'Wallet & Governance':
       'https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fmainnet4.edgewa.re#/accounts',
-    'Forum & Proposals': 'https://commonwealth.im/edgeware',
+    'Forum & Proposals': 'https://gov.edgewa.re/',
   };
 
   const LINKS_DEVELOP = {
