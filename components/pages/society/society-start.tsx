@@ -14,7 +14,7 @@ import Compass2LineIcon from 'remixicon/icons/Map/compass-2-line.svg';
 import { Button } from 'components/common/button';
 import { socialMediaUrls } from 'data/config';
 
-export const CollectivesStart = () => {
+export const SocietyStart = () => {
   return (
     <section id="start-collective" className="container mx-auto my-32 max-w-7xl">
       <div className="flex flex-col items-center px-4 text-center">

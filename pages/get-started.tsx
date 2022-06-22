@@ -40,10 +40,10 @@ const LINKS: Record<string, LinkItem[]> = {
     {
       label: 'Whitepaper',
       icon: IconPaper,
-      href: 'https://arena-attachments.s3.amazonaws.com/4643268/c8d128724f36b716660e4bf21823e760.pdf?1563310093',
+      href: '/assets/whitepaper/edgeware-whitepaper.pdf',
     },
-    { label: 'Discord', icon: IconDiscord, href: 'https://discord.gg/bkBctVs5F5' },
-    { label: 'Collectives', icon: IconBubbles, href: '/collectives' },
+    { label: 'Discord', icon: IconDiscord, href: 'http://edgeware.chat/' },
+    { label: 'Society', icon: IconBubbles, href: '/society' },
   ],
 
   wallets: [

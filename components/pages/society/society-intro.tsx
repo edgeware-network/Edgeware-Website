@@ -1,4 +1,4 @@
-export const CollectivesSocietyIntro = () => {
+export const SocietyIntro = () => {
   return (
     <section id="edgeware-society" className="my-24 px-4 text-center">
       <h1 className="my-8 text-6xl">Edgeware Society</h1>

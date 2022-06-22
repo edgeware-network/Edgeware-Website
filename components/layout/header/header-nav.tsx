@@ -8,7 +8,7 @@ const NAV_ITEMS = {
   Home: '/',
   'Contribute & Earn': '/contribute',
   Build: '/build',
-  Society: '/collectives',
+  Society: '/society',
   Governance: 'https://gov.edgewa.re/',
   Ecosystem: '/partners',
   'Get Started': '/get-started',

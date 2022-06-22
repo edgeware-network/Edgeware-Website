@@ -1,15 +1,15 @@
 import { Newsletter } from '../components/common/newsletter';
 
-import { CollectivesSocietyIntro } from 'components/pages/collectives/collectives-society-intro';
-import { CollectivesList } from 'components/pages/collectives/collectives-list';
-import { CollectivesStart } from 'components/pages/collectives/collectives-start';
+import { SocietyIntro } from 'components/pages/society/society-intro';
+import { CollectivesList } from 'components/pages/society/society-list';
+import { SocietyStart } from 'components/pages/society/society-start';
 
-export default function Collectives() {
+export default function SocietyPage() {
   return (
     <>
-      <CollectivesSocietyIntro />
+      <SocietyIntro />
       <CollectivesList />
-      <CollectivesStart />
+      <SocietyStart />
       <Newsletter />
     </>
   );
@@ -19,7 +19,7 @@ export async function getStaticProps() {
   return {
     props: {
       meta: {
-        title: 'Find your people or start a collective',
+        title: 'Find your society at Edgeware',
         description:
           'Whether you are looking to develop an idea, a team looking to launch a project or an established community looking to add rocket fuel to your dreams, Edgeware is a place you can call home.',
       },
