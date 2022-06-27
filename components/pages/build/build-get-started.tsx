@@ -63,7 +63,6 @@ const NetworksInfo = () => {
         'Alternative RPC URL': 'https://edgeware.api.onfinality.io/public-ws/evm',
         'Chain ID': '2021',
         Symbol: 'EDG',
-        Explorer: 'https://evm.edgscan.live/',
       },
       EdgeWASM: {
         'RPC URL': 'wss://mainnet.edgewa.re',
@@ -81,11 +80,16 @@ const NetworksInfo = () => {
         Explorer: 'https://testnet.edgscan.live/',
       },
       BeresheetWASM: {
-        'RPC URL': 'wss://beresheet.edgewa.re',
+        'RPC URL': 'wss://beresheet1.edgewa.re',
         'Chain Prefix': '7',
         Explorer: 'https://beresheet.subscan.io/',
       },
     },
+  };
+
+  const APP_URLS = {
+    edgeApps: 'https://www.edgeware.app/',
+    polkadotApps: 'https://polkadot.js.org/apps/',
   };
 
   const hasMetamask = typeof window !== 'undefined' && !!(window as any).ethereum;
@@ -109,6 +113,12 @@ const NetworksInfo = () => {
       .request({ method: 'wallet_addEthereumChain', params })
       .then(() => console.log('Success'))
       .catch((error: Error) => console.log('Error', error.message));
+  };
+
+  const handleOpen = (networkKey: string, chainKey: string, app: keyof typeof APP_URLS) => {
+    const rpcUrl = encodeURIComponent(NETWORKS[networkKey][chainKey]['RPC URL']);
+    const target = `${APP_URLS[app]}?rpc=${rpcUrl}`;
+    window.open(target);
   };
 
   return (
@@ -165,6 +175,22 @@ const NetworksInfo = () => {
                           />
                           Add network to Metamask
                         </button>
+                      )}
+                      {chainKey.includes('WASM') && (
+                        <>
+                          <button
+                            onClick={() => handleOpen(networkKey, chainKey, 'edgeApps')}
+                            className="mb-4 mr-2 rounded bg-white p-2 text-grey-900"
+                          >
+                            Open in EdgeApps
+                          </button>
+                          <button
+                            onClick={() => handleOpen(networkKey, chainKey, 'polkadotApps')}
+                            className="mb-4 mr-2 rounded bg-white p-2 text-grey-900"
+                          >
+                            Open in PolkadotApps
+                          </button>
+                        </>
                       )}
                     </Tab.Panel>
                   ))}
