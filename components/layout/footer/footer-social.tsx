@@ -7,7 +7,13 @@ import IconGithub from 'remixicon/icons/Logos/github-fill.svg';
 import IconReddit from 'remixicon/icons/Logos/reddit-fill.svg';
 import { socialMediaUrls } from 'data/config';
 
+import IconMatrix from '../../../public/images/common/matrix-logo-white.svg';
+
 const SOCIAL_LINKS = {
+  Discord: {
+    icon: IconDiscord,
+    href: socialMediaUrls.discordUrl,
+  },
   Twitter: {
     icon: IconTwitter,
     href: socialMediaUrls.twitterUrl,
@@ -16,17 +22,17 @@ const SOCIAL_LINKS = {
     icon: IconTelegram,
     href: socialMediaUrls.telegramUrl,
   },
-  Discord: {
-    icon: IconDiscord,
-    href: socialMediaUrls.discordUrl,
-  },
   Github: {
     icon: IconGithub,
     href: socialMediaUrls.githubUrl,
   },
-  IconReddit: {
+  Reddit: {
     icon: IconReddit,
     href: socialMediaUrls.redditUrl,
+  },
+  Matrix: {
+    icon: IconMatrix,
+    href: socialMediaUrls.matrixUrl,
   },
 };
 
@@ -36,6 +42,21 @@ export const FooterSocial = () => {
     <div className="flex flex-row justify-start">
       {linkEntries.map(([key, linkData]) => {
         const Icon = linkData.icon;
+        if (key === 'Matrix') {
+          return (
+            <a
+              href={linkData.href}
+              className="mr-2 opacity-25 hover:opacity-50"
+              target="_blank"
+              rel="noopener noreferrer"
+              key={key}
+              aria-label={key}
+            >
+              <Icon className="h-8 fill-white" />
+            </a>
+          );
+        }
+
         return (
           <a
             href={linkData.href}
@@ -45,7 +66,7 @@ export const FooterSocial = () => {
             key={key}
             aria-label={key}
           >
-            <Icon className="h-6 w-6 fill-white" />
+            <Icon className="h-8 w-8 fill-white" />
           </a>
         );
       })}
