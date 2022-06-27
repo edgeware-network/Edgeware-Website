@@ -13,7 +13,6 @@ import IconWindow from 'remixicon/icons/Business/window-line.svg';
 import IconExchange from 'remixicon/icons/Finance/exchange-line.svg';
 import IconResume from 'remixicon/icons/System/shield-user-line.svg';
 import IconToken from 'remixicon/icons/Finance/copper-coin-line.svg';
-import IconChat from 'remixicon/icons/Communication/chat-1-line.svg';
 import { LinksList } from '../get-started/links-list';
 
 export const BuildGetStarted = () => {

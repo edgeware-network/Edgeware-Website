@@ -4,7 +4,7 @@ import FundsLineIcon from 'remixicon/icons/Finance/funds-line.svg';
 
 const getImagePathFromName = (name: string) => {
   const filename = slugify(name, { lower: true });
-  return `/images/partners/${filename}.png`;
+  return `/images/ecosystem/partners/${filename}.png`;
 };
 
 export type PartnerCardProps = {

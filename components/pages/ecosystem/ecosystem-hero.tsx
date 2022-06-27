@@ -1,4 +1,4 @@
-export const PartnersHero: React.FC = () => {
+export const EcosystemHero: React.FC = () => {
   return (
     <section className="bg-[url('/images/partners/partners-bg@2x.jpg')] bg-cover bg-center pt-36">
       <div className="container mx-auto flex min-h-[75vh] max-w-6xl">

@@ -10,7 +10,7 @@ const NAV_ITEMS = {
   Build: '/build',
   Society: '/society',
   Governance: 'https://gov.edgewa.re/',
-  Ecosystem: '/partners',
+  Ecosystem: '/ecosystem',
   'Get Started': '/get-started',
 };
 

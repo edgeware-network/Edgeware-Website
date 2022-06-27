@@ -2,8 +2,8 @@ import * as React from 'react';
 import { GetStaticProps, NextPage } from 'next';
 
 import { getAllPartners, AllPartnersData } from 'lib/api';
-import { PartnersHero } from 'components/pages/partners/partners-hero';
-import { PartnersList } from 'components/pages/partners/partners-list';
+import { EcosystemHero } from 'components/pages/ecosystem/ecosystem-hero';
+import { EcosystemPartnersList } from 'components/pages/ecosystem/ecosystem-list';
 
 type PartnersPageStaticProps = {
   allPartnersByCategory: AllPartnersData;
@@ -14,8 +14,8 @@ const PartnersPage: NextPage<PartnersPageStaticProps> = ({
 }: PartnersPageStaticProps) => {
   return (
     <>
-      <PartnersHero />
-      <PartnersList allPartnersByCategory={allPartnersByCategory} />
+      <EcosystemHero />
+      <EcosystemPartnersList allPartnersByCategory={allPartnersByCategory} />
     </>
   );
 };

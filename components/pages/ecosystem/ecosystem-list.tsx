@@ -1,19 +1,19 @@
 import { AllPartnersData } from 'lib/api/partners';
 import slugify from 'slugify';
-import { PartnerCard } from './partners-list-card';
+import { PartnerCard } from './ecosystem-list-card';
 
-type PartnersListProps = {
+type EcosystemPartnersListProps = {
   allPartnersByCategory: AllPartnersData;
 };
 
-export const PartnersList = ({ allPartnersByCategory }: PartnersListProps) => {
+export const EcosystemPartnersList = ({ allPartnersByCategory }: EcosystemPartnersListProps) => {
   return (
     <section className="container mx-auto max-w-6xl">
       <h2 className="text-center text-5xl">Our Partners</h2>
-      <PartnersListNav items={allPartnersByCategory.map((g) => g.category)} />
+      <EcosystemPartnersListNav items={allPartnersByCategory.map((g) => g.category)} />
       <div className="my-8">
         {allPartnersByCategory.map((partnerGroup) => (
-          <PartnerCategory
+          <EcosystemPartnersCategory
             key={partnerGroup.category}
             categoryName={partnerGroup.category}
             id={slugify(partnerGroup.category, { lower: true })}
@@ -21,18 +21,18 @@ export const PartnersList = ({ allPartnersByCategory }: PartnersListProps) => {
             {partnerGroup.partners.map((partner) => (
               <PartnerCard {...partner} key={partner.name} />
             ))}
-          </PartnerCategory>
+          </EcosystemPartnersCategory>
         ))}
       </div>
     </section>
   );
 };
 
-type PartnersListNavProps = {
+type EcosystemPartnersListNavProps = {
   items: string[];
 };
 
-const PartnersListNav = ({ items }: PartnersListNavProps) => {
+const EcosystemPartnersListNav = ({ items }: EcosystemPartnersListNavProps) => {
   return (
     <nav className="my-8 mx-auto flex max-w-4xl flex-row flex-wrap items-center justify-center">
       {items.map((cat) => (
@@ -48,13 +48,17 @@ const PartnersListNav = ({ items }: PartnersListNavProps) => {
   );
 };
 
-type PartnerCategoryProps = {
+type EcosystemPartnersCategoryProps = {
   children: React.ReactNode;
   categoryName: string;
   id: string;
 };
 
-export const PartnerCategory = ({ categoryName, id, children }: PartnerCategoryProps) => {
+export const EcosystemPartnersCategory = ({
+  categoryName,
+  id,
+  children,
+}: EcosystemPartnersCategoryProps) => {
   return (
     <div className="my-8" id={`category-${id}`}>
       <div className="text-center">
