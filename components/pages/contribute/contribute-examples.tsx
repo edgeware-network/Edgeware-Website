@@ -24,21 +24,29 @@ export const ContributeExamples = () => {
         <ContributeExampleCard
           tag="Case Study"
           title="Edgeware Agency"
-          url="https://edgeware.agency/"
+          url="https://gov.edgewa.re/discussion/3834-agency-funding-feb-22"
           prominent
           bgCover="atoms"
         >
           Decentralizing chain operations from core teams, the Agency proposal funded the growth of
-          both talent and our chain’s development.
+          both talent and our chain's development.
         </ContributeExampleCard>
       </div>
       <div className="my-4 grid grid-cols-1 justify-center gap-4 md:grid-cols-2 md:gap-8 lg:my-8 lg:grid-cols-3 lg:gap-12">
-        <ContributeExampleCard tag="DAO" title="Identity Registrar" url="https://edgewa.re/">
-          Earn EDG for each user’s on-chain identity you manually or automatically verified.
+        <ContributeExampleCard
+          tag="DAO"
+          title="Identity Registrar"
+          url="https://www.edgeware.wiki/edgeware-stack/identity#becoming-a-registrar"
+        >
+          Earn EDG for each user's on-chain identity you manually or automatically verified.
         </ContributeExampleCard>
-        <ContributeExampleCard tag="DAO" title="Curator" url="https://edgewa.re/">
-          These fixers work with bounty-hunters to select solutions that fulfil the bounty, and pay
-          out the reward as a service.
+        <ContributeExampleCard
+          tag="DAO"
+          title="Curator"
+          url="https://docs.edgeware.wiki/community/public-grants#optional-creating-a-multisig-escrow"
+        >
+          Work with community partners to create and fulfil proposals, and pay out the reward as a
+          service.
         </ContributeExampleCard>
         <ContributeExampleCard
           tag="Validator"
@@ -46,7 +54,7 @@ export const ContributeExamples = () => {
           url="https://docs.edgeware.wiki/quickstart/set-up-a-validator"
         >
           Provide security for the network, validate transactions, and earn block rewards.{' '}
-          <em className="text-green-500">20%+ APY for active set</em>
+          <em className="block not-italic text-green-500">20%+ APY for active set</em>
         </ContributeExampleCard>
 
         <ContributeExampleCard
@@ -55,7 +63,7 @@ export const ContributeExamples = () => {
           url="https://docs.edgeware.wiki/edgeware-stack/staking/nominating"
         >
           Help provide network security by nominating to keep validators in the live set, and earn a
-          percentage of rewards. <em className="text-green-500">20%+ APY</em>
+          percentage of rewards. <em className="block not-italic text-green-500">20%+ APY</em>
         </ContributeExampleCard>
 
         <ContributeExampleCard
@@ -68,7 +76,11 @@ export const ContributeExamples = () => {
           utilize these funds through a democratic and open process.
         </ContributeExampleCard>
 
-        <ContributeExampleCard tag="DAO" title="Community Ops" url="https://edgewa.re/">
+        <ContributeExampleCard
+          tag="DAO"
+          title="Community Ops"
+          url="https://docs.edgeware.wiki/community/contributing#how-to-contribute"
+        >
           Provide support and moderation services for Edgeware Community.
         </ContributeExampleCard>
 
