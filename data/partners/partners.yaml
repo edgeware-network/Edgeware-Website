@@ -30,16 +30,16 @@ partners:
         funded: true
       - name: Patract Elara
         description: Elara provides Polkadot developers with free, instant and scalable blockchain API access services, including Polkadot, Kusama, etc.
-        link: Elara provides Polkadot developers with free, instant and scalable blockchain API access services, including Polkadot, Kusama, etc.
+        link: https://www.patract.io/
       - name: Covalent
         description: Covalent provides a unified API bringing visibility to billions of blockchain data points.
-        link: Covalent provides a unified API bringing visibility to billions of blockchain data points.
+        link: https://www.covalenthq.com/
       - name: Knit Finance
         description: Knit is a protocol for creating cross-chain wrappers for the top-200 assets. Deposit to insured custody and mint K-Assets.
-        link: Knit is a protocol for creating cross-chain wrappers for the top-200 assets. Deposit to insured custody and mint K-Assets.
+        link: https://knit.finance/
       - name: Biconomy
         description: Biconomy enables simple blockchain transactions by leveraging scalable relayer infrastructure.
-        link: Biconomy enables simple blockchain transactions by leveraging scalable relayer infrastructure.
+        link: https://www.biconomy.io/
         funded: true
   - category: Oracles
     partners:

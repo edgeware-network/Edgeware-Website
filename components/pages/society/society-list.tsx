@@ -23,7 +23,7 @@ const COLLECTIVES = [
     description:
       'Works to create an ecosystem of support for developers and application builders in the network. Resources, Q/A, and discussion about technical advancement of the network are the usual activities.',
     members: '+90',
-    href: 'https://linktr.ee/edg_developers',
+    href: 'https://t.me/edg_developers',
   },
   {
     imageSrc: '/images/society/dao-working-group.jpg',
@@ -115,14 +115,18 @@ const SocietyListItem = (props: SocietyCardProps) => {
           {members} Members
         </span>
 
-        <a
-          href={href}
-          className="inline-block rounded bg-grey-800 py-2 px-8 hover:bg-grey-600 hover:text-white"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Join
-        </a>
+        {title === 'Edgeware Agency' ? (
+          <span className="text-grey-600">Decentralized</span>
+        ) : (
+          <a
+            href={href}
+            className="inline-block rounded bg-grey-800 py-2 px-8 hover:bg-grey-600 hover:text-white"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Join
+          </a>
+        )}
       </div>
     </div>
   );
