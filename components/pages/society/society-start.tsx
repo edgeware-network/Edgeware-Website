@@ -88,7 +88,11 @@ export const SocietyStart = () => {
       </div>
 
       <div className="my-4 text-center">
-        <Button colorStyle="primary" href={socialMediaUrls.discordUrl} sizing="large">
+        <Button
+          colorStyle="primary"
+          href="https://gov.edgewa.re/proposal/discussion/702-edg-working-groups-a-primer"
+          sizing="large"
+        >
           Start your collective
         </Button>
       </div>
