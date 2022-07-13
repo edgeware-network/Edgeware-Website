@@ -1,4 +1,8 @@
 import BubbleChartLineIcon from 'remixicon/icons/Business/bubble-chart-line.svg';
+import IconTelegram from 'remixicon/icons/Logos/telegram-fill.svg';
+import IconDiscord from 'remixicon/icons/Logos/discord-fill.svg';
+
+import IconMatrix from '../../../public/images/common/matrix-logo-white.svg';
 
 const COLLECTIVES = [
   {
@@ -7,7 +11,11 @@ const COLLECTIVES = [
     description:
       "Join Edgeware's Proposals channel to discuss, debate and develop proposals for the community to fund. Proposals cover chain upgrades, changes to core governance principles and a wide range of project plans by a wide range of teams.",
     members: '+40',
-    href: 'https://t.me/EdgewareGWG',
+    hrefs: {
+      discord: 'https://discord.gg/YQQQh5KP2p',
+      telegram: 'https://t.me/EdgewareGWG',
+      matrix: 'https://matrix.to/#/#edgeware-proposals:matrix.org',
+    },
   },
   {
     imageSrc: '/images/society/edgeware-agency.jpg',
@@ -15,7 +23,6 @@ const COLLECTIVES = [
     description:
       'Focuses on developing and exploring the brand, including visual, emotional, experiential values of Edgeware, evangelizing use cases, and developing assets to communicate the above.',
     members: '+80',
-    href: 'https://t.me/EdgewareAgency',
   },
   {
     imageSrc: '/images/society/builders.jpg',
@@ -23,7 +30,11 @@ const COLLECTIVES = [
     description:
       'Works to create an ecosystem of support for developers and application builders in the network. Resources, Q/A, and discussion about technical advancement of the network are the usual activities.',
     members: '+90',
-    href: 'https://t.me/edg_developers',
+    hrefs: {
+      discord: 'https://discord.gg/vrER5Bs',
+      telegram: 'https://t.me/edg_developers',
+      matrix: 'https://matrix.to/#/#edgeware-builders:matrix.org',
+    },
   },
   {
     imageSrc: '/images/society/dao-working-group.jpg',
@@ -31,7 +42,11 @@ const COLLECTIVES = [
     description:
       'Works to enable a robust infrastructure and cutting-edge support for DAOs and organizational primitives within Edgeware: Legal bridging, budgeting tools, organizational structures, reputation and deployment of DAOs.',
     members: '20+',
-    href: 'https://t.me/EDGDAOWG',
+    hrefs: {
+      discord: 'https://discord.gg/ugPyMUFYmb',
+      telegram: 'https://t.me/EDGDAOWG',
+      matrix: 'https://matrix.to/#/#edgeware-dao-wg:matrix.org',
+    },
   },
   {
     imageSrc: '/images/society/nft-strategy-group.jpg',
@@ -39,7 +54,11 @@ const COLLECTIVES = [
     description:
       'This working group works with artists and art industry actors across mediums of visual, music, NFT and more to ensure that Artists and the Arts are a healthy and innovative sector of Edgeware, and seeks to solve problems with the sustainability, production and consumption of art works.',
     members: '+40',
-    href: 'https://t.me/EdgewareNFTs',
+    hrefs: {
+      discord: 'https://discord.gg/JYAdmvrvd4',
+      telegram: 'https://t.me/EdgewareNFTs',
+      matrix: 'https://matrix.to/#/#edgeware-web3_media:matrix.org',
+    },
   },
   {
     imageSrc: '/images/society/edgeware-economics.jpg',
@@ -47,7 +66,10 @@ const COLLECTIVES = [
     description:
       'This working group draws community members from Edgeware, other blockchain projects and curious people  to talk about market chatter, parachain economics, token price Qs, memes and moons.',
     members: '+400',
-    href: 'https://t.me/edgewareeconomics',
+    hrefs: {
+      discord: 'https://discord.gg/WDXKMkBSxn',
+      telegram: 'https://t.me/edgewareeconomics',
+    },
   },
   {
     imageSrc: '/images/society/edg-games.jpg',
@@ -55,7 +77,10 @@ const COLLECTIVES = [
     description:
       'Dedicated to cutting-edge technology but also having a good time, the Gaming Working Group is for discussing all things cryptographic and how they might be used in building games of the future.',
     members: '+10',
-    href: 'https://t.me/edgewaregamesWG',
+    hrefs: {
+      discord: 'http://edgeware.chat/',
+      telegram: 'https://t.me/edgewaregamesWG',
+    },
   },
   {
     imageSrc: '/images/society/edg-university.jpg',
@@ -63,7 +88,10 @@ const COLLECTIVES = [
     description:
       'The University group focuses on building bridges to academia and students via research grants and initiatives that can help unlock education around the power of Edgeware, blockchain technology in general and how applications can be created across different industries.',
     members: '+10',
-    href: 'https://t.me/EDGuniWG',
+    hrefs: {
+      discord: 'http://edgeware.chat/',
+      telegram: 'https://t.me/EDGuniWG',
+    },
   },
   {
     imageSrc: '/images/society/zk-wg.jpg',
@@ -71,7 +99,10 @@ const COLLECTIVES = [
     description:
       "The ZK Working Group is interested in advancing zero-knowledge and privacy primitives for Edgeware and for the Substrate ecosystem for a variety of applications such as bridges, DeFi, identity, and governance. The group's core focus is on identifying research that can be used in novel ways in the ecosystem.",
     members: '+20',
-    href: 'https://t.me/zkedge',
+    hrefs: {
+      discord: 'http://edgeware.chat/',
+      telegram: 'https://t.me/zkedge',
+    },
   },
 ];
 
@@ -94,11 +125,11 @@ type SocietyCardProps = {
   title: string;
   description: string;
   members?: string;
-  href?: string;
+  hrefs?: Record<string, string>;
 };
 
 const SocietyListItem = (props: SocietyCardProps) => {
-  const { imageSrc, title, description, members = '10+', href } = props;
+  const { imageSrc, title, description, members = '10+', hrefs } = props;
 
   return (
     <div className="flex h-full flex-col rounded-md border border-grey-700 bg-grey-900">
@@ -110,22 +141,36 @@ const SocietyListItem = (props: SocietyCardProps) => {
         <p className="my-4 text-grey-300">{description}</p>
       </div>
       <div className="flex justify-between px-4 py-4">
-        <span className="flex flex-row items-center">
-          <BubbleChartLineIcon className="mr-2 h-6 w-6 fill-white" />
+        <span className="flex flex-row items-center text-sm">
+          <BubbleChartLineIcon className="mr-1 h-6 w-6 fill-white " />
           {members} Members
         </span>
 
         {title === 'Edgeware Agency' ? (
           <span className="text-grey-600">Decentralized</span>
         ) : (
-          <a
-            href={href}
-            className="inline-block rounded bg-grey-800 py-2 px-8 hover:bg-grey-600 hover:text-white"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Join
-          </a>
+          <span>
+            {hrefs &&
+              Object.keys(hrefs).map((key) => (
+                <a
+                  key={key}
+                  href={hrefs[key]}
+                  className="group inline-block"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {key === 'telegram' && (
+                    <IconTelegram className="ml-2 h-6 w-6 fill-white opacity-70 group-hover:opacity-100" />
+                  )}
+                  {key === 'discord' && (
+                    <IconDiscord className="ml-2 h-6 w-6 fill-white opacity-70 group-hover:opacity-100" />
+                  )}
+                  {key === 'matrix' && (
+                    <IconMatrix className="relative top-1 ml-2 h-8 fill-white opacity-70 group-hover:opacity-100" />
+                  )}
+                </a>
+              ))}
+          </span>
         )}
       </div>
     </div>
