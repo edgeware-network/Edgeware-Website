@@ -13,6 +13,9 @@ import IconWindow from 'remixicon/icons/Business/window-line.svg';
 import IconExchange from 'remixicon/icons/Finance/exchange-line.svg';
 import IconResume from 'remixicon/icons/System/shield-user-line.svg';
 import IconToken from 'remixicon/icons/Finance/copper-coin-line.svg';
+
+import IconLink from 'remixicon/icons/System/external-link-fill.svg';
+
 import { LinksList } from '../get-started/links-list';
 
 export const BuildGetStarted = () => {
@@ -181,13 +184,15 @@ const NetworksInfo = () => {
                             onClick={() => handleOpen(networkKey, chainKey, 'edgeApps')}
                             className="mb-4 mr-2 rounded bg-white p-2 text-grey-900"
                           >
-                            Open in EdgeApps
+                            EdgeApps
+                            <IconLink className="ml-2 inline-block h-5 w-5 align-text-top" />
                           </button>
                           <button
                             onClick={() => handleOpen(networkKey, chainKey, 'polkadotApps')}
                             className="mb-4 mr-2 rounded bg-white p-2 text-grey-900"
                           >
-                            Open in PolkadotApps
+                            PolkadotApps
+                            <IconLink className="ml-2 inline-block h-5 w-5 align-text-top" />
                           </button>
                         </>
                       )}
