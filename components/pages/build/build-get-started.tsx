@@ -118,7 +118,7 @@ const NetworksInfo = () => {
   };
 
   const handleOpen = (networkKey: string, chainKey: string, app: keyof typeof APP_URLS) => {
-    const rpcUrl = encodeURIComponent(NETWORKS[networkKey][chainKey]['RPC URL']);
+    const rpcUrl = encodeURIComponent(NETWORKS[networkKey][chainKey]['Alternative RPC URL']);
     const target = `${APP_URLS[app]}?rpc=${rpcUrl}`;
     window.open(target);
   };
