@@ -52,7 +52,7 @@ export const HomepageEconomicsTokenWidget: React.FC = () => {
         <div className="mt-4 flex flex-col pt-4">
           <span className="text-sm text-white">Treasury Balance</span>
           <strong className="text-xl font-medium text-white md:text-2xl lg:text-3xl">
-            662.8424 MEDG
+            633.2637 MEDG
           </strong>
         </div>
       </div>
