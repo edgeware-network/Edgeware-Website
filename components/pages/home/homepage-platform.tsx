@@ -23,7 +23,7 @@ export const HomepagePlatform = () => {
 
         {/* 3 column benefits */}
         <div className="container mx-auto my-8 max-w-5xl px-4 md:my-16 lg:my-24">
-          <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-8 lg:space-x-16">
+          <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-8 lg:space-x-10">
             {/* EdgeEVM */}
             <div className="flex w-full rounded-lg border border-grey-800 bg-[url('/images/home/platform/pink-block-bg.jpg')] bg-cover bg-center bg-no-repeat p-3 text-center md:w-1/3">
               <div className="flex h-full flex-col justify-between rounded-lg bg-grey-700 p-3">
@@ -57,9 +57,7 @@ export const HomepagePlatform = () => {
                 </div>
 
                 <ul className="mt-12 flex flex-col space-y-2 text-center uppercase text-grey-900">
-                  <li className="rounded-md bg-green-500 p-1.5">
-                    High Performing Permissionless Environment
-                  </li>
+                  <li className="rounded-md bg-green-500 p-1.5">High Performing Environment</li>
                   <li className="rounded-md bg-green-500 p-1.5">Memory/Weight Efficient</li>
                   <li className="rounded-md bg-green-500 p-1.5">Futureproof</li>
                   <li className="rounded-md bg-green-500 p-1.5">Rust Ink</li>
