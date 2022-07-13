@@ -11,7 +11,7 @@ const TEASERS = {
   },
   kabocha: {
     href: 'https://www.kabocha.network/',
-    alt: 'Kabocha Crowdloan',
+    alt: 'Kabocha Parachain',
   },
   events: {
     href: 'https://calendar.google.com/calendar/u/0/embed?src=commonwealth.im_ihbs892pqubvogtoim6c1hf7ck@group.calendar.google.com',
