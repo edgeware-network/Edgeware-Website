@@ -12,7 +12,6 @@ import ScalesLineIcon from 'remixicon/icons/Others/scales-line.svg';
 import CommandLineIcon from 'remixicon/icons/Development/command-line.svg';
 import Compass2LineIcon from 'remixicon/icons/Map/compass-2-line.svg';
 import { Button } from 'components/common/button';
-import { socialMediaUrls } from 'data/config';
 
 export const SocietyStart = () => {
   return (
