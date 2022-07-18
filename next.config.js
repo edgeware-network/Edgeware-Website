@@ -17,7 +17,7 @@ module.exports = withSvgr({
       },
       {
         source: '/developers',
-        destination: '/contribute',
+        destination: '/build',
         permanent: true,
       },
     ];
