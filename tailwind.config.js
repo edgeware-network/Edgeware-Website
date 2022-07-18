@@ -1,0 +1,48 @@
+module.exports = {
+  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      black: '#000000',
+      white: '#ffffff',
+      primary: {
+        100: '#fbeaf0',
+        200: '#ffcbde',
+        300: '#ffa4c5',
+        400: '#fb6c9f',
+        500: '#ff3b80',
+        600: '#af1850',
+        700: '#660c2d',
+        800: '#300515',
+        900: '#1a000f',
+      },
+      grey: {
+        100: '#f1f1f1',
+        200: '#c5c5c5',
+        300: '#a8a8a8',
+        400: '#8b8b8b',
+        500: '#6e6e6e',
+        600: '#525252',
+        700: '#383838',
+        800: '#292929',
+        900: '#151515',
+      },
+      green: {
+        100: '#eafcf9',
+        200: '#c0f6ee',
+        300: '#97f0e2',
+        400: '#6dead6',
+        500: '#2ee1c5',
+        600: '#25b49e',
+        700: '#1c8776',
+        800: '#0e433b',
+        900: '#051614',
+      },
+    },
+    fontFamily: {
+      sans: ['"Space Grotesk"', 'sans-serif'],
+    },
+  },
+  plugins: [require('@tailwindcss/typography')],
+};

@@ -8,6 +8,7 @@ import * as gtag from '../utils/gtag';
 const queryClient = new QueryClient();
 
 import '../styles/global.scss';
+import '../styles/tailwind.css';
 
 import { Layout } from '../components/layout/layout';
 

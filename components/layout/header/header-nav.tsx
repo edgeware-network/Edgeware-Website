@@ -1,101 +1,90 @@
 import * as React from 'react';
-import cn from 'classnames';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import IconMenuLine from 'remixicon/icons/System/menu-line.svg';
+import IconCloseLine from 'remixicon/icons/System/close-line.svg';
+import { Transition } from '@headlessui/react';
 
-import styles from './header-nav.module.scss';
-import { HeaderOverlayNav } from './header-nav-overlay';
-import { NavToggle } from './nav/nav-toggle';
-import { useRouter } from 'next/router';
-
-const setBodyOverlay = (flag: boolean) => {
-  if (flag) {
-    document.body.classList.add('hasOverlay');
-  } else {
-    document.body.classList.remove('hasOverlay');
-  }
+const NAV_ITEMS = {
+  Home: '/',
+  'Contribute & Earn': '/contribute',
+  Build: '/build',
+  Society: '/society',
+  Governance: 'https://gov.edgewa.re/',
+  Ecosystem: '/ecosystem',
+  'Get Started': '/get-started',
 };
 
-interface HeaderNavProps {
-  onToggleModal: () => void;
-}
+type NavOverlayProps = {
+  isOpen: boolean;
+  onNavigation: () => void;
+};
 
-export const HeaderNav: React.FC<HeaderNavProps> = ({ onToggleModal }) => {
-  const [isOpen, setOpen] = React.useState(false);
-  const containerRef = React.useRef(null);
-
-  const toggleOpen = React.useCallback(() => {
-    setOpen(!isOpen);
-    setBodyOverlay(!isOpen);
-  }, [isOpen]);
-
+const NavOverlay = ({ isOpen, onNavigation }: NavOverlayProps) => {
   return (
-    <motion.div initial={false} animate={isOpen ? 'open' : 'closed'} ref={containerRef}>
-      <div className={styles.navWrapper}>
-        <NavItems onToggleModal={onToggleModal} />
+    <Transition
+      show={isOpen}
+      enter="transition-opacity duration-300"
+      enterFrom="opacity-0"
+      enterTo="opacity-100"
+      leave="transition-opacity duration-150"
+      leaveFrom="opacity-100"
+      leaveTo="opacity-0"
+      className="fixed left-0 top-0 right-0 bottom-0 z-10 bg-black"
+    >
+      <div className="flex flex-col justify-start px-4 pt-24 md:pt-36">
+        {Object.entries(NAV_ITEMS).map((entry) => (
+          <NavItem key={entry[0]} href={entry[1]} mobileNav onNavigation={onNavigation}>
+            {entry[0]}
+          </NavItem>
+        ))}
       </div>
-      <div className={styles.navBurger}>
-        <NavToggle onToggle={toggleOpen} />
-      </div>
-      <AnimatePresence>
-        {isOpen && <HeaderOverlayNav onClose={toggleOpen} onToggleModal={onToggleModal} />}
-      </AnimatePresence>
-    </motion.div>
+    </Transition>
   );
 };
 
-interface NavItemsProps {
-  style?: 'desktop' | 'mobile';
-  onToggleModal: () => void;
-  onClick?: () => void;
-}
-
-export const NavItems: React.FC<NavItemsProps> = ({ style, onClick, onToggleModal }) => {
-  const router = useRouter();
-
-  const handleGetStartedClick = (event: React.MouseEvent) => {
-    event.preventDefault();
-    router.push('/get-started');
-  };
-
-  const ITEMS = {
-    Home: '/',
-    Collectives: '/collectives',
-    Partners: '/partners',
-    Developers: '/developers',
-    Mission: '/mission',
-    News: 'https://blog.edgewa.re/',
-    Docs: 'https://docs.edgeware.wiki/',
-  };
-
-  return (
-    <nav className={cn(styles.nav, style === 'mobile' && styles.navMobile)}>
-      {Object.entries(ITEMS).map((entry) => (
-        <NavItem key={entry[0]} href={entry[1]} onClick={onClick}>
-          {entry[0]}
-        </NavItem>
-      ))}
-      <NavButtonItem onClick={handleGetStartedClick}>Get Started</NavButtonItem>
-    </nav>
-  );
+type NavItemProps = {
+  children: React.ReactNode;
+  mobileNav?: boolean;
+  href: string;
+  onNavigation?: () => void;
 };
 
-interface NavItemProps {
-  href?: string;
-  onClick?: (e: React.MouseEvent) => void;
-}
-
-const NavItem: React.FC<NavItemProps> = ({ href, children, onClick }) => {
+const NavItem = ({ children, href, mobileNav = false, onNavigation }: NavItemProps) => {
   const isExternal = href.match(/https/);
+
+  const linkClasses = {
+    desktop: 'px-2 hover:text-primary-500',
+    button:
+      'py-2.5 px-5 rounded-md bg-primary-500 text-white hover:bg-primary-600 hover:text-white',
+    mobile: 'px-2 py-2 hover:text-primary-500 border-b border-b-grey-800 text-lg font-semibold',
+  };
+
+  const renderAsButton = href === '/get-started';
+
+  let linkClassName = renderAsButton
+    ? linkClasses.button
+    : mobileNav
+    ? linkClasses.mobile
+    : linkClasses.desktop;
+
+  if (renderAsButton && mobileNav) {
+    linkClassName += ' mt-4';
+  }
+
+  const handleClick = () => {
+    if (onNavigation) {
+      onNavigation();
+    }
+  };
 
   if (isExternal) {
     return (
       <a
         href={href}
-        className={styles.navItem}
-        onClick={onClick}
+        className={linkClassName}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={handleClick}
       >
         {children}
       </a>
@@ -104,17 +93,36 @@ const NavItem: React.FC<NavItemProps> = ({ href, children, onClick }) => {
 
   return (
     <Link href={href}>
-      <a className={styles.navItem} onClick={onClick}>
+      <a className={linkClassName} onClick={handleClick}>
         {children}
       </a>
     </Link>
   );
 };
 
-const NavButtonItem: React.FC<NavItemProps> = ({ children, onClick }) => {
+type HeaderNavProps = {
+  isMobileNavOpen: boolean;
+  setIsMobileNavOpen: (isMobileNavOpen: boolean) => void;
+};
+
+export const HeaderNav = ({ isMobileNavOpen, setIsMobileNavOpen }: HeaderNavProps) => {
   return (
-    <button className={cn(styles.navItem, styles.navItemSpecial)} onClick={onClick}>
-      {children}
-    </button>
+    <>
+      <nav className="hidden flex-row items-center justify-end lg:flex lg:space-x-6">
+        {Object.entries(NAV_ITEMS).map((entry) => (
+          <NavItem key={entry[0]} href={entry[1]}>
+            {entry[0]}
+          </NavItem>
+        ))}
+      </nav>
+      <button className="z-20 flex lg:hidden" onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}>
+        {isMobileNavOpen ? (
+          <IconCloseLine className="h-7 w-7 fill-white" />
+        ) : (
+          <IconMenuLine className="h-6 w-6 fill-white" />
+        )}
+      </button>
+      <NavOverlay isOpen={isMobileNavOpen} onNavigation={() => setIsMobileNavOpen(false)} />
+    </>
   );
 };

@@ -4,28 +4,23 @@ import Link from 'next/link';
 import { EdgewareLogo } from './edgeware-logo';
 import { HeaderNav } from './header-nav';
 
-import styles from './header.module.scss';
-import { GetStartedModal } from '../../modals/get-started/get-started';
-import { useModalState } from '../../modals/useModalState';
+type HeaderProps = {
+  overlayHeader?: boolean;
+};
 
-interface HeaderProps {
-  isStatic?: boolean;
-}
-
-export const Header: React.FC<HeaderProps> = ({ isStatic = false }) => {
-  const { isOpen, toggleModal } = useModalState();
+export const Header = ({ overlayHeader = false }: HeaderProps) => {
+  const [isMobileNavOpen, setIsMobileNavOpen] = React.useState(false);
 
   return (
-    <header className={`${styles.header} ${isStatic && styles.headerStatic}`}>
-      <div className="container-lg">
-        <div className={styles.wrapper}>
+    <header className={overlayHeader ? 'absolute top-0 left-0 right-0' : 'relative'}>
+      <div className="container mx-auto my-4 max-w-7xl md:py-8 lg:py-12">
+        <div className="flex flex-row items-center justify-between px-4">
           <Link href="/">
-            <a className={styles.logo} aria-label="Edgeware">
-              <EdgewareLogo />
+            <a className="z-20" aria-label="Edgeware" onClick={() => setIsMobileNavOpen(false)}>
+              <EdgewareLogo className="h-12 w-12 md:h-14 md:w-14 lg:h-16 lg:w-16" />
             </a>
           </Link>
-          <HeaderNav onToggleModal={toggleModal} />
-          {/* <GetStartedModal isOpen={isOpen} onClose={toggleModal} /> */}
+          <HeaderNav isMobileNavOpen={isMobileNavOpen} setIsMobileNavOpen={setIsMobileNavOpen} />
         </div>
       </div>
     </header>

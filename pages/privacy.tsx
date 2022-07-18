@@ -1,12 +1,7 @@
-import * as React from 'react';
-import { Section } from '../components/common/section/section';
-
-import { SimpleText } from '../components/common/simple-text/simple-text';
-
 export default function Privacy() {
   return (
-    <Section id="privacy-policy" width="normal">
-      <SimpleText>
+    <section id="privacy-policy" className="container mx-auto max-w-7xl">
+      <div className="prose prose-xl prose-invert">
         <h1>Privacy Policy</h1>
         <p>Last updated: January 20, 2021</p>
         <p>
@@ -1142,11 +1137,11 @@ export default function Privacy() {
           <li>
             By visiting this page on our website:{' '}
             <a
-              href="https://github.com/hicommonwealth/edgeware-homepage/issues"
+              href="https://github.com/edgeware-network/Edgeware-Website/issues"
               rel="external nofollow noopener noreferrer"
               target="_blank"
             >
-              https://github.com/hicommonwealth/edgeware-homepage/issues
+              https://github.com/edgeware-network/Edgeware-Website/issues
             </a>
           </li>
         </ul>
@@ -1334,16 +1329,16 @@ export default function Privacy() {
           <li>
             By visiting this page on our website:{' '}
             <a
-              href="https://github.com/hicommonwealth/edgeware-homepage/issues"
+              href="https://github.com/edgeware-network/Edgeware-Website/issues"
               rel="external nofollow noopener noreferrer"
               target="_blank"
             >
-              https://github.com/hicommonwealth/edgeware-homepage/issues
+              https://github.com/edgeware-network/Edgeware-Website/issues
             </a>
           </li>
         </ul>
-      </SimpleText>
-    </Section>
+      </div>
+    </section>
   );
 }
 

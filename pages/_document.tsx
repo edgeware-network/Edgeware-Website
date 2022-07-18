@@ -25,7 +25,7 @@ class MyDocument extends Document {
             }}
           />
         </Head>
-        <body>
+        <body className="bg-grey-900 font-sans text-white">
           <Main />
           <NextScript />
         </body>

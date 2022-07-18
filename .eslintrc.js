@@ -3,13 +3,13 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
   },
   env: {
     browser: true,
     node: true,
-    jest: true
+    jest: true,
   },
   extends: [
     'eslint:recommended',
@@ -21,16 +21,16 @@ module.exports = {
     // Prettier plugin and recommended rules
     'plugin:prettier/recommended',
   ],
-  plugins: ["prettier"],
+  plugins: ['prettier'],
   rules: {
     // Include .prettierrc.js rules
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/no-unescaped-entities': 'off',
-    'jsx-a11y/anchor-is-valid': 'warn',
-    'jsx-a11y/click-events-have-key-events': 'warn',
-    'jsx-a11y/no-static-element-interactions': 'warn',
+    'jsx-a11y/anchor-is-valid': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
   },
