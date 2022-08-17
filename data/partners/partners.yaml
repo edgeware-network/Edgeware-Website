@@ -1,4 +1,13 @@
 partners:
+  - category: Entities
+    partners:
+      - name: Edgeware Agency
+        description: Edgeware Agency is a metaDAO that supports the growth and adoption of the Edgeware Ecosystem
+        link: https://gov.edgewa.re/discussion/1112-proposal-edgeware-agency-funding
+        funded: true
+      - name: Decent Partners
+        description: Decent develops community networks that are funded, governed and owned by the people they represent.
+        link: https://decent.partners/
   - category: DeFi
     partners:
       - name: Stafi Protocol
@@ -10,18 +19,6 @@ partners:
       - name: PicoSwap
         description: Pico is a protocol for decentralized exchange built on Edgeware, a pioneering Polkadot smart contract blockchain.
         link: https://picoswap.medium.com/
-  - category: Governance
-    partners:
-      - name: Edgeware Agency
-        description: Edgeware Agency is a metaDAO that supports the growth and adoption of the Edgeware Ecosystem
-        link: https://edgeware.agency/
-        funded: true
-      - name: Mailchain
-        description: Send and receive messages between blockchain addresses through a simple, email-like interface.
-        link: https://medium.com/@Mailchain_xyz/sending-mailchain-messages-with-substrate-on-edgeware-f185eddd76ab
-      - name: Decent Partners
-        description: Decent develops community networks that are funded, governed and owned by the people they represent.
-        link: https://decent.partners/
   - category: Infrastructure
     partners:
       - name: OnFinality
@@ -41,6 +38,9 @@ partners:
         description: Biconomy enables simple blockchain transactions by leveraging scalable relayer infrastructure.
         link: https://www.biconomy.io/
         funded: true
+      - name: Mailchain
+        description: Send and receive messages between blockchain addresses through a simple, email-like interface.
+        link: https://medium.com/@Mailchain_xyz/sending-mailchain-messages-with-substrate-on-edgeware-f185eddd76ab
   - category: Oracles
     partners:
       - name: Paralink Network
@@ -52,7 +52,7 @@ partners:
       - name: Chainlink
         description: Chainlink provides reliable, tamper-proof inputs and outputs for complex smart contracts on any blockchain.
         link: https://blog.edgewa.re/chainlink-oracles-on-edgeware-powered-by-volta/
-  - category: NFT & Art
+  - category: Art & NFTs
     partners:
       - name: Zien
         description: Zien is a platform providing NFT Airdrops on WhatsApp.
