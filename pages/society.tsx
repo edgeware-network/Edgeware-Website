@@ -1,14 +1,14 @@
 import { Newsletter } from '../components/common/newsletter';
 
 import { SocietyIntro } from 'components/pages/society/society-intro';
-import { CollectivesList } from 'components/pages/society/society-list';
+import { SocietyCollectivesList } from 'components/pages/society/society-list';
 import { SocietyStart } from 'components/pages/society/society-start';
 
 export default function SocietyPage() {
   return (
     <>
       <SocietyIntro />
-      <CollectivesList />
+      <SocietyCollectivesList />
       <SocietyStart />
       <Newsletter />
     </>
