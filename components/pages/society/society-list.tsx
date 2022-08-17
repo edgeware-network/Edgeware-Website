@@ -71,42 +71,9 @@ const COLLECTIVES = [
       telegram: 'https://t.me/edgewareeconomics',
     },
   },
-  {
-    imageSrc: '/images/society/edg-games.jpg',
-    title: 'Games',
-    description:
-      'Dedicated to cutting-edge technology but also having a good time, the Gaming Working Group is for discussing all things cryptographic and how they might be used in building games of the future.',
-    members: '+10',
-    hrefs: {
-      discord: 'http://edgeware.chat/',
-      telegram: 'https://t.me/edgewaregamesWG',
-    },
-  },
-  {
-    imageSrc: '/images/society/edg-university.jpg',
-    title: 'University',
-    description:
-      'The University group focuses on building bridges to academia and students via research grants and initiatives that can help unlock education around the power of Edgeware, blockchain technology in general and how applications can be created across different industries.',
-    members: '+10',
-    hrefs: {
-      discord: 'http://edgeware.chat/',
-      telegram: 'https://t.me/EDGuniWG',
-    },
-  },
-  {
-    imageSrc: '/images/society/zk-wg.jpg',
-    title: 'ZK Working Group',
-    description:
-      "The ZK Working Group is interested in advancing zero-knowledge and privacy primitives for Edgeware and for the Substrate ecosystem for a variety of applications such as bridges, DeFi, identity, and governance. The group's core focus is on identifying research that can be used in novel ways in the ecosystem.",
-    members: '+20',
-    hrefs: {
-      discord: 'http://edgeware.chat/',
-      telegram: 'https://t.me/zkedge',
-    },
-  },
 ];
 
-export const CollectivesList = () => {
+export const SocietyCollectivesList = () => {
   return (
     <section id="collectives-list" className="my-24 mx-auto max-w-6xl px-4">
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-16">
