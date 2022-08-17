@@ -22,21 +22,19 @@ export const HomepagePlatform = () => {
         </div>
 
         {/* 3 column benefits */}
-        <div className="container mx-auto my-8 max-w-5xl px-4 md:my-16 lg:my-24">
+        <div className="container mx-auto my-8 max-w-6xl px-4 md:my-16 lg:my-24">
           <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-8 lg:space-x-10">
             {/* EdgeEVM */}
             <div className="flex w-full rounded-lg border border-grey-800 bg-[url('/images/home/platform/pink-block-bg.jpg')] bg-cover bg-center bg-no-repeat p-3 text-center md:w-1/3">
               <div className="flex h-full flex-col justify-between rounded-lg bg-grey-700 p-3">
-                <div>
-                  <h3 className="my-4 text-2xl font-normal text-primary-500">EdgeEVM</h3>
-                  <p className="text-lg">
-                    Permissionless, familiar, and Solidity-based, EdgeEVM makes it easy to expand to
-                    new chains, debug and port your dapps, and gives you access to the largest set
-                    of tools and resources.
-                  </p>
-                </div>
+                <h3 className="my-4 text-2xl font-normal text-primary-500">EdgeEVM</h3>
+                <p className="text-lg">
+                  Permissionless, familiarity, and Solidity-based, EdgeEVM makes it easy to expand
+                  to new chains, debug and port your dapp with access to the largest set of tools
+                  and resources.
+                </p>
 
-                <ul className="flex flex-col space-y-2 text-center uppercase text-grey-900">
+                <ul className="mt-16 flex flex-col space-y-2 text-center uppercase text-grey-900">
                   <li className="rounded-md bg-primary-500 p-1.5">Mature Ecosystem</li>
                   <li className="rounded-md bg-primary-500 p-1.5">Solidity Compatible</li>
                   <li className="rounded-md bg-primary-500 p-1.5">Easy Portability</li>
@@ -48,16 +46,14 @@ export const HomepagePlatform = () => {
             {/* EdgeWASM */}
             <div className="flex w-full rounded-lg border border-grey-800 bg-[url('/images/home/platform/green-block-bg.jpg')] bg-cover bg-center bg-no-repeat p-3 text-center md:w-1/3">
               <div className="flex h-full flex-col justify-between rounded-lg bg-grey-700 p-3">
-                <div>
-                  <h3 className="my-4 text-2xl font-normal text-green-500">EdgeWASM</h3>
-                  <p className="text-lg">
-                    The permissionless environment for the experts seeking more performance and
-                    future-proof scalability compared to EdgeEVM.
-                  </p>
-                </div>
+                <h3 className="my-4 text-2xl font-normal text-green-500">EdgeWASM</h3>
+                <p className="text-lg">
+                  The permissionless environment for the experts seeking more performance and
+                  future-proof scalability compared to EdgeEVM.
+                </p>
 
-                <ul className="mt-12 flex flex-col space-y-2 text-center uppercase text-grey-900">
-                  <li className="rounded-md bg-green-500 p-1.5">High Performing Environment</li>
+                <ul className="mt-16 flex flex-col space-y-2 text-center uppercase text-grey-900">
+                  <li className="rounded-md bg-green-500 p-1.5">High Performance</li>
                   <li className="rounded-md bg-green-500 p-1.5">Memory/Weight Efficient</li>
                   <li className="rounded-md bg-green-500 p-1.5">Futureproof</li>
                   <li className="rounded-md bg-green-500 p-1.5">Rust Ink</li>
@@ -68,19 +64,13 @@ export const HomepagePlatform = () => {
             {/* Ecosystem */}
             <div className="flex w-full rounded-lg border border-grey-800 bg-[url('/images/home/platform/grey-block-bg.jpg')] bg-cover bg-center bg-no-repeat p-3 text-center md:w-1/3">
               <div className="flex h-full flex-col justify-between rounded-lg bg-grey-700 p-3">
-                <div>
-                  <h3 className="my-4 text-2xl font-normal text-grey-300">SubstratePallets</h3>
-                  <p className="text-lg">
-                    Unlock the full power and performance of the runtime using Substrate Pallets.
-                    Fully interoperable and future-proof, Rust-based pallets can grant the chain new
-                    functions once approved by the governing community.
-                  </p>
-                </div>
-
-                <ul className="mt-12 flex flex-col space-y-2 text-center uppercase text-grey-900">
-                  <li className="rounded-md bg-grey-300 p-1.5">
-                    Interoperability with other Pallets
-                  </li>
+                <h3 className="my-4 text-2xl font-normal text-grey-300">SubstratePallets</h3>
+                <p className="text-lg">
+                  Interoperable and future-proof, Rust-based pallets can grant the chain new
+                  functions once approved by the governing community.
+                </p>
+                <ul className="mt-16 flex flex-col space-y-2 text-center uppercase text-grey-900">
+                  <li className="rounded-md bg-grey-300 p-1.5">Interoperability</li>
                   <li className="rounded-md bg-grey-300 p-1.5">Low Level Access</li>
                   <li className="rounded-md bg-grey-300 p-1.5">Permissioned Deployment</li>
                   <li className="rounded-md bg-grey-300 p-1.5">Forkless Upgrades</li>
