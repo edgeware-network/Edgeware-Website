@@ -1,5 +1,5 @@
-const DOMAIN = 'https://edgewa.re';
-const SITE_NAME = 'edgewa.re';
+const DOMAIN = 'https://www.edgeware.io';
+const SITE_NAME = 'www.edgeware.io';
 
 type HeadOpenGraphProps = {
   pageTitle: string;

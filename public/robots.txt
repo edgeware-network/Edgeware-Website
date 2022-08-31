@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://edgewa.re
+Host: https://www.edgeware.io
 
 # Sitemaps
-Sitemap: https://edgewa.re/sitemap.xml
+Sitemap: https://www.edgeware.io/sitemap.xml

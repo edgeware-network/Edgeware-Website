@@ -149,11 +149,11 @@ export default function Privacy() {
             <p>
               <strong>Website</strong> refers to Edgeware, accessible from{' '}
               <a
-                href="https://edgewa.re"
+                href="https://www.edgeware.io"
                 rel="external nofollow noopener noreferrer"
                 target="_blank"
               >
-                https://edgewa.re
+                https://www.edgeware.io
               </a>
             </p>
           </li>
