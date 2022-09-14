@@ -35,7 +35,12 @@ export const PartnerCard = ({ name, description, link, funded = false }: Partner
       )}
 
       <div className="mt-auto">
-        <a href={link} className="text-primary-500 hover:text-primary-400">
+        <a
+          href={link}
+          className="text-primary-500 hover:text-primary-400"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Learn more
         </a>
       </div>
