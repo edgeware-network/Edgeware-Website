@@ -138,7 +138,7 @@ export const EvmWithdraw = () => {
     }
 
     setFormState({ text: 'Connecting to polkadot-js...', error: true });
-    const polkadotUrl = 'wss://edgeware.api.onfinality.io/public-ws';
+    const polkadotUrl = 'wss://edgeware.jelliedowl.net';
     const registry = new TypeRegistry();
     const api = await new ApiPromise({
       provider: new WsProvider(polkadotUrl),
@@ -202,7 +202,7 @@ export const EvmWithdraw = () => {
           {
             chainId: '0x7E5',
             chainName: 'Edgeware',
-            rpcUrls: ['https://edgeware.api.onfinality.io/public-ws/evm'],
+            rpcUrls: ['https://edgeware-evm.jelliedowl.net/'],
             nativeCurrency: {
               name: 'Edgeware',
               symbol: 'EDG',
