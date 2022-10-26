@@ -2,14 +2,14 @@
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-[Edgeware](https://edgewa.re/) is a smart contract chain with a community-managed treasury, decentralised proposal system and network of DAOs.
+[Edgeware](https://www.edgeware.io/) is a smart contract chain with a community-managed treasury, decentralised proposal system and network of DAOs.
 
 Edgeware is launched by [Commonwealth Labs](https://commonwealth.im/)
 and built on [Parity Substrate](https://www.parity.io/substrate/).
 We're grateful for the support of many friends, advisors, and community
 members.
 
-This project is a repository of its public-facing website: [https://edgewa.re](https://edgewa.re/)
+This project is a repository of its public-facing website: [https://www.edgeware.io](https://www.edgeware.io/)
 
 ## Contributing
 
@@ -21,10 +21,13 @@ Edgeware website is built with [Next.js](https://nextjs.org/)
 
 Make sure you have Node.js and Yarn installed.
 Install the project dependencies:
+
 ```bash
 yarn
 ```
+
 Run the local development server:
+
 ```bash
 yarn dev
 ```
