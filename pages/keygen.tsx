@@ -9,11 +9,11 @@ export default function Keygen() {
   return (
     <>
       <KeygenIntro />
-      <KeygenDeposit />
-      <KeygenWithdraw />
       <KeygenKeypairGenerator />
       <KeygenConvertPublicKey />
       <KeygenConvertAddress />
+      <KeygenDeposit />
+      <KeygenWithdraw />
     </>
   );
 }

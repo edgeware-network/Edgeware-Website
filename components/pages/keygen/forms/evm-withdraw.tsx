@@ -140,6 +140,7 @@ export const EvmWithdraw = () => {
     setFormState({ text: 'Connecting to polkadot-js...', error: true });
     const polkadotUrl = 'wss://edgeware.jelliedowl.net';
     const registry = new TypeRegistry();
+
     const api = await new ApiPromise({
       provider: new WsProvider(polkadotUrl),
       registry,
