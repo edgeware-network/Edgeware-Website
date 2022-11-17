@@ -107,6 +107,7 @@ export const EvmWithdraw = () => {
       setFormState({ text: 'Metamask or compatible Web3 wallet required', error: true });
       return;
     }
+
     if (!currentProvider) {
       setFormState({ text: 'Metamask or compatible Web3 wallet required', error: true });
       return;
@@ -119,7 +120,7 @@ export const EvmWithdraw = () => {
     }
 
     const amount = amountEl.current.value;
-    if (isNaN(+amount)) {
+    if (amount === '' || isNaN(+amount)) {
       setFormState({ text: 'Invalid amount', error: true });
       return;
     }
@@ -141,6 +142,8 @@ export const EvmWithdraw = () => {
     const polkadotUrl = 'wss://edgeware.jelliedowl.net';
     const registry = new TypeRegistry();
 
+    // eslint-disable-next-line
+    // @ts-ignore
     const api = await new ApiPromise({
       provider: new WsProvider(polkadotUrl),
       registry,
@@ -222,6 +225,7 @@ export const EvmWithdraw = () => {
     <>
       <form onSubmit={(e) => e.preventDefault()} className="my-8 max-w-2xl">
         <label className="my-4 block" htmlFor="ac-input-withdraw-address" aria-label="Address">
+          <span className="text-gray-700">Withdraw address (Substrate):</span>
           <input
             id="ac-input-withdraw-address"
             className="w-full rounded border border-grey-700 bg-grey-900 px-4 py-2"
@@ -229,17 +233,20 @@ export const EvmWithdraw = () => {
             name="input"
             placeholder="Substrate address (e.g. nJrsr...)"
             ref={inputEl}
+            required
             autoComplete="off"
             autoCapitalize="off"
             autoCorrect="off"
           />
         </label>
         <label className="my-4 block" htmlFor="ac-input-withdraw-amount" aria-label="Amount">
+          <span className="text-gray-700">Withdrawal amount (EDG):</span>
           <input
             id="ac-input-withdraw-amount"
             className="w-full rounded border border-grey-700 bg-grey-900 px-4 py-2"
             type="text"
             name="input"
+            required
             placeholder="Amount (EDG)"
             ref={amountEl}
             autoComplete="off"
