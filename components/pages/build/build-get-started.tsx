@@ -61,10 +61,11 @@ const NetworksInfo = () => {
   const NETWORKS = {
     Mainnet: {
       EdgeEVM: {
-        'RPC URL': 'https://mainnet.edgewa.re/evm',
+        'RPC URL': 'https://edgeware-evm.jelliedowl.net/',
         'Alternative RPC URL': 'https://edgeware.api.onfinality.io/public-ws/evm',
         'Chain ID': '2021',
         Symbol: 'EDG',
+        Explorer: 'https://edgscan.live/',
       },
       EdgeWASM: {
         'RPC URL': 'wss://mainnet.edgewa.re',
@@ -76,7 +77,7 @@ const NetworksInfo = () => {
     },
     Testnet: {
       BeresheetEVM: {
-        'RPC URL': 'https://beresheet.edgewa.re/evm',
+        'RPC URL': 'https://beresheet-evm.jelliedowl.net/',
         'Chain ID': '2022',
         Symbol: 'tEDG',
         Explorer: 'https://testnet.edgscan.live/',
