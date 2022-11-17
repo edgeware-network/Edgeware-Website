@@ -224,7 +224,7 @@ export const EvmWithdraw = () => {
         <label className="my-4 block" htmlFor="ac-input-withdraw-address" aria-label="Address">
           <input
             id="ac-input-withdraw-address"
-            className="w-full rounded border border-grey-700 bg-grey-900 px-4 py-3"
+            className="w-full rounded border border-grey-700 bg-grey-900 px-4 py-2"
             type="text"
             name="input"
             placeholder="Substrate address (e.g. nJrsr...)"
@@ -237,7 +237,7 @@ export const EvmWithdraw = () => {
         <label className="my-4 block" htmlFor="ac-input-withdraw-amount" aria-label="Amount">
           <input
             id="ac-input-withdraw-amount"
-            className="w-full rounded border border-grey-700 bg-grey-900 px-4 py-3"
+            className="w-full rounded border border-grey-700 bg-grey-900 px-4 py-2"
             type="text"
             name="input"
             placeholder="Amount (EDG)"
