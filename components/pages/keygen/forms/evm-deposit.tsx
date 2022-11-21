@@ -70,7 +70,7 @@ export const EVMDepositForm = () => {
       {formStep === 2 && (
         <>
           <div className="py-1">
-            <span>Corresponding Substrate deposit address is:</span>
+            <span>Your corresponding intermediate substrate deposit address is:</span>
             <input
               id="ac-input-substrate-deposit"
               className="w-full rounded border border-grey-700 bg-grey-900 px-4 py-2 disabled:bg-grey-800"
@@ -82,8 +82,9 @@ export const EVMDepositForm = () => {
             />
 
             <p className="mt-4">
-              Send EDG to this address to deposit them in your EVM address. Once the transaction is
-              confirmed, your EVM address will be credited with the same amount.
+              Send EDGs to the above address to deposit them in your EdgeEVM account. Once the
+              extrinsic/transaction gets included in a block, your EDGs will immediately reflect in
+              your wallet/extension as well as on the EdgeEVM explorer. (ETA: less than 6 sec)
             </p>
           </div>
 
@@ -106,7 +107,7 @@ export const EVMDepositForm = () => {
 
           <div className="py-6">
             <p className="my-2">
-              When you are done or want to start again, click the button below to reset the form.
+              When you are done or want to start again, click the button below to reset the conversion tool.
             </p>
             <Button onClick={handleReset} colorStyle="white" sizing="normal">
               Start over

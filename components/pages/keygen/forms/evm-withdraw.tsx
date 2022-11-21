@@ -41,12 +41,12 @@ export const EvmWithdraw = () => {
     try {
       await (window as any).ethereum.request({ method: 'eth_requestAccounts' });
     } catch (e) {
-      setFormState({ text: 'Metamask or compatible Web3 wallet required', error: true });
+      setFormState({ text: 'Metamask or EVM compatible Web3 wallet required', error: true });
       return;
     }
     const account = currentProvider?.selectedAddress;
     if (!account) {
-      setFormState({ text: 'Metamask or compatible Web3 wallet required', error: true });
+      setFormState({ text: 'Metamask or EVM compatible Web3 wallet required', error: true });
       return;
     }
 
@@ -65,7 +65,7 @@ export const EvmWithdraw = () => {
     // are we on the right network?
     if (+currentProvider?.chainId !== 2021 && +currentProvider?.chainId !== 2022) {
       setFormState({
-        text: 'Wallet must be configured to EVM chain ID 2021 for Edgeware',
+        text: 'Please switch to Edgeware EdgeEVM network in your web3 wallet manually or click on the `Switch to EdgeEVM` button below.',
         error: true,
         showAddNetwork: true,
       });
@@ -131,7 +131,7 @@ export const EvmWithdraw = () => {
 
     if (+currentProvider?.chainId !== 2021 && +currentProvider?.chainId !== 2022) {
       setFormState({
-        text: 'Wallet must be configured to EVM chain ID 2021 for Edgeware',
+        text: 'Please switch to Edgeware EdgeEVM network in your web3 wallet/signer manually or click on the `Switch to EdgeEVM` button below.',
         error: true,
         showAddNetwork: true,
       });
@@ -205,7 +205,7 @@ export const EvmWithdraw = () => {
         params: [
           {
             chainId: '0x7E5',
-            chainName: 'Edgeware',
+            chainName: 'Edgeware EdgeEVM',
             rpcUrls: ['https://edgeware-evm.jelliedowl.net/'],
             nativeCurrency: {
               name: 'Edgeware',
@@ -269,7 +269,7 @@ export const EvmWithdraw = () => {
         </div>
         {formState.showAddNetwork && (window as any).ethereum && (
           <Button onClick={addNetwork} colorStyle="white" sizing="normal">
-            Switch to Edgeware
+            Switch to EdgeEVM
           </Button>
         )}
       </form>
