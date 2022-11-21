@@ -107,7 +107,8 @@ export const EVMDepositForm = () => {
 
           <div className="py-6">
             <p className="my-2">
-              When you are done or want to start again, click the button below to reset the conversion tool.
+              When you are done or want to start again, click the button below to reset the
+              conversion tool.
             </p>
             <Button onClick={handleReset} colorStyle="white" sizing="normal">
               Start over
