@@ -1,6 +1,6 @@
 import { AddressConverter } from './forms/address-converter';
 
-export const KeygenConvertAddress = () => {
+export const ToolsConvertAddress = () => {
   return (
     <section id="convert-address" className="container mx-auto my-48 max-w-7xl">
       <h2 className="my-8 text-5xl">Convert address to public key</h2>

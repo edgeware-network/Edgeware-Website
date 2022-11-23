@@ -22,7 +22,7 @@ export const footerLinks: FooterLinksGroup[] = [
       Github: 'https://github.com/edgeware-network',
       Documentation: 'https://docs.edgeware.wiki/',
       Validators: 'https://docs.edgeware.wiki/quickstart/set-up-a-validator',
-      Keygen: '/keygen',
+      Tools: '/tools',
     },
   },
   {

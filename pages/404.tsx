@@ -3,12 +3,6 @@ import React from 'react';
 import { ErrorIcon } from '../components/common/error-icon';
 
 export default function NotFoundPage() {
-  React.useEffect(() => {
-    if (window.location.pathname === '/keygen/') {
-      window.location.href = '/keygen';
-    }
-  }, []);
-
   return (
     <>
       <section id="content" className="container mx-auto my-24 max-w-7xl">

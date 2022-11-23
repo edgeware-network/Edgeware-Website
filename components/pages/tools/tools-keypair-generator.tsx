@@ -1,6 +1,6 @@
 import { KeyPairGenerator } from './forms/keypair-generator';
 
-export const KeygenKeypairGenerator = () => {
+export const ToolsKeypairGenerator = () => {
   return (
     <section id="keypair" className="container mx-auto my-48 max-w-7xl">
       <h2 className="my-8 text-5xl">Generate keypair</h2>

@@ -1,6 +1,6 @@
 import { EVMDepositForm } from './forms/evm-deposit';
 
-export const KeygenDeposit = () => {
+export const ToolsEVMDeposit = () => {
   return (
     <section id="deposit" className="container mx-auto my-48 max-w-7xl">
       <h2 className="my-8 text-5xl">Deposit to EVM</h2>

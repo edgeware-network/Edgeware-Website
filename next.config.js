@@ -20,6 +20,11 @@ module.exports = withSvgr({
         destination: '/build',
         permanent: true,
       },
+      {
+        source: '/keygen',
+        destination: '/tools',
+        permanent: true,
+      },
     ];
   },
 });

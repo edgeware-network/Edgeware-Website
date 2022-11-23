@@ -1,6 +1,6 @@
 import { EvmWithdraw } from './forms/evm-withdraw';
 
-export const KeygenWithdraw = () => {
+export const ToolsEVMWithdrawal = () => {
   return (
     <section id="withdraw" className="container mx-auto my-48 max-w-7xl">
       <h2 className="my-8 text-5xl">Withdraw from EVM</h2>

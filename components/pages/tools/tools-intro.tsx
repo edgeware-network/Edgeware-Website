@@ -1,10 +1,12 @@
-export const KeygenIntro = () => {
+export const ToolsIntro = () => {
   return (
     <section id="intro" className="container mx-auto my-16 max-w-7xl">
       <h1 className="my-8 text-6xl">Edgeware Key Generator and Tools</h1>
       <p className="my-2 leading-relaxed">
-        This page is a collection of tools to help you generate and manage your Edgeware keys. It is
-        not a wallet, and does not store your keys.
+        This page is a collection of tools to generate keys, do the public key to address
+        transformation and do EdgeEVM/EdgeWASM transfers.
+        <br />
+        It is not a wallet and does not store your keys or data.
         <br />
         Note: The preferred way to generate a private key is{' '}
         <a
