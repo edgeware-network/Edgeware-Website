@@ -235,7 +235,7 @@ export const EvmWithdraw = () => {
             ref={inputEl}
             required
             autoComplete="off"
-            autoCapitalize="off"
+            autoCapitalize="none"
             autoCorrect="off"
           />
         </label>
@@ -250,7 +250,7 @@ export const EvmWithdraw = () => {
             placeholder="Amount (EDG)"
             ref={amountEl}
             autoComplete="off"
-            autoCapitalize="off"
+            autoCapitalize="none"
             autoCorrect="off"
           />
         </label>

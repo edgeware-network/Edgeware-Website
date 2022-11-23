@@ -90,7 +90,7 @@ Public Key: ${results.data}`;
           placeholder={FORM_LABELS[type]}
           ref={addressInputElementRef}
           autoComplete="off"
-          autoCapitalize="off"
+          autoCapitalize="none"
           autoCorrect="off"
         />
       </label>

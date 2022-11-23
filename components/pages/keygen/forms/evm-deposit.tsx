@@ -54,7 +54,7 @@ export const EVMDepositForm = () => {
           placeholder={'Enter your EVM Address (e.g. 0x1234...)'}
           ref={addressInputElementRef}
           autoComplete="off"
-          autoCapitalize="off"
+          autoCapitalize="none"
           autoCorrect="off"
         />
       </label>
