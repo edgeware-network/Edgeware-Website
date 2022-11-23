@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Button } from 'components/common/button';
 
 import { generateKeyPair, KeyPairData } from '../../../../lib/keygen';
+import { cryptoWaitReady } from '@polkadot/util-crypto';
 
 type KeyPairGeneratorState = {
   generated: boolean;
@@ -24,11 +25,16 @@ export const KeyPairGenerator = () => {
   });
 
   const handleClick = () => {
-    const keypairData = generateKeyPair();
-    setResults({
-      generated: true,
-      keypairData,
-    });
+    async function generate() {
+      await cryptoWaitReady();
+      const keypairData = generateKeyPair();
+      setResults({
+        generated: true,
+        keypairData,
+      });
+    }
+
+    generate();
   };
 
   const handleReset = () => {
