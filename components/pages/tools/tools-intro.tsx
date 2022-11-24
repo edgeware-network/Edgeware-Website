@@ -7,17 +7,6 @@ export const ToolsIntro = () => {
         transformation and do EdgeEVM/EdgeWASM transfers.
         <br />
         It is not a wallet and does not store your keys or data.
-        <br />
-        Note: The preferred way to generate a private key is{' '}
-        <a
-          href="https://docs.edgeware.wiki/quickstart/create-an-account#subkey"
-          target="_blank"
-          className="underline"
-          rel="noreferrer noopener"
-        >
-          using the command line
-        </a>
-        , on an air-gapped computer.
       </p>
       <p className="my-4">Tools this page:</p>
       <ol className="my-4 list-inside list-decimal">
