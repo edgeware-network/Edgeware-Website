@@ -3,7 +3,7 @@ import { EvmWithdraw } from './forms/evm-withdraw';
 export const ToolsEVMWithdrawal = () => {
   return (
     <section id="withdraw" className="container mx-auto my-48 max-w-7xl">
-      <h2 className="my-8 text-5xl">Withdraw from EVM</h2>
+      <h2 className="my-8 text-5xl">Withdraw from EdgeEVM</h2>
       <p className="my-2 max-w-prose">
         To withdraw EDGs from EdgeEVM (e.g. via Metamask) to substrate/EdgeWASM, send them to the
         algorithmically discovered <strong>EVM withdrawal address</strong> corresponding to your

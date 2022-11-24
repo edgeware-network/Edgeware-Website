@@ -2,8 +2,8 @@ import React from 'react';
 
 export const ToolsIntro = () => {
   const TOOLS = {
-    deposit: 'Deposit to EVM',
-    withdraw: 'Withdraw from EVM',
+    deposit: 'Deposit to EdgeEVM',
+    withdraw: 'Withdraw from EdgeEVM',
     'convert-address': ' Convert address to public key',
     'convert-public-key': 'Convert public key to address',
     keypair: 'Generate keypair',
@@ -18,7 +18,7 @@ export const ToolsIntro = () => {
 
   return (
     <section id="intro" className="container mx-auto my-16 max-w-7xl">
-      <h1 className="my-8 text-6xl">Edgeware Key Generator and Tools</h1>
+      <h1 className="my-8 text-6xl">Edgeware Tools</h1>
       <p className="my-2 max-w-prose">
         This page is a collection of tools to generate keys, do the public key to address
         transformation and do EdgeEVM/EdgeWASM transfers.
