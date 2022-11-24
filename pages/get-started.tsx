@@ -9,7 +9,7 @@ import IconGov from 'remixicon/icons/Buildings/government-line.svg';
 import IconPaper from 'remixicon/icons/Document/file-list-line.svg';
 import IconDiscord from 'remixicon/icons/Logos/discord-line.svg';
 // import IconBubbles from 'remixicon/icons/Business/bubble-chart-line.svg';
-import IconTools from 'remixicon/icons/Design/ri-tools-line.svg';
+import IconTools from 'remixicon/icons/Design/tools-line.svg';
 
 import IconTerminal from 'remixicon/icons/Development/terminal-window-line.svg';
 import IconCommand from 'remixicon/icons/Development/command-line.svg';
