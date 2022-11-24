@@ -133,7 +133,7 @@ const LINKS: Record<string, LinkItem[]> = {
     { label: 'Dev Digest', icon: IconArticle, href: 'https://blog.edgewa.re/tag/weekly/' },
     { label: 'Dev Docs', icon: IconDocs, href: 'https://docs.edgeware.wiki/' },
     { label: 'Commonwealth', icon: IconCompass, href: 'https://commonwealth.im/edgeware' },
-    { 
+    {
       label: 'Node Telemetry',
       icon: IconApps,
       href: 'https://telemetry.polkadot.io/#list/0x742a2ca70c2fda6cee4f8df98d64c4c670a052d9568058982dad9d5a7a135c5b',
