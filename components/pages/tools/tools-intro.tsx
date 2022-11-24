@@ -23,7 +23,7 @@ export const ToolsIntro = () => {
         This page is a collection of tools to generate keys, do the public key to address
         transformation and do EdgeEVM/EdgeWASM transfers.
         <br />
-        It is not a wallet and does not store your keys or data.
+        This is not a wallet and our website does not store any of your keys or data!
       </p>
       <p className="my-4">Available tools:</p>
       <nav className="space-2 flex max-w-sm flex-col flex-wrap">
