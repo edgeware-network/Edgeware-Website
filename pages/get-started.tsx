@@ -76,14 +76,8 @@ const LINKS: Record<string, LinkItem[]> = {
   ],
 
    explorers: [
-    { label: 'Subscan Explorer',
-      icon: IconSearch,
-      href: 'https://edgeware.subscan.io/'
-    },
-    { label: 'EdgeEVM Explorer',
-      icon: IconSearch,
-      href: 'https://edgscan.live/'
-    },
+    { label: 'Subscan Explorer', icon: IconSearch, href: 'https://edgeware.subscan.io/' },
+    { label: 'EdgeEVM Explorer', icon: IconSearch, href: 'https://edgscan.live/' },
   ],
   
   staking: [
