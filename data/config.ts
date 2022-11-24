@@ -1,5 +1,5 @@
 export const socialMediaUrls = {
-  discordUrl: 'http://edgeware.chat/',
+  discordUrl: 'https://discord.gg/4pnzjWTJ9b',
   twitterUrl: 'https://twitter.com/EdgewareDAO',
   githubUrl: 'https://github.com/orgs/Edgeware-Network',
   redditUrl: 'https://www.reddit.com/r/edgeware',
