@@ -9,7 +9,7 @@ import IconGov from 'remixicon/icons/Buildings/government-line.svg';
 import IconPaper from 'remixicon/icons/Document/file-list-line.svg';
 import IconDiscord from 'remixicon/icons/Logos/discord-line.svg';
 // import IconBubbles from 'remixicon/icons/Business/bubble-chart-line.svg';
-import IconTools from 'remixicon/icons/Design/ri-tools-line.svg'
+import IconTools from 'remixicon/icons/Design/ri-tools-line.svg';
 
 import IconTerminal from 'remixicon/icons/Development/terminal-window-line.svg';
 import IconCommand from 'remixicon/icons/Development/command-line.svg';
@@ -75,11 +75,11 @@ const LINKS: Record<string, LinkItem[]> = {
     { label: 'Clover Wallet', icon: IconWallet, href: 'https://clover.finance/' },
   ],
 
-   explorers: [
+  explorers: [
     { label: 'Subscan Explorer', icon: IconSearch, href: 'https://edgeware.subscan.io/' },
     { label: 'EdgeEVM Explorer', icon: IconSearch, href: 'https://edgscan.live/' },
   ],
-  
+
   staking: [
     {
       label: 'Run a Validator',
@@ -135,7 +135,7 @@ const LINKS: Record<string, LinkItem[]> = {
     { label: 'Commonwealth', icon: IconCompass, href: 'https://commonwealth.im/edgeware' },
     { label: 'Node Telemetry',
       icon: IconApps,
-      href: 'https://telemetry.polkadot.io/#list/0x742a2ca70c2fda6cee4f8df98d64c4c670a052d9568058982dad9d5a7a135c5b'
+      href: 'https://telemetry.polkadot.io/#list/0x742a2ca70c2fda6cee4f8df98d64c4c670a052d9568058982dad9d5a7a135c5b',
     },
   ],
 };
