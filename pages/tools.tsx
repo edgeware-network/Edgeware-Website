@@ -9,11 +9,11 @@ export default function ToolsPage() {
   return (
     <>
       <ToolsIntro />
-      <ToolsKeypairGenerator />
-      <ToolsConvertPublicKey />
-      <ToolsConvertAddress />
       <ToolsEVMDeposit />
       <ToolsEVMWithdrawal />
+      <ToolsConvertAddress />
+      <ToolsConvertPublicKey />
+      <ToolsKeypairGenerator />
     </>
   );
 }
