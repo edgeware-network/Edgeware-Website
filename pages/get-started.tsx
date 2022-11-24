@@ -43,7 +43,7 @@ const LINKS: Record<string, LinkItem[]> = {
       icon: IconPaper,
       href: '/assets/whitepaper/edgeware-whitepaper.pdf',
     },
-    { label: 'Discord', icon: IconDiscord, href: 'http://edgeware.chat/' },
+    { label: 'Discord', icon: IconDiscord, href: 'https://discord.gg/4pnzjWTJ9b' },
     { label: 'Tools', icon: IconTools, href: '/tools' },
   ],
 
