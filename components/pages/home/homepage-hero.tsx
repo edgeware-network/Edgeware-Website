@@ -26,6 +26,12 @@ export const HomepageHero = () => {
               <Button href={socialMediaUrls.discordUrl} sizing="large" colorStyle="primary">
                 Join Discord
               </Button>
+              <Button href="https://edgeware.app/" sizing="large" colorStyle="primary">
+                EdgeApps
+              </Button>
+              <Button href="/tools" sizing="large" colorStyle="grey">
+                Tools
+              </Button>
               <Button href="/build" sizing="large" colorStyle="grey">
                 Start Building
               </Button>
