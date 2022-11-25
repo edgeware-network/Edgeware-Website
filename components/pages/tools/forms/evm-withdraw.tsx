@@ -5,7 +5,7 @@ import { TypeRegistry } from '@polkadot/types';
 import { ApiPromise, WsProvider } from '@polkadot/api';
 import { decodeAddress } from '@polkadot/util-crypto';
 import Web3 from 'web3';
-import { useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 import { Button } from 'components/common/button';
 
@@ -26,16 +26,33 @@ interface EvmWithdrawFormState {
 }
 
 export const EvmWithdraw = () => {
-  const inputEl = useRef(null);
-  const amountEl = useRef(null);
+  const addressInputEl = useRef(null);
+  const amountInputEl = useRef(null);
   const [formState, setFormState] = useState({
     text: null,
     error: false,
   } as EvmWithdrawFormState);
 
-  const evmToMainnet = async () => {
+  const handleTransferButton = async (event: React.MouseEvent) => {
+    event.preventDefault();
     setFormState({});
 
+    // 1. Validate form
+    const substrateAddress = addressInputEl.current.value;
+    if (!substrateAddress) {
+      setFormState({ text: 'Invalid Substrate address', error: true });
+      addressInputEl.current.focus();
+      return;
+    }
+
+    const amount = amountInputEl.current.value;
+    if (amount === '' || amount === '0' || isNaN(+amount)) {
+      setFormState({ text: 'Invalid EDG amount', error: true });
+      amountInputEl.current.focus();
+      return;
+    }
+
+    // 2. Check for Web3 accounts
     const web3 = new Web3((window as any).ethereum);
     const currentProvider = web3?.eth?.accounts?.currentProvider as any;
     try {
@@ -50,19 +67,7 @@ export const EvmWithdraw = () => {
       return;
     }
 
-    const substrateAddress = inputEl.current.value;
-    if (!substrateAddress) {
-      setFormState({ text: 'Invalid Substrate address', error: true });
-      return;
-    }
-
-    const amount = amountEl.current.value;
-    if (isNaN(+amount)) {
-      setFormState({ text: 'Invalid amount', error: true });
-      return;
-    }
-
-    // are we on the right network?
+    // Are we on the right network?
     if (+currentProvider?.chainId !== 2021 && +currentProvider?.chainId !== 2022) {
       setFormState({
         text: 'Please switch to Edgeware EdgeEVM network in your web3 wallet manually or click on the `Switch to EdgeEVM` button below.',
@@ -72,6 +77,7 @@ export const EvmWithdraw = () => {
       return;
     }
 
+    // 3. Continue with transfer
     try {
       setFormState({ text: 'Confirm the transaction in your wallet', error: true });
       const addressBytes = decodeAddress(substrateAddress);
@@ -96,7 +102,8 @@ export const EvmWithdraw = () => {
     }
   };
 
-  const evmWithdraw = async () => {
+  const handleWithdrawButton = async (event: React.MouseEvent) => {
+    event.preventDefault();
     setFormState({});
 
     const web3 = new Web3((window as any).ethereum);
@@ -113,13 +120,13 @@ export const EvmWithdraw = () => {
       return;
     }
 
-    const sender = inputEl.current.value;
+    const sender = addressInputEl.current.value;
     if (!sender) {
       setFormState({ text: 'Invalid Substrate address', error: true });
       return;
     }
 
-    const amount = amountEl.current.value;
+    const amount = amountInputEl.current.value;
     if (amount === '' || isNaN(+amount)) {
       setFormState({ text: 'Invalid amount', error: true });
       return;
@@ -196,7 +203,7 @@ export const EvmWithdraw = () => {
       });
   };
 
-  const addNetwork = async (e) => {
+  const handleNetworkSwitchButton = async (e: React.MouseEvent) => {
     e.preventDefault();
 
     try {
@@ -221,9 +228,13 @@ export const EvmWithdraw = () => {
     }
   };
 
+  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+  };
+
   return (
     <>
-      <form onSubmit={(e) => e.preventDefault()} className="my-8 max-w-2xl">
+      <form onSubmit={handleFormSubmit} className="my-8 max-w-2xl">
         <label className="my-4 block" htmlFor="ac-input-withdraw-address" aria-label="Address">
           <span className="text-gray-700">Withdraw address (Substrate):</span>
           <input
@@ -232,7 +243,7 @@ export const EvmWithdraw = () => {
             type="text"
             name="input"
             placeholder="Substrate address (e.g. nJrsr...)"
-            ref={inputEl}
+            ref={addressInputEl}
             required
             autoComplete="off"
             autoCapitalize="none"
@@ -248,19 +259,19 @@ export const EvmWithdraw = () => {
             name="input"
             required
             placeholder="Amount (EDG)"
-            ref={amountEl}
+            ref={amountInputEl}
             autoComplete="off"
             autoCapitalize="none"
             autoCorrect="off"
           />
         </label>
         <div className="py-1">
-          <Button onClick={evmToMainnet} colorStyle="primary" sizing="normal">
+          <Button onClick={handleTransferButton} colorStyle="primary" sizing="normal">
             1. Transfer to withdraw address
           </Button>
         </div>
         <div className="py-1">
-          <Button onClick={evmWithdraw} colorStyle="primary" sizing="normal">
+          <Button onClick={handleWithdrawButton} colorStyle="primary" sizing="normal">
             2. Withdraw from EVM
           </Button>
         </div>
@@ -268,7 +279,7 @@ export const EvmWithdraw = () => {
           {formState.text}
         </div>
         {formState.showAddNetwork && (window as any).ethereum && (
-          <Button onClick={addNetwork} colorStyle="white" sizing="normal">
+          <Button onClick={handleNetworkSwitchButton} colorStyle="white" sizing="normal">
             Switch to EdgeEVM
           </Button>
         )}
