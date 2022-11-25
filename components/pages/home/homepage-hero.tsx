@@ -26,6 +26,12 @@ export const HomepageHero = () => {
               <Button href={socialMediaUrls.discordUrl} sizing="large" colorStyle="primary">
                 Join Discord
               </Button>
+              <Button href="https://edgeware.app/" sizing="large" colorStyle="primary">
+                Use EdgeApps
+              </Button>
+              <Button href="/tools" sizing="large" colorStyle="grey">
+                Tools
+              </Button>
               <Button href="/build" sizing="large" colorStyle="grey">
                 Start Building
               </Button>
@@ -37,19 +43,23 @@ export const HomepageHero = () => {
             <ul className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-10">
               <li className="flex flex-row align-middle">
                 <CheckboxCircleFill className="mr-2 h-6 w-6 fill-green-500" />
-                Built on Substrate
+                Oldest Substrate Solochain
               </li>
               <li className="flex flex-row align-middle">
                 <CheckboxCircleFill className="mr-2 h-6 w-6 fill-green-500" />
-                Mainnet
+                Self-sustainable Ecosystem
               </li>
               <li className="flex flex-row align-middle">
                 <CheckboxCircleFill className="mr-2 h-6 w-6 fill-green-500" />
-                EVM and Wasm Contracts
+                Dual Smart Contracts Environments
               </li>
               <li className="flex flex-row align-middle">
                 <CheckboxCircleFill className="mr-2 h-6 w-6 fill-green-500" />
-                Fairly Distributed
+                Fairly Distributed through Lockdrop
+              </li>
+              <li className="flex flex-row align-middle">
+                <CheckboxCircleFill className="mr-2 h-6 w-6 fill-green-500" />
+                Full Democracy since the Genesis
               </li>
             </ul>
           </div>
