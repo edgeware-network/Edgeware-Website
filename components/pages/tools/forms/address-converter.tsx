@@ -31,11 +31,11 @@ export const AddressConverter = ({ type }: AddressConverterProps) => {
     data: undefined,
   });
 
-  const inputEl = React.useRef(null);
+  const addressInputElementRef = React.useRef(null);
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
-    const inputValue = inputEl.current.value;
+    const inputValue = addressInputElementRef.current.value;
     const data = convertInputByType(inputValue, type);
     setResults({
       inputValue,
@@ -83,13 +83,14 @@ Public Key: ${results.data}`;
       <label htmlFor={`ac-input-${type}`} aria-label={FORM_LABELS[type]} className="my-4 block">
         <input
           id={`ac-input-${type}`}
-          className="w-full rounded border border-grey-700 bg-grey-900 px-4 py-3"
+          className="w-full rounded border border-grey-700 bg-grey-900 px-4 py-2"
           type="text"
           name="input"
+          required
           placeholder={FORM_LABELS[type]}
-          ref={inputEl}
+          ref={addressInputElementRef}
           autoComplete="off"
-          autoCapitalize="off"
+          autoCapitalize="none"
           autoCorrect="off"
         />
       </label>

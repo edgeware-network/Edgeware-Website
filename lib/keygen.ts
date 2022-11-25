@@ -28,6 +28,7 @@ export function generateKeyPair(): KeyPairData {
   };
 }
 
+// Converts EVM address to Substrate address
 export function evmConvert(evmAddress = '') {
   try {
     const addr = hexToU8a(evmAddress);
@@ -47,6 +48,7 @@ export function evmConvert(evmAddress = '') {
   }
 }
 
+// Converts Substrate address to EVM address
 export function ss58Convert(address = '') {
   const keyring = new Keyring();
   try {
@@ -58,6 +60,7 @@ export function ss58Convert(address = '') {
   }
 }
 
+// Converts public key to EVM address
 export function publicKeyConvert(publicKey = '') {
   try {
     const testnetKeyring = new Keyring({ type: 'sr25519' });

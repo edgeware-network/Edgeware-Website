@@ -9,7 +9,7 @@ export const footerLinks: FooterLinksGroup[] = [
     items: {
       Interface: 'https://www.edgeware.app/?rpc=wss%3A%2F%2Fmainnet.edgewa.re#/explorer',
       Governance: 'https://gov.edgewa.re/',
-      Discord: 'http://edgeware.chat/',
+      Discord: 'https://discord.gg/4pnzjWTJ9b',
       Society: '/society',
       Press: '/press',
     },
@@ -22,7 +22,7 @@ export const footerLinks: FooterLinksGroup[] = [
       Github: 'https://github.com/edgeware-network',
       Documentation: 'https://docs.edgeware.wiki/',
       Validators: 'https://docs.edgeware.wiki/quickstart/set-up-a-validator',
-      Keygen: '/keygen',
+      Tools: '/tools',
     },
   },
   {

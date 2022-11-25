@@ -8,7 +8,8 @@ import IconUser from 'remixicon/icons/User/open-arm-line.svg';
 import IconGov from 'remixicon/icons/Buildings/government-line.svg';
 import IconPaper from 'remixicon/icons/Document/file-list-line.svg';
 import IconDiscord from 'remixicon/icons/Logos/discord-line.svg';
-import IconBubbles from 'remixicon/icons/Business/bubble-chart-line.svg';
+// import IconBubbles from 'remixicon/icons/Business/bubble-chart-line.svg';
+import IconTools from 'remixicon/icons/Design/tools-line.svg';
 
 import IconTerminal from 'remixicon/icons/Development/terminal-window-line.svg';
 import IconCommand from 'remixicon/icons/Development/command-line.svg';
@@ -35,15 +36,15 @@ const LINKS: Record<string, LinkItem[]> = {
     {
       label: 'EdgeApps',
       icon: IconWallet,
-      href: 'https://www.edgeware.app/?rpc=wss%3A%2F%2Fmainnet.edgewa.re#/',
+      href: 'https://www.edgeware.app/?rpc=wss%3A%2F%2Fedgeware.jelliedowl.net#/',
     },
     {
       label: 'Whitepaper',
       icon: IconPaper,
       href: '/assets/whitepaper/edgeware-whitepaper.pdf',
     },
-    { label: 'Discord', icon: IconDiscord, href: 'http://edgeware.chat/' },
-    { label: 'Society', icon: IconBubbles, href: '/society' },
+    { label: 'Discord', icon: IconDiscord, href: 'https://discord.gg/4pnzjWTJ9b' },
+    { label: 'Tools', icon: IconTools, href: '/tools' },
   ],
 
   wallets: [
@@ -72,6 +73,11 @@ const LINKS: Record<string, LinkItem[]> = {
     { label: 'Math Wallet', icon: IconWallet, href: 'https://mathwallet.org/' },
     { label: 'Polkawallet', icon: IconWallet, href: 'https://polkawallet.io/' },
     { label: 'Clover Wallet', icon: IconWallet, href: 'https://clover.finance/' },
+  ],
+
+  explorers: [
+    { label: 'Subscan Explorer', icon: IconSearch, href: 'https://edgeware.subscan.io/' },
+    { label: 'EdgeEVM Explorer', icon: IconSearch, href: 'https://edgscan.live/' },
   ],
 
   staking: [
@@ -113,21 +119,24 @@ const LINKS: Record<string, LinkItem[]> = {
   ],
 
   other: [
-    { label: 'Subscan Explorer', icon: IconSearch, href: 'https://edgeware.subscan.io/' },
-    { label: 'Commonwealth', icon: IconCompass, href: 'https://commonwealth.im/' },
-    { label: 'Node Telemetry', icon: IconApps, href: 'https://telemetry.polkadot.io/' },
-    { label: 'Dev Digest', icon: IconArticle, href: 'https://blog.edgewa.re/' },
-    { label: 'Dev Docs', icon: IconDocs, href: 'https://docs.edgeware.wiki/' },
-    { label: 'Cutting Edge News', icon: IconNews, href: 'https://blog.edgewa.re/' },
+    {
+      label: 'Markets',
+      icon: IconMarkets,
+      href: 'https://www.coingecko.com/en/coins/edgeware#markets',
+    },
     {
       label: 'Video Tutorials',
       icon: IconYouTube,
       href: 'https://www.youtube.com/channel/UC7LAzthbMfggA28kE1fihaA',
     },
+    { label: 'Cutting Edge News', icon: IconNews, href: 'https://blog.edgewa.re/tag/weekly/' },
+    { label: 'Dev Digest', icon: IconArticle, href: 'https://blog.edgewa.re/tag/weekly/' },
+    { label: 'Dev Docs', icon: IconDocs, href: 'https://docs.edgeware.wiki/' },
+    { label: 'Commonwealth', icon: IconCompass, href: 'https://commonwealth.im/edgeware' },
     {
-      label: 'Markets',
-      icon: IconMarkets,
-      href: 'https://www.coingecko.com/en/coins/edgeware#markets',
+      label: 'Node Telemetry',
+      icon: IconApps,
+      href: 'https://telemetry.polkadot.io/#list/0x742a2ca70c2fda6cee4f8df98d64c4c670a052d9568058982dad9d5a7a135c5b',
     },
   ],
 };
@@ -139,6 +148,7 @@ export default function GetStarted() {
 
       <LinksList headline="Holders" items={LINKS.holders} highlight />
       <LinksList headline="Wallets" items={LINKS.wallets} />
+      <LinksList headline="Explorers" items={LINKS.explorers} />
       <LinksList headline="Staking" items={LINKS.staking} />
       <LinksList headline="Venture &amp; Funding" items={LINKS.venture} />
       <LinksList headline="Other" items={LINKS.other} />

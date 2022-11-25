@@ -41,12 +41,12 @@ export const EvmWithdraw = () => {
     try {
       await (window as any).ethereum.request({ method: 'eth_requestAccounts' });
     } catch (e) {
-      setFormState({ text: 'Metamask or compatible Web3 wallet required', error: true });
+      setFormState({ text: 'Metamask or EVM compatible Web3 wallet required', error: true });
       return;
     }
     const account = currentProvider?.selectedAddress;
     if (!account) {
-      setFormState({ text: 'Metamask or compatible Web3 wallet required', error: true });
+      setFormState({ text: 'Metamask or EVM compatible Web3 wallet required', error: true });
       return;
     }
 
@@ -65,7 +65,7 @@ export const EvmWithdraw = () => {
     // are we on the right network?
     if (+currentProvider?.chainId !== 2021 && +currentProvider?.chainId !== 2022) {
       setFormState({
-        text: 'Wallet must be configured to EVM chain ID 2021 for Edgeware',
+        text: 'Please switch to Edgeware EdgeEVM network in your web3 wallet manually or click on the `Switch to EdgeEVM` button below.',
         error: true,
         showAddNetwork: true,
       });
@@ -107,6 +107,7 @@ export const EvmWithdraw = () => {
       setFormState({ text: 'Metamask or compatible Web3 wallet required', error: true });
       return;
     }
+
     if (!currentProvider) {
       setFormState({ text: 'Metamask or compatible Web3 wallet required', error: true });
       return;
@@ -119,7 +120,7 @@ export const EvmWithdraw = () => {
     }
 
     const amount = amountEl.current.value;
-    if (isNaN(+amount)) {
+    if (amount === '' || isNaN(+amount)) {
       setFormState({ text: 'Invalid amount', error: true });
       return;
     }
@@ -130,7 +131,7 @@ export const EvmWithdraw = () => {
 
     if (+currentProvider?.chainId !== 2021 && +currentProvider?.chainId !== 2022) {
       setFormState({
-        text: 'Wallet must be configured to EVM chain ID 2021 for Edgeware',
+        text: 'Please switch to Edgeware EdgeEVM network in your web3 wallet/signer manually or click on the `Switch to EdgeEVM` button below.',
         error: true,
         showAddNetwork: true,
       });
@@ -140,6 +141,9 @@ export const EvmWithdraw = () => {
     setFormState({ text: 'Connecting to polkadot-js...', error: true });
     const polkadotUrl = 'wss://edgeware.jelliedowl.net';
     const registry = new TypeRegistry();
+
+    // eslint-disable-next-line
+    // @ts-ignore
     const api = await new ApiPromise({
       provider: new WsProvider(polkadotUrl),
       registry,
@@ -201,7 +205,7 @@ export const EvmWithdraw = () => {
         params: [
           {
             chainId: '0x7E5',
-            chainName: 'Edgeware',
+            chainName: 'Edgeware EdgeEVM',
             rpcUrls: ['https://edgeware-evm.jelliedowl.net/'],
             nativeCurrency: {
               name: 'Edgeware',
@@ -221,28 +225,32 @@ export const EvmWithdraw = () => {
     <>
       <form onSubmit={(e) => e.preventDefault()} className="my-8 max-w-2xl">
         <label className="my-4 block" htmlFor="ac-input-withdraw-address" aria-label="Address">
+          <span className="text-gray-700">Withdraw address (Substrate):</span>
           <input
             id="ac-input-withdraw-address"
-            className="w-full rounded border border-grey-700 bg-grey-900 px-4 py-3"
+            className="w-full rounded border border-grey-700 bg-grey-900 px-4 py-2"
             type="text"
             name="input"
             placeholder="Substrate address (e.g. nJrsr...)"
             ref={inputEl}
+            required
             autoComplete="off"
-            autoCapitalize="off"
+            autoCapitalize="none"
             autoCorrect="off"
           />
         </label>
         <label className="my-4 block" htmlFor="ac-input-withdraw-amount" aria-label="Amount">
+          <span className="text-gray-700">Withdrawal amount (EDG):</span>
           <input
             id="ac-input-withdraw-amount"
-            className="w-full rounded border border-grey-700 bg-grey-900 px-4 py-3"
+            className="w-full rounded border border-grey-700 bg-grey-900 px-4 py-2"
             type="text"
             name="input"
+            required
             placeholder="Amount (EDG)"
             ref={amountEl}
             autoComplete="off"
-            autoCapitalize="off"
+            autoCapitalize="none"
             autoCorrect="off"
           />
         </label>
@@ -261,7 +269,7 @@ export const EvmWithdraw = () => {
         </div>
         {formState.showAddNetwork && (window as any).ethereum && (
           <Button onClick={addNetwork} colorStyle="white" sizing="normal">
-            Switch to Edgeware
+            Switch to EdgeEVM
           </Button>
         )}
       </form>
