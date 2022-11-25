@@ -25,9 +25,15 @@ interface EvmWithdrawFormState {
   showAddNetwork?: boolean;
 }
 
+type formStep = 'initial' | 'transfer' | 'complete';
+
 export const EvmWithdraw = () => {
   const addressInputEl = useRef(null);
   const amountInputEl = useRef(null);
+  const evmAddressInputEl = useRef(null);
+
+  const [formStep, setFormStep] = useState<formStep>('initial');
+
   const [formState, setFormState] = useState({
     text: null,
     error: false,
@@ -35,7 +41,10 @@ export const EvmWithdraw = () => {
 
   const handleTransferButton = async (event: React.MouseEvent) => {
     event.preventDefault();
+
+    // Reset state
     setFormState({});
+    setFormStep('initial');
 
     // 1. Validate form
     const substrateAddress = addressInputEl.current.value;
@@ -79,9 +88,14 @@ export const EvmWithdraw = () => {
 
     // 3. Continue with transfer
     try {
-      setFormState({ text: 'Confirm the transaction in your wallet', error: true });
       const addressBytes = decodeAddress(substrateAddress);
       const evmAddress = Buffer.from(addressBytes.subarray(0, 20)).toString('hex');
+
+      setFormStep('transfer');
+      evmAddressInputEl.current.value = evmAddress;
+
+      setFormState({ text: 'Confirm the transaction in your wallet', error: false });
+
       await web3.eth
         .sendTransaction({
           from: account,
@@ -90,10 +104,14 @@ export const EvmWithdraw = () => {
           gas: '55000',
         })
         .on('transactionHash', () => {
-          setFormState({ text: 'Transaction sent, waiting for confirmation...', error: true });
+          setFormState({ text: 'Transaction sent, waiting for confirmation...', error: false });
         });
-      setFormState({ text: 'Transfer to withdraw address succeeded. Please continue to step 2.' });
+      setFormState({
+        text: 'Transfer to withdraw address succeeded. Please continue to step 2.',
+        error: false,
+      });
     } catch (err) {
+      console.log(err);
       if (err.code === 4001) {
         setFormState({ text: 'Transaction canceled', error: true });
       } else {
@@ -127,7 +145,7 @@ export const EvmWithdraw = () => {
     }
 
     const amount = amountInputEl.current.value;
-    if (amount === '' || isNaN(+amount)) {
+    if (amount === '' || amount === '0' || isNaN(+amount)) {
       setFormState({ text: 'Invalid amount', error: true });
       return;
     }
@@ -145,12 +163,11 @@ export const EvmWithdraw = () => {
       return;
     }
 
-    setFormState({ text: 'Connecting to polkadot-js...', error: true });
+    setFormState({ text: 'Connecting to polkadot-js...', error: false });
+
     const polkadotUrl = 'wss://edgeware.jelliedowl.net';
     const registry = new TypeRegistry();
 
-    // eslint-disable-next-line
-    // @ts-ignore
     const api = await new ApiPromise({
       provider: new WsProvider(polkadotUrl),
       registry,
@@ -175,8 +192,9 @@ export const EvmWithdraw = () => {
 
     setFormState({
       text: `Withdrawing ${withdrawingBalance} of ${availableBalance} available, please confirm in polkadot-js`,
-      error: true,
+      error: false,
     });
+
     const injector = await web3FromAddress(sender);
     api.tx.evm
       .withdraw(evmAddress, (+amount * 10 ** +api.registry.chainDecimals).toString())
@@ -192,10 +210,13 @@ export const EvmWithdraw = () => {
           setFormState({ text: 'Transaction error', error: true });
         } else if (result.isCompleted && withdrawingBalance === availableBalance) {
           setFormState({ text: `Transaction success. Withdrew ${withdrawingBalance}!` });
+
+          setFormStep('complete');
         } else if (result.isCompleted) {
           setFormState({
             text: `Transaction success. Withdrew ${withdrawingBalance} of ${availableBalance} available in the withdraw address`,
           });
+          setFormStep('complete');
         }
       })
       .catch((err) => {
@@ -232,6 +253,19 @@ export const EvmWithdraw = () => {
     event.preventDefault();
   };
 
+  const handleReset = () => {
+    if (addressInputEl.current) {
+      addressInputEl.current.value = '';
+    }
+
+    if (amountInputEl.current) {
+      amountInputEl.current.value = '';
+    }
+
+    setFormState({});
+    setFormStep('initial');
+  };
+
   return (
     <>
       <form onSubmit={handleFormSubmit} className="my-8 max-w-2xl">
@@ -265,6 +299,27 @@ export const EvmWithdraw = () => {
             autoCorrect="off"
           />
         </label>
+        {formStep === 'transfer' && (
+          <label
+            className="my-4 block"
+            htmlFor="ac-input-withdraw-address-evm"
+            aria-label="Address"
+          >
+            <span className="text-gray-700">Discovered withdrawal address (EVM):</span>
+            <input
+              id="ac-input-withdraw-address-evm"
+              className="w-full rounded border border-grey-700 bg-grey-800 px-4 py-2 focus:outline-none focus:ring-0"
+              type="text"
+              readOnly
+              name="input"
+              placeholder=""
+              ref={evmAddressInputEl}
+            />
+          </label>
+        )}
+        <div className={formState.error ? 'my-4 text-[#DC2626]' : 'my-4 text-green-600'}>
+          {formState.text}
+        </div>
         <div className="py-1">
           <Button onClick={handleTransferButton} colorStyle="primary" sizing="normal">
             1. Transfer to withdraw address
@@ -275,13 +330,20 @@ export const EvmWithdraw = () => {
             2. Withdraw from EVM
           </Button>
         </div>
-        <div className={formState.error ? 'mt-4 text-[#DC2626]' : 'mt-4 text-green-600'}>
-          {formState.text}
-        </div>
         {formState.showAddNetwork && (window as any).ethereum && (
-          <Button onClick={handleNetworkSwitchButton} colorStyle="white" sizing="normal">
-            Switch to EdgeEVM
-          </Button>
+          <div className="py-1">
+            <Button onClick={handleNetworkSwitchButton} colorStyle="white" sizing="normal">
+              Switch to EdgeEVM
+            </Button>
+          </div>
+        )}
+
+        {formStep === 'complete' && (
+          <div className="py-1">
+            <Button onClick={handleReset} colorStyle="white" sizing="normal">
+              Start over
+            </Button>
+          </div>
         )}
       </form>
     </>
