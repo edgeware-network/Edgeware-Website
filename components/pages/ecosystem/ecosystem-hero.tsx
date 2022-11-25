@@ -1,6 +1,6 @@
 export const EcosystemHero: React.FC = () => {
   return (
-    <section className="bg-[url('/images/partners/partners-bg@2x.jpg')] bg-cover bg-center pt-36">
+    <section className="bg-[url('/images/ecosystem/partners/partners-bg@2x.jpg')] bg-cover bg-center pt-36">
       <div className="container mx-auto flex min-h-[75vh] max-w-6xl">
         <div className="my-auto w-full text-center">
           <h1 className="my-4 text-6xl font-medium">Home to next generation networks</h1>
