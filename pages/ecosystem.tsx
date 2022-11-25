@@ -4,6 +4,7 @@ import { GetStaticProps, NextPage } from 'next';
 import { getAllPartners, AllPartnersData } from 'lib/api';
 import { EcosystemHero } from 'components/pages/ecosystem/ecosystem-hero';
 import { EcosystemPartnersList } from 'components/pages/ecosystem/ecosystem-list';
+import { EcosystemWidget } from 'components/pages/ecosystem/ecosystem-widget';
 
 type PartnersPageStaticProps = {
   allPartnersByCategory: AllPartnersData;
@@ -15,6 +16,7 @@ const PartnersPage: NextPage<PartnersPageStaticProps> = ({
   return (
     <>
       <EcosystemHero />
+      <EcosystemWidget />
       <EcosystemPartnersList allPartnersByCategory={allPartnersByCategory} />
     </>
   );
