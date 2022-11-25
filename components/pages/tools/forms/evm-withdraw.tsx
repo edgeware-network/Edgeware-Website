@@ -92,7 +92,7 @@ export const EvmWithdraw = () => {
       const evmAddress = Buffer.from(addressBytes.subarray(0, 20)).toString('hex');
 
       setFormStep('transfer');
-      evmAddressInputEl.current.value = `0x${evmAddress}`;
+      evmAddressInputEl.current.value = Web3.utils.toChecksumAddress(evmAddress);
 
       setFormState({ text: 'Confirm the transaction in your wallet', error: false });
 
