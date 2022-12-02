@@ -13,7 +13,7 @@ export const EcosystemWidget = () => {
           You can convert your EdgeWASM tokens to EdgeEVM tokens and vice versa.
         </p>
       </div>
-      <div className="my-16 mx-auto max-w-2xl rounded-lg border border-grey-800 p-8">
+      <div className="my-16 mx-auto max-w-3xl rounded-lg border border-grey-800 p-8">
         <nav className="flex flex-row justify-center space-x-8">
           <button
             className={`rounded-full ${side === 'wasm' ? 'bg-grey-800' : ''} px-4 py-2 text-white`}
@@ -28,10 +28,12 @@ export const EcosystemWidget = () => {
             Withdraw from EdgeEVM
           </button>
         </nav>
-        <div className="my-8 max-w-xl">
+        <div className="my-8 max-w-3xl">
           {side === 'wasm' ? <EVMDepositForm /> : <EvmWithdrawForm />}
         </div>
       </div>
     </section>
   );
 };
+
+export default EcosystemWidget;

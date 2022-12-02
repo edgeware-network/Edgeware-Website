@@ -1,10 +1,19 @@
-import * as React from 'react';
+import dynamic from 'next/dynamic';
 import { GetStaticProps, NextPage } from 'next';
 
-import { getAllPartners, AllPartnersData } from 'lib/api';
 import { EcosystemHero } from 'components/pages/ecosystem/ecosystem-hero';
 import { EcosystemPartnersList } from 'components/pages/ecosystem/ecosystem-list';
 import { EcosystemWidget } from 'components/pages/ecosystem/widget/ecosystem-widget';
+
+import { AllPartnersData, getAllPartners } from 'lib/api';
+import { Suspense } from 'react';
+
+const DynamicEcosystemWidget = dynamic(
+  () => import('../components/pages/ecosystem/widget/ecosystem-widget'),
+  {
+    ssr: false,
+  }
+);
 
 type PartnersPageStaticProps = {
   allPartnersByCategory: AllPartnersData;
@@ -16,7 +25,7 @@ const PartnersPage: NextPage<PartnersPageStaticProps> = ({
   return (
     <>
       <EcosystemHero />
-      <EcosystemWidget />
+      <DynamicEcosystemWidget />
       <EcosystemPartnersList allPartnersByCategory={allPartnersByCategory} />
     </>
   );

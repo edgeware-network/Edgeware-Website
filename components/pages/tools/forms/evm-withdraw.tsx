@@ -317,7 +317,7 @@ export const EvmWithdraw = () => {
             />
           </label>
         )}
-        <div className={formState.error ? 'my-4 text-[#DC2626]' : 'my-4 text-green-600'}>
+        <div className={formState.error ? 'my-4 text-red-500' : 'my-4 text-green-600'}>
           {formState.text}
         </div>
         <div className="py-1">
