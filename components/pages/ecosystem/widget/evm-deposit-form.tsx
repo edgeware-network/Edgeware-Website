@@ -14,6 +14,7 @@ type FormErrorsState = {
 export const EVMDepositForm = () => {
   const [formState, setFormState] = React.useState<FormState>('initial');
   const [errors, setErrors] = React.useState<FormErrorsState>({});
+  const [tx, setTx] = React.useState<string | null>(null);
 
   const addressInputRef = React.useRef<HTMLInputElement>(null);
   const amountInputRef = React.useRef<HTMLInputElement>(null);
@@ -62,6 +63,10 @@ export const EVMDepositForm = () => {
     async function process() {
       try {
         const result = await processEVMDeposit(address, amount);
+        if (result.success) {
+          setFormState('success');
+          setTx(result?.data?.tx);
+        }
       } catch (error) {
         setErrors({
           global: error.message,
@@ -138,6 +143,21 @@ export const EVMDepositForm = () => {
             Deposit tokens
           </Button>
         )}
+
+        {formState === 'success' && tx && (
+          <span>
+            Transfer submitted{' - '}
+            <a
+              href={`https://edgeware.subscan.io/extrinsic/${tx}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500"
+            >
+              View on Subscan
+            </a>
+          </span>
+        )}
+
         {formState === 'in-progress' && <span className="block py-4">Processing request...</span>}
         <button onClick={handleReset}>Reset</button>
       </div>

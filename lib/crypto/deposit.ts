@@ -4,6 +4,7 @@ import { initPolkadotAPI, requestTransfer } from './polkadot';
 type DepositResult = {
   success: boolean;
   message?: string;
+  data?: any;
 };
 
 export const processEVMDeposit = async (
@@ -38,12 +39,27 @@ export const processEVMDeposit = async (
 
   // Request transfer
   try {
-    await requestTransfer(api, mainnetAddress, amount);
-  } catch (e) {
-    console.error(e);
+    const tx = await requestTransfer(api, mainnetAddress, amount);
+
+    if (tx) {
+      return {
+        success: true,
+        message: `Successfully sent ${amount} EDG to ${mainnetAddress}.`,
+        data: {
+          tx,
+        },
+      };
+    } else {
+      return {
+        success: false,
+        message: 'Failed to send transaction. Please try again later.',
+      };
+    }
+  } catch (error) {
+    console.error(error);
     return {
       success: false,
-      message: 'Failed to request transfer. Please try again later.',
+      message: error?.message || 'Failed to request transfer. Please try again later.',
     };
   }
 

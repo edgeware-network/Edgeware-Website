@@ -1,6 +1,6 @@
 import { spec } from '@edgeware/node-types';
 import { ApiPromise, WsProvider } from '@polkadot/api';
-import { web3Enable } from '@polkadot/extension-dapp';
+import { web3Accounts, web3Enable, web3FromAddress } from '@polkadot/extension-dapp';
 import { TypeRegistry } from '@polkadot/types';
 
 export const initPolkadotAPI = async () => {
@@ -18,15 +18,28 @@ export const initPolkadotAPI = async () => {
   return api;
 };
 
-export const requestTransfer = async (api: ApiPromise, address: string, amount: number) => {
-  const transfer = api.tx.balances.transfer(address, amount);
+export const requestTransfer = async (
+  api: ApiPromise,
+  recipientAddress: string,
+  amount: number
+) => {
+  const accounts = await web3Accounts();
 
-  const unsub = await transfer.signAndSend(address, ({ status }) => {
-    if (status.isInBlock) {
-      console.log(`Successful transfer of ${amount} to ${address}`);
-      unsub();
-    } else {
-      console.log(`Current status: ${status.type}`);
-    }
-  });
+  if (accounts.length === 0) {
+    throw new Error('No accounts found');
+  }
+
+  // obtain sender address
+  const senderAccount = accounts[0];
+  console.log('Using first account: ', senderAccount.address);
+
+  // prepare transfer tx
+  const transfer = api.tx.balances.transfer(recipientAddress, amount);
+
+  // get signer
+  const injector = await web3FromAddress(senderAccount.address);
+
+  // sign and send tx
+  const hash = await transfer.signAndSend(senderAccount.address, { signer: injector.signer });
+  return hash;
 };
