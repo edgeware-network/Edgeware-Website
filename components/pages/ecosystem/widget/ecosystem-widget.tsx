@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { EVMDepositForm } from './evm-deposit-form';
 import { EvmWithdrawForm } from './evm-withdraw-form';
+import { Web3ContextProvider } from './web3-context';
 
 export const EcosystemWidget = () => {
   const [side, setSide] = useState<'wasm' | 'evm'>('wasm');
@@ -29,7 +30,9 @@ export const EcosystemWidget = () => {
           </button>
         </nav>
         <div className="my-8 max-w-3xl">
-          {side === 'wasm' ? <EVMDepositForm /> : <EvmWithdrawForm />}
+          <Web3ContextProvider>
+            {side === 'wasm' ? <EVMDepositForm /> : <EvmWithdrawForm />}
+          </Web3ContextProvider>
         </div>
       </div>
     </section>

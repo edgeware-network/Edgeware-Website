@@ -8,10 +8,11 @@ type DepositResult = {
 };
 
 export const processEVMDeposit = async (
-  inputAddress: string,
+  targetAddress: string,
+  sourceAddress: string,
   inputAmount: string
 ): Promise<DepositResult> => {
-  const mainnetAddress = evmConvert(inputAddress);
+  const mainnetAddress = evmConvert(targetAddress);
 
   if (mainnetAddress === 'error') {
     return {
@@ -39,7 +40,7 @@ export const processEVMDeposit = async (
 
   // Request transfer
   try {
-    const tx = await requestTransfer(api, mainnetAddress, amount);
+    const tx = await requestTransfer(api, mainnetAddress, sourceAddress, amount);
 
     if (tx) {
       return {
