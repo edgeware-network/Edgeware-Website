@@ -49,7 +49,7 @@ export const requestTransfer = async (
   const bnAmount = getBigNumberAmount(amount, decimals);
 
   // prepare transfer tx
-  const transfer = api.tx.balances.transfer(recipientAddress, bnAmount.to);
+  const transfer = api.tx.balances.transfer(recipientAddress, bnAmount);
 
   // get signer
   const injector = await web3FromAddress(senderAccount.address);
@@ -62,5 +62,5 @@ export const requestTransfer = async (
 export const getBigNumberAmount = (amount: number, chainDecimals: number) => {
   const bn = new BigNumber(amount).shiftedBy(chainDecimals);
 
-  return bn.toNumber();
+  return bn.toString();
 };
