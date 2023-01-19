@@ -1,4 +1,6 @@
 import Web3 from 'web3';
+import { decodeAddress, encodeAddress } from '@polkadot/keyring';
+import { hexToU8a, isHex } from '@polkadot/util';
 
 type ValidationResult = {
   valid: boolean;
@@ -23,6 +25,28 @@ export const validateEVMAddress = (address: string): ValidationResult => {
   return {
     valid: true,
   };
+};
+
+export const validateSubstrateAddress = (address: string): ValidationResult => {
+  if (!address) {
+    return {
+      valid: false,
+      message: 'Address is required!',
+    };
+  }
+
+  try {
+    encodeAddress(isHex(address) ? hexToU8a(address) : decodeAddress(address));
+
+    return {
+      valid: true,
+    };
+  } catch (error) {
+    return {
+      valid: false,
+      message: 'Invalid address format! Please check if your address is a Substrate address.',
+    };
+  }
 };
 
 export const validateTokenAmount = (amount: string): ValidationResult => {

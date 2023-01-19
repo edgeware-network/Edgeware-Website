@@ -27,12 +27,6 @@ export const requestTransfer = async (
 ) => {
   const accounts = await web3Accounts();
 
-  console.log({
-    recipientAddress,
-    senderAddress,
-    amount,
-  });
-
   if (accounts.length === 0) {
     throw new Error('No accounts found');
   }
@@ -42,7 +36,6 @@ export const requestTransfer = async (
   if (!senderAccount) {
     throw new Error('Sender account not found');
   }
-  console.log('Using account: ', senderAccount.address);
 
   // convert amount to big number
   const decimals = api.registry.chainDecimals[0];
@@ -56,6 +49,42 @@ export const requestTransfer = async (
 
   // sign and send tx
   const hash = await transfer.signAndSend(senderAccount.address, { signer: injector.signer });
+  return hash;
+};
+
+export const requestEVMWithdrawal = async (
+  api: ApiPromise,
+  evmAddress: string,
+  senderAddress: string,
+  amount: number
+) => {
+  const accounts = await web3Accounts();
+
+  if (accounts.length === 0) {
+    throw new Error('No accounts found');
+  }
+
+  // obtain sender address
+  const senderAccount = accounts.find((account) => account.address === senderAddress);
+  if (!senderAccount) {
+    throw new Error('Sender account not found');
+  }
+
+  // convert amount to big number
+  const decimals = api.registry.chainDecimals[0];
+  const bnAmount = getBigNumberAmount(amount, decimals);
+
+  // get signer
+  const injector = await web3FromAddress(senderAccount.address);
+
+  // prepare withdrawal tx
+  console.log({
+    evmAddress,
+  });
+  const withdrawal = api.tx.evm.withdraw(`0x${evmAddress}`, bnAmount);
+
+  // sign and send tx
+  const hash = await withdrawal.signAndSend(senderAccount.address, { signer: injector.signer });
   return hash;
 };
 

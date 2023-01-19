@@ -63,8 +63,4 @@ export const processEVMDeposit = async (
       message: error?.message || 'Failed to request transfer. Please try again later.',
     };
   }
-
-  return {
-    success: true,
-  };
 };
