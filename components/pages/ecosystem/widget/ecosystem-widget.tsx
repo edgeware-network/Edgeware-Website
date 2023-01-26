@@ -1,4 +1,4 @@
-import { EcosystemForm } from './EcosystemForm';
+import { WidgetForm } from './widget-form';
 import { Web3ContextProvider } from './web3-context';
 
 export const EcosystemWidget = () => {
@@ -13,7 +13,7 @@ export const EcosystemWidget = () => {
       <div className="my-16 mx-auto max-w-3xl rounded-lg border border-grey-800 p-8">
         <div className="my-8 max-w-3xl">
           <Web3ContextProvider>
-            <EcosystemForm />
+            <WidgetForm />
           </Web3ContextProvider>
         </div>
       </div>

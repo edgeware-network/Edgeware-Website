@@ -2,7 +2,7 @@ import React, { createContext, useState } from 'react';
 import Web3 from 'web3';
 import { web3Accounts, web3Enable } from '@polkadot/extension-dapp';
 
-type Account = {
+export type Account = {
   address: string;
   label: string;
 };
