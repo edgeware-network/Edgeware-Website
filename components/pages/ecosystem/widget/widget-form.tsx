@@ -228,6 +228,7 @@ export const WidgetForm = () => {
       <WidgetTransferSelector
         targetTransferType={targetTransferType}
         onTargetTransferTypeChange={setTargetTransferType}
+        inProgress={formState === 'in-progress'}
       />
 
       <div className="flex flex-row items-center justify-center space-x-16 px-8 pt-12">
