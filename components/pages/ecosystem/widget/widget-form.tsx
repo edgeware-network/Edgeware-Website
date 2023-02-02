@@ -313,7 +313,7 @@ export const WidgetForm = () => {
         </div>
       )}
 
-      {formState === 'in-progress' && <p className="pt-4">Processing request...</p>}
+      {formState === 'in-progress' && <p className="animate-pulse pt-4">Processing request...</p>}
     </div>
   );
 };

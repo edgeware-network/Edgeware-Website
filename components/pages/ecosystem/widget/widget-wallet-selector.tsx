@@ -45,6 +45,10 @@ export const WidgetWalletSelector = ({
     );
   }
 
+  if (!selectedAccount) {
+    return null;
+  }
+
   return (
     <div className="relative flex w-full items-center">
       <Listbox value={selectedAccount} onChange={setSelectedAccount}>
