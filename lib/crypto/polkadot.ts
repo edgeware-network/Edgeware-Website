@@ -78,9 +78,6 @@ export const requestEVMWithdrawal = async (
   const injector = await web3FromAddress(senderAccount.address);
 
   // prepare withdrawal tx
-  console.log({
-    evmAddress,
-  });
   const withdrawal = api.tx.evm.withdraw(`0x${evmAddress}`, bnAmount);
 
   // sign and send tx

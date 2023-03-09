@@ -1,9 +1,11 @@
 import React, { createContext, useState } from 'react';
 import Web3 from 'web3';
 import { web3Accounts, web3Enable } from '@polkadot/extension-dapp';
+import { initPolkadotAPI, toEdgewareAddress } from 'lib/crypto/polkadot';
 
 export type Account = {
   address: string;
+  networkAddress?: string;
   label: string;
 };
 
@@ -26,7 +28,12 @@ export const Web3ContextProvider = ({ children }) => {
         await (window as any).ethereum?.enable();
         const web3 = new Web3(Web3.givenProvider);
         const accounts = await web3.eth.getAccounts();
-        setEthereumAccounts(accounts.map((a) => ({ address: a, label: a })));
+        setEthereumAccounts(
+          accounts.map((a, index) => ({
+            address: a,
+            label: `Metamask account #${index + 1}`,
+          }))
+        );
         return true;
       } else {
         throw new Error('No Ethereum wallet detected');
@@ -43,10 +50,17 @@ export const Web3ContextProvider = ({ children }) => {
         if (extensions.length === 0) {
           throw new Error('No Polkadot wallet detected');
         }
+
+        const api = await initPolkadotAPI();
         const allAccounts = await web3Accounts();
         const accounts = allAccounts
-          .map((a) => ({ address: a.address, label: a.meta.name }))
+          .map((a) => ({
+            address: a.address,
+            networkAddress: api.createType('Address', a.address).toString(),
+            label: a.meta.name,
+          }))
           .reverse();
+
         setPolkadotAccounts(accounts);
         return true;
       }

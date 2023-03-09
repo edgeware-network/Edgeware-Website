@@ -49,12 +49,19 @@ export const WidgetWalletSelector = ({
     return null;
   }
 
+  const fullSelectedAccount = accounts.find((a) => a.address === selectedAccount);
+
   return (
     <div className="relative flex w-full items-center">
       <Listbox value={selectedAccount} onChange={setSelectedAccount}>
         <Listbox.Button className="flex w-full grow flex-row items-center justify-between rounded border border-grey-700 p-4">
-          <span className="mr-2 h-2 w-2 shrink-0 rounded-full bg-green-500" />
-          <span className="block w-60 truncate">{selectedAccount}</span>
+          <span className="mr-4 h-2 w-2 shrink-0 rounded-full bg-green-500" />
+          <span className="block grow text-left">
+            <span className="block w-72 truncate">{fullSelectedAccount.label}</span>
+            <span className="block w-72 truncate text-xs">
+              {fullSelectedAccount.networkAddress || fullSelectedAccount.address}
+            </span>
+          </span>
           <IconArrow className={`ml-2 h-6 w-6 shrink-0 fill-grey-600`} />
         </Listbox.Button>
         <Listbox.Options className="absolute top-14 z-10 mt-1 max-h-60 w-full overflow-auto rounded border border-grey-700 bg-grey-900">
@@ -69,7 +76,13 @@ export const WidgetWalletSelector = ({
                   account.address === selectedAccount ? 'bg-green-500' : ''
                 }`}
               />
-              <span className="block w-60 truncate">{account.address}</span>
+              <span className="block grow">
+                <span className="block w-72 truncate">{account.label}</span>
+
+                <span className="block w-72 truncate text-xs">
+                  {account.networkAddress || account.address}
+                </span>
+              </span>
             </Listbox.Option>
           ))}
         </Listbox.Options>
