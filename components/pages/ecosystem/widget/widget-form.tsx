@@ -1,7 +1,6 @@
-import { Button } from 'components/common/button';
 import { validateEVMAddress, validateSubstrateAddress, validateTokenAmount } from 'lib/crypto';
 import { processEVMDeposit } from 'lib/crypto/deposit';
-import React, { useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useWeb3Context } from './web3-context';
 import { processEVMWithdrawal } from 'lib/crypto/withdrawal';
 import { WidgetTransferSelector } from './widget-transfer-selector';
@@ -19,21 +18,22 @@ type FormErrorsState = {
 };
 
 export const WidgetForm = () => {
-  const [formState, setFormState] = React.useState<FormState>('initial');
-  const [ethereumConnected, setEthereumConnected] = React.useState(false);
-  const [polkadotConnected, setPolkadotConnected] = React.useState(false);
-  const [targetTransferType, setTargetTransferType] = React.useState<TargetTransferType>('deposit');
+  const [formState, setFormState] = useState<FormState>('initial');
 
-  const [selectedPolkadotAccount, setSelectedPolkadotAccount] = React.useState<string>();
-  const [selectedEthereumAccount, setSelectedEthereumAccount] = React.useState<string>();
+  const [ethereumConnected, setEthereumConnected] = useState(false);
+  const [polkadotConnected, setPolkadotConnected] = useState(false);
+  const [targetTransferType, setTargetTransferType] = useState<TargetTransferType>('deposit');
 
-  const [errors, setErrors] = React.useState<FormErrorsState>({});
-  const [tx, setTx] = React.useState<string | null>(null);
+  const [selectedPolkadotAccount, setSelectedPolkadotAccount] = useState<string>();
+  const [selectedEthereumAccount, setSelectedEthereumAccount] = useState<string>();
+
+  const [errors, setErrors] = useState<FormErrorsState>({});
+  const [tx, setTx] = useState<string | null>(null);
 
   const { connectToEthereum, ethereumAccounts, connectToPolkadot, polkadotAccounts } =
     useWeb3Context();
 
-  const amountInputRef = React.useRef<HTMLInputElement>(null);
+  const amountInputRef = useRef<HTMLInputElement>(null);
 
   const handleDepositSubmit = () => {
     // reset state to ready and clear errors
@@ -211,6 +211,25 @@ export const WidgetForm = () => {
     connect();
   };
 
+  const handleDisconnect = (type: 'polkadot' | 'ethereum') => {
+    const isConnected = type === 'polkadot' ? polkadotConnected : ethereumConnected;
+    if (!isConnected) {
+      return;
+    }
+
+    if (type === 'polkadot') {
+      setPolkadotConnected(false);
+      setSelectedPolkadotAccount(undefined);
+      setFormState('initial');
+    }
+
+    if (type === 'ethereum') {
+      setEthereumConnected(false);
+      setSelectedEthereumAccount(undefined);
+      setFormState('initial');
+    }
+  };
+
   useEffect(() => {
     if (polkadotConnected && polkadotAccounts && polkadotAccounts.length > 0) {
       setSelectedPolkadotAccount(polkadotAccounts[0].address);
@@ -231,12 +250,13 @@ export const WidgetForm = () => {
         inProgress={formState === 'in-progress'}
       />
 
-      <div className="flex flex-row items-center justify-center space-x-16 px-8 pt-12">
+      <div className="flex flex-row items-start justify-center space-x-16 px-8 pt-12">
         <div className="w-1/2 shrink-0">
           <WidgetWalletSelector
             type="polkadot"
             connected={polkadotConnected}
             onConnect={handleConnect}
+            onDisconnect={handleDisconnect}
             accounts={polkadotAccounts}
             selectedAccount={selectedPolkadotAccount}
             setSelectedAccount={setSelectedPolkadotAccount}
@@ -247,6 +267,7 @@ export const WidgetForm = () => {
             type="ethereum"
             connected={ethereumConnected}
             onConnect={handleConnect}
+            onDisconnect={handleDisconnect}
             accounts={ethereumAccounts}
             selectedAccount={selectedEthereumAccount}
             setSelectedAccount={setSelectedEthereumAccount}

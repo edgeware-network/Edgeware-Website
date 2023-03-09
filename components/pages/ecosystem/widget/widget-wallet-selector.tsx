@@ -10,12 +10,14 @@ type WidgetWalletSelectorProps = {
   connected: boolean;
   type: 'polkadot' | 'ethereum';
   onConnect: (type: 'polkadot' | 'ethereum') => void;
+  onDisconnect: (type: 'polkadot' | 'ethereum') => void;
 };
 
 export const WidgetWalletSelector = ({
   connected,
   type,
   onConnect,
+  onDisconnect,
   accounts,
   selectedAccount,
   setSelectedAccount,
@@ -37,6 +39,11 @@ export const WidgetWalletSelector = ({
     );
   }
 
+  const handleDisconnect = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    onDisconnect(type);
+  };
+
   if (!accounts || accounts.length === 0) {
     return (
       <div className="w-full rounded border border-grey-700 p-4">
@@ -52,7 +59,7 @@ export const WidgetWalletSelector = ({
   const fullSelectedAccount = accounts.find((a) => a.address === selectedAccount);
 
   return (
-    <div className="relative flex w-full items-center">
+    <div className="relative flex w-full flex-col items-center">
       <Listbox value={selectedAccount} onChange={setSelectedAccount}>
         <Listbox.Button className="flex w-full grow flex-row items-center justify-between rounded border border-grey-700 p-4">
           <span className="mr-4 h-2 w-2 shrink-0 rounded-full bg-green-500" />
@@ -87,6 +94,14 @@ export const WidgetWalletSelector = ({
           ))}
         </Listbox.Options>
       </Listbox>
+
+      {selectedAccount && (
+        <div className="mt-2 text-left">
+          <button className="text-xs" onClick={handleDisconnect}>
+            Disconnect
+          </button>
+        </div>
+      )}
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React, { createContext, useState } from 'react';
 import Web3 from 'web3';
 import { web3Accounts, web3Enable } from '@polkadot/extension-dapp';
-import { initPolkadotAPI, toEdgewareAddress } from 'lib/crypto/polkadot';
+import { initPolkadotAPI } from 'lib/crypto/polkadot';
 
 export type Account = {
   address: string;
