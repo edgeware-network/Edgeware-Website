@@ -198,12 +198,19 @@ export const WidgetForm = () => {
           }
         }
       } else {
-        const result = await connectToEthereum();
-        if (result) {
-          setEthereumConnected(true);
-          if (polkadotConnected) {
-            setFormState('ready');
+        try {
+          const result = await connectToEthereum();
+          if (result) {
+            setEthereumConnected(true);
+            if (polkadotConnected) {
+              setFormState('ready');
+            }
           }
+        } catch (error) {
+          setErrors({
+            ...errors,
+            evmAddress: "Couldn't connect to Ethereum.",
+          });
         }
       }
     }
@@ -261,6 +268,9 @@ export const WidgetForm = () => {
             selectedAccount={selectedPolkadotAccount}
             setSelectedAccount={setSelectedPolkadotAccount}
           />
+          {errors.substrateAddress && (
+            <span className="text-sm text-red-500">{errors.substrateAddress}</span>
+          )}
         </div>
         <div className="w-1/2 shrink-0">
           <WidgetWalletSelector
@@ -272,6 +282,7 @@ export const WidgetForm = () => {
             selectedAccount={selectedEthereumAccount}
             setSelectedAccount={setSelectedEthereumAccount}
           />
+          {errors.evmAddress && <span className="text-sm text-red-500">{errors.evmAddress}</span>}
         </div>
       </div>
 

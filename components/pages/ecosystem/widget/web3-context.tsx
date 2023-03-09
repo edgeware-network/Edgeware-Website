@@ -18,6 +18,8 @@ type Web3ContextType = {
 
 const Web3Context = createContext<Web3ContextType | null>(null);
 
+const EDG_EVM_NETWORK_ID = 2021;
+
 export const Web3ContextProvider = ({ children }) => {
   const [ethereumAccounts, setEthereumAccounts] = useState<Account[]>([]);
   const [polkadotAccounts, setPolkadotAccounts] = useState<Account[]>([]);
@@ -27,6 +29,15 @@ export const Web3ContextProvider = ({ children }) => {
       if ('ethereum' in window) {
         await (window as any).ethereum?.enable();
         const web3 = new Web3(Web3.givenProvider);
+
+        // check for network
+        const networkId = await web3.eth.net.getId();
+
+        if (networkId !== EDG_EVM_NETWORK_ID) {
+          alert('Please select the Edgeware EVM network in Metamask');
+          throw new Error('Please select the Edgeware EVM network in Metamask');
+        }
+
         const accounts = await web3.eth.getAccounts();
         setEthereumAccounts(
           accounts.map((a, index) => ({
