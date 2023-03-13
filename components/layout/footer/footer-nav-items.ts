@@ -12,6 +12,7 @@ export const footerLinks: FooterLinksGroup[] = [
       Discord: 'https://discord.gg/4pnzjWTJ9b',
       Society: '/society',
       Press: '/press',
+      Blog: 'https://blog.edgewa.re/',
     },
   },
   {
