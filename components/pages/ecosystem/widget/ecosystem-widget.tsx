@@ -10,11 +10,23 @@ export const EcosystemWidget = () => {
           You can convert your EdgeWASM tokens to EdgeEVM tokens and vice versa.
         </p>
       </div>
-      <div className="my-16 mx-auto max-w-4xl rounded-lg border border-grey-800 p-8">
+      <div className="mx-auto mt-16 mb-8 max-w-4xl rounded-lg border border-grey-800 p-8">
         <Web3ContextProvider>
           <WidgetForm />
         </Web3ContextProvider>
       </div>
+      <p className="text-center">
+        Need assistance or have questions? You can reach out to us on our Discord at{' '}
+        <a
+          href="https://discord.gg/8wrdMrAFtv"
+          target="_blank"
+          rel="noreferrer"
+          className="text-primary-500"
+        >
+          #public-square
+        </a>{' '}
+        channel.
+      </p>
     </section>
   );
 };
