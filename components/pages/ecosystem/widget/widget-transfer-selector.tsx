@@ -25,6 +25,15 @@ export const WidgetTransferSelector = ({
     }
   };
 
+  let messageText = 'Click to change direction';
+  if (inProgress) {
+    if (targetTransferType === 'withdrawal') {
+      messageText = 'Withdrawal in progress. Make sure to confirm steps of the transaction.';
+    } else {
+      messageText = 'Deposit in progress...';
+    }
+  }
+
   return (
     <div className="relative grid h-24 grid-cols-2">
       <div className="mr-8 mt-4 p-2 text-center text-xl">EdgeWASM</div>
@@ -43,11 +52,11 @@ export const WidgetTransferSelector = ({
             />
           </button>
           <span
-            className={`w-48 text-center text-xs text-grey-500 ${
+            className={`w-72 text-center text-xs text-grey-500 ${
               inProgress ? 'animate-pulse' : ''
             }`}
           >
-            {inProgress ? 'Transfer in progress...' : 'Click to change direction'}
+            {messageText}
           </span>
         </div>
       </div>

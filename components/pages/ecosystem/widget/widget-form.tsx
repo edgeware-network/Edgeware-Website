@@ -57,36 +57,30 @@ export const WidgetForm = () => {
       </div>
 
       <div className="mt-4 flex flex-row justify-center">
-        <label className="my-4 block" htmlFor="ac-input-amount" aria-label="Amount">
-          <span className="sr-only my-2 block">Deposit amount:</span>
-          <input
-            id="ac-input-amount"
-            className="block w-64 rounded border border-grey-700 bg-grey-900 px-4 py-4 text-center disabled:opacity-50"
-            type="text"
-            name="input"
-            required
-            placeholder="Amount (EDG)"
-            ref={amountInputRef}
-            disabled={state.formState !== 'ready'}
-            autoComplete="off"
-            autoCapitalize="none"
-            autoCorrect="off"
-          />
-          {state.errors.amount && (
-            <span className="text-sm text-red-500">{state.errors.amount}</span>
-          )}
-        </label>
-      </div>
+        <span className="sr-only my-2">Deposit amount:</span>
+        <input
+          id="ac-input-amount"
+          className="appearance-text block w-48 rounded-l border border-grey-700 bg-grey-900 px-4 py-4 text-center focus:outline-none disabled:opacity-50"
+          type="text"
+          name="input"
+          required
+          placeholder="Enter amount (EDG)"
+          ref={amountInputRef}
+          disabled={state.formState !== 'ready'}
+          autoComplete="off"
+          autoCapitalize="none"
+          autoCorrect="off"
+        />
 
-      <div className="mt-0">
         <button
-          className="rounded bg-primary-500 p-4 px-8 text-white disabled:opacity-25"
+          className="rounded-r bg-primary-500 p-4 px-6 text-white hover:bg-primary-600 disabled:opacity-25"
           onClick={handleSubmit}
           disabled={state.formState !== 'ready'}
         >
           Transfer
         </button>
       </div>
+      {state.errors.amount && <span className="text-sm text-red-500">{state.errors.amount}</span>}
 
       {state.formState === 'error' ? (
         <p className="pt-4 text-red-500">
