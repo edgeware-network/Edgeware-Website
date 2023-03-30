@@ -39,6 +39,9 @@ module.exports = {
         800: '#0e433b',
         900: '#051614',
       },
+      red: {
+        500: '#DC2626',
+      },
     },
     fontFamily: {
       sans: ['"Space Grotesk"', 'sans-serif'],

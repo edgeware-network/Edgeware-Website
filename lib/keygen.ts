@@ -41,8 +41,7 @@ export function evmConvert(evmAddress = '') {
       { publicKey: res }
     );
 
-    const convertedMainnetAddress = mainnetPair.address;
-    return convertedMainnetAddress;
+    return mainnetPair.address;
   } catch (e) {
     return 'error';
   }
