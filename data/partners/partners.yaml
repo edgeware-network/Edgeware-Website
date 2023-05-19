@@ -17,6 +17,7 @@ partners:
       - name: Tidal Finance
         description: Flexible insurance for the DeFi economy.
         link: https://blog.edgewa.re/edgeware-partners-with-tidal-finance-to-bring-insurance-cover-to-edg-ecosystem/
+        protocol: EdgeEVM
       - name: PicoSwap
         description: Pico is a protocol for decentralized exchange built on Edgeware, a pioneering Polkadot smart contract blockchain.
         link: https://picoswap.medium.com/
@@ -28,13 +29,15 @@ partners:
         funded: true
       - name: Patract Elara
         description: Elara provides Polkadot developers with free, instant and scalable blockchain API access services, including Polkadot, Kusama, etc.
-        link: https://www.patract.io/
+        link: https://github.com/patractlabs/elara
+        protocol: EdgeWASM
       - name: Covalent
         description: Covalent provides a unified API bringing visibility to billions of blockchain data points.
         link: https://www.covalenthq.com/
       - name: Knit Finance
         description: Knit is a protocol for creating cross-chain wrappers for the top-200 assets. Deposit to insured custody and mint K-Assets.
         link: https://knit.finance/
+        protocol: EdgeEVM
       - name: Biconomy
         description: Biconomy enables simple blockchain transactions by leveraging scalable relayer infrastructure.
         link: https://www.biconomy.io/

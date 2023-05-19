@@ -9,6 +9,7 @@ type Partner = {
   description: string;
   link: string;
   funded?: boolean;
+  deployedOn?: string;
 };
 
 type PartnersCategory = {
