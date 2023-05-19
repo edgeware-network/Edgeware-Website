@@ -1,4 +1,5 @@
 import { useTransferWidget } from './useTransferWidget';
+import { WidgetNetworkSelector } from './widget-network-selector';
 import { WidgetTransferSelector } from './widget-transfer-selector';
 import { WidgetWalletSelector } from './widget-wallet-selector';
 
@@ -13,6 +14,7 @@ export const WidgetForm = () => {
     handleReset,
     polkadotAccounts,
     ethereumAccounts,
+    setNetwork,
     setSelectedPolkadotAccount,
     setSelectedEthereumAccount,
   } = useTransferWidget();
@@ -24,6 +26,7 @@ export const WidgetForm = () => {
         onTargetTransferTypeChange={setTargetTransferType}
         inProgress={state.formState === 'in-progress'}
       />
+      <WidgetNetworkSelector network={state.network} onNetworkChange={setNetwork} />
 
       <div className="flex flex-row items-start justify-center space-x-16 px-8 pt-12">
         <div className="w-1/2 shrink-0">

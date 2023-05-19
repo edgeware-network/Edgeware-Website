@@ -6,6 +6,7 @@ import { processEVMWithdrawal } from 'lib/crypto/withdrawal';
 
 // Shared types
 type FormState = 'initial' | 'ready' | 'in-progress' | 'success' | 'error';
+export type Network = 'mainnet' | 'testnet';
 type TargetTransferType = 'deposit' | 'withdrawal';
 type FormErrorsState = {
   global?: string;
@@ -17,6 +18,7 @@ type FormErrorsState = {
 // State
 type State = {
   formState: FormState;
+  network: Network;
   ethereumConnected: boolean;
   polkadotConnected: boolean;
   targetTransferType: TargetTransferType;
@@ -29,6 +31,7 @@ type State = {
 // Initial state
 const initialState: State = {
   formState: 'initial',
+  network: 'mainnet',
   ethereumConnected: false,
   polkadotConnected: false,
   targetTransferType: 'deposit',
@@ -41,6 +44,7 @@ const initialState: State = {
 // Action types
 type Action =
   | { type: 'SET_FORM_STATE'; payload: FormState }
+  | { type: 'SET_NETWORK'; payload: Network }
   | { type: 'SET_ETHEREUM_CONNECTED'; payload: boolean }
   | { type: 'SET_POLKADOT_CONNECTED'; payload: boolean }
   | { type: 'SET_TARGET_TRANSFER_TYPE'; payload: TargetTransferType }
@@ -54,6 +58,8 @@ const reducer = (state: State, action: Action): State => {
   switch (action.type) {
     case 'SET_FORM_STATE':
       return { ...state, formState: action.payload };
+    case 'SET_NETWORK':
+      return { ...state, network: action.payload };
     case 'SET_ETHEREUM_CONNECTED':
       return { ...state, ethereumConnected: action.payload };
     case 'SET_POLKADOT_CONNECTED':
@@ -82,6 +88,7 @@ export const useTransferWidget = () => {
   // Actions
   const setFormState = (formState: FormState) =>
     dispatch({ type: 'SET_FORM_STATE', payload: formState });
+  const setNetwork = (network: Network) => dispatch({ type: 'SET_NETWORK', payload: network });
   const setEthereumConnected = (connected: boolean) =>
     dispatch({ type: 'SET_ETHEREUM_CONNECTED', payload: connected });
   const setPolkadotConnected = (connected: boolean) =>
@@ -315,6 +322,7 @@ export const useTransferWidget = () => {
     ethereumAccounts,
     amountInputRef,
     setFormState,
+    setNetwork,
     setEthereumConnected,
     setPolkadotConnected,
     setTargetTransferType,
