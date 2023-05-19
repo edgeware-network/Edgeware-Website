@@ -17,6 +17,7 @@ partners:
       - name: Tidal Finance
         description: Flexible insurance for the DeFi economy.
         link: https://blog.edgewa.re/edgeware-partners-with-tidal-finance-to-bring-insurance-cover-to-edg-ecosystem/
+        protocol: EdgeEVM
       - name: PicoSwap
         description: Pico is a protocol for decentralized exchange built on Edgeware, a pioneering Polkadot smart contract blockchain.
         link: https://picoswap.medium.com/
@@ -26,48 +27,59 @@ partners:
         description: OnFinality provides support for blockchain developers by providing infrastructure and API services to automate blockchain DevOps.
         link: https://onfinality.medium.com/run-public-edgeware-nodes-on-onfinality-2ea656262446
         funded: true
+        protocol: EdgeWASM & EdgeEVM
       - name: Patract Elara
         description: Elara provides Polkadot developers with free, instant and scalable blockchain API access services, including Polkadot, Kusama, etc.
-        link: https://www.patract.io/
+        link: https://github.com/patractlabs/elara
+        protocol: EdgeWASM
       - name: Covalent
         description: Covalent provides a unified API bringing visibility to billions of blockchain data points.
         link: https://www.covalenthq.com/
       - name: Knit Finance
         description: Knit is a protocol for creating cross-chain wrappers for the top-200 assets. Deposit to insured custody and mint K-Assets.
         link: https://knit.finance/
+        protocol: EdgeEVM
       - name: Biconomy
         description: Biconomy enables simple blockchain transactions by leveraging scalable relayer infrastructure.
         link: https://www.biconomy.io/
         funded: true
+        protocol: EdgeEVM
       - name: Mailchain
         description: Send and receive messages between blockchain addresses through a simple, email-like interface.
         link: https://medium.com/@Mailchain_xyz/sending-mailchain-messages-with-substrate-on-edgeware-f185eddd76ab
+        protocol: EdgeWASM
   - category: Oracles
     partners:
       - name: Paralink Network
         description: Paralink Network offers a multi-chain oracle platform for DeFi and other blockchain applications.
         link: https://blog.edgewa.re/paralink-network-announces-full-support-for-edgeware-bringing-oracles-and-validator-participation/
+        protocol: EdgeEVM
       - name: Kylin Network
         description: Kyline provides data Infrastructure for DeFi and Web 3.0 Powered by Polkadot.
         link: https://blog.edgewa.re/strategic-partnership-between-edgeware-and-kylin-network-brings-oracles-and-data-marketplaces-to-edg/
+        protocol: EdgeWASM & EdgeEVM
       - name: Chainlink
         description: Chainlink provides reliable, tamper-proof inputs and outputs for complex smart contracts on any blockchain.
         link: https://blog.edgewa.re/chainlink-oracles-on-edgeware-powered-by-volta/
+        protocol: EdgeEVM
   - category: Art & NFTs
     partners:
       - name: Zien
         description: Zien is a platform providing NFT Airdrops on WhatsApp.
         link: https://gov.edgewa.re/proposal/discussion/1129-proposal-bring-zien-nfts-via-whatsapp-to-edgeware
         funded: true
+        protocol: EdgeEVM
       - name: New Futures
         description: Web3 media launchpad and creative DAO/NFT platform uniting art, culture and technology based on RMRK.
         link: https://www.new-futures.co/
+        protocol: EdgeEVM
   - category: Privacy
     partners:
       - name: Webb Protocol
         description: Webb develops private interoperable bridges for the Web3 ecosystem using zero-knowledge proofs and distributed systems technology.
         link: https://gov.edgewa.re/proposal/discussion/976-edgeware-mixer-by-webb
         funded: true
+        protocol: EdgeWASM & EdgeEVM
   - category: Legal
     partners:
       - name: LexBridge
@@ -77,6 +89,7 @@ partners:
       - name: 4thPillarTech
         description: 4thPillarTech provides blockchain metadata & data file exchange, while providing a digital identity solutions.
         link: https://gov.edgewa.re/proposal/discussion/1063-4thpillar-technologies-has-integrated-edgeware-for-their-ecommerce-and-document-exchange-platform
+        protocol: EdgeWASM
   - category: Media
     partners:
       - name: How to make it in Crypto Media Podcast
@@ -96,6 +109,8 @@ partners:
       - name: Zondax
         description: Zondax is a team of software developers, engineers and cryptographers that build innovative tech products.
         link: https://medium.com/zondax/edgeware-ledger-app-by-zondax-7cf12c0ea3af
+        protocol: EdgeWASM
       - name: ICON
         description: ICON is a blockchain protocol for decentralized applications. As an aggregator chain, it achieves interoperability.
         link: https://medium.com/helloiconworld/blockchain-transmission-protocol-btp-working-group-update-icon-joins-forces-with-the-polkadot-63694290e15b
+        protocol: EdgeEVM

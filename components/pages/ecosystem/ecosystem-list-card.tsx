@@ -12,9 +12,16 @@ export type PartnerCardProps = {
   description: string;
   link: string;
   funded?: boolean;
+  protocol?: string;
 };
 
-export const PartnerCard = ({ name, description, link, funded = false }: PartnerCardProps) => {
+export const PartnerCard = ({
+  name,
+  description,
+  link,
+  funded = false,
+  protocol,
+}: PartnerCardProps) => {
   const iconHref = getImagePathFromName(name);
 
   return (
@@ -27,10 +34,17 @@ export const PartnerCard = ({ name, description, link, funded = false }: Partner
       </span>
       <h4 className="my-2 text-lg font-medium">{name}</h4>
       <p className="text-sm text-grey-500">{description}</p>
+
       {funded && (
         <span className="absolute right-0 top-0 flex flex-row rounded-bl-md bg-green-200 p-1 text-xs text-green-800">
           <FundsLineIcon className="mr-2 h-4 w-4" />
           Funded by the Edgeware Treasury
+        </span>
+      )}
+
+      {protocol && (
+        <span className="absolute right-0 bottom-0 flex flex-row rounded-tl-md bg-primary-500 p-1 px-2 text-xs text-grey-800">
+          {protocol}
         </span>
       )}
 
