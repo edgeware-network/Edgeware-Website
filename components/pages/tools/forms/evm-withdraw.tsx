@@ -22,10 +22,11 @@ if (typeof window !== 'undefined') {
 interface EvmWithdrawFormState {
   text?: string;
   error?: boolean;
+  evmTransactionSuccess?: boolean;
   showAddNetwork?: boolean;
 }
 
-type formStep = 'initial' | 'transfer' | 'complete';
+type formStep = 'initial' | 'transfer' | 'withdraw' | 'complete';
 
 export const EvmWithdraw = () => {
   const addressInputEl = useRef(null);
@@ -34,17 +35,66 @@ export const EvmWithdraw = () => {
 
   const [formStep, setFormStep] = useState<formStep>('initial');
 
-  const [formState, setFormState] = useState({
+  const [formState, setFormState] = useState<EvmWithdrawFormState>({
     text: null,
     error: false,
-  } as EvmWithdrawFormState);
+  });
 
-  const handleTransferButton = async (event: React.MouseEvent) => {
+  const handleDiscoverButton = async (event: React.MouseEvent) => {
     event.preventDefault();
 
     // Reset state
     setFormState({});
     setFormStep('initial');
+
+    // 1. Validate form
+    const substrateAddress = addressInputEl.current.value;
+    if (!substrateAddress) {
+      setFormState({ text: 'Invalid Substrate address', error: true });
+      addressInputEl.current.focus();
+      return;
+    }
+
+    // 2. Check for Web3 accounts
+    const web3 = new Web3((window as any).ethereum);
+    const currentProvider = web3?.eth?.accounts?.currentProvider as any;
+    try {
+      await (window as any).ethereum.request({ method: 'eth_requestAccounts' });
+    } catch (e) {
+      setFormState({ text: 'Metamask or EVM compatible Web3 wallet required', error: true });
+      return;
+    }
+    const account = currentProvider?.selectedAddress;
+    if (!account) {
+      setFormState({ text: 'Metamask or EVM compatible Web3 wallet required', error: true });
+      return;
+    }
+
+    // Are we on the right network?
+    if (+currentProvider?.chainId !== 2021 && +currentProvider?.chainId !== 2022) {
+      setFormState({
+        text: 'Please switch to Edgeware EdgeEVM network in your web3 wallet manually or click on the `Switch to EdgeEVM` button below.',
+        error: true,
+        showAddNetwork: true,
+      });
+      return;
+    }
+
+    // 3. Continue with transfer
+    try {
+      const addressBytes = decodeAddress(substrateAddress);
+      const evmAddress = Buffer.from(addressBytes.subarray(0, 20)).toString('hex');
+
+      setFormStep('transfer');
+      evmAddressInputEl.current.value = Web3.utils.toChecksumAddress(evmAddress);
+    } catch (err) {
+      console.log(err);
+      setFormState({ text: 'Transaction error', error: true });
+    }
+  };
+
+  const handleTransferButton = async (event: React.MouseEvent) => {
+    event.preventDefault();
 
     // 1. Validate form
     const substrateAddress = addressInputEl.current.value;
@@ -91,9 +141,7 @@ export const EvmWithdraw = () => {
       const addressBytes = decodeAddress(substrateAddress);
       const evmAddress = Buffer.from(addressBytes.subarray(0, 20)).toString('hex');
 
-      setFormStep('transfer');
-      evmAddressInputEl.current.value = Web3.utils.toChecksumAddress(evmAddress);
-
+      setFormStep('withdraw');
       setFormState({ text: 'Confirm the transaction in your wallet', error: false });
 
       await web3.eth
@@ -107,8 +155,9 @@ export const EvmWithdraw = () => {
           setFormState({ text: 'Transaction sent, waiting for confirmation...', error: false });
         });
       setFormState({
-        text: 'Transfer to withdraw address succeeded. Please continue to step 2.',
+        text: 'Transfer to withdraw address succeeded. Please continue to step 3.',
         error: false,
+        evmTransactionSuccess: true,
       });
     } catch (err) {
       console.log(err);
@@ -122,31 +171,39 @@ export const EvmWithdraw = () => {
 
   const handleWithdrawButton = async (event: React.MouseEvent) => {
     event.preventDefault();
-    setFormState({});
+    if (!formState.evmTransactionSuccess) {
+      return;
+    }
+
+    setFormState({
+      ...formState,
+      text: undefined,
+      error: false,
+    });
 
     const web3 = new Web3((window as any).ethereum);
     const currentProvider = web3?.eth?.accounts?.currentProvider as any;
     try {
       await (window as any).ethereum.request({ method: 'eth_requestAccounts' });
     } catch (e) {
-      setFormState({ text: 'Metamask or compatible Web3 wallet required', error: true });
+      setFormState({ text: 'Metamask or compatible Web3 wallet required!', error: true });
       return;
     }
 
     if (!currentProvider) {
-      setFormState({ text: 'Metamask or compatible Web3 wallet required', error: true });
+      setFormState({ text: 'Metamask or compatible Web3 wallet required!', error: true });
       return;
     }
 
     const sender = addressInputEl.current.value;
     if (!sender) {
-      setFormState({ text: 'Invalid Substrate address', error: true });
+      setFormState({ text: 'Invalid Substrate address!', error: true });
       return;
     }
 
     const amount = amountInputEl.current.value;
     if (amount === '' || amount === '0' || isNaN(+amount)) {
-      setFormState({ text: 'Invalid amount', error: true });
+      setFormState({ text: 'Invalid amount!', error: true });
       return;
     }
 
@@ -183,7 +240,7 @@ export const EvmWithdraw = () => {
       u8aToHex(keyring.decodeAddress(address))
     );
     if (allAccountsHex.indexOf(addressHex) === -1) {
-      setFormState({ text: 'Address not found in polkadot-js', error: true });
+      setFormState({ text: 'Address not found in polkadot-js!', error: true });
       return;
     }
 
@@ -191,7 +248,7 @@ export const EvmWithdraw = () => {
     const withdrawingBalance = `${amount} EDG`;
 
     setFormState({
-      text: `Withdrawing ${withdrawingBalance} of ${availableBalance} available, please confirm in polkadot-js`,
+      text: `Withdrawing ${withdrawingBalance} of ${availableBalance} available, please confirm in polkadot-js...`,
       error: false,
     });
 
@@ -200,21 +257,21 @@ export const EvmWithdraw = () => {
       .withdraw(evmAddress, (+amount * 10 ** +api.registry.chainDecimals).toString())
       .signAndSend(sender, { signer: injector.signer }, (result) => {
         if (result.isError) {
-          setFormState({ text: 'Transaction error', error: true });
+          setFormState({ text: 'Transaction error!', error: true });
         } else if (result.dispatchError && withdrawingBalance > availableBalance) {
           setFormState({
-            text: `Transaction error. Attempted to withdraw ${withdrawingBalance} with only ${availableBalance} available`,
+            text: `Transaction error. Attempted to withdraw ${withdrawingBalance} with only ${availableBalance} available.`,
             error: true,
           });
         } else if (result.dispatchError) {
-          setFormState({ text: 'Transaction error', error: true });
+          setFormState({ text: 'Transaction error!', error: true });
         } else if (result.isCompleted && withdrawingBalance === availableBalance) {
           setFormState({ text: `Transaction success. Withdrew ${withdrawingBalance}!` });
 
           setFormStep('complete');
         } else if (result.isCompleted) {
           setFormState({
-            text: `Transaction success. Withdrew ${withdrawingBalance} of ${availableBalance} available in the withdraw address`,
+            text: `Transaction success. Withdrew ${withdrawingBalance} of ${availableBalance} available in the withdraw address.`,
           });
           setFormStep('complete');
         }
@@ -284,64 +341,91 @@ export const EvmWithdraw = () => {
             autoCorrect="off"
           />
         </label>
-        <label className="my-4 block" htmlFor="ac-input-withdraw-amount" aria-label="Amount">
-          <span className="text-gray-700">Withdrawal amount (EDG):</span>
-          <input
-            id="ac-input-withdraw-amount"
-            className="w-full rounded border border-grey-700 bg-grey-900 px-4 py-2"
-            type="text"
-            name="input"
-            required
-            placeholder="Amount (EDG)"
-            ref={amountInputEl}
-            autoComplete="off"
-            autoCapitalize="none"
-            autoCorrect="off"
-          />
-        </label>
-        {formStep === 'transfer' && (
-          <label
-            className="my-4 block"
-            htmlFor="ac-input-withdraw-address-evm"
-            aria-label="Address"
-          >
-            <span className="text-gray-700">Discovered withdrawal address (EVM):</span>
-            <input
-              id="ac-input-withdraw-address-evm"
-              className="w-full rounded border border-grey-700 bg-grey-800 px-4 py-2 focus:outline-none focus:ring-0"
-              type="text"
-              readOnly
-              name="input"
-              placeholder=""
-              ref={evmAddressInputEl}
-            />
-          </label>
+        {(formStep === 'transfer' || formStep === 'withdraw') && (
+          <div>
+            <p>
+              Note, this is your algorithmically discovered, intermediary EVM withdrawal address
+              that corresponds to your substrate address. In order to continue with the withdrawal
+              process you now need to send the funds from your EVM address to this intermediary
+              address.
+            </p>
+            <label
+              className="my-4 block"
+              htmlFor="ac-input-withdraw-address-evm"
+              aria-label="Address"
+            >
+              <span className="text-gray-700">Discovered withdrawal address (EVM):</span>
+              <input
+                id="ac-input-withdraw-address-evm"
+                className="w-full rounded border border-grey-700 bg-grey-800 px-4 py-2 focus:outline-none focus:ring-0"
+                type="text"
+                readOnly
+                name="input"
+                placeholder=""
+                ref={evmAddressInputEl}
+              />
+            </label>
+            <label className="my-4 block" htmlFor="ac-input-withdraw-amount" aria-label="Amount">
+              <span className="text-gray-700">Withdrawal amount (EDG):</span>
+              <input
+                id="ac-input-withdraw-amount"
+                className="w-full rounded border border-grey-700 bg-grey-900 px-4 py-2"
+                type="text"
+                name="input"
+                required
+                placeholder="Amount (EDG)"
+                ref={amountInputEl}
+                autoComplete="off"
+                autoCapitalize="none"
+                autoCorrect="off"
+              />
+            </label>
+          </div>
         )}
         <div className={formState.error ? 'my-4 text-red-500' : 'my-4 text-green-600'}>
           {formState.text}
         </div>
-        <div className="py-1">
-          <Button onClick={handleTransferButton} colorStyle="primary" sizing="normal">
-            1. Transfer to withdraw address
-          </Button>
-        </div>
-        <div className="py-1">
-          <Button onClick={handleWithdrawButton} colorStyle="primary" sizing="normal">
-            2. Withdraw from EVM
-          </Button>
+        {formStep === 'withdraw' && formState.evmTransactionSuccess && (
+          <div className="mb-4">
+            <p>
+              Once the transfer is complete, you can withdraw the funds from the EVM to your
+              Substrate address. You can do this by initiating the{' '}
+              <code className="rounded bg-grey-800 p-1 text-sm">evm.withdraw(address,value)</code>
+              extrinsic from your Substrate account.
+            </p>
+          </div>
+        )}
+        <div className="space-x-2 py-1">
+          {formStep === 'initial' && (
+            <Button onClick={handleDiscoverButton} colorStyle="primary" sizing="normal">
+              1. Discover EVM withdrawal address
+            </Button>
+          )}
+          {formStep === 'transfer' && (
+            <Button onClick={handleTransferButton} colorStyle="primary" sizing="normal">
+              2. Transfer to intermediary EVM address
+            </Button>
+          )}
+          {formStep === 'withdraw' && (
+            <Button
+              disabled={!formState.evmTransactionSuccess}
+              onClick={handleWithdrawButton}
+              colorStyle="primary"
+              sizing="normal"
+            >
+              3. Withdraw from EVM
+            </Button>
+          )}
+          {formStep !== 'initial' && (
+            <Button onClick={handleReset} colorStyle="white" sizing="normal">
+              Start over
+            </Button>
+          )}
         </div>
         {formState.showAddNetwork && (window as any).ethereum && (
           <div className="py-1">
             <Button onClick={handleNetworkSwitchButton} colorStyle="white" sizing="normal">
               Switch to EdgeEVM
-            </Button>
-          </div>
-        )}
-
-        {formStep === 'complete' && (
-          <div className="py-1">
-            <Button onClick={handleReset} colorStyle="white" sizing="normal">
-              Start over
             </Button>
           </div>
         )}
