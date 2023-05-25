@@ -7,7 +7,7 @@ export const WidgetNetworkSelector = ({ network, onNetworkChange }: WidgetNetwor
   const networks = ['mainnet', 'testnet'];
 
   return (
-    <div className="mt-3 space-x-2 text-xs">
+    <div className="space-x-2 text-xs">
       {networks.map((n) => (
         <button
           key={n}

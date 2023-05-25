@@ -4,10 +4,16 @@ import { web3Accounts, web3Enable, web3FromAddress } from '@polkadot/extension-d
 import { TypeRegistry } from '@polkadot/types';
 import BigNumber from 'bignumber.js';
 
-export const initPolkadotAPI = async () => {
+type Network = 'mainnet' | 'testnet';
+
+const getNetworkUrl = (network: Network) => {
+  return network === 'testnet' ? 'wss://beresheet.jelliedowl.net' : 'wss://edgeware.jelliedowl.net';
+};
+
+export const initPolkadotAPI = async (network: Network) => {
   await web3Enable('Polkadot-JS Apps');
 
-  const polkadotUrl = 'wss://edgeware.jelliedowl.net';
+  const polkadotUrl = getNetworkUrl(network);
   const registry = new TypeRegistry();
 
   const api = await new ApiPromise({

@@ -9,22 +9,29 @@ export type Account = {
   label: string;
 };
 
+type Network = 'mainnet' | 'testnet';
+
 type Web3ContextType = {
-  connectToEthereum: () => Promise<boolean>;
-  connectToPolkadot: () => Promise<boolean>;
+  connectToEthereum: (network: Network) => Promise<boolean>;
+  connectToPolkadot: (network: Network) => Promise<boolean>;
   ethereumAccounts: Account[];
   polkadotAccounts: Account[];
 };
 
 const Web3Context = createContext<Web3ContextType | null>(null);
 
-const EDG_EVM_NETWORK_ID = 2021;
+const EDG_EVM_NETWORK_ID: Record<Network, number> = {
+  mainnet: 2021,
+  testnet: 2022,
+};
 
 export const Web3ContextProvider = ({ children }) => {
   const [ethereumAccounts, setEthereumAccounts] = useState<Account[]>([]);
   const [polkadotAccounts, setPolkadotAccounts] = useState<Account[]>([]);
 
-  const connectToEthereum = async () => {
+  const connectToEthereum = async (network: Network) => {
+    console.log(`Attempting to connect with EVM wallet (${network})`);
+
     try {
       if ('ethereum' in window) {
         await (window as any).ethereum?.enable();
@@ -33,8 +40,13 @@ export const Web3ContextProvider = ({ children }) => {
         // check for network
         const networkId = await web3.eth.net.getId();
 
-        if (networkId !== EDG_EVM_NETWORK_ID) {
-          alert('Please select the Edgeware EVM network in Metamask');
+        if (networkId !== EDG_EVM_NETWORK_ID[network]) {
+          if (network === 'mainnet') {
+            alert('Please select the Edgeware EVM mainnet network in Metamask');
+          } else {
+            alert('Please select the Beresheet EVM testnet network in Metamask');
+          }
+
           throw new Error('Please select the Edgeware EVM network in Metamask');
         }
 
@@ -54,7 +66,8 @@ export const Web3ContextProvider = ({ children }) => {
     }
   };
 
-  const connectToPolkadot = async () => {
+  const connectToPolkadot = async (network: Network) => {
+    console.log(`Attempting to connect with Polkadot wallet (${network})`);
     try {
       if ((window as any).injectedWeb3) {
         const extensions = await web3Enable('Polkadot-JS Apps');

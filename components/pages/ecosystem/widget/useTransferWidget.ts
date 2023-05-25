@@ -5,8 +5,8 @@ import { processEVMDeposit } from 'lib/crypto/deposit';
 import { processEVMWithdrawal } from 'lib/crypto/withdrawal';
 
 // Shared types
-type FormState = 'initial' | 'ready' | 'in-progress' | 'success' | 'error';
 export type Network = 'mainnet' | 'testnet';
+type FormState = 'initial' | 'ready' | 'in-progress' | 'success' | 'error';
 type TargetTransferType = 'deposit' | 'withdrawal';
 type FormErrorsState = {
   global?: string;
@@ -59,7 +59,10 @@ const reducer = (state: State, action: Action): State => {
     case 'SET_FORM_STATE':
       return { ...state, formState: action.payload };
     case 'SET_NETWORK':
-      return { ...state, network: action.payload };
+      return {
+        ...state,
+        network: action.payload,
+      };
     case 'SET_ETHEREUM_CONNECTED':
       return { ...state, ethereumConnected: action.payload };
     case 'SET_POLKADOT_CONNECTED':
@@ -148,7 +151,7 @@ export const useTransferWidget = () => {
 
     async function process() {
       try {
-        const result = await processEVMDeposit(evmAddress, substrateAddress, amount);
+        const result = await processEVMDeposit(evmAddress, substrateAddress, amount, state.network);
         if (result.success) {
           setFormState('success');
           setTx(result?.data?.tx);
@@ -210,7 +213,12 @@ export const useTransferWidget = () => {
 
     async function process() {
       try {
-        const result = await processEVMWithdrawal(evmAddress, substrateAddress, amount);
+        const result = await processEVMWithdrawal(
+          evmAddress,
+          substrateAddress,
+          amount,
+          state.network
+        );
         if (result.success) {
           setFormState('success');
           setTx(result?.data?.tx);
@@ -250,15 +258,16 @@ export const useTransferWidget = () => {
   };
 
   const handleConnect = (type: 'polkadot' | 'ethereum') => {
-    const isConnected = type === 'polkadot' ? state.polkadotConnected : state.ethereumConnected;
-
-    if (isConnected) {
+    if (
+      (type === 'polkadot' && state.polkadotConnected) ||
+      (type === 'ethereum' && state.ethereumConnected)
+    ) {
       return;
     }
 
     async function connect() {
       if (type === 'polkadot') {
-        const result = await connectToPolkadot();
+        const result = await connectToPolkadot(state.network);
         if (result) {
           setPolkadotConnected(true);
           if (state.ethereumConnected) {
@@ -267,7 +276,7 @@ export const useTransferWidget = () => {
         }
       } else {
         try {
-          const result = await connectToEthereum();
+          const result = await connectToEthereum(state.network);
           if (result) {
             setEthereumConnected(true);
             if (state.polkadotConnected) {
@@ -305,6 +314,17 @@ export const useTransferWidget = () => {
     }
   };
 
+  const handleNetworkChange = (network: Network) => {
+    // reset state to ready and clear errors
+    setFormState('initial');
+    setPolkadotConnected(false);
+    setEthereumConnected(false);
+    setSelectedPolkadotAccount(undefined);
+    setSelectedEthereumAccount(undefined);
+    setErrors({});
+    setNetwork(network);
+  };
+
   // useEffect hooks to synchronize hook state with useWeb3Context state
   useEffect(() => {
     if (state.polkadotConnected && polkadotAccounts && polkadotAccounts.length > 0) {
@@ -322,7 +342,6 @@ export const useTransferWidget = () => {
     ethereumAccounts,
     amountInputRef,
     setFormState,
-    setNetwork,
     setEthereumConnected,
     setPolkadotConnected,
     setTargetTransferType,
@@ -334,5 +353,6 @@ export const useTransferWidget = () => {
     handleReset,
     handleConnect,
     handleDisconnect,
+    handleNetworkChange,
   };
 };

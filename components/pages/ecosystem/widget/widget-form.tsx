@@ -10,23 +10,26 @@ export const WidgetForm = () => {
     setTargetTransferType,
     handleConnect,
     handleDisconnect,
+    handleNetworkChange,
     handleSubmit,
     handleReset,
     polkadotAccounts,
     ethereumAccounts,
-    setNetwork,
     setSelectedPolkadotAccount,
     setSelectedEthereumAccount,
   } = useTransferWidget();
 
   return (
-    <div className="text-center">
+    <div className="relative text-center">
       <WidgetTransferSelector
         targetTransferType={state.targetTransferType}
         onTargetTransferTypeChange={setTargetTransferType}
         inProgress={state.formState === 'in-progress'}
       />
-      <WidgetNetworkSelector network={state.network} onNetworkChange={setNetwork} />
+
+      <div className="absolute -right-4 -top-6">
+        <WidgetNetworkSelector network={state.network} onNetworkChange={handleNetworkChange} />
+      </div>
 
       <div className="flex flex-row items-start justify-center space-x-16 px-8 pt-12">
         <div className="w-1/2 shrink-0">

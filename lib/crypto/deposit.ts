@@ -7,10 +7,13 @@ type DepositResult = {
   data?: any;
 };
 
+type Network = 'mainnet' | 'testnet';
+
 export const processEVMDeposit = async (
   targetAddress: string,
   sourceAddress: string,
-  inputAmount: string
+  inputAmount: string,
+  network: Network
 ): Promise<DepositResult> => {
   const mainnetAddress = evmConvert(targetAddress);
 
@@ -30,7 +33,7 @@ export const processEVMDeposit = async (
   const amount = Number(inputAmount);
 
   // Initialize API
-  const api = await initPolkadotAPI();
+  const api = await initPolkadotAPI(network);
   if (!api) {
     return {
       success: false,

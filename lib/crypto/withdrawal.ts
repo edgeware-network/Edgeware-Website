@@ -1,7 +1,8 @@
 import { decodeAddress } from '@polkadot/util-crypto';
 import Web3 from 'web3';
-
 import { initPolkadotAPI, requestEVMWithdrawal } from './polkadot';
+
+type Network = 'mainnet' | 'testnet';
 
 type WithdrawalResult = {
   success: boolean;
@@ -12,7 +13,8 @@ type WithdrawalResult = {
 export const processEVMWithdrawal = async (
   sourceAddress: string,
   substrateAddress: string,
-  inputAmount: string
+  inputAmount: string,
+  network: Network
 ): Promise<WithdrawalResult> => {
   // 1. discover intermediary EVM withdrawal address
   const intermediaryEVMAddress = Buffer.from(
@@ -39,7 +41,7 @@ export const processEVMWithdrawal = async (
 
   // 4. sign withdrawal transaction command on substrate
   // Initialize API
-  const api = await initPolkadotAPI();
+  const api = await initPolkadotAPI(network);
   if (!api) {
     return {
       success: false,
