@@ -75,7 +75,7 @@ export const Web3ContextProvider = ({ children }) => {
           throw new Error('No Polkadot wallet detected');
         }
 
-        const api = await initPolkadotAPI();
+        const api = await initPolkadotAPI(network);
         const allAccounts = await web3Accounts();
         const accounts = allAccounts
           .map((a) => ({
