@@ -27,7 +27,7 @@ export const WidgetForm = () => {
         inProgress={state.formState === 'in-progress'}
       />
 
-      <div className="absolute -right-4 -top-6">
+      <div className="absolute -right-8 -top-8">
         <WidgetNetworkSelector network={state.network} onNetworkChange={handleNetworkChange} />
       </div>
 

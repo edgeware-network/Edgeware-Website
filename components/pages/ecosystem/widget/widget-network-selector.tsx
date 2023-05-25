@@ -7,12 +7,12 @@ export const WidgetNetworkSelector = ({ network, onNetworkChange }: WidgetNetwor
   const networks = ['mainnet', 'testnet'];
 
   return (
-    <div className="space-x-2 text-xs">
+    <div className="space-x-2 rounded-bl-md rounded-tr-md bg-grey-800 p-2 px-4 text-xs">
       {networks.map((n) => (
         <button
           key={n}
           className={`capitalize ${
-            n === network ? 'font-semibold' : 'text-grey-500 hover:text-primary-500'
+            n === network ? ' font-semibold text-primary-500' : ' text-grey-500 hover:text-grey-300'
           }`}
           onClick={() => onNetworkChange(n)}
         >
