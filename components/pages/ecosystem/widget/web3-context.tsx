@@ -25,6 +25,31 @@ const EDG_EVM_NETWORK_ID: Record<Network, number> = {
   testnet: 2022,
 };
 
+const EDG_EVM_NETWORKS_EXTENSION: Record<Network, any> = {
+  mainnet: {
+    chainId: '0x7E5',
+    chainName: 'Edgeware EdgeEVM',
+    rpcUrls: ['https://edgeware-evm.jelliedowl.net/'],
+    nativeCurrency: {
+      name: 'Edgeware',
+      symbol: 'EDG',
+      decimals: 18,
+    },
+    blockExplorerUrls: ['https://edgscan.live/'],
+  },
+  testnet: {
+    chainId: '0x7E6',
+    chainName: 'Edgeware EdgeEVM Testnet',
+    rpcUrls: ['https://beresheet-evm.jelliedowl.net/'],
+    nativeCurrency: {
+      name: 'Edgeware',
+      symbol: 'EDG',
+      decimals: 18,
+    },
+    blockExplorerUrls: ['https://beresheet.edgscan.live/'],
+  },
+};
+
 export const Web3ContextProvider = ({ children }) => {
   const [ethereumAccounts, setEthereumAccounts] = useState<Account[]>([]);
   const [polkadotAccounts, setPolkadotAccounts] = useState<Account[]>([]);
@@ -41,13 +66,14 @@ export const Web3ContextProvider = ({ children }) => {
         const networkId = await web3.eth.net.getId();
 
         if (networkId !== EDG_EVM_NETWORK_ID[network]) {
-          if (network === 'mainnet') {
-            alert('Please select the Edgeware EVM mainnet network in Metamask');
-          } else {
-            alert('Please select the Beresheet EVM testnet network in Metamask');
-          }
-
-          throw new Error('Please select the Edgeware EVM network in Metamask');
+          tryEthereumNetworkSwitch(network);
+          // if (network === 'mainnet') {
+          //   alert('Please select the Edgeware EVM mainnet network in Metamask');
+          // } else {
+          //   alert('Please select the Beresheet EVM testnet network in Metamask');
+          // }
+          //
+          // throw new Error('Please select the Edgeware EVM network in Metamask');
         }
 
         const accounts = await web3.eth.getAccounts();
@@ -88,6 +114,17 @@ export const Web3ContextProvider = ({ children }) => {
         setPolkadotAccounts(accounts);
         return true;
       }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const tryEthereumNetworkSwitch = async (network: Network) => {
+    try {
+      await (window as any).ethereum.request({
+        method: 'wallet_addEthereumChain',
+        params: [EDG_EVM_NETWORKS_EXTENSION[network]],
+      });
     } catch (err) {
       console.error(err);
     }
