@@ -328,11 +328,15 @@ export const useTransferWidget = () => {
   // useEffect hooks to synchronize hook state with useWeb3Context state
   useEffect(() => {
     if (state.polkadotConnected && polkadotAccounts && polkadotAccounts.length > 0) {
-      setSelectedPolkadotAccount(polkadotAccounts[0].address);
+      if (!state.selectedPolkadotAccount) {
+        setSelectedPolkadotAccount(polkadotAccounts[0].address);
+      }
     }
 
     if (state.ethereumConnected && ethereumAccounts && ethereumAccounts.length > 0) {
-      setSelectedEthereumAccount(ethereumAccounts[0].address);
+      if (!state.selectedEthereumAccount) {
+        setSelectedEthereumAccount(ethereumAccounts[0].address);
+      }
     }
   }, [state, polkadotAccounts, ethereumAccounts]);
 
