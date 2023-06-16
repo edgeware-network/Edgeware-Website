@@ -158,7 +158,7 @@ export const requestEVMWithdrawal = async (
               console.log(`\t'${section}.${method}':: ${data}`);
             }
           }
-          resolve({ blockHash: status.asInBlock, txHash: transfer.hash });
+          resolve({ blockHash: status.asInBlock, txHash: withdrawal.hash });
         }
       }
     )
