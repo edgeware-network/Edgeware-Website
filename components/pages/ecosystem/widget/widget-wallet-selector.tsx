@@ -64,7 +64,12 @@ export const WidgetWalletSelector = ({
         <Listbox.Button className="flex w-full grow flex-row items-center justify-between rounded border border-grey-700 p-4">
           <span className="mr-4 h-2 w-2 shrink-0 rounded-full bg-green-500" />
           <span className="block grow text-left">
-            <span className="block w-72 truncate">{fullSelectedAccount.label}</span>
+            <span className="block w-72 truncate">
+              {fullSelectedAccount.label}
+              {fullSelectedAccount.balance && (
+                <span className="ml-2 text-xs text-grey-500">{fullSelectedAccount.balance}</span>
+              )}
+            </span>
             <span className="block w-72 truncate text-xs">
               {fullSelectedAccount.networkAddress || fullSelectedAccount.address}
             </span>

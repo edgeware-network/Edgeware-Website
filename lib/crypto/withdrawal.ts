@@ -53,14 +53,25 @@ export const processEVMWithdrawal = async (
   const amount = Number(inputAmount);
 
   try {
-    const tx = await requestEVMWithdrawal(api, intermediaryEVMAddress, substrateAddress, amount);
+    const { txHash, blockHash, error } = await requestEVMWithdrawal(
+      api,
+      intermediaryEVMAddress,
+      substrateAddress,
+      amount
+    );
 
-    if (tx) {
+    console.log({
+      txHash,
+      blockHash,
+    });
+
+    if (txHash) {
       return {
         success: true,
         message: `Successfully withdrawn ${amount} EDG to ${substrateAddress}.`,
         data: {
-          tx,
+          tx: txHash,
+          block: blockHash,
         },
       };
     } else {

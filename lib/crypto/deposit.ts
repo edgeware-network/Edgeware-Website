@@ -43,14 +43,25 @@ export const processEVMDeposit = async (
 
   // Request transfer
   try {
-    const tx = await requestTransfer(api, mainnetAddress, sourceAddress, amount);
+    const { txHash, blockHash, error } = await requestTransfer(
+      api,
+      mainnetAddress,
+      sourceAddress,
+      amount
+    );
 
-    if (tx) {
+    console.log({
+      txHash,
+      blockHash,
+    });
+
+    if (txHash) {
       return {
         success: true,
         message: `Successfully sent ${amount} EDG to ${mainnetAddress}.`,
         data: {
-          tx,
+          tx: txHash,
+          block: blockHash,
         },
       };
     } else {

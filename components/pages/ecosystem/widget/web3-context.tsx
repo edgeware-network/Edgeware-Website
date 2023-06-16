@@ -2,11 +2,14 @@ import React, { createContext, useState } from 'react';
 import Web3 from 'web3';
 import { web3Accounts, web3Enable } from '@polkadot/extension-dapp';
 import { initPolkadotAPI } from 'lib/crypto/polkadot';
+import { AccountInfo } from '@polkadot/types/interfaces';
+import { formatBalance } from '@polkadot/util';
 
 export type Account = {
   address: string;
   networkAddress?: string;
   label: string;
+  balance?: string;
 };
 
 type Network = 'mainnet' | 'testnet';
@@ -14,6 +17,7 @@ type Network = 'mainnet' | 'testnet';
 type Web3ContextType = {
   connectToEthereum: (network: Network) => Promise<boolean>;
   connectToPolkadot: (network: Network) => Promise<boolean>;
+  updateBalances: (network: Network) => Promise<void>;
   ethereumAccounts: Account[];
   polkadotAccounts: Account[];
 };
@@ -43,7 +47,7 @@ const EDG_EVM_NETWORKS_EXTENSION: Record<Network, any> = {
     rpcUrls: ['https://beresheet-evm.jelliedowl.net/'],
     nativeCurrency: {
       name: 'Edgeware',
-      symbol: 'EDG',
+      symbol: 'tEDG',
       decimals: 18,
     },
     blockExplorerUrls: ['https://beresheet.edgscan.live/'],
@@ -66,23 +70,10 @@ export const Web3ContextProvider = ({ children }) => {
         const networkId = await web3.eth.net.getId();
 
         if (networkId !== EDG_EVM_NETWORK_ID[network]) {
-          tryEthereumNetworkSwitch(network);
-          // if (network === 'mainnet') {
-          //   alert('Please select the Edgeware EVM mainnet network in Metamask');
-          // } else {
-          //   alert('Please select the Beresheet EVM testnet network in Metamask');
-          // }
-          //
-          // throw new Error('Please select the Edgeware EVM network in Metamask');
+          await tryEthereumNetworkSwitch(network);
         }
 
-        const accounts = await web3.eth.getAccounts();
-        setEthereumAccounts(
-          accounts.map((a, index) => ({
-            address: a,
-            label: `Metamask account #${index + 1}`,
-          }))
-        );
+        await updateEthereumBalances(network);
         return true;
       } else {
         throw new Error('No Ethereum wallet detected');
@@ -94,6 +85,52 @@ export const Web3ContextProvider = ({ children }) => {
 
   const connectToPolkadot = async (network: Network) => {
     console.log(`Attempting to connect with Polkadot wallet (${network})`);
+
+    try {
+      if ((window as any).injectedWeb3) {
+        return await updatePolkadotBalances(network);
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const updateEthereumBalances = async (network: Network) => {
+    console.log(`Attempting to update with EVM wallets (${network})`);
+
+    try {
+      if ('ethereum' in window) {
+        await (window as any).ethereum?.enable();
+        const web3 = new Web3(Web3.givenProvider);
+
+        const allAccounts = await web3.eth.getAccounts();
+
+        // get balances for accounts
+        const accountsWithBalance = await Promise.all(
+          allAccounts.map(async (a, index) => {
+            const balanceInWei = await web3.eth.getBalance(a);
+            const balanceInEDG = parseFloat(web3.utils.fromWei(balanceInWei, 'ether')).toFixed(2);
+
+            return {
+              address: a,
+              label: `Metamask account #${index + 1}`,
+              balance: `${balanceInEDG} EDG `,
+            };
+          })
+        );
+
+        setEthereumAccounts(accountsWithBalance);
+        return true;
+      } else {
+        throw new Error('No Ethereum wallet detected');
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const updatePolkadotBalances = async (network: Network) => {
+    console.log(`Attempting to connect with Polkadot wallet (${network})`);
     try {
       if ((window as any).injectedWeb3) {
         const extensions = await web3Enable('Polkadot-JS Apps');
@@ -103,20 +140,40 @@ export const Web3ContextProvider = ({ children }) => {
 
         const api = await initPolkadotAPI(network);
         const allAccounts = await web3Accounts();
-        const accounts = allAccounts
-          .map((a) => ({
-            address: a.address,
-            networkAddress: api.createType('Address', a.address).toString(),
-            label: a.meta.name,
-          }))
-          .reverse();
 
-        setPolkadotAccounts(accounts);
+        formatBalance.setDefaults({
+          decimals: 18, // adjust this to match your network
+          unit: 'EDG',
+        });
+
+        const accounts = await Promise.all(
+          allAccounts.map(async (a) => {
+            const accountInfo = (await api.query.system.account(a.address)) as AccountInfo;
+            const balance = formatBalance(accountInfo.data.free);
+
+            return {
+              address: a.address,
+              networkAddress: api.createType('Address', a.address).toString(),
+              label: a.meta.name,
+              balance,
+            };
+          })
+        );
+
+        console.log({
+          accounts,
+        });
+
+        setPolkadotAccounts(accounts.reverse());
         return true;
       }
     } catch (err) {
       console.error(err);
     }
+  };
+
+  const updateBalances = async (network: Network) => {
+    await Promise.all([updateEthereumBalances(network), updatePolkadotBalances(network)]);
   };
 
   const tryEthereumNetworkSwitch = async (network: Network) => {
@@ -133,6 +190,7 @@ export const Web3ContextProvider = ({ children }) => {
   const contextValue = {
     connectToEthereum,
     connectToPolkadot,
+    updateBalances,
     ethereumAccounts,
     polkadotAccounts,
   };

@@ -26,6 +26,7 @@ type State = {
   selectedEthereumAccount: string | undefined;
   errors: FormErrorsState;
   tx: string | null;
+  block: string | null;
 };
 
 // Initial state
@@ -39,6 +40,7 @@ const initialState: State = {
   selectedEthereumAccount: undefined,
   errors: {},
   tx: null,
+  block: null,
 };
 
 // Action types
@@ -51,7 +53,8 @@ type Action =
   | { type: 'SET_SELECTED_POLKADOT_ACCOUNT'; payload: string | undefined }
   | { type: 'SET_SELECTED_ETHEREUM_ACCOUNT'; payload: string | undefined }
   | { type: 'SET_ERRORS'; payload: FormErrorsState }
-  | { type: 'SET_TX'; payload: string | null };
+  | { type: 'SET_TX'; payload: string | null }
+  | { type: 'SET_BLOCK'; payload: string | null };
 
 // Reducer
 const reducer = (state: State, action: Action): State => {
@@ -77,6 +80,8 @@ const reducer = (state: State, action: Action): State => {
       return { ...state, errors: action.payload };
     case 'SET_TX':
       return { ...state, tx: action.payload };
+    case 'SET_BLOCK':
+      return { ...state, block: action.payload };
     default:
       return state;
   }
@@ -85,8 +90,13 @@ const reducer = (state: State, action: Action): State => {
 export const useTransferWidget = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const amountInputRef = useRef<HTMLInputElement>(null);
-  const { connectToEthereum, ethereumAccounts, connectToPolkadot, polkadotAccounts } =
-    useWeb3Context();
+  const {
+    connectToEthereum,
+    ethereumAccounts,
+    connectToPolkadot,
+    polkadotAccounts,
+    updateBalances,
+  } = useWeb3Context();
 
   // Actions
   const setFormState = (formState: FormState) =>
@@ -104,6 +114,7 @@ export const useTransferWidget = () => {
     dispatch({ type: 'SET_SELECTED_ETHEREUM_ACCOUNT', payload: account });
   const setErrors = (errors: FormErrorsState) => dispatch({ type: 'SET_ERRORS', payload: errors });
   const setTx = (tx: string | null) => dispatch({ type: 'SET_TX', payload: tx });
+  const setBlock = (block: string | null) => dispatch({ type: 'SET_BLOCK', payload: block });
 
   // Logic functions
   const handleDepositSubmit = () => {
@@ -155,6 +166,7 @@ export const useTransferWidget = () => {
         if (result.success) {
           setFormState('success');
           setTx(result?.data?.tx);
+          setBlock(result?.data?.block);
         }
       } catch (error) {
         setErrors({
@@ -222,6 +234,7 @@ export const useTransferWidget = () => {
         if (result.success) {
           setFormState('success');
           setTx(result?.data?.tx);
+          setBlock(result?.data?.block);
         }
       } catch (error) {
         console.error(error);
@@ -243,6 +256,8 @@ export const useTransferWidget = () => {
     } else {
       handleWithdrawalSubmit();
     }
+
+    handleBalanceUpdate();
   };
 
   const handleReset = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -325,6 +340,15 @@ export const useTransferWidget = () => {
     setNetwork(network);
   };
 
+  const handleBalanceUpdate = () => {
+    // Balance will update by just connecting to the network again
+    async function update() {
+      console.log('Periodically updating balances');
+      await updateBalances(state.network);
+    }
+    [0, 5, 10, 20, 25, 30].map((s) => window.setTimeout(update, s * 1000));
+  };
+
   // useEffect hooks to synchronize hook state with useWeb3Context state
   useEffect(() => {
     if (state.polkadotConnected && polkadotAccounts && polkadotAccounts.length > 0) {
@@ -340,6 +364,12 @@ export const useTransferWidget = () => {
     }
   }, [state, polkadotAccounts, ethereumAccounts]);
 
+  useEffect(() => {
+    if (state.formState === 'success') {
+      handleBalanceUpdate();
+    }
+  }, [state.formState]);
+
   return {
     state,
     polkadotAccounts,
@@ -353,6 +383,7 @@ export const useTransferWidget = () => {
     setSelectedEthereumAccount,
     setErrors,
     setTx,
+    setBlock,
     handleSubmit,
     handleReset,
     handleConnect,

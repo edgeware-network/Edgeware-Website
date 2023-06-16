@@ -1,5 +1,6 @@
 import { useTransferWidget } from './useTransferWidget';
 import { WidgetNetworkSelector } from './widget-network-selector';
+import { WidgetSuccess } from './widget-success';
 import { WidgetTransferSelector } from './widget-transfer-selector';
 import { WidgetWalletSelector } from './widget-wallet-selector';
 
@@ -95,26 +96,12 @@ export const WidgetForm = () => {
       ) : null}
 
       {state.formState === 'success' && state.tx && (
-        <div className="pt-8">
-          Transfer submitted!
-          <div className="mt-2 flex justify-center">
-            <a
-              href={`https://edgeware.subscan.io/extrinsic/${state.tx}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 ml-2 rounded bg-grey-400 p-2 px-4 text-sm"
-            >
-              View Extrinsic on Subscan
-            </a>
-            <button
-              className="text-blue-500 ml-2 rounded bg-grey-400 p-2 px-4 text-sm"
-              onClick={handleReset}
-              disabled={state.formState !== 'success'}
-            >
-              Start again
-            </button>
-          </div>
-        </div>
+        <WidgetSuccess
+          tx={state.tx}
+          block={state.block}
+          network={state.network}
+          handleReset={handleReset}
+        />
       )}
 
       {state.formState === 'in-progress' && (
