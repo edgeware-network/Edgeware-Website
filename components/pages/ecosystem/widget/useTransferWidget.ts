@@ -92,8 +92,10 @@ export const useTransferWidget = () => {
   const amountInputRef = useRef<HTMLInputElement>(null);
   const {
     connectToEthereum,
+    disconnectFromEthereum,
     ethereumAccounts,
     connectToPolkadot,
+    disconnectFromPolkadot,
     polkadotAccounts,
     updateBalances,
   } = useWeb3Context();
@@ -316,17 +318,23 @@ export const useTransferWidget = () => {
       return;
     }
 
-    if (type === 'polkadot') {
-      setPolkadotConnected(false);
-      setSelectedPolkadotAccount(undefined);
-      setFormState('initial');
+    async function disconnect() {
+      if (type === 'polkadot') {
+        await disconnectFromPolkadot();
+        setPolkadotConnected(false);
+        setSelectedPolkadotAccount(undefined);
+        setFormState('initial');
+      }
+
+      if (type === 'ethereum') {
+        await disconnectFromEthereum();
+        setEthereumConnected(false);
+        setSelectedEthereumAccount(undefined);
+        setFormState('initial');
+      }
     }
 
-    if (type === 'ethereum') {
-      setEthereumConnected(false);
-      setSelectedEthereumAccount(undefined);
-      setFormState('initial');
-    }
+    disconnect();
   };
 
   const handleNetworkChange = (network: Network) => {

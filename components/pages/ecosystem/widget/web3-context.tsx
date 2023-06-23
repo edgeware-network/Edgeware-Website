@@ -16,7 +16,9 @@ type Network = 'mainnet' | 'testnet';
 
 type Web3ContextType = {
   connectToEthereum: (network: Network) => Promise<boolean>;
+  disconnectFromEthereum: () => Promise<void>;
   connectToPolkadot: (network: Network) => Promise<boolean>;
+  disconnectFromPolkadot: () => void;
   updateBalances: (network: Network) => Promise<void>;
   ethereumAccounts: Account[];
   polkadotAccounts: Account[];
@@ -83,6 +85,15 @@ export const Web3ContextProvider = ({ children }) => {
     }
   };
 
+  const disconnectFromEthereum = async () => {
+    console.log('Disconnecting from EVM wallet');
+    try {
+      const web3 = new Web3(Web3.givenProvider);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   const connectToPolkadot = async (network: Network) => {
     console.log(`Attempting to connect with Polkadot wallet (${network})`);
 
@@ -90,6 +101,15 @@ export const Web3ContextProvider = ({ children }) => {
       if ((window as any).injectedWeb3) {
         return await updatePolkadotBalances(network);
       }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const disconnectFromPolkadot = async () => {
+    console.log('Disconnecting from Polkadot wallet');
+    try {
+      console.log('Done!');
     } catch (err) {
       console.error(err);
     }
@@ -189,7 +209,9 @@ export const Web3ContextProvider = ({ children }) => {
 
   const contextValue = {
     connectToEthereum,
+    disconnectFromEthereum,
     connectToPolkadot,
+    disconnectFromPolkadot,
     updateBalances,
     ethereumAccounts,
     polkadotAccounts,
