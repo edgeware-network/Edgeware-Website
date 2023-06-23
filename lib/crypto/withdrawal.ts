@@ -41,10 +41,10 @@ export const processEVMWithdrawal = async (
 
   // 3a. Check ballance on intermediary EVM withdrawal address
   const balanceInWei = await web3.eth.getBalance(intermediaryEVMAddress);
-  const balanceInEDG = parseFloat(web3.utils.fromWei(balanceInWei, 'ether'));
+  const availableBalance = parseFloat(web3.utils.fromWei(balanceInWei, 'ether'));
 
   console.log('IntermediaryEVMAddress', intermediaryEVMAddress);
-  console.log('Found additional EDG balance in intermediary account:', balanceInEDG);
+  console.log('Found additional EDG balance in intermediary account:', availableBalance);
 
   // 4. sign withdrawal transaction command on substrate
   // Initialize API
@@ -57,16 +57,18 @@ export const processEVMWithdrawal = async (
   }
 
   // Request withdrawal
-  let amount = Number(inputAmount);
-  const extra = balanceInEDG > 10 ? Math.floor(balanceInEDG - 10) : 0;
-  amount += extra;
+  const BUFFER = 1;
+  const amount = Number(inputAmount);
+  const withdrawExtra = availableBalance - BUFFER > amount;
+  const actualAmount = withdrawExtra ? availableBalance - BUFFER : amount;
+  const difference = Math.floor(actualAmount - BUFFER - amount);
 
   try {
     const { txHash, blockHash, error } = await requestEVMWithdrawal(
       api,
       intermediaryEVMAddress,
       substrateAddress,
-      amount
+      actualAmount
     );
 
     console.log({
@@ -76,8 +78,8 @@ export const processEVMWithdrawal = async (
 
     if (txHash) {
       let message = `Successfully withdrawn ${amount} EDG`;
-      if (extra) {
-        message += ` (${inputAmount} EDG requested + ${extra} EDG recovered from intermediary account)`;
+      if (withdrawExtra) {
+        message += ` (${inputAmount} EDG requested + ${difference} EDG recovered from intermediary account)`;
       }
 
       return {
@@ -86,7 +88,6 @@ export const processEVMWithdrawal = async (
         data: {
           tx: txHash,
           block: blockHash,
-          additionalBalance: balanceInEDG - 1,
         },
       };
     } else {
