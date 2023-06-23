@@ -187,6 +187,11 @@ export const useTransferWidget = () => {
           setMessage(result?.message);
           setTx(result?.data?.tx);
           setBlock(result?.data?.block);
+        } else {
+          setErrors({
+            global: result.message,
+          });
+          setFormState('error');
         }
       } catch (error) {
         setErrors({
