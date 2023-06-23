@@ -58,7 +58,7 @@ export const processEVMDeposit = async (
     if (txHash) {
       return {
         success: true,
-        message: `Successfully sent ${amount} EDG ${targetAddress}.`,
+        message: `Successfully sent ${amount} EDG to ${targetAddress}.`,
         data: {
           tx: txHash,
           block: blockHash,

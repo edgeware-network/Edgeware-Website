@@ -10,7 +10,7 @@ type WidgetSuccessProps = {
 
 export const WidgetSuccess = ({ tx, block, message, handleReset, network }: WidgetSuccessProps) => {
   const rpcByNetwork = {
-    mainnet: 'wss://beresheet.jelliedowl.net',
+    mainnet: 'wss://edgeware.jelliedowl.net',
     testnet: 'wss://beresheet.jelliedowl.net',
   };
 
