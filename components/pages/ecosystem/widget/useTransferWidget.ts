@@ -25,6 +25,7 @@ type State = {
   selectedPolkadotAccount: string | undefined;
   selectedEthereumAccount: string | undefined;
   errors: FormErrorsState;
+  message: string | null;
   tx: string | null;
   block: string | null;
 };
@@ -39,6 +40,7 @@ const initialState: State = {
   selectedPolkadotAccount: undefined,
   selectedEthereumAccount: undefined,
   errors: {},
+  message: null,
   tx: null,
   block: null,
 };
@@ -53,6 +55,7 @@ type Action =
   | { type: 'SET_SELECTED_POLKADOT_ACCOUNT'; payload: string | undefined }
   | { type: 'SET_SELECTED_ETHEREUM_ACCOUNT'; payload: string | undefined }
   | { type: 'SET_ERRORS'; payload: FormErrorsState }
+  | { type: 'SET_MESSAGE'; payload: string | null }
   | { type: 'SET_TX'; payload: string | null }
   | { type: 'SET_BLOCK'; payload: string | null };
 
@@ -78,6 +81,8 @@ const reducer = (state: State, action: Action): State => {
       return { ...state, selectedEthereumAccount: action.payload };
     case 'SET_ERRORS':
       return { ...state, errors: action.payload };
+    case 'SET_MESSAGE':
+      return { ...state, message: action.payload };
     case 'SET_TX':
       return { ...state, tx: action.payload };
     case 'SET_BLOCK':
@@ -115,6 +120,8 @@ export const useTransferWidget = () => {
   const setSelectedEthereumAccount = (account: string | undefined) =>
     dispatch({ type: 'SET_SELECTED_ETHEREUM_ACCOUNT', payload: account });
   const setErrors = (errors: FormErrorsState) => dispatch({ type: 'SET_ERRORS', payload: errors });
+  const setMessage = (message: string | null) =>
+    dispatch({ type: 'SET_MESSAGE', payload: message });
   const setTx = (tx: string | null) => dispatch({ type: 'SET_TX', payload: tx });
   const setBlock = (block: string | null) => dispatch({ type: 'SET_BLOCK', payload: block });
 
@@ -159,6 +166,16 @@ export const useTransferWidget = () => {
       return;
     }
 
+    // validate balance
+    const balance = polkadotAccounts.find((a) => a.address === substrateAddress)?.balance || '0';
+    if (parseFloat(balance) < parseFloat(amount)) {
+      setErrors({
+        amount: 'Insufficient balance',
+      });
+
+      return;
+    }
+
     // submit form and continue with processing
     setFormState('in-progress');
 
@@ -167,6 +184,7 @@ export const useTransferWidget = () => {
         const result = await processEVMDeposit(evmAddress, substrateAddress, amount, state.network);
         if (result.success) {
           setFormState('success');
+          setMessage(result?.message);
           setTx(result?.data?.tx);
           setBlock(result?.data?.block);
         }
@@ -222,6 +240,16 @@ export const useTransferWidget = () => {
       return;
     }
 
+    // validate balance
+    const balance = ethereumAccounts.find((a) => a.address === evmAddress)?.balance || '0';
+    if (parseFloat(balance) < parseFloat(amount)) {
+      setErrors({
+        amount: 'Insufficient balance',
+      });
+
+      return;
+    }
+
     // submit form and continue with processing
     setFormState('in-progress');
 
@@ -233,10 +261,17 @@ export const useTransferWidget = () => {
           amount,
           state.network
         );
+
         if (result.success) {
-          setFormState('success');
           setTx(result?.data?.tx);
+          setMessage(result?.message);
           setBlock(result?.data?.block);
+          setFormState('success');
+        } else {
+          setErrors({
+            global: result.message,
+          });
+          setFormState('error');
         }
       } catch (error) {
         console.error(error);
@@ -269,8 +304,10 @@ export const useTransferWidget = () => {
     } else {
       setFormState('initial');
     }
-    setTargetTransferType('deposit');
     setErrors({});
+    setTx(null);
+    setBlock(null);
+    setMessage(null);
     amountInputRef.current.value = '';
   };
 
@@ -354,7 +391,7 @@ export const useTransferWidget = () => {
       console.log('Periodically updating balances');
       await updateBalances(state.network);
     }
-    [0, 5, 10, 20, 25, 30].map((s) => window.setTimeout(update, s * 1000));
+    [0, 5, 15, 30, 60, 120].map((s) => window.setTimeout(update, s * 1000));
   };
 
   // useEffect hooks to synchronize hook state with useWeb3Context state

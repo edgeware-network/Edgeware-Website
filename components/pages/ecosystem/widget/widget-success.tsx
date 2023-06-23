@@ -3,11 +3,12 @@ import type { Network } from './useTransferWidget';
 type WidgetSuccessProps = {
   tx: string;
   block: string;
+  message: string;
   handleReset: (e: any) => void;
   network: Network;
 };
 
-export const WidgetSuccess = ({ tx, block, handleReset, network }: WidgetSuccessProps) => {
+export const WidgetSuccess = ({ tx, block, message, handleReset, network }: WidgetSuccessProps) => {
   const rpcByNetwork = {
     mainnet: 'wss://beresheet.jelliedowl.net',
     testnet: 'wss://beresheet.jelliedowl.net',
@@ -17,8 +18,8 @@ export const WidgetSuccess = ({ tx, block, handleReset, network }: WidgetSuccess
 
   return (
     <div className="pt-8">
-      Transfer submitted!
-      <div className="mt-2 flex justify-center">
+      {message && <p className="text-center text-sm">{message}</p>}
+      <div className="mt-4 flex justify-center">
         {network === 'mainnet' && (
           <a
             href={`https://edgeware.subscan.io/extrinsic/${tx}`}

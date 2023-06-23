@@ -39,6 +39,13 @@ export const processEVMWithdrawal = async (
   const receipt = await web3.eth.getTransactionReceipt(result.transactionHash);
   console.log(receipt);
 
+  // 3a. Check ballance on intermediary EVM withdrawal address
+  const balanceInWei = await web3.eth.getBalance(intermediaryEVMAddress);
+  const balanceInEDG = parseFloat(web3.utils.fromWei(balanceInWei, 'ether'));
+
+  console.log('IntermediaryEVMAddress', intermediaryEVMAddress);
+  console.log('Found additional EDG balance in intermediary account:', balanceInEDG);
+
   // 4. sign withdrawal transaction command on substrate
   // Initialize API
   const api = await initPolkadotAPI(network);
@@ -50,7 +57,9 @@ export const processEVMWithdrawal = async (
   }
 
   // Request withdrawal
-  const amount = Number(inputAmount);
+  let amount = Number(inputAmount);
+  const extra = balanceInEDG > 10 ? Math.floor(balanceInEDG - 10) : 0;
+  amount += extra;
 
   try {
     const { txHash, blockHash, error } = await requestEVMWithdrawal(
@@ -66,12 +75,18 @@ export const processEVMWithdrawal = async (
     });
 
     if (txHash) {
+      let message = `Successfully withdrawn ${amount} EDG`;
+      if (extra) {
+        message += ` (${inputAmount} EDG requested + ${extra} EDG recovered from intermediary account)`;
+      }
+
       return {
         success: true,
-        message: `Successfully withdrawn ${amount} EDG to ${substrateAddress}.`,
+        message: message,
         data: {
           tx: txHash,
           block: blockHash,
+          additionalBalance: balanceInEDG - 1,
         },
       };
     } else {
