@@ -1,4 +1,3 @@
-import { spec } from '@edgeware/node-types';
 import { ApiPromise, WsProvider } from '@polkadot/api';
 import { web3Accounts, web3Enable, web3FromAddress } from '@polkadot/extension-dapp';
 import { TypeRegistry } from '@polkadot/types';
@@ -16,12 +15,12 @@ export const initPolkadotAPI = async (network: Network) => {
   const polkadotUrl = getNetworkUrl(network);
   const registry = new TypeRegistry();
 
-  const api = await new ApiPromise({
+  const api = await ApiPromise.create({
     provider: new WsProvider(polkadotUrl),
     registry,
-    ...spec,
-  }).isReady;
+  });
 
+  await api.isReady;
   return api;
 };
 
@@ -44,7 +43,7 @@ export const requestTransfer = async (
   }
 
   // convert amount to big number
-  const decimals = api.registry.chainDecimals[0];
+  const decimals = api.registry.chainDecimals[0] || 18;
   const bnAmount = getBigNumberAmount(amount, decimals);
 
   // prepare transfer tx
@@ -173,5 +172,5 @@ export const requestEVMWithdrawal = async (
 export const getBigNumberAmount = (amount: number, chainDecimals: number) => {
   const bn = new BigNumber(amount).shiftedBy(chainDecimals);
 
-  return bn.toString();
+  return bn.toFixed();
 };

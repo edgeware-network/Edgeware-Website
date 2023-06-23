@@ -180,10 +180,6 @@ export const Web3ContextProvider = ({ children }) => {
           })
         );
 
-        console.log({
-          accounts,
-        });
-
         setPolkadotAccounts(accounts.reverse());
         return true;
       }
