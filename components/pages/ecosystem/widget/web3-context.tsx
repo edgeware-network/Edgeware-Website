@@ -1,15 +1,18 @@
+import { web3Accounts, web3Enable } from '@polkadot/extension-dapp';
+import { AccountInfo } from '@polkadot/types/interfaces';
+import { BN, formatBalance } from '@polkadot/util';
+import { initPolkadotAPI } from 'lib/crypto/polkadot';
 import React, { createContext, useState } from 'react';
 import Web3 from 'web3';
-import { web3Accounts, web3Enable } from '@polkadot/extension-dapp';
-import { initPolkadotAPI } from 'lib/crypto/polkadot';
-import { AccountInfo } from '@polkadot/types/interfaces';
-import { formatBalance } from '@polkadot/util';
 
 export type Account = {
   address: string;
   networkAddress?: string;
   label: string;
-  balance?: string;
+  balance: {
+    amount: BN;
+    formatted: string;
+  };
 };
 
 type Network = 'mainnet' | 'testnet';
@@ -129,12 +132,15 @@ export const Web3ContextProvider = ({ children }) => {
         const accountsWithBalance = await Promise.all(
           allAccounts.map(async (a, index) => {
             const balanceInWei = await web3.eth.getBalance(a);
-            const balanceInEDG = parseFloat(web3.utils.fromWei(balanceInWei, 'ether')).toFixed(2);
+            const amount = new BN(balanceInWei);
 
             return {
               address: a,
               label: `Metamask account #${index + 1}`,
-              balance: `${balanceInEDG} EDG `,
+              balance: {
+                amount,
+                formatted: formatBalance(amount),
+              },
             };
           })
         );
@@ -169,13 +175,16 @@ export const Web3ContextProvider = ({ children }) => {
         const accounts = await Promise.all(
           allAccounts.map(async (a) => {
             const accountInfo = (await api.query.system.account(a.address)) as AccountInfo;
-            const balance = formatBalance(accountInfo.data.free);
+            const amount = accountInfo.data.free;
 
             return {
               address: a.address,
               networkAddress: api.createType('Address', a.address).toString(),
               label: a.meta.name,
-              balance,
+              balance: {
+                amount,
+                formatted: formatBalance(amount),
+              },
             };
           })
         );

@@ -1,8 +1,9 @@
-import { useReducer, useRef, useEffect } from 'react';
-import { useWeb3Context } from './web3-context';
+import { BN } from '@polkadot/util';
 import { validateEVMAddress, validateSubstrateAddress, validateTokenAmount } from 'lib/crypto';
 import { processEVMDeposit } from 'lib/crypto/deposit';
 import { processEVMWithdrawal } from 'lib/crypto/withdrawal';
+import { useEffect, useReducer, useRef } from 'react';
+import { useWeb3Context } from './web3-context';
 
 // Shared types
 export type Network = 'mainnet' | 'testnet';
@@ -167,8 +168,11 @@ export const useTransferWidget = () => {
     }
 
     // validate balance
-    const balance = polkadotAccounts.find((a) => a.address === substrateAddress)?.balance || '0';
-    if (parseFloat(balance) < parseFloat(amount)) {
+    const balance = polkadotAccounts.find((a) => a.address === substrateAddress).balance;
+    const transferBn = new BN(amount).mul(new BN(10).pow(new BN(18)));
+    const sufficientBallance = balance?.amount.gt(transferBn);
+
+    if (!sufficientBallance) {
       setErrors({
         amount: 'Insufficient balance',
       });
@@ -246,8 +250,11 @@ export const useTransferWidget = () => {
     }
 
     // validate balance
-    const balance = ethereumAccounts.find((a) => a.address === evmAddress)?.balance || '0';
-    if (parseFloat(balance) < parseFloat(amount)) {
+    const balance = ethereumAccounts.find((a) => a.address === evmAddress).balance;
+    const transferBn = new BN(amount).mul(new BN(10).pow(new BN(18)));
+    const sufficientBallance = balance?.amount.gt(transferBn);
+
+    if (!sufficientBallance) {
       setErrors({
         amount: 'Insufficient balance',
       });

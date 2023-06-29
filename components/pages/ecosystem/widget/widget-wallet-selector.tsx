@@ -67,7 +67,9 @@ export const WidgetWalletSelector = ({
             <span className="block w-72 truncate">
               {fullSelectedAccount.label}
               {fullSelectedAccount.balance && (
-                <span className="ml-2 text-xs text-grey-500">{fullSelectedAccount.balance}</span>
+                <span className="ml-2 text-xs text-grey-500">
+                  {fullSelectedAccount.balance.formatted}
+                </span>
               )}
             </span>
             <span className="block w-72 truncate text-xs">
