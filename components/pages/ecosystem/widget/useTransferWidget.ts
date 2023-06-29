@@ -2,7 +2,7 @@ import { BN } from '@polkadot/util';
 import { validateEVMAddress, validateSubstrateAddress, validateTokenAmount } from 'lib/crypto';
 import { processEVMDeposit } from 'lib/crypto/deposit';
 import { processEVMWithdrawal } from 'lib/crypto/withdrawal';
-import { useEffect, useReducer, useRef } from 'react';
+import { useCallback, useEffect, useReducer, useRef } from 'react';
 import { useWeb3Context } from './web3-context';
 
 // Shared types
@@ -397,14 +397,15 @@ export const useTransferWidget = () => {
     setNetwork(network);
   };
 
-  const handleBalanceUpdate = () => {
+  const handleBalanceUpdate = useCallback(() => {
     // Balance will update by just connecting to the network again
     async function update() {
       console.log('Periodically updating balances');
       await updateBalances(state.network);
     }
-    [0, 5, 15, 30, 60, 120].map((s) => window.setTimeout(update, s * 1000));
-  };
+
+    window.setTimeout(update, 10_000);
+  }, [state.network, updateBalances]);
 
   // useEffect hooks to synchronize hook state with useWeb3Context state
   useEffect(() => {
@@ -425,7 +426,7 @@ export const useTransferWidget = () => {
     if (state.formState === 'success') {
       handleBalanceUpdate();
     }
-  }, [state.formState]);
+  }, [state.formState, handleBalanceUpdate]);
 
   return {
     state,
