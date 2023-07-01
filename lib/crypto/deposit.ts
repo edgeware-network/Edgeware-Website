@@ -37,7 +37,7 @@ export const processEVMDeposit = async (
   if (!api) {
     return {
       success: false,
-      message: 'Failed to connect to the network. Please try again later.',
+      message: 'Failed to connect to the network.',
     };
   }
 
@@ -67,14 +67,14 @@ export const processEVMDeposit = async (
     } else {
       return {
         success: false,
-        message: 'Failed to send transaction. Please try again later.',
+        message: 'Failed to send transaction.',
       };
     }
   } catch (error) {
     console.error(error);
     return {
       success: false,
-      message: error?.message || 'Failed to request transfer. Please try again later.',
+      message: error?.message || 'Failed to request transfer.',
     };
   }
 };

@@ -56,15 +56,18 @@ export const processEVMWithdrawal = async (
     };
   }
 
-  // Request withdrawal
+  // Calculate amounts
+
+  // Reserve 1 EDG as a buffer for fees etc
   const BUFFER = 1;
   const amount = Number(inputAmount);
   const withdrawExtra = availableBalance - BUFFER > amount;
   const actualAmount = withdrawExtra ? availableBalance - BUFFER : amount;
-  const difference = Math.floor(actualAmount - BUFFER - amount);
+  const difference = Math.round(actualAmount - amount);
 
+  // Request withdrawal:
   try {
-    const { txHash, blockHash, error } = await requestEVMWithdrawal(
+    const { txHash, blockHash } = await requestEVMWithdrawal(
       api,
       intermediaryEVMAddress,
       substrateAddress,
@@ -93,14 +96,14 @@ export const processEVMWithdrawal = async (
     } else {
       return {
         success: false,
-        message: 'Failed to send transaction. Please try again later.',
+        message: 'Failed to send transaction.',
       };
     }
   } catch (error) {
     console.error(error);
     return {
       success: false,
-      message: error?.message || 'Failed to request transfer. Please try again later.',
+      message: error?.message || 'Failed to request transfer.',
     };
   }
 };
