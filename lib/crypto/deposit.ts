@@ -7,10 +7,13 @@ type DepositResult = {
   data?: any;
 };
 
+type Network = 'mainnet' | 'testnet';
+
 export const processEVMDeposit = async (
   targetAddress: string,
   sourceAddress: string,
-  inputAmount: string
+  inputAmount: string,
+  network: Network
 ): Promise<DepositResult> => {
   const mainnetAddress = evmConvert(targetAddress);
 
@@ -30,37 +33,48 @@ export const processEVMDeposit = async (
   const amount = Number(inputAmount);
 
   // Initialize API
-  const api = await initPolkadotAPI();
+  const api = await initPolkadotAPI(network);
   if (!api) {
     return {
       success: false,
-      message: 'Failed to connect to the network. Please try again later.',
+      message: 'Failed to connect to the network.',
     };
   }
 
   // Request transfer
   try {
-    const tx = await requestTransfer(api, mainnetAddress, sourceAddress, amount);
+    const { txHash, blockHash, error } = await requestTransfer(
+      api,
+      mainnetAddress,
+      sourceAddress,
+      amount
+    );
 
-    if (tx) {
+    console.log({
+      txHash,
+      blockHash,
+    });
+
+    if (txHash) {
       return {
         success: true,
-        message: `Successfully sent ${amount} EDG to ${mainnetAddress}.`,
+        message: `Successfully sent ${amount} EDG to ${targetAddress}.`,
         data: {
-          tx,
+          tx: txHash,
+          block: blockHash,
         },
       };
     } else {
       return {
         success: false,
-        message: 'Failed to send transaction. Please try again later.',
+        message: 'Failed to send transaction.',
       };
     }
   } catch (error) {
     console.error(error);
     return {
       success: false,
-      message: error?.message || 'Failed to request transfer. Please try again later.',
+      message: error?.message || 'Failed to request transfer.',
     };
   }
 };

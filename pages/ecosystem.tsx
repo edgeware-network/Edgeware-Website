@@ -3,10 +3,8 @@ import { GetStaticProps, NextPage } from 'next';
 
 import { EcosystemHero } from 'components/pages/ecosystem/ecosystem-hero';
 import { EcosystemPartnersList } from 'components/pages/ecosystem/ecosystem-list';
-import { EcosystemWidget } from 'components/pages/ecosystem/widget/ecosystem-widget';
 
 import { AllPartnersData, getAllPartners } from 'lib/api';
-import { Suspense } from 'react';
 
 const DynamicEcosystemWidget = dynamic(
   () => import('../components/pages/ecosystem/widget/ecosystem-widget'),

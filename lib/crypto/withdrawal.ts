@@ -1,7 +1,8 @@
 import { decodeAddress } from '@polkadot/util-crypto';
 import Web3 from 'web3';
-
 import { initPolkadotAPI, requestEVMWithdrawal } from './polkadot';
+
+type Network = 'mainnet' | 'testnet';
 
 type WithdrawalResult = {
   success: boolean;
@@ -12,7 +13,8 @@ type WithdrawalResult = {
 export const processEVMWithdrawal = async (
   sourceAddress: string,
   substrateAddress: string,
-  inputAmount: string
+  inputAmount: string,
+  network: Network
 ): Promise<WithdrawalResult> => {
   // 1. discover intermediary EVM withdrawal address
   const intermediaryEVMAddress = Buffer.from(
@@ -37,9 +39,16 @@ export const processEVMWithdrawal = async (
   const receipt = await web3.eth.getTransactionReceipt(result.transactionHash);
   console.log(receipt);
 
+  // 3a. Check ballance on intermediary EVM withdrawal address
+  const balanceInWei = await web3.eth.getBalance(intermediaryEVMAddress);
+  const availableBalance = parseFloat(web3.utils.fromWei(balanceInWei, 'ether'));
+
+  console.log('IntermediaryEVMAddress', intermediaryEVMAddress);
+  console.log('Found additional EDG balance in intermediary account:', availableBalance);
+
   // 4. sign withdrawal transaction command on substrate
   // Initialize API
-  const api = await initPolkadotAPI();
+  const api = await initPolkadotAPI(network);
   if (!api) {
     return {
       success: false,
@@ -47,31 +56,54 @@ export const processEVMWithdrawal = async (
     };
   }
 
-  // Request withdrawal
+  // Calculate amounts
+
+  // Reserve 1 EDG as a buffer for fees etc
+  const BUFFER = 1;
   const amount = Number(inputAmount);
+  const withdrawExtra = availableBalance - BUFFER > amount;
+  const actualAmount = withdrawExtra ? availableBalance - BUFFER : amount;
+  const difference = Math.round(actualAmount - amount);
 
+  // Request withdrawal:
   try {
-    const tx = await requestEVMWithdrawal(api, intermediaryEVMAddress, substrateAddress, amount);
+    const { txHash, blockHash } = await requestEVMWithdrawal(
+      api,
+      intermediaryEVMAddress,
+      substrateAddress,
+      actualAmount
+    );
 
-    if (tx) {
+    console.log({
+      txHash,
+      blockHash,
+    });
+
+    if (txHash) {
+      let message = `Successfully withdrawn ${amount} EDG`;
+      if (withdrawExtra) {
+        message += ` (${inputAmount} EDG requested + ${difference} EDG recovered from intermediary account)`;
+      }
+
       return {
         success: true,
-        message: `Successfully withdrawn ${amount} EDG to ${substrateAddress}.`,
+        message: message,
         data: {
-          tx,
+          tx: txHash,
+          block: blockHash,
         },
       };
     } else {
       return {
         success: false,
-        message: 'Failed to send transaction. Please try again later.',
+        message: 'Failed to send transaction.',
       };
     }
   } catch (error) {
     console.error(error);
     return {
       success: false,
-      message: error?.message || 'Failed to request transfer. Please try again later.',
+      message: error?.message || 'Failed to request transfer.',
     };
   }
 };

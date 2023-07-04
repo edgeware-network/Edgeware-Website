@@ -1,6 +1,9 @@
 import { useTransferWidget } from './useTransferWidget';
+import { WidgetNetworkSelector } from './widget-network-selector';
+import { WidgetSuccess } from './widget-success';
 import { WidgetTransferSelector } from './widget-transfer-selector';
 import { WidgetWalletSelector } from './widget-wallet-selector';
+import IconFunds from 'remixicon/icons/Finance/exchange-funds-line.svg';
 
 export const WidgetForm = () => {
   const {
@@ -9,6 +12,7 @@ export const WidgetForm = () => {
     setTargetTransferType,
     handleConnect,
     handleDisconnect,
+    handleNetworkChange,
     handleSubmit,
     handleReset,
     polkadotAccounts,
@@ -18,12 +22,16 @@ export const WidgetForm = () => {
   } = useTransferWidget();
 
   return (
-    <div className="text-center">
+    <div className="relative text-center">
       <WidgetTransferSelector
         targetTransferType={state.targetTransferType}
         onTargetTransferTypeChange={setTargetTransferType}
         inProgress={state.formState === 'in-progress'}
       />
+
+      <div className="absolute -right-8 -top-8">
+        <WidgetNetworkSelector network={state.network} onNetworkChange={handleNetworkChange} />
+      </div>
 
       <div className="flex flex-row items-start justify-center space-x-16 px-8 pt-12">
         <div className="w-1/2 shrink-0">
@@ -77,42 +85,42 @@ export const WidgetForm = () => {
           onClick={handleSubmit}
           disabled={state.formState !== 'ready'}
         >
-          Transfer
+          {state.targetTransferType === 'deposit' ? 'Deposit' : 'Withdraw'}
         </button>
       </div>
       {state.errors.amount && <span className="text-sm text-red-500">{state.errors.amount}</span>}
 
       {state.formState === 'error' ? (
-        <p className="pt-4 text-red-500">
-          {state.errors.global || 'Something went wrong. Please try again.'}
-        </p>
+        <>
+          <p className="pt-4 text-red-500">
+            {state.errors.global || 'Something went wrong. Please try again.'}
+          </p>
+          <button
+            className="text-blue-500 mt-2 ml-2 rounded bg-grey-400 p-2 px-4 text-sm"
+            onClick={handleReset}
+          >
+            Start again
+          </button>
+        </>
       ) : null}
 
       {state.formState === 'success' && state.tx && (
-        <div className="pt-8">
-          Transfer submitted!
-          <div className="mt-2 flex justify-center">
-            <a
-              href={`https://edgeware.subscan.io/extrinsic/${state.tx}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 ml-2 rounded bg-grey-400 p-2 px-4 text-sm"
-            >
-              View Extrinsic on Subscan
-            </a>
-            <button
-              className="text-blue-500 ml-2 rounded bg-grey-400 p-2 px-4 text-sm"
-              onClick={handleReset}
-              disabled={state.formState !== 'success'}
-            >
-              Start again
-            </button>
-          </div>
-        </div>
+        <>
+          <WidgetSuccess
+            tx={state.tx}
+            block={state.block}
+            network={state.network}
+            message={state.message}
+            handleReset={handleReset}
+          />
+        </>
       )}
 
       {state.formState === 'in-progress' && (
-        <p className="animate-pulse pt-4">Processing request...</p>
+        <p className="animate-pulse pt-4 text-center">
+          <IconFunds className="mr-2 -mt-1 inline-block h-5 w-5 animate-spin fill-white" />
+          <span className=" ">Processing request... Please wait!</span>
+        </p>
       )}
     </div>
   );

@@ -36,11 +36,18 @@ export const WidgetTransferSelector = ({
 
   return (
     <div className="relative grid h-24 grid-cols-2">
-      <div className="mr-8 mt-4 p-2 text-center text-xl">EdgeWASM</div>
+      <div className="mr-8 mt-10 p-2 text-center text-xl">EdgeWASM</div>
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
         <div className="flex flex-col items-center">
+          <span
+            className={`w-72 text-center text-xs text-grey-500 ${
+              inProgress ? 'animate-pulse' : ''
+            }`}
+          >
+            {messageText}
+          </span>
           <button
-            className={`relative mb-2 w-20 grow-0 rounded-full bg-white p-4 ${
+            className={`relative mt-2 w-20 grow-0 rounded-full bg-white p-4 transition-all hover:scale-110 ${
               inProgress ? 'animate-pulse' : ''
             }`}
             onClick={handleChange}
@@ -51,16 +58,9 @@ export const WidgetTransferSelector = ({
               } transition-transform`}
             />
           </button>
-          <span
-            className={`w-72 text-center text-xs text-grey-500 ${
-              inProgress ? 'animate-pulse' : ''
-            }`}
-          >
-            {messageText}
-          </span>
         </div>
       </div>
-      <div className="ml-8 mt-4 p-2 text-center text-xl">EdgeEVM</div>
+      <div className="ml-8 mt-10 p-2 text-center text-xl">EdgeEVM</div>
     </div>
   );
 };
