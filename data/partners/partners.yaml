@@ -131,6 +131,10 @@ partners:
         funded: true
   - category: Other
     partners:
+      - name: Zondax
+        description: Zondax is a team of software developers, engineers and cryptographers that build innovative tech products.
+        link: https://medium.com/zondax/edgeware-ledger-app-by-zondax-7cf12c0ea3af
+        protocol: EdgeWASM
       - name: ICON
         description: ICON is a public blockchain protocol building a hyperconnected future with BTP and xCall service.
         link: https://medium.com/helloiconworld/blockchain-transmission-protocol-btp-working-group-update-icon-joins-forces-with-the-polkadot-63694290e15b
