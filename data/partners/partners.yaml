@@ -11,7 +11,7 @@ partners:
         funded: true
        - name: Commonwealth Labs
         description: Commonwealth Labs founded Edgeware as a first project within the substrate ecosystem. 
-        link: https://commonwealth.im/
+        link: https://www.linkedin.com/company/commonwealth-labs/about/
         funded: true
        - name: Decentration
         description: Realising web3 through engineering and product development. Decentration are founding stewards of Kabocha and member of the Edgeware council web3 foundation grant funded. Working on making useful and usable experiences in web3. 
@@ -36,7 +36,7 @@ partners:
         link: https://blog.edgewa.re/edgeware-partners-with-tidal-finance-to-bring-insurance-cover-to-edg-ecosystem/
         protocol: EdgeEVM
       - name: Edgeverse DEX
-        description: A Dex by BharatCoorg deployed on EdgeEVM.
+        description: A DEX by contributor BharatCoorg.
         link: https://app.edgeverse.exchange/#/swap
         funded: true
         protocol: EdgeEVM
@@ -131,15 +131,32 @@ partners:
         funded: true
   - category: Other
     partners:
-      - name: Commonwealth
-        description: Commonwealth facilitates scalable governance and decision making for protocols and organizations.
-        link: https://commonwealth.im/
-        funded: true
-      - name: Zondax
-        description: Zondax is a team of software developers, engineers and cryptographers that build innovative tech products.
-        link: https://medium.com/zondax/edgeware-ledger-app-by-zondax-7cf12c0ea3af
-        protocol: EdgeWASM
       - name: ICON
-        description: ICON is a blockchain protocol for decentralized applications. As an aggregator chain, it achieves interoperability.
+        description: ICON is a public blockchain protocol building a hyperconnected future with BTP and xCall service.
         link: https://medium.com/helloiconworld/blockchain-transmission-protocol-btp-working-group-update-icon-joins-forces-with-the-polkadot-63694290e15b
         protocol: EdgeEVM
+      - name: Auto Fabrica
+        description: Auto Fabrica is a company specialising in the hand making and coach building of bespoke motorcycles. 
+        link: https://gov.edgewa.re/discussion/4747-project-auto-fabrica-a-decentralised-creator-collective
+      - name: EdgeTreasury portal by OpenSquare
+        description: EdgeTreasury is a transparency-focused portal for Edgeware, providing a clear overview of income, expenses, and financial structure to encourage community participation.
+        link: https://edg.dotreasury.com/
+        funded: true
+      - name: Staking Rewards
+        description: Staking Rewards is the leading data provider for staking and crypto-growth tools. 
+        link: https://www.stakingrewards.com/earn/edgeware/
+  - category: Community
+    partners:
+      - name: Commonwealth Forum
+        description: Commonwealth forum is a multichain web3-native governance forum, incubated by the Edgeware community.
+        link: https://gov.edgewa.re/discussions
+        funded: true
+      - name: Peeranha
+        description: Peeranha.io is a decentralized platform for community-driven Q&A powered by blockchain technology.
+        link: https://gov.edgewa.re/discussion/6883-edgeware-knowledgebase-with-peeranha
+        funded: true
+  - category: Graphs
+    partners:
+      - name: SubQuery
+        description: SubQuery is an Open, Flexible, Fast and Universal data indexing framework for web3. 
+        link: https://subquery.network/
