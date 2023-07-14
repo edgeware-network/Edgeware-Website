@@ -102,6 +102,23 @@ partners:
         link: https://www.instagram.com/artratecampus/
         funded: true
         protocol: EdgeWASM
+  - category: Pallets
+    partners:
+      - name: Pallet_Mint
+        description: Pallet mint is an alternative to treasury funding. Mint new tokens through democracy instead of taking tokens from a treasury pot. 
+        link: https://github.com/kabocha-network/pallet_mint_with_fee
+        funded: true
+        pallet: true
+      - name: Pallet_Subscription
+        description: Like stripe but for web3. Enabling automated payments from wallets with customisable frequency and end date.
+        link: https://github.com/kabocha-network/pallet_subscription
+        funded: true
+        pallet: true
+      - name: Pallet_Supersig
+        description: Supersig is like Multisig but with superpowers, such as add/remove members and simpleMajority threshold.
+        link: https://github.com/kabocha-network/pallet_supersig
+        funded: true
+        pallet: true
   - category: Privacy
     partners:
       - name: Webb Protocol
@@ -129,16 +146,21 @@ partners:
         description: A Content and Community Project that aims to deliver creative assets to the chain, provide user feedback from the creator perspective and add value to Edgeware’s Citizen Benefits.
         link: https://gov.edgewa.re/proposal/discussion/1131-exit-theory-a-content-and-community-project
         funded: true
+  - category: Chains
+    partners:
+      - name: Kabocha
+        description: The Edgeware ecosystem parachain on Kusama - facilitating identity, DAOs tools, and payment automation for creators, founders and orgs.
+        link: https://kabocha.network/
+        funded: true
+      - name: ICON
+        description: ICON is a public blockchain protocol building a hyperconnected future with BTP and xCall service.
+        link: https://medium.com/helloiconworld/blockchain-transmission-protocol-btp-working-group-update-icon-joins-forces-with-the-polkadot-63694290e15b
   - category: Other
     partners:
       - name: Zondax
         description: Zondax is a team of software developers, engineers and cryptographers that build innovative tech products.
         link: https://medium.com/zondax/edgeware-ledger-app-by-zondax-7cf12c0ea3af
         protocol: EdgeWASM
-      - name: ICON
-        description: ICON is a public blockchain protocol building a hyperconnected future with BTP and xCall service.
-        link: https://medium.com/helloiconworld/blockchain-transmission-protocol-btp-working-group-update-icon-joins-forces-with-the-polkadot-63694290e15b
-        protocol: EdgeEVM
       - name: Auto Fabrica
         description: Auto Fabrica is a company specialising in the hand making and coach building of bespoke motorcycles. 
         link: https://gov.edgewa.re/discussion/4747-project-auto-fabrica-a-decentralised-creator-collective
@@ -164,3 +186,15 @@ partners:
       - name: SubQuery
         description: SubQuery is an Open, Flexible, Fast and Universal data indexing framework for web3. 
         link: https://subquery.network/
+  - category: Explorers
+    partners:
+      - name: Subscan
+        description: Universal substrate chains explorer
+        link: https://edgeware.subscan.io/
+        funded: true
+        protocol: EdgeWASM
+      - name: Edgscan
+        description: Curated EdgeEVM explorer. Powered by Blocksout.
+        link: https://edgscan.live/
+        funded: true
+        protocol: EdgeEVM
