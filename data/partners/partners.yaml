@@ -21,7 +21,6 @@ partners:
         description: Rusty Crewmates is a consulting organisation that provides code development in a flexible way for the crypto – blockchain – NFT - DAO ecosystems.
         link: https://twitter.com/rustycrewmates
         funded: true
-        pallet: true
       - name: Placeholder Labs
         description: Placeholder Labs is the creative collective of three companies that together are focused on building immersive and innovative music events that layer real-world experiences with Web3 technologies that create once-in-a-lifetime experiences for participants.
         link: https://commonwealth.im/edgeware/discussion/5302--placeholder-labs-dorg-immersive-experiences-and-blockchain-for-the-music-industry
@@ -108,17 +107,17 @@ partners:
         description: Pallet mint is an alternative to treasury funding. Mint new tokens through democracy instead of taking tokens from a treasury pot. 
         link: https://github.com/kabocha-network/pallet_mint_with_fee
         funded: true
-        pallet: true
+        protocol: Pallet
       - name: Pallet_Subscription
         description: Like stripe but for web3. Enabling automated payments from wallets with customisable frequency and end date.
         link: https://github.com/kabocha-network/pallet_subscription
         funded: true
-        pallet: true
+        protocol: Pallet
       - name: Pallet_Supersig
         description: Supersig is like Multisig but with superpowers, such as add/remove members and simpleMajority threshold.
         link: https://github.com/kabocha-network/pallet_supersig
         funded: true
-        pallet: true
+        protocol: Pallet
   - category: Privacy
     partners:
       - name: Webb Protocol
