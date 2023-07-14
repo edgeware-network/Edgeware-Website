@@ -1,4 +1,3 @@
-partners:
   - category: Entities
     partners:
       - name: Edgeware Agency
@@ -9,6 +8,23 @@ partners:
         description: Decent develops community networks that are funded, governed and owned by the people they represent.
         link: https://decent.partners/
         funded: true
+       - name: Commonwealth Labs
+        description: Commonwealth Labs founded Edgeware as a first project within the substrate ecosystem. 
+        link: https://commonwealth.im/
+        funded: true
+       - name: Decentration
+        description: Realising web3 through engineering and product development. Decentration are founding stewards of Kabocha and member of the Edgeware council web3 foundation grant funded. Working on making useful and usable experiences in web3. 
+        link: https://www.decentration.org/
+        funded: true
+      - name: Rusty Crewmates
+        description: Rusty Crewmates is a consulting organisation that provides code development in a flexible way for the crypto – blockchain – NFT - DAO ecosystems.
+        link: https://twitter.com/rustycrewmates
+        funded: true
+        pallet: true
+      - name: Placeholder Labs
+        description: Placeholder Labs is the creative collective of three companies that together are focused on building immersive and innovative music events that layer real-world experiences with Web3 technologies that create once-in-a-lifetime experiences for participants.
+        link: https://commonwealth.im/edgeware/discussion/5302--placeholder-labs-dorg-immersive-experiences-and-blockchain-for-the-music-industry
+        funded: true
   - category: DeFi
     partners:
       - name: Stafi Protocol
@@ -18,9 +34,11 @@ partners:
         description: Flexible insurance for the DeFi economy.
         link: https://blog.edgewa.re/edgeware-partners-with-tidal-finance-to-bring-insurance-cover-to-edg-ecosystem/
         protocol: EdgeEVM
-      - name: PicoSwap
-        description: Pico is a protocol for decentralized exchange built on Edgeware, a pioneering Polkadot smart contract blockchain.
-        link: https://picoswap.medium.com/
+      - name: Edgeverse DEX
+        description: A Dex by BharatCoorg deployed on EdgeEVM.
+        link: https://app.edgeverse.exchange/#/swap
+        funded: true
+        protocol: EdgeEVM
   - category: Infrastructure
     partners:
       - name: OnFinality
@@ -48,6 +66,11 @@ partners:
         description: Send and receive messages between blockchain addresses through a simple, email-like interface.
         link: https://medium.com/@Mailchain_xyz/sending-mailchain-messages-with-substrate-on-edgeware-f185eddd76ab
         protocol: EdgeWASM
+      - name: Edgeverse bridges
+        description: Multichain Bridges by contributor BharatCoorg.
+        link: https://bridge.edgeverse.exchange/#/v2/mergeswap
+        funded: true
+        protocol: EdgeEVM
   - category: Oracles
     partners:
       - name: Paralink Network
@@ -73,6 +96,11 @@ partners:
         description: Web3 media launchpad and creative DAO/NFT platform uniting art, culture and technology based on RMRK.
         link: https://www.new-futures.co/
         protocol: EdgeEVM
+      - name: Art Rate
+        description: Art Rate is a platform which serves services to navigate creation power. Art Rate uses a website (in progress) to manage artists' artwork for proposing in international markets, therefor the website is kind of vitrine of artworks which is categorized according to art formats and emotions. Artists can define new categories of emotions in formats part to describe their art concepts better and expand emotion rout in platform.
+        link: https://www.instagram.com/artratecampus/
+        funded: true
+        protocol: EdgeWASM
   - category: Privacy
     partners:
       - name: Webb Protocol
