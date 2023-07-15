@@ -240,6 +240,6 @@ partners:
         link: https://twitter.com/EdgewareDAO/status/1658818658305466370
         funded: false
       - name: Neatcoin
-        description: Neatcoin is a cooperative DNS on Substrate/Polkadot, with actor smart contract capabilities, implements Massive BABE consensus, and experimenting on the Frontier of Substrate.
+        description: Neatcoin is a cooperative DNS on Substrate/Polkadot, with actor smart contract capabilities, and experimenting on the Frontier of Substrate.
         link: https://twitter.com/neatcoin/status/1529820286874316803?s=20
         funded: false
