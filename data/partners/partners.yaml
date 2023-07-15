@@ -6,19 +6,19 @@ partners:
         link: https://gov.edgewa.re/discussion/1112-proposal-edgeware-agency-funding
         funded: true
       - name: Decent Partners
-        description: Decent develops community networks that are funded, governed and owned by the people they represent.
+        description: Decent develops community networks that are funded, governed, and owned by the people they represent.
         link: https://decent.partners/
         funded: true
        - name: Commonwealth Labs
         description: Commonwealth Labs founded Edgeware as a first project within the substrate ecosystem. 
-        link: https://www.linkedin.com/company/commonwealth-labs/about/
+        link: https://www.linkedin.com/company/commonwealth-labs/
         funded: true
        - name: Decentration
-        description: Realising web3 through engineering and product development. Decentration are founding stewards of Kabocha and member of the Edgeware council web3 foundation grant funded. Working on making useful and usable experiences in web3. 
+        description: Realising web3 through engineering and product development. Decentration is a founding steward of Kabocha and a member of the Edgeware Council web3 Foundation grant funded. Working on making useful and usable experiences in web3. 
         link: https://www.decentration.org/
         funded: true
       - name: Rusty Crewmates
-        description: Rusty Crewmates is a consulting organisation that provides code development in a flexible way for the crypto – blockchain – NFT - DAO ecosystems.
+        description: Rusty Crewmates is a consulting organization that provides code development in a flexible way for the crypto – blockchain – NFT - DAO ecosystems.
         link: https://twitter.com/rustycrewmates
         funded: true
       - name: Placeholder Labs
@@ -46,8 +46,13 @@ partners:
         link: https://onfinality.medium.com/run-public-edgeware-nodes-on-onfinality-2ea656262446
         funded: true
         protocol: EdgeWASM & EdgeEVM
+      - name: JelliedOwl
+        description: The Load-balancer infrastructure with Geo-awareness determines the nearest node as per the user's IP to get minimum latency.
+        link: https://gov.edgewa.re/discussion/6607-public-rpc-and-bootnodes-jelliedowl
+        funded: true
+        protocol: EdgeWASM
       - name: Patract Elara
-        description: Elara provides Polkadot developers with free, instant and scalable blockchain API access services, including Polkadot, Kusama, etc.
+        description: Elara provides Polkadot developers with free, instant, and scalable blockchain API access services, including Polkadot, Kusama, etc.
         link: https://github.com/patractlabs/elara
         protocol: EdgeWASM
       - name: Covalent
@@ -71,6 +76,18 @@ partners:
         link: https://bridge.edgeverse.exchange/#/v2/mergeswap
         funded: true
         protocol: EdgeEVM
+      - name: Privhost
+        description: A public node provider that supports .onion addresses for everyone to utilize.
+        link: https://gov.edgewa.re/discussion/9569-tor-support-and-onion-addresses-have-come-to-edgeware
+        funded: false
+      - name: BitStack
+        description: Empowering Web3 developers with easy-to-use, reliable and scalable blockchain infrastructure.
+        link: https://bitstack.com/#/protocols
+        funded: false
+      - name: Dwellir
+        description: Dwellir runs enterprise-grade RPC infrastructure. They ensure global scalability and low latency while providing comprehensive blockchain support
+        link: https://gov.edgewa.re/discussion/7117-dwellir-rpc-infrastructure-services-q3-proposal
+        funded: true
   - category: Oracles
     partners:
       - name: Paralink Network
@@ -93,11 +110,11 @@ partners:
         funded: true
         protocol: EdgeEVM
       - name: New Futures
-        description: Web3 media launchpad and creative DAO/NFT platform uniting art, culture and technology based on RMRK.
+        description: Web3 media launchpad and creative DAO/NFT platform uniting art, culture, and technology based on RMRK.
         link: https://www.new-futures.co/
         protocol: EdgeEVM
       - name: Art Rate
-        description: Art Rate is a platform which serves services to navigate creation power. Art Rate uses a website (in progress) to manage artists' artwork for proposing in international markets, therefor the website is kind of vitrine of artworks which is categorized according to art formats and emotions. Artists can define new categories of emotions in formats part to describe their art concepts better and expand emotion rout in platform.
+        description: Art Rate is a platform that serves services to navigate creation power. Art Rate uses a website (in progress) to manage artists' artwork for proposing in international markets, therefor the website is kind of vitrine of artworks which is categorized according to art formats and emotions. Artists can define new categories of emotions in formats part to describe their art concepts better and expand emotion rout in platform.
         link: https://www.instagram.com/artratecampus/
         funded: true
         protocol: EdgeWASM
@@ -109,7 +126,7 @@ partners:
         funded: true
         protocol: Pallet
       - name: Pallet_Subscription
-        description: Like stripe but for web3. Enabling automated payments from wallets with customisable frequency and end date.
+        description: Like stripe but for web3. Enabling automated payments from wallets with customizable frequency and end date.
         link: https://github.com/kabocha-network/pallet_subscription
         funded: true
         protocol: Pallet
@@ -132,7 +149,7 @@ partners:
         link: https://gov.edgewa.re/proposal/discussion/948-proposal-lexbridge-legal-entitydocument-panel
         funded: true
       - name: 4thPillarTech
-        description: 4thPillarTech provides blockchain metadata & data file exchange, while providing a digital identity solutions.
+        description: 4thPillarTech provides blockchain metadata & data file exchange while providing digital identity solutions.
         link: https://gov.edgewa.re/proposal/discussion/1063-4thpillar-technologies-has-integrated-edgeware-for-their-ecommerce-and-document-exchange-platform
         protocol: EdgeWASM
   - category: Media
@@ -142,13 +159,13 @@ partners:
         link: https://gov.edgewa.re/proposal/discussion/1135-how-to-make-it-in-crypto-media-an-original-podcast-series
         funded: true
       - name: Exit Theory
-        description: A Content and Community Project that aims to deliver creative assets to the chain, provide user feedback from the creator perspective and add value to Edgeware’s Citizen Benefits.
+        description: A Content and Community Project that aims to deliver creative assets to the chain, provide user feedback from the creator's perspective and add value to Edgeware’s Citizen Benefits.
         link: https://gov.edgewa.re/proposal/discussion/1131-exit-theory-a-content-and-community-project
         funded: true
   - category: Chains
     partners:
       - name: Kabocha
-        description: The Edgeware ecosystem parachain on Kusama - facilitating identity, DAOs tools, and payment automation for creators, founders and orgs.
+        description: The Edgeware ecosystem parachain on Kusama - facilitating identity, DAOs tools, and payment automation for creators, founders, and orgs.
         link: https://kabocha.network/
         funded: true
       - name: ICON
@@ -157,11 +174,11 @@ partners:
   - category: Other
     partners:
       - name: Zondax
-        description: Zondax is a team of software developers, engineers and cryptographers that build innovative tech products.
+        description: Zondax is a team of software developers, engineers, and cryptographers that build innovative tech products.
         link: https://medium.com/zondax/edgeware-ledger-app-by-zondax-7cf12c0ea3af
         protocol: EdgeWASM
       - name: Auto Fabrica
-        description: Auto Fabrica is a company specialising in the hand making and coach building of bespoke motorcycles. 
+        description: Auto Fabrica is a company specializing in the hand-making and coach-building of bespoke motorcycles. 
         link: https://gov.edgewa.re/discussion/4747-project-auto-fabrica-a-decentralised-creator-collective
       - name: EdgeTreasury portal by OpenSquare
         description: EdgeTreasury is a transparency-focused portal for Edgeware, providing a clear overview of income, expenses, and financial structure to encourage community participation.
@@ -173,7 +190,7 @@ partners:
   - category: Community
     partners:
       - name: Commonwealth Forum
-        description: Commonwealth forum is a multichain web3-native governance forum, incubated by the Edgeware community.
+        description: Commonwealth Forum is a multichain web3-native governance forum, incubated by the Edgeware community.
         link: https://gov.edgewa.re/discussions
         funded: true
       - name: Peeranha
@@ -183,7 +200,7 @@ partners:
   - category: Graphs
     partners:
       - name: SubQuery
-        description: SubQuery is an Open, Flexible, Fast and Universal data indexing framework for web3. 
+        description: SubQuery is an Open, Flexible, Fast, and Universal data indexing framework for web3. 
         link: https://subquery.network/
   - category: Explorers
     partners:
@@ -197,3 +214,28 @@ partners:
         link: https://edgscan.live/
         funded: true
         protocol: EdgeEVM
+  - category: Tooling
+    partners:
+      - name: Coinbase Rosetta
+        description: Rosetta is an open standard that simplifies blockchain deployment and interaction. For Faster Onboarding, with Industry Standards, and to Grow Adoption
+        link: https://www.edgeware.wiki/development/develop/rosetta-api
+        funded: false
+      - name: EdgeSnap
+        description: One-stop snap-based solution for all your Edgeverse needs. so you can access both EdgeEVM and EdgeWASM environments from the Metamask eliminating the need for multiple extensions. 
+        link: https://devfolio.co/projects/edgesnap-3cc5
+        funded: false
+        protocol: EdgeWASM & EdgeEVM
+      - name: wagmi.sh
+        description: Wagmi is a collection of React Hooks containing everything you need to start working with Ethereum. Easy to "Connect Wallet," display ENS and balance information, sign messages, interact with contracts etc.
+        link: https://wagmi.sh/core/chains#supported-chains
+        funded: false
+  - category: Non-deployment collaborators
+    partners:
+      - name: SleepLess Collective
+        description: Sleepless Collective is a 24/7 music radio in the Edgeware Discord server a.k.a Edgeware Radio
+        link: https://twitter.com/EdgewareDAO/status/1658818658305466370?s=20
+        funded: false
+      - name: Salad Ventures
+        description: Salad Ventures is an X-2-Earn ecosystem project that uses innovative growth strategies and blockchain technology to help Web 3 projects scale.
+        link: https://twitter.com/EdgewareDAO/status/1658818658305466370
+        funded: false
