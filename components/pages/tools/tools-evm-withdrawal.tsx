@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { EvmWithdraw } from './forms/evm-withdraw';
 
 export const ToolsEVMWithdrawal = () => {
@@ -16,6 +17,13 @@ export const ToolsEVMWithdrawal = () => {
         Note: This requires wallets/signers compatible with EdgeEVM (e.g. Metamask) as well as
         substrate/EdgeWASM (e.g. polkadot-js). If you are using this tool in an EVM-only mobile dapp
         browser, you will need to perform step 2 manually.
+        <br />
+        This tool is intended for users who are familiar with the EVM and the EdgeEVM. If you are a
+        beginner, please use the our{' '}
+        <Link href="/ecosystem#widget" className="underline">
+          <a className="underline">Ecosystem Transfer Widget</a>
+        </Link>{' '}
+        instead.
       </p>
       <div>
         <EvmWithdraw />
