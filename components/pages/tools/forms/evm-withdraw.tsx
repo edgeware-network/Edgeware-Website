@@ -516,6 +516,7 @@ export const EvmWithdraw = () => {
               {' or '}
               <a
                 href="https://www.edgeware.app/#/extrinsics"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="underline hover:text-white"
               >
