@@ -11,12 +11,12 @@ export default function SocietyPage() {
           growth of the Edgeware community by providing grants to projects that contribute to the
           Edgeware ecosystem.
         </p>
-      </section>
-
-      <section id="edgeware-csp-widget" className="my-24 bg-black px-4 py-8 pb-24 text-center">
         <p className="my-4 mx-auto max-w-prose leading-relaxed">
           Use the widget below to mint your own CSP NFT.
         </p>
+      </section>
+
+      <section id="edgeware-csp-widget" className="my-24 px-4 py-8 pb-24 text-center">
         <div className="py-4">
           <iframe
             className="mx-auto rounded-lg border-0 shadow-2xl outline-none focus:outline-none focus:ring-0"
