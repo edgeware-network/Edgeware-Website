@@ -9,12 +9,12 @@ partners:
         description: Decent develops community networks that are funded, governed, and owned by the people they represent.
         link: https://decent.partners/
         funded: true
-       - name: Commonwealth Labs
-        description: Commonwealth Labs founded Edgeware as a first project within the substrate ecosystem. 
+      - name: Commonwealth Labs
+        description: Commonwealth Labs founded Edgeware as a first project within the substrate ecosystem.
         link: https://www.linkedin.com/company/commonwealth-labs/
         funded: true
-       - name: Decentration
-        description: Realising web3 through engineering and product development. Decentration is a founding steward of Kabocha and a member of the Edgeware Council web3 Foundation grant funded. Working on making useful and usable experiences in web3. 
+      - name: Decentration
+        description: Realising web3 through engineering and product development. Decentration is a founding steward of Kabocha and a member of the Edgeware Council web3 Foundation grant funded. Working on making useful and usable experiences in web3.
         link: https://www.decentration.org/
         funded: true
       - name: Rusty Crewmates
@@ -121,7 +121,7 @@ partners:
   - category: Pallets
     partners:
       - name: Pallet_Mint
-        description: Pallet mint is an alternative to treasury funding. Mint new tokens through democracy instead of taking tokens from a treasury pot. 
+        description: Pallet mint is an alternative to treasury funding. Mint new tokens through democracy instead of taking tokens from a treasury pot.
         link: https://github.com/kabocha-network/pallet_mint_with_fee
         funded: true
         protocol: Pallet
@@ -178,14 +178,14 @@ partners:
         link: https://medium.com/zondax/edgeware-ledger-app-by-zondax-7cf12c0ea3af
         protocol: EdgeWASM
       - name: Auto Fabrica
-        description: Auto Fabrica is a company specializing in the hand-making and coach-building of bespoke motorcycles. 
+        description: Auto Fabrica is a company specializing in the hand-making and coach-building of bespoke motorcycles.
         link: https://gov.edgewa.re/discussion/4747-project-auto-fabrica-a-decentralised-creator-collective
       - name: EdgeTreasury portal by OpenSquare
         description: EdgeTreasury is a transparency-focused portal for Edgeware, providing a clear overview of income, expenses, and financial structure to encourage community participation.
         link: https://edg.dotreasury.com/
         funded: true
       - name: Staking Rewards
-        description: Staking Rewards is the leading data provider for staking and crypto-growth tools. 
+        description: Staking Rewards is the leading data provider for staking and crypto-growth tools.
         link: https://www.stakingrewards.com/earn/edgeware/
   - category: Community
     partners:
@@ -200,7 +200,7 @@ partners:
   - category: Graphs
     partners:
       - name: SubQuery
-        description: SubQuery is an Open, Flexible, Fast, and Universal data indexing framework for web3. 
+        description: SubQuery is an Open, Flexible, Fast, and Universal data indexing framework for web3.
         link: https://subquery.network/
   - category: Explorers
     partners:
@@ -221,7 +221,7 @@ partners:
         link: https://www.edgeware.wiki/development/develop/rosetta-api
         funded: false
       - name: EdgeSnap
-        description: One-stop snap-based solution for all your Edgeverse needs. so you can access both EdgeEVM and EdgeWASM environments from the Metamask eliminating the need for multiple extensions. 
+        description: One-stop snap-based solution for all your Edgeverse needs. so you can access both EdgeEVM and EdgeWASM environments from the Metamask eliminating the need for multiple extensions.
         link: https://devfolio.co/projects/edgesnap-3cc5
         funded: false
         protocol: EdgeWASM & EdgeEVM
