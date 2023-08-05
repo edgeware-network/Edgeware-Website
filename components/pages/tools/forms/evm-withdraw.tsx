@@ -31,6 +31,9 @@ interface EvmWithdrawFormState {
 
 type formStep = 'initial' | 'transfer' | 'withdraw' | 'complete';
 
+// 1. TODO: add manual process to step 4 with manual transaction signing
+// 2. TODO: add manual deposit to Edge EVM step
+
 export const EvmWithdraw = () => {
   const addressInputEl = useRef(null);
   const amountInputEl = useRef(null);
@@ -41,6 +44,8 @@ export const EvmWithdraw = () => {
     evmText: null,
     evmError: false,
   });
+
+  const [evmAddress, setEvmAddress] = useState('');
 
   const handleDiscoverButton = async (event: React.MouseEvent) => {
     event.preventDefault();
@@ -57,39 +62,13 @@ export const EvmWithdraw = () => {
       return;
     }
 
-    // 2. Check for Web3 accounts
-    const web3 = new Web3((window as any).ethereum);
-    const currentProvider = web3?.eth?.accounts?.currentProvider as any;
-    try {
-      await (window as any).ethereum.request({ method: 'eth_requestAccounts' });
-    } catch (e) {
-      setFormState({ evmText: 'Metamask or EVM compatible Web3 wallet required', evmError: true });
-      return;
-    }
-    const account = currentProvider?.selectedAddress;
-    if (!account) {
-      setFormState({ evmText: 'Metamask or EVM compatible Web3 wallet required', evmError: true });
-      return;
-    }
-
-    // Are we on the right network?
-    if (+currentProvider?.chainId !== 2021 && +currentProvider?.chainId !== 2022) {
-      setFormState({
-        evmText:
-          'Please switch to Edgeware EdgeEVM network in your web3 wallet manually or click on the `Switch to EdgeEVM` button below.',
-        evmError: true,
-        showAddNetwork: true,
-      });
-      return;
-    }
-
-    // 3. Continue with transfer
+    // 2. Continue with transfer
     try {
       const addressBytes = decodeAddress(substrateAddress);
       const evmAddress = Buffer.from(addressBytes.subarray(0, 20)).toString('hex');
 
       setFormStep('transfer');
-      evmAddressInputEl.current.value = Web3.utils.toChecksumAddress(evmAddress);
+      setEvmAddress(Web3.utils.toChecksumAddress(evmAddress));
     } catch (err) {
       console.log(err);
       setFormState({ evmText: 'Transaction error', evmError: true });
@@ -438,6 +417,7 @@ export const EvmWithdraw = () => {
                 disabled
                 name="input"
                 placeholder=""
+                defaultValue={evmAddress}
                 ref={evmAddressInputEl}
               />
             </label>

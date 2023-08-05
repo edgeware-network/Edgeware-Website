@@ -65,9 +65,10 @@ export const processEVMDeposit = async (
         },
       };
     } else {
+      console.error(error);
       return {
         success: false,
-        message: 'Failed to send transaction.',
+        message: error || 'Failed to send transaction.',
       };
     }
   } catch (error) {
