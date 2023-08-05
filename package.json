@@ -10,7 +10,8 @@
     "export": "next build && next export",
     "lint": "eslint ./ --ext .ts,.tsx",
     "lint:fix": "npm run lint -- --fix",
-    "prettier": "prettier --write '**/*.{ts,tsx}'"
+    "prettier": "prettier --write '**/*.{ts,tsx}'",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@edgeware/node-types": "3.6.2-wako",
