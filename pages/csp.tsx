@@ -4,7 +4,7 @@ const widgetSrc = 'https://bafybeidpp4d3znpjxlvlhitaylbqwmyk2gzcxazp5wkftvwu7r3l
 export default function SocietyPage() {
   return (
     <>
-      <section id="edgeware-csp" className="my-24 px-4 text-center">
+      <section id="edgeware-csp" className="mt-24 px-4 text-center">
         <h1 className="my-8 text-6xl">Contributor Support Program</h1>
         <p className="my-4 mx-auto max-w-prose text-lg leading-relaxed">
           The Edgeware Contributors Support Program (CSP) is a program designed to support the
@@ -16,8 +16,8 @@ export default function SocietyPage() {
         </p>
       </section>
 
-      <section id="edgeware-csp-widget" className="my-24 px-4 py-8 pb-24 text-center">
-        <div className="py-4">
+      <section id="edgeware-csp-widget" className="py-8 pb-24 text-center">
+        <div className="mb-8 py-4">
           <iframe
             className="mx-auto rounded-lg border-0 shadow-2xl outline-none focus:outline-none focus:ring-0"
             title="Edgeware CSP Widget"
@@ -26,6 +26,18 @@ export default function SocietyPage() {
             height="600px"
           />
         </div>
+        <p className="my-4 mx-auto max-w-3xl leading-relaxed">
+          To learn more about the Contributors' Support Program visit{' '}
+          <a
+            href="https://gov.edgewa.re/discussion/12279-contributors-support-program-csp"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-600 text-primary-500 underline"
+          >
+            Edgeware Governance Forum
+          </a>
+          .
+        </p>
       </section>
     </>
   );
