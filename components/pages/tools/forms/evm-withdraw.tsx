@@ -31,9 +31,6 @@ interface EvmWithdrawFormState {
 
 type formStep = 'initial' | 'transfer' | 'withdraw' | 'complete';
 
-// 1. TODO: add manual process to step 4 with manual transaction signing
-// 2. TODO: add manual deposit to Edge EVM step
-
 export const EvmWithdraw = () => {
   const addressInputEl = useRef(null);
   const amountInputEl = useRef(null);
@@ -154,6 +151,26 @@ export const EvmWithdraw = () => {
         setFormState({ evmText: 'Transaction error', evmError: true });
       }
     }
+  };
+
+  const handleManualTransfer = async (event: React.MouseEvent) => {
+    event.preventDefault();
+
+    // Validate amount
+    const amount = amountInputEl.current.value;
+    if (amount === '' || amount === '0' || isNaN(+amount)) {
+      setFormState({ evmText: 'Invalid EDG amount', evmError: true });
+      amountInputEl.current.focus();
+      return;
+    }
+
+    setFormStep('withdraw');
+    setFormState({
+      ...formState,
+      evmError: false,
+      evmText: 'Transfer performed manually!',
+      evmTransactionSuccess: true,
+    });
   };
 
   // Will sign the withdrawal extrinsic from the Substrate account (via polkadot-js)
@@ -331,7 +348,9 @@ export const EvmWithdraw = () => {
     event.preventDefault();
   };
 
-  const handleReset = () => {
+  const handleReset = (e: React.MouseEvent) => {
+    e.preventDefault();
+
     if (addressInputEl.current) {
       addressInputEl.current.value = '';
     }
@@ -395,7 +414,7 @@ export const EvmWithdraw = () => {
             {formStep === 'initial' && (
               <div className="mt-4">
                 <Button onClick={handleDiscoverButton} colorStyle="primary" sizing="normal">
-                  1. Discover EVM withdrawal address
+                  Discover EVM withdrawal address
                 </Button>
               </div>
             )}
@@ -460,6 +479,15 @@ export const EvmWithdraw = () => {
                   Transfer
                 </Button>
               </div>
+              <div className="my-2">
+                If you transferred the funds manually,
+                <button
+                  className="ml-2 underline hover:text-primary-500"
+                  onClick={handleManualTransfer}
+                >
+                  click here to go to final step →
+                </button>
+              </div>
             </label>
             <div className={formState.evmError ? 'my-4 text-red-500' : 'my-4 text-green-600'}>
               {formState.evmText}
@@ -472,8 +500,29 @@ export const EvmWithdraw = () => {
             <p className="mb-2">4. Finalize the withdrawal from your Substrate account</p>
             <p className="my-2 text-sm text-grey-200">
               Now you can withdraw the funds from the EVM to your Substrate address. This can be
-              done by initiating the evm.withdraw(address,value) extrinsic from your Substrate
-              account using the polkadot-js tools.
+              done by initiating the
+              <code className="mx-1 rounded bg-black px-1 py-1 font-mono text-xs text-white">
+                evm.withdraw(address,value)
+              </code>
+              extrinsic from your Substrate account using the{' '}
+              <a
+                href="https://polkadot.js.org/apps/#/extrinsics"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-white"
+              >
+                polkadot-js
+              </a>
+              {' or '}
+              <a
+                href="https://www.edgeware.app/#/extrinsics"
+                rel="noopener noreferrer"
+                className="underline hover:text-white"
+              >
+                edgeware.app
+              </a>{' '}
+              extrinsics.
+              <br />
               <br />
               For convenience, you can use the button below to sign the transaction.
             </p>
