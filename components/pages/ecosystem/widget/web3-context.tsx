@@ -92,6 +92,7 @@ export const Web3ContextProvider = ({ children }) => {
     console.log('Disconnecting from EVM wallet');
     try {
       const web3 = new Web3(Web3.givenProvider);
+      console.log('Done!');
     } catch (err) {
       console.error(err);
     }
