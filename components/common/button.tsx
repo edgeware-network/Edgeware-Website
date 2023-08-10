@@ -17,7 +17,7 @@ export const Button = ({ children, href, colorStyle, sizing, ...restProps }: But
     },
     colorStyles: {
       primary:
-        'bg-primary-500 text-white hover:bg-primary-600 hover:text-white active:bg-primary-700 active:text-white',
+        'bg-primary-500 text-white hover:bg-primary-600 hover:text-white active:bg-primary-700 active:text-white disabled:bg-primary-700',
       grey: 'bg-grey-800 text-white hover:bg-grey-700 hover:text-white active:bg-grey-700 active:text-white',
       black:
         'bg-grey-900 text-white hover:bg-grey-700 hover:text-white active:bg-grey-600 active:text-white',
