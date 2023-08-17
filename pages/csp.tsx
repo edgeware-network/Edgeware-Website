@@ -28,14 +28,16 @@ export default function SocietyPage() {
   return (
     <>
       <section id="edgeware-csp" className="mt-24 px-4 text-center">
-        <h1 className="my-8 text-6xl">Contributor Support Program</h1>
+        <h1 className="my-8 text-6xl">Contributors' Support Program</h1>
         <p className="my-4 mx-auto max-w-prose text-lg leading-relaxed">
-          The Edgeware Contributors Support Program (CSP) is a program designed to support the
-          growth of the Edgeware community by providing grants to projects that contribute to the
-          Edgeware ecosystem.
+          Contributors' Support Program allows anyone to support the currently non-treasury
+          funded contributors to continue their contributions to the Edgeware community
+          through the monthly limited editions of NFTs.
+          This program aims to provide basic minimal monthly incentives for Edgeware
+          contributors who are consistent with their contributions.
         </p>
         <p className="my-4 mx-auto max-w-prose leading-relaxed">
-          Use the widget below to mint your own CSP NFT.
+          Click on the month below to mint the corresponding CSP NFT(s):
         </p>
       </section>
 
@@ -65,14 +67,14 @@ export default function SocietyPage() {
           />
         </div>
         <p className="my-4 mx-auto max-w-3xl leading-relaxed">
-          To learn more about the Contributors' Support Program visit{' '}
+          To learn more about the Contributors' Support Program, please visit{' '}
           <a
             href="https://gov.edgewa.re/discussion/12279-contributors-support-program-csp"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-600 text-primary-500 underline"
           >
-            Edgeware Governance Forum
+            the governance forum thread
           </a>
           .
         </p>
@@ -85,9 +87,9 @@ export async function getStaticProps() {
   return {
     props: {
       meta: {
-        title: 'Edgeware Community Contributors Program',
+        title: 'Edgeware Contributors Support Program',
         description:
-          'The Edgeware Community Contributors Program (CSP) is a program designed to support the growth of the Edgeware community by providing grants to projects that contribute to the Edgeware ecosystem.',
+          'Support the ongoing community contributions through the monthly editions of limited NFTs and get exclusive perks.',
       },
     },
   };
