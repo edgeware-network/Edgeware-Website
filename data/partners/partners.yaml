@@ -104,11 +104,6 @@ partners:
         protocol: EdgeEVM
   - category: Art & NFTs
     partners:
-      - name: Zien
-        description: Zien is a platform providing NFT Airdrops on WhatsApp.
-        link: https://gov.edgewa.re/proposal/discussion/1129-proposal-bring-zien-nfts-via-whatsapp-to-edgeware
-        funded: true
-        protocol: EdgeEVM
       - name: New Futures
         description: Web3 media launchpad and creative DAO/NFT platform uniting art, culture, and technology based on RMRK.
         link: https://www.new-futures.co/
