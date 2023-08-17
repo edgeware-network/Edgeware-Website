@@ -59,7 +59,7 @@ export default function SocietyPage() {
           <iframe
             className="mx-auto rounded-lg border-0 shadow-2xl outline-none focus:outline-none focus:ring-0"
             title="Edgeware CSP Widget"
-            src={currentWidget.src}
+            src={currentWidget?.src}
             width="600px"
             height="600px"
           />
