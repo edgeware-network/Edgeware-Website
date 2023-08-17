@@ -30,11 +30,10 @@ export default function SocietyPage() {
       <section id="edgeware-csp" className="mt-24 px-4 text-center">
         <h1 className="my-8 text-6xl">Contributors' Support Program</h1>
         <p className="my-4 mx-auto max-w-prose text-lg leading-relaxed">
-          Contributors' Support Program allows anyone to support the currently non-treasury
-          funded contributors to continue their contributions to the Edgeware community
-          through the monthly limited editions of NFTs.
-          This program aims to provide basic minimal monthly incentives for Edgeware
-          contributors who are consistent with their contributions.
+          Contributors' Support Program allows anyone to support the currently non-treasury funded
+          contributors to continue their contributions to the Edgeware community through the monthly
+          limited editions of NFTs. This program aims to provide basic minimal monthly incentives
+          for Edgeware contributors who are consistent with their contributions.
         </p>
         <p className="my-4 mx-auto max-w-prose leading-relaxed">
           Click on the month below to mint the corresponding CSP NFT(s):
