@@ -1,13 +1,17 @@
 import * as React from 'react';
 
 const TEASERS = {
-  binance: {
-    href: '/binance',
-    alt: 'Binance sends out EDG',
+  csp: {
+    href: '/csp',
+    alt: 'Support the ongoing community contributions through the monthly editions of limited NFTs and get exclusive perks.',
   },
   evm: {
     href: 'https://docs.edgeware.wiki/development/develop/smart-contracts/evm-smart-contracts',
-    alt: 'EdgeEVM coming soon - ETH developers now port their work to EDG with virtually zero changes. Grow your Dapp.',
+    alt: 'Explore the vanilla implementation of full-fledged EVM running in the same high-performant substrate solochain.',
+  },
+  binance: {
+    href: '/binance',
+    alt: 'Binance distributed EDG to their ETH holding users of lockdrop timeframe.',
   },
   kabocha: {
     href: 'https://www.kabocha.network/',
@@ -15,7 +19,7 @@ const TEASERS = {
   },
   events: {
     href: 'https://calendar.google.com/calendar/u/0/embed?src=commonwealth.im_ihbs892pqubvogtoim6c1hf7ck@group.calendar.google.com',
-    alt: 'Community Events every week',
+    alt: 'Join the weekly Community Calls to shape the evolution of Edgeware ecosystem.',
   },
 };
 

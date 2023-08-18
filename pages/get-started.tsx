@@ -3,11 +3,11 @@ import * as React from 'react';
 import IconBank from 'remixicon/icons/Buildings/bank-line.svg';
 import IconPost from 'remixicon/icons/Document/draft-line.svg';
 import IconList from 'remixicon/icons/Document/file-list-3-line.svg';
-import IconUser from 'remixicon/icons/User/open-arm-line.svg';
+import IconUser from 'remixicon/icons/User & Faces/open-arm-line.svg';
 
 import IconGov from 'remixicon/icons/Buildings/government-line.svg';
 import IconPaper from 'remixicon/icons/Document/file-list-line.svg';
-import IconDiscord from 'remixicon/icons/Logos/discord-line.svg';
+// import IconDiscord from 'remixicon/icons/Logos/discord-line.svg';
 // import IconBubbles from 'remixicon/icons/Business/bubble-chart-line.svg';
 import IconTools from 'remixicon/icons/Design/tools-line.svg';
 
@@ -26,6 +26,7 @@ import IconNews from 'remixicon/icons/Document/newspaper-line.svg';
 import IconArticle from 'remixicon/icons/Document/article-line.svg';
 import IconDocs from 'remixicon/icons/Development/code-s-slash-line.svg';
 import IconMarkets from 'remixicon/icons/Business/line-chart-line.svg';
+import IconShakeHands from 'remixicon/icons/Business/shake-hands-line.svg';
 
 import { LinksList } from '../components/pages/get-started/links-list';
 import type { LinkItem } from '../components/pages/get-started/links-list';
@@ -43,8 +44,8 @@ const LINKS: Record<string, LinkItem[]> = {
       icon: IconPaper,
       href: '/assets/whitepaper/edgeware-whitepaper.pdf',
     },
-    { label: 'Discord', icon: IconDiscord, href: 'https://discord.gg/4pnzjWTJ9b' },
     { label: 'Tools', icon: IconTools, href: '/tools' },
+    { label: 'CSP', icon: IconShakeHands, href: '/csp' },
   ],
 
   wallets: [
