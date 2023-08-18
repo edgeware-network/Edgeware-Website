@@ -26,6 +26,7 @@ import IconNews from 'remixicon/icons/Document/newspaper-line.svg';
 import IconArticle from 'remixicon/icons/Document/article-line.svg';
 import IconDocs from 'remixicon/icons/Development/code-s-slash-line.svg';
 import IconMarkets from 'remixicon/icons/Business/line-chart-line.svg';
+import IconShakeHands from 'remixicon/icons/Business/ri-shake-hands-line.svg';
 
 import { LinksList } from '../components/pages/get-started/links-list';
 import type { LinkItem } from '../components/pages/get-started/links-list';
@@ -43,8 +44,8 @@ const LINKS: Record<string, LinkItem[]> = {
       icon: IconPaper,
       href: '/assets/whitepaper/edgeware-whitepaper.pdf',
     },
-    { label: 'Discord', icon: IconDiscord, href: 'https://discord.gg/4pnzjWTJ9b' },
     { label: 'Tools', icon: IconTools, href: '/tools' },
+    { label: 'Contributors Support Program', icon: IconShakeHands, href: '/csp' },
   ],
 
   wallets: [
