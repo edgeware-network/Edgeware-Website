@@ -1,7 +1,7 @@
 import { Button } from 'components/common/button';
 import { socialMediaUrls } from 'data/config';
 
-import OpenArmLineIcon from 'remixicon/icons/User/open-arm-line.svg';
+import OpenArmLineIcon from 'remixicon/icons/User & Faces/open-arm-line.svg';
 
 export const ContributeEDGizen = () => {
   return (

@@ -1,12 +1,12 @@
 import { IconLogo } from 'components/common/icon-logo';
 
-import OpenArmLineIcon from 'remixicon/icons/User/open-arm-line.svg';
+import OpenArmLineIcon from 'remixicon/icons/User & Faces/open-arm-line.svg';
 import FundsLineIcon from 'remixicon/icons/Finance/funds-line.svg';
 import EarthLineIcon from 'remixicon/icons/Map/earth-line.svg';
 
 import FingerprintFillIcon from 'remixicon/icons/Device/fingerprint-fill.svg';
 import CompassDiscoverLineIcon from 'remixicon/icons/Map/compass-discover-line.svg';
-import User4LineIcon from 'remixicon/icons/User/user-4-line.svg';
+import User4LineIcon from 'remixicon/icons/User & Faces/user-4-line.svg';
 
 import ScalesLineIcon from 'remixicon/icons/Others/scales-line.svg';
 import CommandLineIcon from 'remixicon/icons/Development/command-line.svg';

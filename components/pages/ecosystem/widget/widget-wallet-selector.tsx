@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Account } from './web3-context';
-import IconArrow from 'remixicon/icons/System/arrow-down-s-line.svg';
+import IconArrow from 'remixicon/icons/Arrows/arrow-down-s-line.svg';
 import { Listbox } from '@headlessui/react';
 
 type WidgetWalletSelectorProps = {
