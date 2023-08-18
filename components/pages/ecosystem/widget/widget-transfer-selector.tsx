@@ -1,4 +1,4 @@
-import IconArrow from 'remixicon/icons/System/arrow-right-line.svg';
+import IconArrow from 'remixicon/icons/Arrows/arrow-right-line.svg';
 
 type WidgetTransferSelectorProps = {
   targetTransferType: 'deposit' | 'withdrawal';
