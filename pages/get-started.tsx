@@ -3,11 +3,11 @@ import * as React from 'react';
 import IconBank from 'remixicon/icons/Buildings/bank-line.svg';
 import IconPost from 'remixicon/icons/Document/draft-line.svg';
 import IconList from 'remixicon/icons/Document/file-list-3-line.svg';
-import IconUser from 'remixicon/icons/User/open-arm-line.svg';
+import IconUser from 'remixicon/icons/User & Faces/open-arm-line.svg';
 
 import IconGov from 'remixicon/icons/Buildings/government-line.svg';
 import IconPaper from 'remixicon/icons/Document/file-list-line.svg';
-import IconDiscord from 'remixicon/icons/Logos/discord-line.svg';
+// import IconDiscord from 'remixicon/icons/Logos/discord-line.svg';
 // import IconBubbles from 'remixicon/icons/Business/bubble-chart-line.svg';
 import IconTools from 'remixicon/icons/Design/tools-line.svg';
 
