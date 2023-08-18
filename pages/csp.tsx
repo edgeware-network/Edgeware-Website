@@ -66,6 +66,18 @@ export default function SocietyPage() {
           />
         </div>
         <p className="my-4 mx-auto max-w-3xl leading-relaxed">
+          Minted the NFT(s)?, claim your discord role and perks now:{' '}
+          <a
+            href="https://discord.gg/uNY622UGh4"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-600 text-primary-500 underline"
+          >
+            click here
+          </a>
+          ☝️
+        </p>
+        <p className="my-4 mx-auto max-w-3xl leading-relaxed">
           To learn more about the Contributors' Support Program, please visit{' '}
           <a
             href="https://gov.edgewa.re/discussion/12279-contributors-support-program-csp"
