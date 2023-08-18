@@ -45,7 +45,7 @@ const LINKS: Record<string, LinkItem[]> = {
       href: '/assets/whitepaper/edgeware-whitepaper.pdf',
     },
     { label: 'Tools', icon: IconTools, href: '/tools' },
-    { label: 'Contributors Support Program', icon: IconShakeHands, href: '/csp' },
+    { label: 'CSP', icon: IconShakeHands, href: '/csp' },
   ],
 
   wallets: [
