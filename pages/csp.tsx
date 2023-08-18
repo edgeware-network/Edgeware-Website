@@ -66,7 +66,7 @@ export default function SocietyPage() {
           />
         </div>
         <p className="my-4 mx-auto max-w-3xl leading-relaxed">
-          Minted the NFT(s)?, claim your discord role and perks now:{' '}
+          Minted the NFT(s)? Claim your discord role and perks now:{' '}
           <a
             href="https://discord.gg/uNY622UGh4"
             target="_blank"
@@ -75,7 +75,7 @@ export default function SocietyPage() {
           >
             click here
           </a>
-          ☝️
+          🤘
         </p>
         <p className="my-4 mx-auto max-w-3xl leading-relaxed">
           To learn more about the Contributors' Support Program, please visit{' '}
