@@ -18,9 +18,9 @@ partners:
         protocol: Pallet
   - category: DeFi
     partners:
-      - name: Edgeverse DEX
+      - name: Mainnet Exchange
         description: A DEX by contributor BharatCoorg.
-        link: https://app.edgeverse.exchange/#/swap
+        link: https://app.mainnet.exchange/#/
         funded: true
         protocol: EdgeEVM
       - name: Stafi Protocol
