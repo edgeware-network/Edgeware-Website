@@ -30,6 +30,10 @@ partners:
         description: Flexible insurance for the DeFi economy.
         link: https://blog.edgewa.re/edgeware-partners-with-tidal-finance-to-bring-insurance-cover-to-edg-ecosystem/
         protocol: EdgeEVM
+      - name: AllianceBlock
+        description: Decentralized Capital Market with Unique Defi-NFT Approach.
+        link: https://blog.edgewa.re/allianceblock-announces-decentralized-capital-market-on-edgeware-with-unique-defi-nft-approach/
+        protocol: EdgeWASM
   - category: Art & NFTs
     partners:
       - name: NEW-FUTURES
@@ -167,6 +171,10 @@ partners:
       - name: wagmi.sh
         description: Wagmi is a collection of React Hooks containing everything you need to start working with Ethereum. Easy to "Connect Wallet," display ENS and balance information, sign messages, interact with contracts etc.
         link: https://wagmi.sh/core/chains#supported-chains
+      - name: Sourcify
+        description: Source-verified smart contracts for transparency and better UX in web3.
+        link: https://sourcify.dev/
+        protocol: EdgeEVM
       - name: EdgeTreasury portal by OpenSquare
         description: EdgeTreasury is a transparency-focused portal for Edgeware, providing a clear overview of income, expenses, and financial structure to encourage community participation.
         link: https://edg.dotreasury.com/
@@ -205,8 +213,8 @@ partners:
       - name: Artistic Residencies programme
         description:  The foundations for a self-sustaining arts/culture-economy.
         link: https://gov.edgewa.re/discussion/639-artistic-residencies-community-call-w-mocda-haute-to-death
-      - name: R&D project - A prayer from the forest
-        description: bBuild a meaningful and long term connection with the Amazonian Huni Kuin people.
+      - name: R&D project ; A prayer from the forest
+        description: Build a meaningful and long term connection with the Amazonian Huni Kuin people.
         link: https://gov.edgewa.re/discussion/5445-an-edgeware-rd-proposal-a-prayer-from-the-forest
   - category: Entities
     partners:
@@ -286,6 +294,11 @@ partners:
         link: https://addons.mozilla.org/en-US/firefox/addon/edgeverse/
         funded: true
         protocol: EdgeWASM & EdgeEVM
+      - name: DFinn Wallet
+        description: Safest Mobile Wallet for EVM and Substrate Blockchains!
+        link: https://dfinnwallet.app/
+        funded: true
+        protocol: EdgeWASM & EdgeEVM 
       - name: Math wallet
         description: The Multichain Wallet for Web3.
         link: https://mathwallet.org/edgeware-wallet/en/
