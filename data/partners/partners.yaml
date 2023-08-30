@@ -52,10 +52,12 @@ partners:
         description: Commonwealth Forum is a multichain web3-native governance forum, incubated by the Edgeware community.
         link: https://gov.edgewa.re/discussions
         funded: true
+        protocol: EdgeWASM
       - name: Peeranha
         description: Peeranha.io is a decentralized platform for community-driven Q&A powered by blockchain technology.
         link: https://gov.edgewa.re/discussion/6883-edgeware-knowledgebase-with-peeranha
         funded: true
+        protocol: EdgeEVM
   - category: Media
     partners:
       - name: How to make it in Crypto Media Podcast
@@ -121,7 +123,7 @@ partners:
         description: The Load-balancer infrastructure with Geo-awareness determines the nearest node as per the user's IP to get minimum latency.
         link: https://gov.edgewa.re/discussion/6607-public-rpc-and-bootnodes-jelliedowl
         funded: true
-        protocol: EdgeWASM
+        protocol: EdgeWASM & EdgeEVM
       - name: Privhost
         description: A public node provider that supports .onion addresses for everyone to utilize.
         link: https://gov.edgewa.re/discussion/9569-tor-support-and-onion-addresses-have-come-to-edgeware
@@ -142,10 +144,11 @@ partners:
       - name: Patract Elara
         description: Elara provides Polkadot developers with free, instant, and scalable blockchain API access services, including Polkadot, Kusama, etc.
         link: https://github.com/patractlabs/elara
-        protocol: EdgeWASM
+        protocol: EdgeWASM & EdgeEVM
       - name: Covalent
         description: Covalent provides a unified API bringing visibility to billions of blockchain data points.
         link: https://www.covalenthq.com/
+        protocol: EdgeEVM
       - name: Knit Finance
         description: Knit is a protocol for creating cross-chain wrappers for the top-200 assets. Deposit to insured custody and mint K-Assets.
         link: https://knit.finance/
@@ -153,17 +156,21 @@ partners:
       - name: Dwellir
         description: Dwellir runs enterprise-grade RPC infrastructure. They ensure global scalability and low latency while providing comprehensive blockchain support
         link: https://gov.edgewa.re/discussion/7117-dwellir-rpc-infrastructure-services-q3-proposal
+        protocol: EdgeWASM & EdgeEVM
       - name: BitStack
         description: Empowering Web3 developers with easy-to-use, reliable and scalable blockchain infrastructure.
         link: https://bitstack.com/#/protocols
+        protocol: EdgeWASM & EdgeEVM
       - name: SubQuery
         description: SubQuery is an Open, Flexible, Fast, and Universal data indexing framework for web3.
         link: https://subquery.network/
+        protocol: EdgeWASM & EdgeEVM
   - category: Tooling
     partners:
       - name: Coinbase Rosetta
         description: Rosetta is an open standard that simplifies blockchain deployment and interaction. For Faster Onboarding, with Industry Standards, and to Grow Adoption
         link: https://www.edgeware.wiki/development/develop/rosetta-api
+        protocol: EdgeWASM & EdgeEVM
       - name: EdgeSnap
         description: One-stop snap-based solution for all your Edgeverse needs. so you can access both EdgeEVM and EdgeWASM environments from the Metamask eliminating the need for multiple extensions.
         link: https://devfolio.co/projects/edgesnap-3cc5
@@ -171,6 +178,7 @@ partners:
       - name: wagmi.sh
         description: Wagmi is a collection of React Hooks containing everything you need to start working with Ethereum. Easy to "Connect Wallet," display ENS and balance information, sign messages, interact with contracts etc.
         link: https://wagmi.sh/core/chains#supported-chains
+        protocol: EdgeEVM
       - name: Sourcify
         description: Source-verified smart contracts for transparency and better UX in web3.
         link: https://sourcify.dev/
@@ -179,6 +187,7 @@ partners:
         description: EdgeTreasury is a transparency-focused portal for Edgeware, providing a clear overview of income, expenses, and financial structure to encourage community participation.
         link: https://edg.dotreasury.com/
         funded: true
+        protocol: EdgeWASM
       - name: Zondax
         description: Zondax is a team of software developers, engineers, and cryptographers that build innovative tech products.
         link: https://medium.com/zondax/edgeware-ledger-app-by-zondax-7cf12c0ea3af
@@ -186,6 +195,7 @@ partners:
       - name: Staking Rewards
         description: Staking Rewards is the leading data provider for staking and crypto-growth tools.
         link: https://www.stakingrewards.com/earn/edgeware/
+        protocol: EdgeWASM
   - category: Non-deployment collaborators
     partners:
       - name: SleepLess Collective
@@ -269,7 +279,7 @@ partners:
         description: Curated EdgeEVM explorer. Powered by Blocksout.
         link: https://edgscan.live/
         funded: true
-        protocol: EdgeEVM
+        protocol: EdgeEVM & EdgeWASM
   - category: Wallets
     partners:
       - name: PolkadotJS
