@@ -1,16 +1,28 @@
 partners:
-  - category: Entities
+  - category: Pallets
     partners:
-      - name: Edgeware Agency
-        description: Edgeware Agency is a metaDAO that supports the growth and adoption of the Edgeware Ecosystem
-        link: https://gov.edgewa.re/discussion/1112-proposal-edgeware-agency-funding
+      - name: Pallet_Subscription
+        description: Like stripe but for web3. Enabling automated payments from wallets with customizable frequency and end date.
+        link: https://github.com/kabocha-network/pallet_subscription
         funded: true
-      - name: Decent Partners
-        description: Decent develops community networks that are funded, governed and owned by the people they represent.
-        link: https://decent.partners/
+        protocol: Pallet
+      - name: Pallet_Supersig
+        description: Supersig is like Multisig but with superpowers, such as add/remove members and simpleMajority threshold.
+        link: https://github.com/kabocha-network/pallet_supersig
         funded: true
+        protocol: Pallet
+      - name: Pallet_Mint
+        description: Pallet mint is an alternative to treasury funding. Mint new tokens through democracy instead of taking tokens from a treasury pot.
+        link: https://github.com/kabocha-network/pallet_mint_with_fee
+        funded: true
+        protocol: Pallet
   - category: DeFi
     partners:
+      - name: Mainnet Exchange
+        description: A DEX by contributor BharatCoorg.
+        link: https://app.mainnet.exchange/#/
+        funded: true
+        protocol: EdgeEVM
       - name: Stafi Protocol
         description: Send and receive messages between blockchain addresses through a simple, email-like interface.
         link: https://medium.com/stafi/stafi-dao-enters-exploration-phase-partners-with-commonwealth-and-edgeware-65bcdaaf30a9
@@ -18,61 +30,56 @@ partners:
         description: Flexible insurance for the DeFi economy.
         link: https://blog.edgewa.re/edgeware-partners-with-tidal-finance-to-bring-insurance-cover-to-edg-ecosystem/
         protocol: EdgeEVM
-      - name: PicoSwap
-        description: Pico is a protocol for decentralized exchange built on Edgeware, a pioneering Polkadot smart contract blockchain.
-        link: https://picoswap.medium.com/
-  - category: Infrastructure
-    partners:
-      - name: OnFinality
-        description: OnFinality provides support for blockchain developers by providing infrastructure and API services to automate blockchain DevOps.
-        link: https://onfinality.medium.com/run-public-edgeware-nodes-on-onfinality-2ea656262446
-        funded: true
-        protocol: EdgeWASM & EdgeEVM
-      - name: Patract Elara
-        description: Elara provides Polkadot developers with free, instant and scalable blockchain API access services, including Polkadot, Kusama, etc.
-        link: https://github.com/patractlabs/elara
+      - name: AllianceBlock
+        description: Decentralized Capital Market with Unique Defi-NFT Approach.
+        link: https://blog.edgewa.re/allianceblock-announces-decentralized-capital-market-on-edgeware-with-unique-defi-nft-approach/
         protocol: EdgeWASM
-      - name: Covalent
-        description: Covalent provides a unified API bringing visibility to billions of blockchain data points.
-        link: https://www.covalenthq.com/
-      - name: Knit Finance
-        description: Knit is a protocol for creating cross-chain wrappers for the top-200 assets. Deposit to insured custody and mint K-Assets.
-        link: https://knit.finance/
-        protocol: EdgeEVM
-      - name: Biconomy
-        description: Biconomy enables simple blockchain transactions by leveraging scalable relayer infrastructure.
-        link: https://www.biconomy.io/
-        funded: true
-        protocol: EdgeEVM
-      - name: Mailchain
-        description: Send and receive messages between blockchain addresses through a simple, email-like interface.
-        link: https://medium.com/@Mailchain_xyz/sending-mailchain-messages-with-substrate-on-edgeware-f185eddd76ab
-        protocol: EdgeWASM
-  - category: Oracles
-    partners:
-      - name: Paralink Network
-        description: Paralink Network offers a multi-chain oracle platform for DeFi and other blockchain applications.
-        link: https://blog.edgewa.re/paralink-network-announces-full-support-for-edgeware-bringing-oracles-and-validator-participation/
-        protocol: EdgeEVM
-      - name: Kylin Network
-        description: Kyline provides data Infrastructure for DeFi and Web 3.0 Powered by Polkadot.
-        link: https://blog.edgewa.re/strategic-partnership-between-edgeware-and-kylin-network-brings-oracles-and-data-marketplaces-to-edg/
-        protocol: EdgeWASM & EdgeEVM
-      - name: Chainlink
-        description: Chainlink provides reliable, tamper-proof inputs and outputs for complex smart contracts on any blockchain.
-        link: https://blog.edgewa.re/chainlink-oracles-on-edgeware-powered-by-volta/
-        protocol: EdgeEVM
   - category: Art & NFTs
     partners:
-      - name: Zien
-        description: Zien is a platform providing NFT Airdrops on WhatsApp.
-        link: https://gov.edgewa.re/proposal/discussion/1129-proposal-bring-zien-nfts-via-whatsapp-to-edgeware
+      - name: NEW-FUTURES
+        description: Web3 media launchpad and creative DAO/NFT platform uniting art, culture, and technology based on RMRK.
+        link: https://www.new-futures.co/
+        funded: true
+        protocol: RMRK & EdgeEVM
+      - name: Art_Rate
+        description: Art Rate is a platform that serves services to navigate creation power. Art Rate uses a website (in progress) to manage artists' artwork for proposing in international markets, therefor the website is kind of vitrine of artworks which is categorized according to art formats and emotions. Artists can define new categories of emotions in formats part to describe their art concepts better and expand emotion rout in platform.
+        link: https://www.instagram.com/artratecampus/
+        funded: true
+        protocol: EdgeWASM
+  - category: Community
+    partners:
+      - name: Commonwealth Forum
+        description: Commonwealth Forum is a multichain web3-native governance forum, incubated by the Edgeware community.
+        link: https://gov.edgewa.re/discussions
+        funded: true
+        protocol: EdgeWASM
+      - name: Peeranha
+        description: Peeranha.io is a decentralized platform for community-driven Q&A powered by blockchain technology.
+        link: https://gov.edgewa.re/discussion/6883-edgeware-knowledgebase-with-peeranha
         funded: true
         protocol: EdgeEVM
-      - name: New Futures
-        description: Web3 media launchpad and creative DAO/NFT platform uniting art, culture and technology based on RMRK.
-        link: https://www.new-futures.co/
-        protocol: EdgeEVM
+  - category: Media
+    partners:
+      - name: How to make it in Crypto Media Podcast
+        description: How to Make it in Crypto Media will take you through the main pillars of a media business—from distribution to editorial and sales—applied to the fascinating vertical crypto.
+        link: https://gov.edgewa.re/proposal/discussion/1135-how-to-make-it-in-crypto-media-an-original-podcast-series
+        funded: true
+      - name: Exit Theory
+        description: A Content and Community Project that aims to deliver creative assets to the chain, provide user feedback from the creator's perspective and add value to Edgeware’s Citizen Benefits.
+        link: https://gov.edgewa.re/proposal/discussion/1131-exit-theory-a-content-and-community-project
+        funded: true
+  - category: Chains
+    partners:
+      - name: Kabocha
+        description: The Edgeware ecosystem parachain on Kusama - facilitating identity, DAOs tools, and payment automation for creators, founders, and orgs.
+        link: https://kabocha.network/
+        funded: true
+      - name: ICON
+        description: ICON is a public blockchain protocol building a hyperconnected future with BTP and xCall service.
+        link: https://medium.com/helloiconworld/blockchain-transmission-protocol-btp-working-group-update-icon-joins-forces-with-the-polkadot-63694290e15b
+      - name: Neatcoin
+        description: Neatcoin is a cooperative DNS on Substrate/Polkadot, with actor smart contract capabilities, and experimenting on the Frontier of Substrate.
+        link: https://twitter.com/neatcoin/status/1529820286874316803?s=20
   - category: Privacy
     partners:
       - name: Webb Protocol
@@ -87,30 +94,248 @@ partners:
         link: https://gov.edgewa.re/proposal/discussion/948-proposal-lexbridge-legal-entitydocument-panel
         funded: true
       - name: 4thPillarTech
-        description: 4thPillarTech provides blockchain metadata & data file exchange, while providing a digital identity solutions.
+        description: 4thPillarTech provides blockchain metadata & data file exchange while providing digital identity solutions.
         link: https://gov.edgewa.re/proposal/discussion/1063-4thpillar-technologies-has-integrated-edgeware-for-their-ecommerce-and-document-exchange-platform
         protocol: EdgeWASM
-  - category: Media
+  - category: Oracles
     partners:
-      - name: How to make it in Crypto Media Podcast
-        description: How to Make it in Crypto Media will take you through the main pillars of a media business—from distribution to editorial and sales—applied to the fascinating vertical crypto.
-        link: https://gov.edgewa.re/proposal/discussion/1135-how-to-make-it-in-crypto-media-an-original-podcast-series
+      - name: Chainlink
+        description: Chainlink provides reliable, tamper-proof inputs and outputs for complex smart contracts on any blockchain.
+        link: https://blog.edgewa.re/chainlink-oracles-on-edgeware-powered-by-volta/
+        protocol: EdgeEVM
         funded: true
-      - name: Exit Theory
-        description: A Content and Community Project that aims to deliver creative assets to the chain, provide user feedback from the creator perspective and add value to Edgeware’s Citizen Benefits.
-        link: https://gov.edgewa.re/proposal/discussion/1131-exit-theory-a-content-and-community-project
-        funded: true
-  - category: Other
+      - name: Kylin Network
+        description: Kyline provides data Infrastructure for DeFi and Web 3.0 Powered by Polkadot.
+        link: https://blog.edgewa.re/strategic-partnership-between-edgeware-and-kylin-network-brings-oracles-and-data-marketplaces-to-edg/
+        protocol: EdgeWASM & EdgeEVM
+      - name: Paralink Network
+        description: Paralink Network offers a multi-chain oracle platform for DeFi and other blockchain applications.
+        link: https://blog.edgewa.re/paralink-network-announces-full-support-for-edgeware-bringing-oracles-and-validator-participation/
+        protocol: EdgeEVM
+  - category: Infrastructure
     partners:
-      - name: Commonwealth
-        description: Commonwealth facilitates scalable governance and decision making for protocols and organizations.
-        link: https://commonwealth.im/
+      - name: Edgeverse bridges
+        description: Multichain Bridges by contributor BharatCoorg.
+        link: https://bridge.edgeverse.exchange/#/v2/mergeswap
         funded: true
+        protocol: EdgeEVM
+      - name: JelliedOwl
+        description: The Load-balancer infrastructure with Geo-awareness determines the nearest node as per the user's IP to get minimum latency.
+        link: https://gov.edgewa.re/discussion/6607-public-rpc-and-bootnodes-jelliedowl
+        funded: true
+        protocol: EdgeWASM & EdgeEVM
+      - name: Privhost
+        description: A public node provider that supports .onion addresses for everyone to utilize.
+        link: https://gov.edgewa.re/discussion/9569-tor-support-and-onion-addresses-have-come-to-edgeware
+      - name: Biconomy
+        description: Biconomy enables simple blockchain transactions by leveraging scalable relayer infrastructure.
+        link: https://www.biconomy.io/
+        funded: true
+        protocol: EdgeEVM
+      - name: Mailchain
+        description: Send and receive messages between blockchain addresses through a simple, email-like interface.
+        link: https://medium.com/@Mailchain_xyz/sending-mailchain-messages-with-substrate-on-edgeware-f185eddd76ab
+        protocol: EdgeWASM
+      - name: OnFinality
+        description: OnFinality provides support for blockchain developers by providing infrastructure and API services to automate blockchain DevOps.
+        link: https://onfinality.medium.com/run-public-edgeware-nodes-on-onfinality-2ea656262446
+        funded: true
+        protocol: EdgeWASM & EdgeEVM
+      - name: Patract Elara
+        description: Elara provides Polkadot developers with free, instant, and scalable blockchain API access services, including Polkadot, Kusama, etc.
+        link: https://github.com/patractlabs/elara
+        protocol: EdgeWASM & EdgeEVM
+      - name: Covalent
+        description: Covalent provides a unified API bringing visibility to billions of blockchain data points.
+        link: https://www.covalenthq.com/
+        protocol: EdgeEVM
+      - name: Knit Finance
+        description: Knit is a protocol for creating cross-chain wrappers for the top-200 assets. Deposit to insured custody and mint K-Assets.
+        link: https://knit.finance/
+        protocol: EdgeEVM
+      - name: Dwellir
+        description: Dwellir runs enterprise-grade RPC infrastructure. They ensure global scalability and low latency while providing comprehensive blockchain support
+        link: https://gov.edgewa.re/discussion/7117-dwellir-rpc-infrastructure-services-q3-proposal
+        protocol: EdgeWASM & EdgeEVM
+      - name: BitStack
+        description: Empowering Web3 developers with easy-to-use, reliable and scalable blockchain infrastructure.
+        link: https://bitstack.com/#/protocols
+        protocol: EdgeWASM & EdgeEVM
+      - name: SubQuery
+        description: SubQuery is an Open, Flexible, Fast, and Universal data indexing framework for web3.
+        link: https://subquery.network/
+        protocol: EdgeWASM & EdgeEVM
+  - category: Tooling
+    partners:
+      - name: Coinbase Rosetta
+        description: Rosetta is an open standard that simplifies blockchain deployment and interaction. For Faster Onboarding, with Industry Standards, and to Grow Adoption
+        link: https://www.edgeware.wiki/development/develop/rosetta-api
+        protocol: EdgeWASM & EdgeEVM
+      - name: EdgeSnap
+        description: One-stop snap-based solution for all your Edgeverse needs. so you can access both EdgeEVM and EdgeWASM environments from the Metamask eliminating the need for multiple extensions.
+        link: https://devfolio.co/projects/edgesnap-3cc5
+        protocol: EdgeWASM & EdgeEVM
+      - name: wagmi.sh
+        description: Wagmi is a collection of React Hooks containing everything you need to start working with Ethereum. Easy to "Connect Wallet," display ENS and balance information, sign messages, interact with contracts etc.
+        link: https://wagmi.sh/core/chains#supported-chains
+        protocol: EdgeEVM
+      - name: Sourcify
+        description: Source-verified smart contracts for transparency and better UX in web3.
+        link: https://sourcify.dev/
+        protocol: EdgeEVM
+      - name: EdgeTreasury portal by OpenSquare
+        description: EdgeTreasury is a transparency-focused portal for Edgeware, providing a clear overview of income, expenses, and financial structure to encourage community participation.
+        link: https://edg.dotreasury.com/
+        funded: true
+        protocol: EdgeWASM
       - name: Zondax
-        description: Zondax is a team of software developers, engineers and cryptographers that build innovative tech products.
+        description: Zondax is a team of software developers, engineers, and cryptographers that build innovative tech products.
         link: https://medium.com/zondax/edgeware-ledger-app-by-zondax-7cf12c0ea3af
         protocol: EdgeWASM
-      - name: ICON
-        description: ICON is a blockchain protocol for decentralized applications. As an aggregator chain, it achieves interoperability.
-        link: https://medium.com/helloiconworld/blockchain-transmission-protocol-btp-working-group-update-icon-joins-forces-with-the-polkadot-63694290e15b
+      - name: Staking Rewards
+        description: Staking Rewards is the leading data provider for staking and crypto-growth tools.
+        link: https://www.stakingrewards.com/earn/edgeware/
+        protocol: EdgeWASM
+  - category: Non-deployment collaborators
+    partners:
+      - name: SleepLess Collective
+        description: Sleepless Collective is a 24/7 music radio in the Edgeware Discord server a.k.a Edgeware Radio
+        link: https://twitter.com/EdgewareDAO/status/1658818658305466370?s=20
+      - name: Salad Ventures
+        description: Salad Ventures is an X-2-Earn ecosystem project that uses innovative growth strategies and blockchain technology to help Web 3 projects scale.
+        link: https://twitter.com/EdgewareDAO/status/1658818658305466370
+  - category: Experimental
+    partners: 
+      - name: Diversification Fund
+        description: An experiment to diversify a very small part the treasury for value preservation.
+        link: https://gov.edgewa.re/discussion/3809-funding-asset-diversification-proposal_fund-a
+        funded: true
+      - name: Community Film
+        description: An initiative by Lemonade Money, the creators of FTTF to highlight what Edgeware ecosystem is all about!
+        link: https://gov.edgewa.re/discussion/2221-edgeware-community-film-funding
+        funded: true
+      - name: Zora OS
+        description: Zora is a decentralized protocol where anyone can permissionlessly buy, sell, and create.
+        link: https://gov.edgewa.re/discussion/966-zora-os-zdk-call
+      - name: Auto Fabrica
+        description: Auto Fabrica is a company specializing in the hand-making and coach-building of bespoke motorcycles.
+        link: https://gov.edgewa.re/discussion/4747-project-auto-fabrica-a-decentralised-creator-collective
+      - name: Artistic Residencies programme
+        description:  The foundations for a self-sustaining arts/culture-economy.
+        link: https://gov.edgewa.re/discussion/639-artistic-residencies-community-call-w-mocda-haute-to-death
+      - name: A prayer from the forest
+        description: Build a meaningful and long term connection with the Amazonian Huni Kuin people.
+        link: https://gov.edgewa.re/discussion/5445-an-edgeware-rd-proposal-a-prayer-from-the-forest
+  - category: Entities
+    partners:
+      - name: Edgeware Agency
+        description: Edgeware Agency is a metaDAO that supports the growth and adoption of the Edgeware Ecosystem
+        link: https://gov.edgewa.re/discussion/1112-proposal-edgeware-agency-funding
+        funded: true
+      - name: Decent Partners
+        description: Decent develops community networks that are funded, governed, and owned by the people they represent.
+        link: https://decent.partners/
+        funded: true
+      - name: Commonwealth Labs
+        description: Commonwealth Labs founded Edgeware as a first project within the substrate ecosystem.
+        link: https://www.linkedin.com/company/commonwealth-labs/
+        funded: true
+      - name: Decentration
+        description: Realising web3 through engineering and product development. Decentration is a founding steward of Kabocha and a member of the Edgeware Council web3 Foundation grant funded. Working on making useful and usable experiences in web3.
+        link: https://www.decentration.org/
+        funded: true
+      - name: Rusty Crewmates
+        description: Rusty Crewmates is a consulting organization that provides code development in a flexible way for the crypto – blockchain – NFT - DAO ecosystems.
+        link: https://twitter.com/rustycrewmates
+        funded: true
+      - name: Placeholder Labs
+        description: Placeholder Labs is the creative collective of three companies that together are focused on building immersive and innovative music events that layer real-world experiences with Web3 technologies that create once-in-a-lifetime experiences for participants.
+        link: https://commonwealth.im/edgeware/discussion/5302--placeholder-labs-dorg-immersive-experiences-and-blockchain-for-the-music-industry
+        funded: true
+  - category: AIO Portals
+    partners:
+      - name: PolkadotApps
+        description: Basic Polkadot/Substrate UI for interacting with a Polkadot and Substrate node. 
+        link: https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fedgeware.jelliedowl.net#/
+        protocol: EdgeWASM
+      - name: EdgeApps
+        description: Curate fork of the PolkadotApps with additional features like Delegation UI.
+        link: https://edgeware.app/
+        funded: true
+        protocol: EdgeWASM
+      - name: SimpleUI
+        description: Bare minimal fork of EdgeApps with modern material UI.
+        link: https://simple.edgeware.app/
+        funded: true
+        protocol: EdgeWASM
+  - category: Explorers
+    partners:
+      - name: Subscan
+        description: Universal substrate chains explorer
+        link: https://edgeware.subscan.io/
+        funded: true
+        protocol: EdgeWASM
+      - name: Edgscan
+        description: Curated EdgeEVM explorer. Powered by Blocksout.
+        link: https://edgscan.live/
+        funded: true
+        protocol: EdgeEVM & EdgeWASM
+  - category: Wallets
+    partners:
+      - name: PolkadotJS
+        description: A browser-based vault for management of your account keys. It is meant to be used alongside wallets such as the apps UI.
+        link: https://polkadot.js.org/extension/
+        protocol: EdgeWASM
+      - name: Nova wallet
+        description: Next-gen iOS/Android app for the substrate ecosystem.
+        link: https://novawallet.io/
+        protocol: EdgeWASM & EdgeEVM
+      - name: Metamask
+        description: The World’s Leading Web3 Wallet
+        link: https://metamask.io/
         protocol: EdgeEVM
+      - name: Edgeverse wallet
+        description: Edgeverse is the most complete crypto wallet of Edgeware and Kabocha networks.
+        link: https://play.google.com/store/apps/details?id=com.edgeverse.wallet.market
+        funded: true
+        protocol: EdgeWASM & EdgeEVM
+      - name: Edgeverse extension
+        description: Browser variant of the Edgeverse wallet.
+        link: https://addons.mozilla.org/en-US/firefox/addon/edgeverse/
+        funded: true
+        protocol: EdgeWASM & EdgeEVM
+      - name: DFinn Wallet
+        description: Safest Mobile Wallet for EVM and Substrate Blockchains!
+        link: https://dfinnwallet.app/
+        funded: true
+        protocol: EdgeWASM & EdgeEVM 
+      - name: Math wallet
+        description: The Multichain Wallet for Web3.
+        link: https://mathwallet.org/edgeware-wallet/en/
+        protocol: EdgeWASM
+      - name: Ledger
+        description: Hardware wallet support (Ledger Live app) powered by Zondax.
+        link: https://support.ledger.com/hc/en-us/articles/4409811412625-Edgeware-EDG
+        funded: true
+        protocol: EdgeWASM
+      - name: Clover web wallet
+        description: A foundational layer for Cross-chain compatibility.
+        link: https://wallet.clover.finance/
+        protocol: EdgeWASM
+      - name: Clover extension
+        description: A wallet created for the next 100M crypto users with user privacy as a cornerstone
+        link: https://clv.org/
+        protocol: EdgeWASM
+      - name: Enzyme
+        description: A browser extension wallet for Substrate-based chains.
+        link: https://gov.edgewa.re/discussion/496-proposal-to-fund-integration-of-edg-into-enzyme-wallet
+        funded: true
+        protocol: EdgeWASM
+      - name: Enkrypt
+        description: A multichain crypto wallet.
+        link: https://www.enkrypt.com/networks/edgeware-wallet/
+        protocol: EdgeWASM & EdgeEVM
+      - name: SubWallet
+        description: Comprehensive Polkadot, Substrate & Ethereum wallet.
+        link: https://www.subwallet.app/download.html
+        protocol: EdgeWASM
