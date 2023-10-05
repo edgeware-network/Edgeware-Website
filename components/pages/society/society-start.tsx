@@ -31,7 +31,7 @@ export const SocietyStart = () => {
       </div>
 
       <div className="my-8 mx-auto grid max-w-6xl md:grid-cols-3 sm:grid-cols-2 gap-2 text-center">
-        <div className="flex flex-col items-center p-4 hover:border-white border-2 border-white border-opacity-0 hover:rounded-lg hover:bg-grey-800 hover:bg-opacity-20 hover:border-opacity-10 transition-all rounded-lg min-h-[13rem]">
+        <div className="min-h-[13rem] flex-col items-center rounded-lg border-2 border-white border-opacity-0 p-4 transition-all hover:rounded-lg hover:border-white hover:border-opacity-10 hover:bg-grey-800 hover:bg-opacity-20">
           <OpenArmLineIcon className="my-4 h-8 w-8 fill-white" />
           <p>
             Solve problems using the new world of blockchain and currency and collaborate with other
@@ -39,12 +39,12 @@ export const SocietyStart = () => {
           </p>
         </div>
 
-        <div className="flex flex-col items-center p-4 hover:border-white border-2 border-white border-opacity-0 hover:rounded-lg hover:bg-grey-800 hover:bg-opacity-20 hover:border-opacity-10 transition-all rounded-lg min-h-[13rem]">
+        <div className="min-h-[13rem] flex-col items-center rounded-lg border-2 border-white border-opacity-0 p-4 transition-all hover:rounded-lg hover:border-white hover:border-opacity-10 hover:bg-grey-800 hover:bg-opacity-20">
           <FundsLineIcon className="my-4 h-8 w-8 fill-white" />
           <p>Request funds from the Treasury to execute your mission.</p>
         </div>
 
-        <div className="flex flex-col items-center p-4 hover:border-white border-2 border-white border-opacity-0 hover:rounded-lg hover:bg-grey-800 hover:bg-opacity-20 hover:border-opacity-10 transition-all rounded-lg min-h-[13rem]">
+        <div className="min-h-[13rem] flex-col items-center rounded-lg border-2 border-white border-opacity-0 p-4 transition-all hover:rounded-lg hover:border-white hover:border-opacity-10 hover:bg-grey-800 hover:bg-opacity-20">
           <EarthLineIcon className="my-4 h-8 w-8 fill-white" />
           <p>
             Regional groups are designed to drive awareness of the network, research key areas of
@@ -52,27 +52,27 @@ export const SocietyStart = () => {
           </p>
         </div>
 
-        <div className="flex flex-col items-center p-4 hover:border-white border-2 border-white border-opacity-0 hover:rounded-lg hover:bg-grey-800 hover:bg-opacity-20 hover:border-opacity-10 transition-all rounded-lg min-h-[13rem]">
+        <div className="min-h-[13rem] flex-col items-center rounded-lg border-2 border-white border-opacity-0 p-4 transition-all hover:rounded-lg hover:border-white hover:border-opacity-10 hover:bg-grey-800 hover:bg-opacity-20">
           <User4LineIcon className="my-4 h-8 w-8 fill-white" />
           <p>Whatever you want, really: Your community is self-determining.</p>
         </div>
-        <div className="flex flex-col items-center p-4 hover:border-white border-2 border-white border-opacity-0 hover:rounded-lg hover:bg-grey-800 hover:bg-opacity-20 hover:border-opacity-10 transition-all rounded-lg min-h-[13rem]">
+        <div className="min-h-[13rem] flex-col items-center rounded-lg border-2 border-white border-opacity-0 p-4 transition-all hover:rounded-lg hover:border-white hover:border-opacity-10 hover:bg-grey-800 hover:bg-opacity-20">
           <CompassDiscoverLineIcon className="my-4 h-8 w-8 fill-white" />
           <p>
             Utilise Commonwealth's open-source interface to organize your group, project or
             community initiative.
           </p>
         </div>
-        <div className="flex flex-col items-center p-4 hover:border-white border-2 border-white border-opacity-0 hover:rounded-lg hover:bg-grey-800 hover:bg-opacity-20 hover:border-opacity-10 transition-all rounded-lg min-h-[13rem]">
+        <div className="min-h-[13rem] flex-col items-center rounded-lg border-2 border-white border-opacity-0 p-4 transition-all hover:rounded-lg hover:border-white hover:border-opacity-10 hover:bg-grey-800 hover:bg-opacity-20">
           <FingerprintFillIcon className="my-4 h-8 w-8 fill-white" />
           <p>Identity or Community-based solution groups: Minorities, Social Justice, or others.</p>
         </div>
 
-        <div className="flex flex-col items-center p-4 hover:border-white border-2 border-white border-opacity-0 hover:rounded-lg hover:bg-grey-800 hover:bg-opacity-20 hover:border-opacity-10 transition-all rounded-lg min-h-[13rem]">
+        <div className="min-h-[13rem] flex-col items-center rounded-lg border-2 border-white border-opacity-0 p-4 transition-all hover:rounded-lg hover:border-white hover:border-opacity-10 hover:bg-grey-800 hover:bg-opacity-20">
           <ScalesLineIcon className="my-4 h-8 w-8 fill-white" />
           <p>Organize your community into a political power within the network.</p>
         </div>
-        <div className="flex flex-col items-center p-4 hover:border-white border-2 border-white border-opacity-0 hover:rounded-lg hover:bg-grey-800 hover:bg-opacity-20 hover:border-opacity-10 transition-all rounded-lg min-h-[13rem]">
+        <div className="min-h-[13rem] flex-col items-center rounded-lg border-2 border-white border-opacity-0 p-4 transition-all hover:rounded-lg hover:border-white hover:border-opacity-10 hover:bg-grey-800 hover:bg-opacity-20">
           <CommandLineIcon className="my-4 h-8 w-8 fill-white" />
           <p>
             Specific technology applications,
@@ -80,7 +80,7 @@ export const SocietyStart = () => {
             Privacy for instance.
           </p>
         </div>
-        <div className="flex flex-col items-center p-4 hover:border-white border-2 border-white border-opacity-0 hover:rounded-lg hover:bg-grey-800 hover:bg-opacity-20 hover:border-opacity-10 transition-all rounded-lg min-h-[13rem]">
+        <div className="min-h-[13rem] flex-col items-center rounded-lg border-2 border-white border-opacity-0 p-4 transition-all hover:rounded-lg hover:border-white hover:border-opacity-10 hover:bg-grey-800 hover:bg-opacity-20">
           <Compass2LineIcon className="my-4 h-8 w-8 fill-white" />
           <p>Advance the community of EDG citizens.</p>
         </div>
