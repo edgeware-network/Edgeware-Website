@@ -69,19 +69,21 @@ export default function SocietyPage() {
             height="600px"
           />
         </div>
-        <p className="my-4 mx-auto max-w-3xl leading-relaxed">
-          Minted the NFT(s)? Claim your discord role and perks now:{' '}
+        <div className='flex flex-col gap-4 p-5 rounded-lg bg-grey-800 bg-opacity-30 my-4 mx-auto max-w-4xl border-grey-700 border-2 border-opacity-50'>
+        <h3 className='font-bold text-xl'>Minted the NFT(s)?</h3>
+        <p className="leading-relaxed">
+          Claim your discord role and perks now:{' '}
           <a
             href="https://discord.gg/uNY622UGh4"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-600 text-primary-500 underline"
+            className="hover:text-blue-600 text-white bg-primary-500 px-4 rounded-lg py-1 ml-2"
           >
             click here
           </a>
-          🤘
         </p>
-        <p className="my-4 mx-auto max-w-3xl leading-relaxed">
+        
+        <p className="leading-relaxed">
           To learn more about the Contributors' Support Program, please visit{' '}
           <a
             href="https://gov.edgewa.re/discussion/12279-contributors-support-program-csp"
@@ -93,6 +95,7 @@ export default function SocietyPage() {
           </a>
           .
         </p>
+        </div>
       </section>
     </>
   );
