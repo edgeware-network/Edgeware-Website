@@ -76,30 +76,32 @@ export default function SocietyPage() {
             height="600px"
           />
         </div>
-        <p className="my-4 mx-auto max-w-3xl leading-relaxed">
-          Minted the NFT(s)? Claim your discord role and perks now:{' '}
-          <a
-            href="https://discord.gg/uNY622UGh4"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-600 text-primary-500 underline"
-          >
-            click here
-          </a>
-          🤘
-        </p>
-        <p className="my-4 mx-auto max-w-3xl leading-relaxed">
-          To learn more about the Contributors' Support Program, please visit{' '}
-          <a
-            href="https://gov.edgewa.re/discussion/12279-contributors-support-program-csp"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-600 text-primary-500 underline"
-          >
-            the governance forum thread
-          </a>
-          .
-        </p>
+        <div className="my-4 mx-auto flex max-w-4xl flex-col gap-4 rounded-lg border-2 border-grey-700 border-opacity-50 bg-grey-800 bg-opacity-30 p-5">
+          <h3 className="text-xl font-bold">Minted the NFT(s)?</h3>
+          <p className="leading-relaxed">
+            Claim your discord role and perks now:{' '}
+            <a
+              href="https://discord.gg/uNY622UGh4"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-600 ml-2 rounded-lg bg-primary-500 px-4 py-1 text-white"
+            >
+              click here
+            </a>
+          </p>
+          <p className="leading-relaxed">
+            To learn more about the Contributors' Support Program, please visit{' '}
+            <a
+              href="https://gov.edgewa.re/discussion/12279-contributors-support-program-csp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-600 text-primary-500 underline"
+            >
+              the governance forum thread
+            </a>
+            .
+          </p>
+        </div>
       </section>
     </>
   );
