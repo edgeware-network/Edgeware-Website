@@ -1,4 +1,6 @@
+import { Listbox } from '@headlessui/react';
 import { useState } from 'react';
+import IconArrow from 'remixicon/icons/Arrows/arrow-down-s-line.svg';
 
 const WidgetMonths = [
   {
@@ -28,6 +30,7 @@ export default function SocietyPage() {
   const [activeMonth, setActiveMonth] = useState<string>(currentMonth);
 
   const currentWidget = WidgetMonths.find((m) => m.month === activeMonth);
+  const dropdownOptions = WidgetMonths.map((m) => m.month).reverse();
 
   return (
     <>
@@ -40,25 +43,29 @@ export default function SocietyPage() {
           for Edgeware contributors who are consistent with their contributions.
         </p>
         <p className="my-4 mx-auto max-w-prose leading-relaxed">
-          Click on the month below to mint the corresponding CSP NFT(s):
+          Select the month below to mint the corresponding CSP NFT(s):
         </p>
       </section>
 
       <section id="edgeware-csp-widget" className="py-8 pb-24 text-center">
-        <div className="flex flex-wrap justify-center">
-          {WidgetMonths.map((m) => (
-            <button
-              key={m.month}
-              className={`mx-2 my-2 rounded-lg border-2  px-4 py-2 ${
-                activeMonth === m.month
-                  ? 'border-primary-500 bg-primary-500 font-semibold text-white'
-                  : 'border-primary-700 bg-primary-700 opacity-90 hover:opacity-100'
-              }`}
-              onClick={() => setActiveMonth(m.month)}
-            >
-              {m.month}
-            </button>
-          ))}
+        <div className="relative mx-auto flex w-60 flex-wrap justify-center">
+          <Listbox onChange={setActiveMonth} value={activeMonth}>
+            <Listbox.Button className="flex w-full grow flex-row items-center justify-between rounded border border-grey-700 p-4">
+              <span>{activeMonth}</span>
+              <IconArrow className={`ml-2 h-6 w-6 shrink-0 fill-grey-600`} />
+            </Listbox.Button>
+            <Listbox.Options className="absolute top-14 z-10 mt-1 max-h-60 w-full overflow-auto rounded border border-grey-700 bg-grey-900">
+              {dropdownOptions.map((o) => (
+                <Listbox.Option
+                  key={o}
+                  value={o}
+                  className="flex cursor-pointer flex-row items-center p-4 text-left hover:bg-grey-800"
+                >
+                  {({ active }) => (active ? <span>{o}</span> : <span>{o}</span>)}
+                </Listbox.Option>
+              ))}
+            </Listbox.Options>
+          </Listbox>
         </div>
         <div className="mb-8 py-4">
           <iframe
