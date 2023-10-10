@@ -12,3 +12,35 @@ select {
   print-color-adjust: exact;
   appearance: none;
 }
+
+/* styles.module.css */
+.message-card {
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  justify-content: first baseline;
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+  background-color: #d42b69;
+  border-radius: 10px;
+  animation: fill 5s linear forwards;
+}
+
+@keyframes fill {
+  100% {
+    width: 100%;
+  }
+}
