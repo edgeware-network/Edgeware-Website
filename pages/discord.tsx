@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
-const discord: React.FC = () => {
+const Discord: React.FC = () => {
   const router = useRouter();
   const [countdown, setCountdown] = useState(5);
   const message = (router.query.message as string) || 'Redirecting...';
@@ -59,4 +59,4 @@ const discord: React.FC = () => {
   );
 };
 
-export default discord;
+export default Discord;
