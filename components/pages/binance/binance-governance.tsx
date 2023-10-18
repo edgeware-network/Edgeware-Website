@@ -15,7 +15,7 @@ export const BinanceGovernance: React.FC = () => {
         <div className="my-4">
           <a
             href="https://www.edgeware.app/#/delegation"
-            className="inline-block rounded-lg bg-primary-500 py-4 px-12 text-xl font-medium text-white hover:bg-primary-600 hover:text-white"
+            className="inline-block rounded-lg bg-primary-500 px-12 py-4 text-xl font-medium text-white hover:bg-primary-600 hover:text-white"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -44,7 +44,7 @@ export const BinanceGovernance: React.FC = () => {
         <div className="my-4">
           <a
             href="https://www.edgeware.app/#/delegation"
-            className="inline-block rounded-lg bg-primary-500 py-4 px-12 text-xl font-medium text-white hover:bg-primary-600 hover:text-white"
+            className="inline-block rounded-lg bg-primary-500 px-12 py-4 text-xl font-medium text-white hover:bg-primary-600 hover:text-white"
             target="_blank"
             rel="noopener noreferrer"
           >

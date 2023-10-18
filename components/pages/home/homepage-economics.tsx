@@ -57,7 +57,7 @@ export const HomepageEconomics = () => {
             })}
           </div>
 
-          <ul className="my-4 flex flex-col justify-between space-y-2 md:my-8 md:flex-row md:space-y-0 md:space-x-2">
+          <ul className="my-4 flex flex-col justify-between space-y-2 md:my-8 md:flex-row md:space-x-2 md:space-y-0">
             {Object.entries(LOCKDROP_STATS).map(([name, stat]) => {
               return (
                 <li

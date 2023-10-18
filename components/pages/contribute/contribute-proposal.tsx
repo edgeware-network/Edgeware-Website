@@ -5,7 +5,7 @@ import CompassDiscoverLineIcon from 'remixicon/icons/Map/compass-discover-line.s
 export const ContributeProposal = () => {
   return (
     <div className="container mx-auto max-w-6xl px-4">
-      <div className="flex flex-col items-center rounded-md bg-white py-8 px-4 text-center md:py-16">
+      <div className="flex flex-col items-center rounded-md bg-white px-4 py-8 text-center md:py-16">
         <CompassDiscoverLineIcon className="h-12 w-12 fill-black text-black" />
         <h2 className="my-4 text-3xl font-medium text-black md:text-4xl">Design a Proposal</h2>
         <p className="max-w-prose text-grey-400">

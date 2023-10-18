@@ -40,13 +40,13 @@ export default function SocietyPage() {
     <>
       <section id="edgeware-csp" className="mt-24 px-4 text-center">
         <h1 className="my-8 text-6xl">Contributors' Support Program</h1>
-        <p className="my-4 mx-auto max-w-prose text-lg leading-relaxed">
+        <p className="mx-auto my-4 max-w-prose text-lg leading-relaxed">
           Contributors' Support Program allows anyone to support the currently non-treasury funded
           contributors to continue their contributions to the Edgeware community through the monthly
           limited editions of NFTs. This program aims to provide basic minimal monthly incentives
           for Edgeware contributors who are consistent with their contributions.
         </p>
-        <p className="my-4 mx-auto max-w-prose leading-relaxed">
+        <p className="mx-auto my-4 max-w-prose leading-relaxed">
           Select the month below to mint the corresponding CSP NFT(s):
         </p>
       </section>
@@ -80,7 +80,7 @@ export default function SocietyPage() {
             height="600px"
           />
         </div>
-        <div className="my-4 mx-auto flex max-w-4xl flex-col gap-4 rounded-lg border-2 border-grey-700 border-opacity-50 bg-grey-800 bg-opacity-30 p-5">
+        <div className="mx-auto my-4 flex max-w-4xl flex-col gap-4 rounded-lg border-2 border-grey-700 border-opacity-50 bg-grey-800 bg-opacity-30 p-5">
           <h3 className="text-xl font-bold">Minted the NFT(s)?</h3>
           <p className="leading-relaxed">
             Claim your discord role and perks now:{' '}
