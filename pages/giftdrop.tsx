@@ -23,8 +23,11 @@ export default function SocietyPage() {
       <section id="edgeware-giftdrop" className="mt-24 px-4 text-center">
         <h1 className="my-8 text-6xl">GiftDrops</h1>
         <p className="my-4 mx-auto max-w-prose text-lg leading-relaxed">
-          GiftDrop is a series of free commemorative mint drops for the EDGizens!
-          Flex your community presence through your GiftDrop NFTs collection 😎
+          GiftDrop is a series of free commemorative mint drops for the EDGizens! Flex your
+          community presence through your GiftDrop NFTs collection{' '}
+          <span role="img" aria-label="Cool Emoji">
+            😎
+          </span>
         </p>
         <p className="my-4 mx-auto max-w-prose leading-relaxed">
           Mint your free GiftDrop NFT today:
@@ -96,8 +99,7 @@ export async function getStaticProps() {
     props: {
       meta: {
         title: 'Edgeware GiftDrops',
-        description:
-          'GiftDrop is a series of free commemorative mint drops for the EDGizens!',
+        description: 'GiftDrop is a series of free commemorative mint drops for the EDGizens!',
       },
     },
   };
