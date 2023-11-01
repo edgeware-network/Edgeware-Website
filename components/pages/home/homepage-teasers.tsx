@@ -1,6 +1,10 @@
 import * as React from 'react';
 
 const TEASERS = {
+  giftdrop: {
+    href: '/giftdrop',
+    alt: 'GiftDrop is a series of free commemorative mint drops for the EDGizens!',
+  },
   csp: {
     href: '/csp',
     alt: 'Support the ongoing community contributions through the monthly editions of limited NFTs and get exclusive perks.',
