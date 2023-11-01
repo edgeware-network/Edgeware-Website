@@ -68,7 +68,7 @@ export default function SocietyPage() {
           <p className="leading-relaxed">
             Claim your discord role:{' '}
             <a
-              href="https://discord.gg/uNY622UGh4"
+              href="https://discord.gg/CMbVmB3GMp"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-600 ml-2 rounded-lg bg-primary-500 px-4 py-1 text-white"
