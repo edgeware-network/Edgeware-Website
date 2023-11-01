@@ -16,7 +16,7 @@ export default function SocietyPage() {
   const [activeIndex, setActiveIndex] = useState<number>(maxIndex);
 
   const currentWidget = WidgetCampaign.find((m) => m.index === activeIndex);
-  const dropdownOptions = WidgetCampaign.map((m) => m.index).reverse();
+  const dropdownOptions = WidgetCampaign.map((m) => m.campaign).reverse();
 
   return (
     <>
@@ -38,17 +38,17 @@ export default function SocietyPage() {
         <div className="relative mx-auto flex w-60 flex-wrap justify-center">
           <Listbox onChange={setActiveIndex} value={activeIndex}>
             <Listbox.Button className="flex w-full grow flex-row items-center justify-between rounded border border-grey-700 p-4">
-              <span>{activeIndex}</span>
+              <span>{currentWidget?.campaign}</span>
               <IconArrow className={`ml-2 h-6 w-6 shrink-0 fill-grey-600`} />
             </Listbox.Button>
             <Listbox.Options className="absolute top-14 z-10 mt-1 max-h-60 w-full overflow-auto rounded border border-grey-700 bg-grey-900">
-              {dropdownOptions.map((o, index) => (
+              {dropdownOptions.map((campaign, index) => (
                 <Listbox.Option
                   key={index}
                   value={index + 1}
-                  className="hover-bg-grey-800·flex·cursor-pointer·flex-row·items-center·p-4·text-left"
+                  className="hover-bg-grey-800 flex cursor-pointer flex-row items-center p-4 text-left"
                 >
-                  {({ active }) => (active ? <span>{o}</span> : <span>{o}</span>)}
+                  {({ active }) => (active ? <span>{campaign}</span> : <span>{campaign}</span>)}
                 </Listbox.Option>
               ))}
             </Listbox.Options>
