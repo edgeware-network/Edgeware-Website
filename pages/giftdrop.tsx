@@ -46,7 +46,7 @@ export default function SocietyPage() {
                 <Listbox.Option
                   key={index}
                   value={index + 1}
-                  className="flex cursor-pointer flex-row items-center p-4 text-left hover-bg-grey-800"
+                  className="hover-bg-grey-800·flex·cursor-pointer·flex-row·items-center·p-4·text-left"
                 >
                   {({ active }) => (active ? <span>{o}</span> : <span>{o}</span>)}
                 </Listbox.Option>
