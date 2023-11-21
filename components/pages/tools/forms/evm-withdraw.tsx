@@ -2,6 +2,7 @@ import { u8aToHex } from '@polkadot/util';
 import Keyring from '@polkadot/keyring';
 import { spec } from '@edgeware/node-types';
 import { RegistryTypes} from '@polkadot/types';
+import '@polkadot/api-augment';
 import { ApiPromise, WsProvider } from '@polkadot/api';
 import { decodeAddress } from '@polkadot/util-crypto';
 import Web3 from 'web3';
