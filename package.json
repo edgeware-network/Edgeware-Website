@@ -17,6 +17,7 @@
     "@edgeware/node-types": "3.6.2-wako",
     "@headlessui/react": "^1.7.8",
     "@polkadot/api": "^9.8.2",
+    "@polkadot/api-augment": "^10.11.1",
     "@polkadot/extension-dapp": "^0.44.6",
     "@polkadot/keyring": "10.1.12",
     "@polkadot/types": "9.8.2",
