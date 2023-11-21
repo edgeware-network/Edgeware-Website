@@ -5,6 +5,10 @@ const TEASERS = {
     href: '/giftdrop',
     alt: 'GiftDrop is a series of free commemorative mint drops for the EDGizens!',
   },
+  nft: {
+    href: '/nft',
+    alt: 'Your NFT Page!',
+  },
   csp: {
     href: '/csp',
     alt: 'Support the ongoing community contributions through the monthly editions of limited NFTs and get exclusive perks.',
