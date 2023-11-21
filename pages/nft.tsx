@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import ConnectWallet from '@thirdweb-dev/react';
 
