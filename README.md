@@ -19,17 +19,17 @@ See [Edgeware Agency][https://edgeware.agency/] to find out how we work and lear
 
 Edgeware website is built with [Next.js](https://nextjs.org/)
 
-Make sure you have Node.js and Yarn installed.
+Make sure you have Node.js
 Install the project dependencies:
 
 ```bash
-yarn
+npm install
 ```
 
 Run the local development server:
 
 ```bash
-yarn dev
+npm run  dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

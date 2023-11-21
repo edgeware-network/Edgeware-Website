@@ -12,7 +12,7 @@ export const Header = ({ overlayHeader = false }: HeaderProps) => {
   const [isMobileNavOpen, setIsMobileNavOpen] = React.useState(false);
 
   return (
-    <header className={overlayHeader ? 'absolute top-0 left-0 right-0' : 'relative'}>
+    <header className={overlayHeader ? 'absolute left-0 right-0 top-0' : 'relative'}>
       <div className="container mx-auto my-4 max-w-7xl md:py-8 lg:py-12">
         <div className="flex flex-row items-center justify-between px-4">
           <Link href="/">

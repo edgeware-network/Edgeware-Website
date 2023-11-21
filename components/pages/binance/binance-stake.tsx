@@ -3,11 +3,11 @@ import { StakingRewardsWidget } from './binance-stake-widget';
 
 export const BinanceStake = () => {
   return (
-    <section className="container my-32 mx-auto max-w-4xl" id="stake">
+    <section className="container mx-auto my-32 max-w-4xl" id="stake">
       <div className="text-center">
         <div className="text-center">
           <h2 className="text-6xl font-medium">Stake and Earn</h2>
-          <p className="my-8 mx-auto max-w-2xl text-lg">
+          <p className="mx-auto my-8 max-w-2xl text-lg">
             Grow your holdings by staking your EDG.
             <br />
             Calculate your earnings with the Staking Rewards Widget Calculator

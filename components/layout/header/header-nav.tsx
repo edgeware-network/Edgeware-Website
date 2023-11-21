@@ -29,7 +29,7 @@ const NavOverlay = ({ isOpen, onNavigation }: NavOverlayProps) => {
       leave="transition-opacity duration-150"
       leaveFrom="opacity-100"
       leaveTo="opacity-0"
-      className="fixed left-0 top-0 right-0 bottom-0 z-10 bg-black"
+      className="fixed bottom-0 left-0 right-0 top-0 z-10 bg-black"
     >
       <div className="flex flex-col justify-start px-4 pt-24 md:pt-36">
         {Object.entries(NAV_ITEMS).map((entry) => (

@@ -34,10 +34,10 @@ type EcosystemPartnersListNavProps = {
 
 const EcosystemPartnersListNav = ({ items }: EcosystemPartnersListNavProps) => {
   return (
-    <nav className="my-8 mx-auto flex max-w-4xl flex-row flex-wrap items-center justify-center">
+    <nav className="mx-auto my-8 flex max-w-4xl flex-row flex-wrap items-center justify-center">
       {items.map((cat) => (
         <a
-          className="my-2 mx-4 rounded-md bg-grey-800 px-8 py-2 hover:bg-grey-500 hover:text-white"
+          className="mx-4 my-2 rounded-md bg-grey-800 px-8 py-2 hover:bg-grey-500 hover:text-white"
           href={`#category-${slugify(cat, { lower: true })}`}
           key={cat}
         >

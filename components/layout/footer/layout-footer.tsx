@@ -7,7 +7,7 @@ import { footerLinks } from './footer-nav-items';
 
 export const Footer = () => {
   return (
-    <footer className="relative z-10 py-6 text-white sm:mt-12 md:mt-24 md:py-12 lg:mt-48 lg:py-24 lg:pt-12 lg:pb-24">
+    <footer className="relative z-10 py-6 text-white sm:mt-12 md:mt-24 md:py-12 lg:mt-48 lg:py-24 lg:pb-24 lg:pt-12">
       <div className="container mx-auto max-w-7xl">
         <div className="flex flex-col justify-between p-4 md:flex-row md:flex-wrap">
           {footerLinks.map((group, index) => (

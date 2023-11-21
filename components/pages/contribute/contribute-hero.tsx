@@ -1,6 +1,6 @@
 export const ContributeHero = () => {
   return (
-    <div className="container mx-auto max-w-4xl py-24 px-4">
+    <div className="container mx-auto max-w-4xl px-4 py-24">
       {/* Intro text & CTAs */}
       <div className="text-center">
         <h1 className="my-4 text-3xl font-medium md:text-4xl lg:text-5xl">

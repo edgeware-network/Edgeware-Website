@@ -20,7 +20,7 @@ import { LinksList } from '../get-started/links-list';
 
 export const BuildGetStarted = () => {
   return (
-    <section className="container mx-auto max-w-7xl py-8 px-4 md:py-16 lg:py-24" id="get-started">
+    <section className="container mx-auto max-w-7xl px-4 py-8 md:py-16 lg:py-24" id="get-started">
       {/* Intro text*/}
       <div className="flex flex-col items-stretch md:flex-row md:space-x-24">
         <div className="my-8 w-full md:my-0 md:w-1/2">
@@ -132,7 +132,7 @@ const NetworksInfo = () => {
             <Tab
               key={network}
               className={({ selected }) =>
-                `py-4 px-2 text-sm ${selected ? 'border-b border-b-primary-500' : ''}`
+                `px-2 py-4 text-sm ${selected ? 'border-b border-b-primary-500' : ''}`
               }
             >
               {network}
@@ -148,7 +148,7 @@ const NetworksInfo = () => {
                     <Tab
                       key={chain}
                       className={({ selected }) =>
-                        `py-4 px-2 text-sm ${selected ? 'border-b border-b-primary-500' : ''}`
+                        `px-2 py-4 text-sm ${selected ? 'border-b border-b-primary-500' : ''}`
                       }
                     >
                       {chain}

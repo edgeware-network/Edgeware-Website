@@ -4,9 +4,9 @@ export const BinanceEdgewareIntro = () => {
   return (
     <section
       id="edgeware"
-      className="container my-24 mx-auto max-w-3xl rounded-md border border-grey-700"
+      className="container mx-auto my-24 max-w-3xl rounded-md border border-grey-700"
     >
-      <div className="bg-[url('/images/backgrounds/edg-logomark-bg.svg')] bg-[center_top_25%] bg-no-repeat py-8 px-16 text-center">
+      <div className="bg-[url('/images/backgrounds/edg-logomark-bg.svg')] bg-[center_top_25%] bg-no-repeat px-16 py-8 text-center">
         <p className="my-12 text-2xl">
           Edgeware is a scalable, sovereign and cooperatively owned smart contract platform with a
           large public treasury, strong governing community, and a focus on DAO deployments.
@@ -23,7 +23,7 @@ export const BinanceEdgewareIntro = () => {
         <div className="my-12">
           <a
             href={socialMediaUrls.discordUrl}
-            className="inline-block rounded-lg bg-grey-500 py-4 px-12 text-xl font-medium text-white hover:bg-grey-600 hover:text-white"
+            className="inline-block rounded-lg bg-grey-500 px-12 py-4 text-xl font-medium text-white hover:bg-grey-600 hover:text-white"
           >
             Join our community on Discord
           </a>

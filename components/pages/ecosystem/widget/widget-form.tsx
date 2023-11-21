@@ -96,7 +96,7 @@ export const WidgetForm = () => {
             {state.errors.global || 'Something went wrong. Please try again.'}
           </p>
           <button
-            className="text-blue-500 mt-2 ml-2 rounded bg-grey-400 p-2 px-4 text-sm"
+            className="text-blue-500 ml-2 mt-2 rounded bg-grey-400 p-2 px-4 text-sm"
             onClick={handleReset}
           >
             Start again
@@ -118,7 +118,7 @@ export const WidgetForm = () => {
 
       {state.formState === 'in-progress' && (
         <p className="animate-pulse pt-4 text-center">
-          <IconFunds className="mr-2 -mt-1 inline-block h-5 w-5 animate-spin fill-white" />
+          <IconFunds className="-mt-1 mr-2 inline-block h-5 w-5 animate-spin fill-white" />
           <span className=" ">Processing request... Please wait!</span>
         </p>
       )}

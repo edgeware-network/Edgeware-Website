@@ -3,11 +3,11 @@ import AsteriskIcon from 'remixicon/icons/Editor/asterisk.svg';
 export const BuildTechFeatures = () => {
   return (
     <section
-      className="md-my-12 container mx-auto my-6 max-w-5xl py-24 px-4 lg:my-24"
+      className="md-my-12 container mx-auto my-6 max-w-5xl px-4 py-24 lg:my-24"
       id="technical-features"
     >
       {/* Intro text*/}
-      <div className="flex flex-col items-center space-y-4 md:flex-row md:space-y-0 md:space-x-16">
+      <div className="flex flex-col items-center space-y-4 md:flex-row md:space-x-16 md:space-y-0">
         <div className="w-full md:w-1/2">
           <h2 className="my-4 text-3xl font-medium md:text-4xl lg:text-5xl">Technical Features</h2>
           <p className="text-md my-4 leading-loose">

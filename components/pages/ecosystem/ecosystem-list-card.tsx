@@ -43,7 +43,7 @@ export const PartnerCard = ({
       )}
 
       {protocol && (
-        <span className="absolute right-0 bottom-0 flex flex-row rounded-tl-md bg-primary-500 p-1 px-2 text-xs text-grey-800">
+        <span className="absolute bottom-0 right-0 flex flex-row rounded-tl-md bg-primary-500 p-1 px-2 text-xs text-grey-800">
           {protocol}
         </span>
       )}

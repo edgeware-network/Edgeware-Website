@@ -1,6 +1,6 @@
 export const BinanceKabocha: React.FC = () => {
   return (
-    <section className="container my-32 mx-auto flex max-w-4xl" id="kabocha-network">
+    <section className="container mx-auto my-32 flex max-w-4xl" id="kabocha-network">
       <div className="text-center">
         <div className="flex flex-col items-center justify-center">
           <img
@@ -26,7 +26,7 @@ export const BinanceKabocha: React.FC = () => {
         <div className="my-4">
           <a
             href="https://www.kabocha.network/"
-            className="inline-block rounded-lg bg-primary-500 py-4 px-12 text-xl font-medium text-white hover:bg-primary-600 hover:text-white"
+            className="inline-block rounded-lg bg-primary-500 px-12 py-4 text-xl font-medium text-white hover:bg-primary-600 hover:text-white"
           >
             Learn more about Kabocha
           </a>

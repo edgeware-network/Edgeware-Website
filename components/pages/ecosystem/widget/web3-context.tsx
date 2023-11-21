@@ -175,7 +175,9 @@ export const Web3ContextProvider = ({ children }) => {
 
         const accounts = await Promise.all(
           allAccounts.map(async (a) => {
-            const accountInfo = (await api.query.system.account(a.address)) as AccountInfo;
+            const accountInfo = (await api.query.system.account(
+              a.address
+            )) as unknown as AccountInfo;
             const amount = accountInfo.data.free;
 
             return {

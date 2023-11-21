@@ -5,7 +5,7 @@ export const PressBrandAssets = () => {
   return (
     <section id="brand-assets" className="container mx-auto max-w-6xl py-16 text-center">
       <h2 className="text-4xl font-medium">Brand Assets</h2>
-      <p className="my-4 mx-auto max-w-2xl text-lg">
+      <p className="mx-auto my-4 max-w-2xl text-lg">
         The Edgeware logo displayed in the official colors and usage patterns.
         <br />
         Do not place the logo on top of other objects and leave a reasonable amount of margin around

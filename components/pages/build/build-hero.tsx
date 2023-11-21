@@ -1,7 +1,7 @@
 export const BuildHero = () => {
   return (
     <section
-      className="container mx-auto max-w-7xl py-6 px-4 md:py-12 lg:py-24"
+      className="container mx-auto max-w-7xl px-4 py-6 md:py-12 lg:py-24"
       id="build-on-cutting-edge"
     >
       {/* Intro text*/}
