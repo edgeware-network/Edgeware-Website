@@ -1,8 +1,8 @@
 import { u8aToHex } from '@polkadot/util';
 import Keyring from '@polkadot/keyring';
 import { spec } from '@edgeware/node-types';
-import { asRegistry } from '@polkadot/types';
-import '@polkadot/api-augment';
+import { ApiOptions } from '@polkadot/api/types';
+import { TypeRegistry } from '@polkadot/types';
 import { ApiPromise, WsProvider } from '@polkadot/api';
 import { decodeAddress } from '@polkadot/util-crypto';
 import Web3 from 'web3';
@@ -245,7 +245,7 @@ export const EvmWithdraw = () => {
     });
 
     const polkadotUrl = 'wss://edgeware.jelliedowl.net';
-    const registry = asRegistry(new TypeRegistry());
+    const registry = new TypeRegistry() as unknown as ApiOptions['types'];
 
     const api = await new ApiPromise({
       provider: new WsProvider(polkadotUrl),
