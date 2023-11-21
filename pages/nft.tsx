@@ -1,6 +1,5 @@
 import { useAddress, useDisconnect, useConnectionStatus, useMetamask, useContract, useOwnedNFTs, MediaRenderer } from "@thirdweb-dev/react";
-import { BaseContract } from "ethers";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 const contractAddresses = [
   "0x6B7508b491b907B2C6d86737516F3786Ddc75063",      
@@ -12,18 +11,32 @@ const contractAddresses = [
 
 export default function NFTsPage() {
 
+  const [ nfts, setNfts ] = useState<[]>([]);
+
   const connectionStatus = useConnectionStatus();
   const address = useAddress();
   const connect = useMetamask();
   const disconnect = useDisconnect();
   const isConnected = (connectionStatus === "connected") ? true : false;
 
+  const getNftMetadata = (address: string) => {
+    contractAddresses.forEach((contractAddress) => {
+      const { contract } = useContract(contractAddress);
+      const { data, isLoading, error } = useOwnedNFTs(contract, address);
+      if (!isLoading && data.length){
+        console.log("inside loop:", data);
+        const metadata = data?.[0].metadata;
+        console.log("nft metadata: ", metadata);
+      }
+
+    })
+  }
+
+  getNftMetadata(address);
+
   const { contract } = useContract("0xcBD6701C3313aC76c529468957Fc2137484A4A51");
   const { data, isLoading, error } = useOwnedNFTs(contract, address);
   const metadata = data?.[0].metadata;
-
-  console.log(metadata);
-
 
   return (
     <>
