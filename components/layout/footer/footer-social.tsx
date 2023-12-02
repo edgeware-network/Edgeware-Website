@@ -44,7 +44,7 @@ const SOCIAL_LINKS = {
 export const FooterSocial = () => {
   const linkEntries = Object.entries(SOCIAL_LINKS);
   return (
-    <div className="flex flex-row justify-start">
+    <div className="flex flex-row justify-start items-center">
       {linkEntries.map(([key, linkData]) => {
         const Icon = linkData.icon;
         if (key === 'Matrix') {
@@ -58,6 +58,21 @@ export const FooterSocial = () => {
               aria-label={key}
             >
               <Icon className="h-8 fill-white" />
+            </a>
+          );
+        }
+
+        if (key === 'Peeranha') {
+          return (
+            <a
+              href={linkData.href}
+              className="mr-4 opacity-25 hover:opacity-50"
+              target="_blank"
+              rel="noopener noreferrer"
+              key={key}
+              aria-label={key}
+            >
+              <Icon className="h-7 fill-white" />
             </a>
           );
         }
