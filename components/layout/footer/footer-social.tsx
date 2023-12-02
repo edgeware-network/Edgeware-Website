@@ -8,6 +8,7 @@ import IconReddit from 'remixicon/icons/Logos/reddit-fill.svg';
 import { socialMediaUrls } from 'data/config';
 
 import IconMatrix from '../../../public/images/common/matrix-logo-white.svg';
+import IconPeeranha from '../../../public/images/common/Icon_Peeranha.svg';
 
 const SOCIAL_LINKS = {
   Discord: {
@@ -30,6 +31,10 @@ const SOCIAL_LINKS = {
     icon: IconReddit,
     href: socialMediaUrls.redditUrl,
   },
+  Peeranha: {
+    icon: IconPeeranha,
+    href: socialMediaUrls.peeranhaUrl,
+  },
   Matrix: {
     icon: IconMatrix,
     href: socialMediaUrls.matrixUrl,
@@ -39,7 +44,7 @@ const SOCIAL_LINKS = {
 export const FooterSocial = () => {
   const linkEntries = Object.entries(SOCIAL_LINKS);
   return (
-    <div className="flex flex-row justify-start">
+    <div className="flex flex-row justify-start items-center">
       {linkEntries.map(([key, linkData]) => {
         const Icon = linkData.icon;
         if (key === 'Matrix') {
@@ -53,6 +58,21 @@ export const FooterSocial = () => {
               aria-label={key}
             >
               <Icon className="h-8 fill-white" />
+            </a>
+          );
+        }
+
+        if (key === 'Peeranha') {
+          return (
+            <a
+              href={linkData.href}
+              className="mr-4 opacity-25 hover:opacity-50"
+              target="_blank"
+              rel="noopener noreferrer"
+              key={key}
+              aria-label={key}
+            >
+              <Icon className="h-7 fill-white" />
             </a>
           );
         }
