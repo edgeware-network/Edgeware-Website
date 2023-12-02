@@ -44,7 +44,7 @@ const SOCIAL_LINKS = {
 export const FooterSocial = () => {
   const linkEntries = Object.entries(SOCIAL_LINKS);
   return (
-    <div className="flex flex-row justify-start items-center">
+    <div className="flex flex-row items-center justify-start">
       {linkEntries.map(([key, linkData]) => {
         const Icon = linkData.icon;
         if (key === 'Matrix') {
