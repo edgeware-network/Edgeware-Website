@@ -8,6 +8,7 @@ import IconReddit from 'remixicon/icons/Logos/reddit-fill.svg';
 import { socialMediaUrls } from 'data/config';
 
 import IconMatrix from '../../../public/images/common/matrix-logo-white.svg';
+import IconPeeranha from '../../../public/images/common/peeranha-logo-white.svg';
 
 const SOCIAL_LINKS = {
   Discord: {
@@ -33,6 +34,10 @@ const SOCIAL_LINKS = {
   Matrix: {
     icon: IconMatrix,
     href: socialMediaUrls.matrixUrl,
+  },
+  Peeranha: {
+    icon: IconPeeranha,
+    href: socialMediaUrls.peeranhaUrl,
   },
 };
 
