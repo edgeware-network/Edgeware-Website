@@ -94,7 +94,7 @@ export async function getStaticProps() {
     props: {
       meta: {
         title: 'EdgeMonk',
-        description: 
+        description:
           'EdgeMonks are sentient beings from the Edgeware universe, they are keepers of Decentralized wisdom.',
       },
     },
