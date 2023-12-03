@@ -2,7 +2,7 @@ import { web3Accounts, web3Enable } from '@polkadot/extension-dapp';
 import { AccountInfo } from '@polkadot/types/interfaces';
 import { BN, formatBalance } from '@polkadot/util';
 import { initPolkadotAPI } from 'lib/crypto/polkadot';
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import Web3 from 'web3';
 
 export type Account = {
