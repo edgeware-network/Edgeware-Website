@@ -26,9 +26,7 @@ export default function SocietyPage() {
           EdgeMonks are sentient beings from the Edgeware universe, they are keepers of
           Decentralized wisdom.
         </p>
-        <p className="my-4 mx-auto max-w-prose leading-relaxed">
-          Mint your unqiue EdgeMonk now:
-        </p>
+        <p className="my-4 mx-auto max-w-prose leading-relaxed">Mint your unqiue EdgeMonk now:</p>
       </section>
 
       <section id="edgeware-edgemonk-widget" className="py-8 pb-24 text-center">
@@ -74,7 +72,7 @@ export default function SocietyPage() {
             </a>
           </p>
           <p className="leading-relaxed">
-            To learn more about the EdgeMonk, please have a look at {' '}
+            To learn more about the EdgeMonk, please have a look at{' '}
             <a
               href="https://www.edgeware.io/assets/ecosystem/external/EdgeMonks_EDGEPAPER.pdf"
               target="_blank"
@@ -96,7 +94,8 @@ export async function getStaticProps() {
     props: {
       meta: {
         title: 'EdgeMonk',
-        description: 'EdgeMonks are sentient beings from the Edgeware universe, they are keepers of Decentralized wisdom.',
+        description: 
+          'EdgeMonks are sentient beings from the Edgeware universe, they are keepers of Decentralized wisdom.',
       },
     },
   };
