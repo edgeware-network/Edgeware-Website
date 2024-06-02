@@ -19,18 +19,18 @@ export const SocietyStart = () => {
       <div className="flex flex-col items-center px-4 text-center">
         <IconLogo />
         <h2 className="my-4 text-6xl">Start your own collective</h2>
-        <p className="my-4 mx-auto max-w-prose text-lg leading-relaxed">
+        <p className="mx-auto my-4 max-w-prose text-lg leading-relaxed">
           In Edgeware, working groups function as mission-based development organizations that are
           composed of members who share interests, needs, and passions.
         </p>
-        <p className="my-4 mx-auto max-w-prose text-lg leading-relaxed">
+        <p className="mx-auto my-4 max-w-prose text-lg leading-relaxed">
           Where an Ambassador team is largely formed to promote a network in a variety of ways,
           Working Groups are intended to solve issues specific to a community while also expanding
           the awareness and utility of the network.
         </p>
       </div>
 
-      <div className="my-8 mx-auto grid max-w-6xl gap-2 text-center sm:grid-cols-2 md:grid-cols-3">
+      <div className="mx-auto my-8 grid max-w-6xl gap-2 text-center sm:grid-cols-2 md:grid-cols-3">
         <div className="flex min-h-[13rem] flex-col items-center rounded-lg border-2 border-white border-opacity-0 p-4 transition-all hover:rounded-lg hover:border-white hover:border-opacity-10 hover:bg-grey-800 hover:bg-opacity-20">
           <OpenArmLineIcon className="my-4 h-8 w-8 fill-white" />
           <p>
