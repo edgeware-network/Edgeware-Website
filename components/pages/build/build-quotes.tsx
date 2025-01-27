@@ -12,7 +12,7 @@ export const BuildQuotes = () => {
   };
 
   return (
-    <section className="container mx-auto my-24 max-w-3xl py-24 px-4" id="quotes">
+    <section className="container mx-auto my-24 max-w-3xl px-4 py-24" id="quotes">
       <Slider {...settings}>
         <BuildQuoteEntry author="Depth Hoar" imageUrl="/images/build/quotes/depth.jpg">
           Working for Edgeware lets me choose my work while being part of a DAO of like-minded

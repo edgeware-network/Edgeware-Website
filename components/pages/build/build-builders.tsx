@@ -1,8 +1,8 @@
 export const BuildBuilders = () => {
   return (
-    <section className="container mx-auto max-w-6xl py-6 px-4 md:py-12 lg:py-24" id="builders">
+    <section className="container mx-auto max-w-6xl px-4 py-6 md:py-12 lg:py-24" id="builders">
       {/* Intro text*/}
-      <div className="flex flex-col items-center space-y-4 md:flex-row md:space-y-0 md:space-x-16">
+      <div className="flex flex-col items-center space-y-4 md:flex-row md:space-x-16 md:space-y-0">
         <div className="w-full md:w-1/2">
           <img
             src="/images/build/code-s-slash-large.png"

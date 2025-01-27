@@ -1,6 +1,6 @@
 export const HomepageEdgewareIntro = () => {
   return (
-    <section id="way-of-edgeware" className={`container my-24 mx-auto max-w-3xl`}>
+    <section id="way-of-edgeware" className={`container mx-auto my-24 max-w-3xl`}>
       <div className="bg-[url('/images/backgrounds/edg-logomark-bg.svg')] bg-contain bg-center bg-no-repeat p-6 text-center md:p-12 lg:p-24">
         <h2 className="text-3xl font-medium md:text-4xl lg:text-5xl">The Way of Edgeware</h2>
         <p className="my-4 leading-relaxed md:text-lg">

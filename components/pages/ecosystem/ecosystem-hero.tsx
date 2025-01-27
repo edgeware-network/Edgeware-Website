@@ -4,7 +4,7 @@ export const EcosystemHero: React.FC = () => {
       <div className="container mx-auto flex min-h-[75vh] max-w-6xl">
         <div className="my-auto w-full text-center">
           <h1 className="my-4 text-6xl font-medium">Home to next generation networks</h1>
-          <p className="my-8 mx-auto max-w-prose text-lg">
+          <p className="mx-auto my-8 max-w-prose text-lg">
             Edgeware partners with leading cryptocurrency teams, projects and collectives to create
             the future of Web3.
           </p>

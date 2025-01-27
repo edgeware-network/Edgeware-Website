@@ -5,7 +5,7 @@ import Apps2LineIcon from 'remixicon/icons/System/apps-2-line.svg';
 export const BuildResources = () => {
   return (
     <section id="resources" className="container mx-auto my-6 max-w-4xl md:my-12 lg:my-24">
-      <div className="flex flex-col items-center space-y-4 px-4 md:flex-row md:space-y-0 md:space-x-24">
+      <div className="flex flex-col items-center space-y-4 px-4 md:flex-row md:space-x-24 md:space-y-0">
         <div className="f-full flex flex-col items-center text-center md:w-1/2">
           <div className="py-4">
             <div className="mx-auto h-fit w-fit rounded-full bg-white p-6">

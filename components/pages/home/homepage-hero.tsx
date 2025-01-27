@@ -7,7 +7,7 @@ export const HomepageHero = () => {
   return (
     <section className="bg-[url('/images/home/hero/hero-bg@2x.png')] bg-cover bg-center pt-24">
       <div className="container mx-auto flex min-h-[75vh] max-w-7xl">
-        <div className="my-auto py-4 px-4 md:py-8 lg:py-24">
+        <div className="my-auto px-4 py-4 md:py-8 lg:py-24">
           {/* Intro text & CTAs */}
           <div className="max-w-screen-md">
             <h1 className="my-8 text-3xl font-medium md:text-4xl lg:text-6xl">
@@ -21,7 +21,7 @@ export const HomepageHero = () => {
 
             <div
               id="actions"
-              className="my-8 flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-8"
+              className="my-8 flex flex-col space-y-4 sm:flex-row sm:space-x-8 sm:space-y-0"
             >
               <Button href={socialMediaUrls.discordUrl} sizing="large" colorStyle="primary">
                 Join Discord
@@ -40,7 +40,7 @@ export const HomepageHero = () => {
 
           {/* Highlights */}
           <div className="my-8">
-            <ul className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-10">
+            <ul className="flex flex-col space-y-4 md:flex-row md:space-x-10 md:space-y-0">
               <li className="flex flex-row align-middle">
                 <CheckboxCircleFill className="mr-2 h-6 w-6 fill-green-500" />
                 Oldest Substrate Solochain

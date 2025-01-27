@@ -28,7 +28,7 @@ export const HomepageTokens = () => {
 
         {/* exchanges */}
         <div className="container mx-auto max-w-6xl">
-          <ul className="m-8 flex flex-col justify-between space-y-4 md:flex-row md:space-y-0 md:space-x-4">
+          <ul className="m-8 flex flex-col justify-between space-y-4 md:flex-row md:space-x-4 md:space-y-0">
             {Object.entries(EXCHANGES).map(([name, url]) => (
               <li key={name} className="flex flex-col items-center">
                 <a href={url} target="_blank" rel="noopener noreferrer" className="block">
@@ -61,7 +61,7 @@ export const HomepageTokenWallets = ({ className }: HomepageTokenWalletsProps) =
     <div className={className ? className : 'container mx-auto my-24 max-w-6xl px-4'}>
       <div className="mx-auto max-w-4xl rounded-lg border border-green-500 bg-grey-900/70 p-8 text-center">
         <h3 className="text-2xl">Wallets to store your EDG</h3>
-        <ul className="my-8 flex flex-col items-center justify-between space-y-4 md:mx-8 md:flex-row md:space-y-0 md:space-x-4 lg:mx-16">
+        <ul className="my-8 flex flex-col items-center justify-between space-y-4 md:mx-8 md:flex-row md:space-x-4 md:space-y-0 lg:mx-16">
           {Object.entries(WALLETS).map(([name, url]) => (
             <li key={name} className="flex flex-col items-center">
               <a href={url} target="_blank" rel="noopener noreferrer" className="block">
