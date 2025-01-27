@@ -24,7 +24,7 @@ module.exports = {
   plugins: ['prettier'],
   rules: {
     // Include .prettierrc.js rules
-    'prettier/prettier': ['error', {}, { usePrettierrc: true }],
+    'prettier/prettier': ['error', { usePrettierrc: true, endOfLine: auto}],
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/no-unescaped-entities': 'off',
