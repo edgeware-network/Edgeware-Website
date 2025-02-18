@@ -5,12 +5,14 @@ import { PressBrandAssets } from 'components/pages/press/press-brand-assets';
 import { PressEnquiries } from 'components/pages/press/press-enquiries';
 
 import { Newsletter } from '../components/common/newsletter';
+import { PressBrandIdentity } from 'components/pages/press/press-brand-identity';
 
 export default function Press() {
   return (
     <>
       <PressIntro />
       <PressBrandAssets />
+      <PressBrandIdentity />
       <PressEnquiries />
       <Newsletter />
     </>
